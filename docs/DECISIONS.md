@@ -91,6 +91,7 @@
 - **Alternatives:** Claude Sonnet as in D2; it still works by changing `LLM_PROVIDER`.
 - **Why:** the human's decision in slice 2: the API key available is an OpenAI one. The OpenAI call uses `max_completion_tokens`, which newer OpenAI models require instead of `max_tokens`, and JSON mode.
 - **Revisit if:** extraction accuracy in the eval is weak; then compare with Claude Sonnet on the same cases.
+- **Measured (slice 2):** one extraction with `gpt-6.1-terra` ($1.00 / $5.00 per million tokens, OpenAI pricing page) on a single-lot notice took 1,953 input and 622 output tokens: $0.005 in 14 seconds, valid on the first attempt. About 60 notices a week is roughly $0.30 a run, and the eval about $0.20, well under the $5 cap. The $2.50 default budget is a safety net that a normal week should not reach (D10).
 
 ## D16: Prices come from config, and an unknown price stops the run
 - **Chose:** each provider carries its price per million tokens. Prices are known in `config.py` for Claude Sonnet only; any other model needs `LLM_INPUT_USD_PER_MTOK` and `LLM_OUTPUT_USD_PER_MTOK` in `.env`, or the run refuses to start. The budget is `LLM_BUDGET_USD` (default $2.50).

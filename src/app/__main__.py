@@ -32,6 +32,8 @@ def parse_args(argv: list[str], today: date) -> argparse.Namespace:
 
 
 def main() -> None:
+    # Tender titles contain "£" and dashes, which a Windows console code page cannot print.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     now = datetime.now(UTC)
     args = parse_args(sys.argv[1:], now.date())
     try:
