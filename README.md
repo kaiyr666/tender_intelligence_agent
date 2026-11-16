@@ -27,11 +27,17 @@ Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 
 ## Where it breaks
 <!-- Honest limits: data it cannot handle, failure modes seen in the eval, what the reviews flagged and was not fixed. Write this yourself. -->
--
+- **The eval numbers are preliminary.** About 30 cases, partly hand-picked, with the threshold tuned on the same set. There is no held-out set (plan reviews 01 and 02, not fixed; see D9).
+- **Personal names in free text are not removed.** Contact details in `parties[]` are dropped and emails and phone numbers in descriptions are masked, but a name written into a description stays.
+- **Only the two LLM-driven gates are checked against the notice text.** Other extracted fields (region, contract length, mobilisation) are validated for shape, not for truth.
+- **The 15-minute review target is not measured.** No bid manager has timed a real review.
 
 ## Next steps (if this were a paid engagement)
 <!-- What you would do next, in order, and why. Write this yourself. -->
-1.
+1. Label 100+ notices from weeks the threshold never saw, and report results on that held-out set.
+2. Time a bid manager reviewing one weekly report, and record shortlist size and confusing entries.
+3. Require supporting quotes for every extracted field, not only the gate fields.
+4. Incumbent lookup from award notices, and an MCP server (`search_tenders`, `get_tender`, `shortlist`).
 
 ## How AI was used
 Built with Claude Code and reviewed by Codex; see [docs/AI_WORKFLOW.md](docs/AI_WORKFLOW.md).
