@@ -26,6 +26,20 @@ held = ["ISO 9001"]
 
 [mobilisation]
 min_weeks = 8
+
+[deadline]
+min_days = 14
+
+[scoring]
+shortlist_threshold = 0.6
+
+[scoring.weights]
+service = 0.35
+region = 0.20
+value = 0.15
+accreditations = 0.10
+mobilisation = 0.10
+deadline = 0.10
 """
 
 

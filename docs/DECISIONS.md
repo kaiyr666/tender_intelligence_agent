@@ -8,7 +8,7 @@
 - **Why:** the task is a bounded sequence over one source, with business rules that must be deterministic and testable, and nothing that needs a model to choose its own tools. Only the free text needs a model. Plain software misses tenders worded in unexpected ways, which is the client's main pain. Retrieval and an agent could both be made to work with a coded rubric, but they add build time and run-to-run variation without solving a problem this proof of concept has.
 - **Revisit if:** pre-filter recall in the eval is low. Retrieval or a cheap LLM relevance check could then find candidates the CPV codes miss, with scoring still in code.
 
-## D2: Model and provider
+## D2: Model and provider (superseded by D15)
 - **Chose:** Anthropic Claude Sonnet (`claude-sonnet-5-5`, the default in `config.py`) through `src/app/llm.py`.
 - **Alternatives:** Haiku (cheaper); OpenAI (already supported by `llm.py`).
 - **Why:** the brief specifies Claude Sonnet. Extraction from long, messy notices benefits from the stronger model, and the pre-filter keeps the call count low enough to fit the $5 cap.
@@ -85,6 +85,48 @@
 - **Alternatives:** cache raw releases and reduce them on read.
 - **Why:** raw releases carry named contacts, emails and phone numbers (17 notices in one week also had emails inside descriptions). Not storing them is simpler than securing them.
 - **Revisit if:** a later step needs a field the Notice drops; it then has to be added to the model and re-fetched.
+
+## D15: OpenAI instead of Claude Sonnet
+- **Chose:** the OpenAI provider in `llm.py`, with the model set by `LLM_PROVIDER=openai` and `LLM_MODEL` in `.env`.
+- **Alternatives:** Claude Sonnet as in D2; it still works by changing `LLM_PROVIDER`.
+- **Why:** the human's decision in slice 2: the API key available is an OpenAI one. The OpenAI call uses `max_completion_tokens`, which newer OpenAI models require instead of `max_tokens`, and JSON mode.
+- **Revisit if:** extraction accuracy in the eval is weak; then compare with Claude Sonnet on the same cases.
+
+## D16: Prices come from config, and an unknown price stops the run
+- **Chose:** each provider carries its price per million tokens. Prices are known in `config.py` for Claude Sonnet only; any other model needs `LLM_INPUT_USD_PER_MTOK` and `LLM_OUTPUT_USD_PER_MTOK` in `.env`, or the run refuses to start. The budget is `LLM_BUDGET_USD` (default $2.50).
+- **Alternatives:** a price table in code for OpenAI models; running without a budget when the price is unknown.
+- **Why:** prices change and differ per model, so a table written from memory would be wrong without anyone noticing. Without a price the budget cannot work, and failing closed is safer than spending blind.
+- **Revisit if:** the provider's API starts returning cost per call.
+
+## D17: Budget checked against a worst-case estimate before every attempt
+- **Chose:** before each attempt (retries included), `llm.py` estimates input tokens at 3 characters per token and output at the full allowance of 8,000 tokens, and refuses the call if that could pass the budget. Actual tokens from the response are what is added up.
+- **Alternatives:** checking actual spend after each call; counting tokens exactly with a tokenizer.
+- **Why:** checking afterwards can overshoot by one call. A worst-case estimate never overshoots and needs no tokenizer dependency. The cost is stopping a little early, by at most one call's maximum.
+- **Revisit if:** runs often stop with much of the budget unspent.
+
+## D18: One extraction call per notice, with notice-wide requirements kept apart
+- **Chose:** one call returns every lot, plus the notice-wide mandatory and preferred accreditations and red flags; code adds the notice-wide requirements to each lot. The LLM classifies services into the profile's labels (or "other: ..."), and code matches labels.
+- **Alternatives:** one call per lot; asking the model to repeat notice-wide requirements in every lot; free-text services matched by keyword.
+- **Why:** one call per notice is cheaper and gives the model the whole notice. Keeping notice-wide requirements apart means a requirement cannot be forgotten on one lot. Using the profile's own labels keeps the service match exact and in code.
+- **Revisit if:** notices with many lots hit the output limit (they then go to "needs review").
+
+## D19: Scoring shapes: unknown is 0.5, shortfalls scale down
+- **Chose:** a criterion the notice does not state scores 0.5. Mobilisation and deadline score weeks or days available divided by what the profile needs, capped at 1. Value over £5m scores 0.3. A minor excluded service costs 0.25 on service fit. The accreditations criterion scores the share of preferred accreditations held (mandatory ones are gates). Accreditations are matched by name after removing case and punctuation ("ISO 9001:2015" counts as ISO 9001).
+- **Alternatives:** unknown scores 0 (penalises vague notices, which are common); step functions.
+- **Why:** a vague notice is not a bad one, and recall matters more than precision for the client. Linear shortfalls are easy to explain to the bid team. The numbers are first guesses for the eval to test.
+- **Revisit if:** the eval shows vague notices crowding the shortlist.
+
+## D20: The extraction cache key includes the prompt input
+- **Chose:** `data/cache/extractions/<notice id>_<release date>_<hash>.json`. The hash covers the prompt file, the model and the filled-in prompt (notice text and profile labels).
+- **Alternatives:** notice ID and release date only (the spec's wording).
+- **Why:** with only the ID and date, editing the prompt or the profile while tuning would silently reuse old extractions and make eval numbers meaningless.
+- **Revisit if:** never needed; old files can simply be deleted.
+
+## D21: API failures stop the run; bad output goes to review
+- **Chose:** output that fails validation twice sends that notice to "needs review" and the run continues. A provider error (bad key, network, rate limit after the SDK's retries) stops the run with a message; extractions so far stay cached, so a rerun continues where it stopped.
+- **Alternatives:** marking every notice as "needs review" when the API fails.
+- **Why:** a bad key would otherwise produce a report of 60 "needs review" notices that looks like a result. Stopping is clearer, and the cache makes rerunning cheap.
+- **Revisit if:** transient API errors stop weekly runs often.
 
 <!--
 Template:

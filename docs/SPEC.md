@@ -41,7 +41,7 @@ The bid team, once a week. They run the tool for the last full week and open a M
 - Every score can be traced to rubric lines, and every rationale uses only extracted fields.
 
 ## Constraints
-- Time box 5 hours in total (about 3 of building). Python, uv, Anthropic Claude Sonnet through `src/app/llm.py`.
+- Time box 5 hours in total (about 3 of building). Python, uv, an OpenAI model through `src/app/llm.py` (changed from Claude Sonnet in slice 2; see D15). Claude stays supported by setting `LLM_PROVIDER`.
 - Under USD 5 of LLM usage for a full weekly run plus the eval, including retries and label drafting.
 - Runs from a fresh clone using the README commands. Tests never call a real LLM or the live API.
 

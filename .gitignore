@@ -16,6 +16,7 @@ build/
 # Local output
 logs/
 data/raw/
+data/cache/
 .DS_Store
 Thumbs.db
 

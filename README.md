@@ -14,6 +14,7 @@ uv sync
 cp .env.example .env   # then add your API key to .env
 uv run python -m app
 ```
+With an OpenAI key, `.env` needs `OPENAI_API_KEY`, `LLM_PROVIDER=openai`, `LLM_MODEL=<model>`, and the model's price in USD per million tokens as `LLM_INPUT_USD_PER_MTOK` and `LLM_OUTPUT_USD_PER_MTOK`. The run refuses to start without a price, because the budget (`LLM_BUDGET_USD`, default 2.50) needs it.
 Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 
 ## How it works
@@ -35,6 +36,12 @@ Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 - **Phone masking over-masks.** Any 10–11 digit reference starting with 0 is masked as if it were a phone number.
 - **Values in other currencies are treated as unknown.** One UK lot that week was labelled AED in the source data.
 - **A week's fetch takes about 3 minutes,** because the API's stage filter is unreliable and every stage has to be fetched (D11).
+- **Accreditation names are matched loosely.** A requirement for "Cyber Essentials Plus" counts as held because the company holds "Cyber Essentials". "X or equivalent" is treated as X, so a notice asking for "CHAS or equivalent" is rejected even though SafeContractor would qualify.
+- **Red flags (TUPE, short deadline, closed framework call-off) are extracted but not scored.** A call-off only open to existing framework suppliers can still be shortlisted; the flag is there for the bid team to see.
+- **Lots the model leaves out are not scored.** If the extraction covers none of a notice's lots, the notice goes to "needs review"; if it covers some, the missing ones are ignored.
+- **A provider error stops the run** (bad key, network). Extractions done so far are cached, so running again continues where it stopped.
+- **The budget stops early rather than late.** Each call is checked against its worst case (full output allowance), so a run can stop with up to one call's maximum unspent.
+- **Scoring numbers are first guesses** (unknown = 0.5, over £5m = 0.3, minor excluded service −0.25, threshold 0.6) until the eval in slice 4 tunes them.
 
 ## Next steps (if this were a paid engagement)
 <!-- What you would do next, in order, and why. Write this yourself. -->

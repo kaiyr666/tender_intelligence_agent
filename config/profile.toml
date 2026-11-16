@@ -63,3 +63,21 @@ held = [
 [mobilisation]
 # Shortest time the company can mobilise a new contract; shorter is a risk.
 min_weeks = 8
+
+[deadline]
+# Days the bid team needs to write a good response; fewer days lower the score.
+min_days = 14
+
+[scoring]
+# A notice is shortlisted when its best eligible lot scores at least this (0 to 1).
+# Tuned on the eval set in slice 4.
+shortlist_threshold = 0.6
+
+[scoring.weights]
+# Relative weights of the criteria; they do not need to add up to 1.
+service = 0.35
+region = 0.20
+value = 0.15
+accreditations = 0.10
+mobilisation = 0.10
+deadline = 0.10

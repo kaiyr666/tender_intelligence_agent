@@ -7,9 +7,17 @@ uv run python -m app --from 2026-11-09 --to 2026-11-15
 import argparse
 import sys
 from datetime import UTC, date, datetime
+from pathlib import Path
 
+from app.assess import assess, format_assessment
+from app.config import get_settings
+from app.extract import ExtractionCache
 from app.fetch import FetchError
+from app.llm import ProviderError, Usage, get_provider
+from app.profile import load_profile
 from app.screen import DATA_DIR, format_summary, last_full_week, save_notices, screen
+
+CACHE_DIR = Path(__file__).resolve().parents[2] / "data" / "cache" / "extractions"
 
 
 def parse_args(argv: list[str], today: date) -> argparse.Namespace:
@@ -27,7 +35,12 @@ def main() -> None:
     now = datetime.now(UTC)
     args = parse_args(sys.argv[1:], now.date())
     try:
-        result = screen(args.date_from, args.date_to, now)
+        settings = get_settings()  # fail on bad LLM settings before the 3-minute fetch
+    except RuntimeError as error:
+        sys.exit(f"LLM settings: {error}")
+    profile = load_profile()
+    try:
+        result = screen(args.date_from, args.date_to, now, profile)
     except FetchError as error:
         sys.exit(f"Could not fetch tenders: {error}")
     save_notices(
@@ -35,6 +48,15 @@ def main() -> None:
         DATA_DIR / f"notices_{args.date_from}_{args.date_to}.json",
     )
     print(format_summary(result, args.date_from, args.date_to))
+
+    usage = Usage(budget_usd=settings.budget_usd)
+    try:
+        results = assess(
+            result.kept, profile, now, get_provider(), usage, ExtractionCache(CACHE_DIR)
+        )
+    except ProviderError as error:
+        sys.exit(f"{error}\nExtractions done so far are cached; run again to continue.")
+    print(format_assessment(results, usage))
 
 
 if __name__ == "__main__":

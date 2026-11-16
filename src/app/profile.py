@@ -38,6 +38,24 @@ class Mobilisation(BaseModel):
     min_weeks: int
 
 
+class Deadline(BaseModel):
+    min_days: int
+
+
+class Weights(BaseModel):
+    service: float
+    region: float
+    value: float
+    accreditations: float
+    mobilisation: float
+    deadline: float
+
+
+class Scoring(BaseModel):
+    shortlist_threshold: float
+    weights: Weights
+
+
 class Profile(BaseModel):
     services: Services
     cpv: CpvRules
@@ -45,6 +63,8 @@ class Profile(BaseModel):
     region: Region
     accreditations: Accreditations
     mobilisation: Mobilisation
+    deadline: Deadline
+    scoring: Scoring
 
 
 def load_profile(path: Path = DEFAULT_PROFILE_PATH) -> Profile:
