@@ -62,6 +62,30 @@
 - **Why:** a log only shows overspending once it has happened, and the weekly volume from the API is not yet known.
 - **Revisit if:** slice 1 shows the volume is small enough that the cap never matters.
 
+## D11: Fetch all stages and filter tags in code
+- **Chose:** request every stage and keep releases tagged `tender` / `tenderUpdate`, `planning` / `planningUpdate` and `tenderCancellation`, taking the latest release per `ocid`.
+- **Alternatives:** the API's `stages=tender` parameter.
+- **Why:** for 9–15 Nov 2026, `stages=tender` returned 41 releases on one page, while the unfiltered feed had 366 `tender` and 141 `tenderUpdate` releases. Fetching everything costs about 3 minutes a week.
+- **Revisit if:** the API's stage filter is fixed (compare counts for one week).
+
+## D12: CPV match by hierarchy, plus a short list of exact broad codes
+- **Chose:** a notice code matches when it equals a profile code or sits under it (the division, the first two digits, always counts). Two broad parent codes, 50000000 and 90900000, match only exactly. Notices with no CPV code are kept.
+- **Alternatives:** match notice parent codes against any profile code below them; or add 50000000 as a full prefix.
+- **Why:** measured on the real week. Exact codes alone missed "Window and High Level Cleaning" (90900000) and "Reactive and Planned Maintenance" (50000000). Matching every parent code kept 48 extra notices, of which about 3 were relevant (most were 45000000 construction). A full 50000000 prefix added vehicle, aircraft and machinery repair. The chosen rule kept 63 of 463.
+- **Revisit if:** the eval's pre-filter recall is low. Known near misses are fire-system and automatic-door maintenance (50413100, 50330000), which the profile does not cover.
+
+## D13: Deadline falls back to the expression-of-interest date
+- **Chose:** use `tender.tenderPeriod.endDate`, or `tender.expressionOfInterestDeadline` when there is no tender period.
+- **Alternatives:** treat the deadline as unknown.
+- **Why:** some procedures publish only an expression-of-interest deadline, and that is the first date the bid team must meet. The `test-writer` agent spotted it in the fixture.
+- **Revisit if:** the team wants both dates shown separately.
+
+## D14: Store reduced notices only, never raw API data
+- **Chose:** `data/raw/notices_<from>_<to>.json` holds Notice objects: no parties except the buyer's name, and emails and phones masked in free text. The eval set is 32 such notices in `evals/notices.json` (23 kept by the pre-filter, 9 dropped near misses).
+- **Alternatives:** cache raw releases and reduce them on read.
+- **Why:** raw releases carry named contacts, emails and phone numbers (17 notices in one week also had emails inside descriptions). Not storing them is simpler than securing them.
+- **Revisit if:** a later step needs a field the Notice drops; it then has to be added to the model and re-fetched.
+
 <!--
 Template:
 ## Dn: <decision>

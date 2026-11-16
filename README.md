@@ -31,6 +31,10 @@ Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 - **Personal names in free text are not removed.** Contact details in `parties[]` are dropped and emails and phone numbers in descriptions are masked, but a name written into a description stays.
 - **Only the two LLM-driven gates are checked against the notice text.** Other extracted fields (region, contract length, mobilisation) are validated for shape, not for truth.
 - **The 15-minute review target is not measured.** No bid manager has timed a real review.
+- **The CPV pre-filter misses relevant work coded outside the profile.** For example, fire-system servicing (50413100) and automatic-door maintenance (50330000) are dropped before the LLM sees them.
+- **Phone masking over-masks.** Any 10–11 digit reference starting with 0 is masked as if it were a phone number.
+- **Values in other currencies are treated as unknown.** One UK lot that week was labelled AED in the source data.
+- **A week's fetch takes about 3 minutes,** because the API's stage filter is unreliable and every stage has to be fetched (D11).
 
 ## Next steps (if this were a paid engagement)
 <!-- What you would do next, in order, and why. Write this yourself. -->

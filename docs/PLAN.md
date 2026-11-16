@@ -2,7 +2,7 @@
 
 About 210 minutes of slices. The rest of the 5 hours covers the spec (done), the human's label check (~15 min) and about 30 minutes of contingency. If time runs short, cut report polish before evaluation or correctness.
 
-- [ ] **Slice 1: Discovery, fetch and pre-filter** (~60 min)
+- [x] **Slice 1: Discovery, fetch and pre-filter** (~60 min). Done; findings in D11–D14. The cost of one extraction call was not measured (no API key yet), so it moves to the start of slice 2. Weights and threshold join `config/profile.toml` in slice 2, where they are used.
   - Goal: know what the real data looks like, and see which notices survive the code pre-filter for a date range.
   - Discovery first (~15 min): fetch one real week; record the notice count, field coverage (value, deadline, lots, CPV, delivery addresses), how repeated releases and withdrawals appear; run one extraction call to measure tokens and cost. Write the findings in `docs/DECISIONS.md` and pick about 30 eval notices (including some the pre-filter drops), cached as sanitised fixtures.
   - Build: `fetch.py` (tender and planning stages, paging, timeout, bounded retries with `Retry-After`, latest release per `ocid`, withdrawn dropped, partial fetch marked incomplete); sanitising (parties cut to organisation and role, emails and phones masked in text); a `Notice` model; `config/profile.toml`; `prefilter.py` (CPV across notice, items and lots; no CPV is kept); the CLI prints counts by reason.

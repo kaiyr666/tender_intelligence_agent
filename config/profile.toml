@@ -1,0 +1,65 @@
+# Company profile: what a good-fit tender looks like for this client.
+# Change this file, not the code, to screen tenders for another company.
+
+[services]
+offered = [
+    "office and commercial cleaning",
+    "manned guarding and security",
+    "planned and reactive building maintenance",
+    "integrated facilities management",
+]
+excluded = [
+    "clinical or hospital cleaning",
+    "construction and capital works",
+    "catering",
+    "IT services",
+]
+
+[cpv]
+# A notice is kept when one of its CPV codes is one of these codes or sits under one
+# (90910000 also covers 90911200 and 90919200).
+codes = [
+    "90910000", # cleaning services
+    "79710000", # security services (guarding, patrol, alarm monitoring)
+    "79993000", # building and facilities management services
+    "70330000", # property management services
+    "98341130", # janitorial services
+    "98341140", # caretaker services
+    "50700000", # repair and maintenance of building installations
+    "50710000", # repair and maintenance of electrical and mechanical installations
+    "50720000", # repair and maintenance of central heating
+    "50730000", # repair and maintenance of cooler groups
+    "50750000", # lift maintenance
+    "50800000", # miscellaneous repair and maintenance
+    "45259000", # repair and maintenance of plant
+    "45453000", # overhaul and refurbishment work (often used for planned maintenance)
+]
+# Broad parent codes that buyers sometimes use alone for relevant work. These match only
+# exactly: 50000000 keeps "repair and maintenance services" but not vehicle repairs (50100000).
+broad_codes = [
+    "50000000", # repair and maintenance services
+    "90900000", # cleaning and sanitation services
+]
+
+[value]
+# Total contract value in GBP, excluding VAT. Below the minimum is not worth bidding;
+# above the maximum needs a partner (scored lower, not dropped).
+min_gbp = 100_000
+max_gbp = 5_000_000
+
+[region]
+# NUTS 1 codes: UKC North East, UKD North West, UKE Yorkshire and the Humber.
+nuts_codes = ["UKC", "UKD", "UKE"]
+
+[accreditations]
+held = [
+    "ISO 9001",
+    "ISO 14001",
+    "Cyber Essentials",
+    "SafeContractor",
+    "SIA Approved Contractor",
+]
+
+[mobilisation]
+# Shortest time the company can mobilise a new contract; shorter is a risk.
+min_weeks = 8

@@ -1,0 +1,3196 @@
+[
+ {
+  "ocid": "ocds-h6vhtk-07b723",
+  "notice_id": "106024-2026",
+  "published": "2026-11-09T09:55:51Z",
+  "title": "Construction, Maintenance and Minor Works Framework",
+  "description": "The proposed framework is intended to provide the Council with access to suitably experienced and competent contractors capable of delivering a range of planned, reactive and project-based works across the Council estate. The scope will include, but is not limited to, general building works, minor civil works, repair and maintenance activities, small-scale refurbishment, enabling works and associated construction-related services.\nThe proposed framework will offer access to a range of construction and minor works trades and disciplines, including painting and decorating, plastering, plumbing, Gas Safe engineering, joinery, drywall and ceilings, skilled labour, general labouring, fence erection, glazing, bricklaying and stonemasonry, tiling, welding and roofing, playpark installations.\nThe estimated total value of the Framework over its term is £1,500,000. This estimate is provided for transparency and planning purposes only and does not constitute a guarantee of volume of work or number of call-off contracts to be awarded under the Framework.\nThe framework will be used exclusively for works and contractors/individuals located within the borough area of Causeway Coast and Glens Borough Council.\nIt is intended to support the efficient, compliant and timely delivery of Council requirements across the Borough whilst providing support to local firms through direct procurement and ensuring that works are procured and delivered in a manner that meets Council's operational needs, statutory responsibilities and commitment to transparency in public procurement.\nThe framework is not intended to confer exclusivity on any single supplier, and any subsequent call-off arrangements will be managed in accordance with the terms of the Framework and the applicable requirements of the Procurement Act 2023 and the Procurement Regulations 2024.\nCouncil considers that the framework is particularly suitable for small and medium-sized enterprises. The nature, scale and geographic focus of the works are expected to provide opportunities for local and regional contractors, including SMEs, to participate as subcontractors.",
+  "buyer": "Causeway Coast and Glens Borough Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 1800000.0,
+  "deadline": null,
+  "url": "https://www.find-tender.service.gov.uk/Notice/106024-2026",
+  "cpv_codes": [
+   "44100000",
+   "45310000",
+   "45320000",
+   "45330000",
+   "45340000",
+   "45350000",
+   "50710000",
+   "50720000",
+   "50870000"
+  ],
+  "regions": [
+   "UKN0C"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 1800000.0,
+    "contract_start": "2027-02-01",
+    "contract_end": "2030-01-31",
+    "cpv_codes": [
+     "44100000",
+     "45310000",
+     "45320000",
+     "45330000",
+     "45340000",
+     "45350000",
+     "50710000",
+     "50720000",
+     "50870000"
+    ],
+    "regions": [
+     "UKN0C"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-05cd4b",
+  "notice_id": "106149-2026",
+  "published": "2026-11-09T11:44:45Z",
+  "title": "Reactive and Planned Maintenance - BUILDING FABRIC",
+  "description": "Reactive and Planned Maintenance - BUILDING Fabric for Merseyside premises",
+  "buyer": "Police & Crime Commissioner for Merseyside & Chief Constable for Merseyside",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 3000000.0,
+  "deadline": "2026-12-09T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/106149-2026",
+  "cpv_codes": [
+   "50000000"
+  ],
+  "regions": [
+   "UKD"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 3000000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "50000000"
+    ],
+    "regions": [
+     "UKD"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-0507b4",
+  "notice_id": "106185-2026",
+  "published": "2026-11-09T12:24:24Z",
+  "title": "PRO0663 - Grounds Maintenance Services Yorkshire",
+  "description": "YHG are looking to appoint a suitably qualified provider to deliver grounds maintenance services across a portfolio of YHG properties throughout the Yorkshire region. The contract has an estimated annual value of £125k and will be awarded to a single supplier responsible for managing and delivering the full scope of services across all locations. \nThe contract will be awarded for an initial period of two years, with the option to extend for further periods of 12 months each on 3 occasions, subject to satisfactory performance and business requirements. Therefore, the maximum contract term will be five years. ",
+  "buyer": "Your Housing Group",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 666666.67,
+  "deadline": "2026-11-18T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/106185-2026",
+  "cpv_codes": [
+   "77310000",
+   "77340000",
+   "90500000"
+  ],
+  "regions": [
+   "UKE"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 666666.67,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "77310000",
+     "77340000",
+     "90500000"
+    ],
+    "regions": [
+     "UKE"
+    ],
+    "selection_criteria": "Please refer to the ITT documentation and PSQ for conditions of participation.\nPlease refer to the ITT documentation and PSQ for conditions of participation."
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b7a1",
+  "notice_id": "106253-2026",
+  "published": "2026-11-09T13:56:52Z",
+  "title": "1053-CFW-T24-  UoB Facilities Management And Building Maintenance Services",
+  "description": "The University of Bradford is seeking suitably qualified and experienced contractors to provide planned and reactive maintenance services across its estate. The procurement is divided into three lots covering Mechanical Services, Electrical Services, and Building Fabric and Grounds Services.\nThe procurement will be conducted using a two-stage Competitive Flexible Procedure.\nAccess Code: B3T62683AE\nFor more information about this opportunity, please visit the eSourcing portal at: \nhttps://www.delta-esourcing.com/tenders/UK-UK-Bradford:-Repair-and-maintenance-services-of-building-installations./B3T62683AE\nTo respond to this opportunity, please click here: \nhttps://www.delta-esourcing.com/respond/B3T62683AE",
+  "buyer": "University of Bradford",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 23107953.14,
+  "deadline": null,
+  "url": "https://www.find-tender.service.gov.uk/Notice/106253-2026",
+  "cpv_codes": [
+   "45300000",
+   "45310000",
+   "50700000",
+   "50711000",
+   "50712000",
+   "79993000"
+  ],
+  "regions": [
+   "UKE41"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Mechanical",
+    "description": "Provision of planned preventative and reactive mechanical maintenance services across the University’s estate. The scope includes maintaining mechanical building systems and associated equipment, attending faults and emergencies, completing remedial works, and supporting statutory compliance and asset performance.",
+    "value_gbp": 9986998.07,
+    "contract_start": "2027-08-01",
+    "contract_end": "2032-08-01",
+    "cpv_codes": [
+     "45300000",
+     "50700000",
+     "50712000"
+    ],
+    "regions": [
+     "UKE41"
+    ],
+    "selection_criteria": "Refer ITP - Schedule 7- Procurement Specific Questionnaire\nRefer ITP - Schedule 7- Procurement Specific Questionnaire"
+   },
+   {
+    "lot_id": "2",
+    "title": "Electrical",
+    "description": "Provision of planned preventative and reactive electrical maintenance services across the University’s estate. The scope includes maintaining electrical systems and associated equipment, responding to faults and emergencies, completing remedial works, and supporting statutory compliance and the safe operation of the estate.",
+    "value_gbp": 7084000.53,
+    "contract_start": "2027-08-01",
+    "contract_end": "2032-08-01",
+    "cpv_codes": [
+     "45310000",
+     "50700000",
+     "50711000"
+    ],
+    "regions": [
+     "UKE41"
+    ],
+    "selection_criteria": "Refer ITP - Schedule 7- Procurement Specific Questionnaire\nRefer ITP - Schedule 7- Procurement Specific Questionnaire"
+   },
+   {
+    "lot_id": "3",
+    "title": "Building Fabric & Grounds",
+    "description": "Provision of planned and reactive building fabric and grounds maintenance services across the University’s estate. The scope includes internal and external building fabric repairs, general maintenance and associated grounds services, together with emergency response, remedial works and support for the safe and effective operation of University buildings and external areas.",
+    "value_gbp": 6036954.54,
+    "contract_start": "2027-08-01",
+    "contract_end": "2032-08-01",
+    "cpv_codes": [
+     "45300000",
+     "50700000",
+     "79993000"
+    ],
+    "regions": [
+     "UKE41"
+    ],
+    "selection_criteria": "Refer ITP- Schedule 7 - Procurement Specific Questionnaire\nRefer ITP- Schedule 7 - Procurement Specific Questionnaire"
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b7e8",
+  "notice_id": "106367-2026",
+  "published": "2026-11-09T15:54:03Z",
+  "title": "Security Guard Services",
+  "description": "The Council requires the provision of a professional, customer-focused Security service to provide a safe and secure environment for employees, elected members, visitors, contractors, partners, and members of the public attending the Customer Centre.\nThe Security service shall act as the first point of contact for safety and security matters within the building helping to maintain a welcoming environment whilst managing security risks, conflict situations, and emergency incidents.",
+  "buyer": "North West Leicestershire District Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 200000.0,
+  "deadline": "2026-12-11T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/106367-2026",
+  "cpv_codes": [
+   "79710000"
+  ],
+  "regions": [
+   "UKF2"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 200000.0,
+    "contract_start": "2027-01-24",
+    "contract_end": "2029-01-23",
+    "cpv_codes": [
+     "79710000"
+    ],
+    "regions": [
+     "UKF2"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-06d59d",
+  "notice_id": "106615-2026",
+  "published": "2026-11-10T12:15:15Z",
+  "title": "Development Partner for the Blackpool Central Housing Regeneration Area Scheme",
+  "description": "Blackpool Council (\"Council\") is seeking to procure a Development Partner, with the requisite skills and track record to work in partnership with the Council to redevelop a 5.41-hectare site close to Blackpool town centre to deliver a high quality residential-led scheme, including the following key worksteams:\n•\tdemolish up to 300 densely populated properties and existing structures including the removal of associated infrastructure;\n•\tundertake site clearance and preparation work;\n•\tdevelop up to 230 new dwellings (use class C3) with car and cycle parking;\n•\tdevelop local centre uses comprising floorspace for flexible E use classes (including office, retail, leisure including food and beverage and F2 use classes (including halls, meeting places for local community);\n•\tdeliver new public realm and hard and soft landscaped public open spaces;\n•\tand provide associated infrastructure and highway works.\nPlease see the Request to Participate (\"RTP\") document for further information which is available via the Council's procurement portal (https://procontract.due-north.com/.).\nThe estimated contract value of this Project on the defined Site (within the red boundary line), as set out in the RTP is £102,000,000 (inclusive of VAT).\nPlease note, the Council reserves the right to bring forward similar phases at its discretion, subject to the Contract Documents, during the term within the extended red boundary line (please see the RTP for further information).\nThe total estimated value set out in this tender notice includes: extension options; and the provision for potential, future phases and options for further similar development activity. The Council cannot guarantee that any extension options or further phases will be progressed.\nSubject to the necessary approvals, development works in respect of the Project on the Site are anticipated to begin in 2028.\nThe Council has entered into a grant funding agreement (\"GFA\") with the Homes and Community Agency (\"Homes England\"). This project is now backed by £110.4m of grant funding from Homes England and is part of a wider 15-year vision to transform housing and communities across inner Blackpool.\nThe project is a once-in-a-generation opportunity for Blackpool; it marks the start of the journey to deliver transformational change to housing in the heart of Blackpool's urban area.\nThe Council is adopting a multi staged competitive flexible procedure (\"CFP\") process pursuant to section 20(2)(b) of the Procurement Act 2023 (\"Act\"), to procure a development partner.",
+  "buyer": "Blackpool Borough Council",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 300000000.0,
+  "deadline": null,
+  "url": "https://www.find-tender.service.gov.uk/Notice/106615-2026",
+  "cpv_codes": [
+   "45100000",
+   "45211000",
+   "45215210",
+   "45233100",
+   "70111000",
+   "70123100",
+   "70210000",
+   "70311000",
+   "70331000",
+   "70333000"
+  ],
+  "regions": [
+   "UKD42"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 300000000.0,
+    "contract_start": "2027-08-01",
+    "contract_end": "2037-07-31",
+    "cpv_codes": [
+     "45100000",
+     "45211000",
+     "45215210",
+     "45233100",
+     "70111000",
+     "70123100",
+     "70210000",
+     "70311000",
+     "70331000",
+     "70333000"
+    ],
+    "regions": [
+     "UKD42"
+    ],
+    "selection_criteria": "Participation in this procurement is subject to the conditions of participation and associated evaluation methodologies as set out in the RTP, available via Blackpool Council's Procurement Portal: The Chest: https://procontract.due-north.com/.\nParticipation in this procurement is subject to the conditions of participation and associated evaluation methodologies as set out in the RTP, available via Blackpool Council's Procurement Portal: The Chest: https://procontract.due-north.com/.\nThe Council will use the RTP stage, which consists of the procurement specific questionnaire and conditions of participation, to shortlist 3 tenderers, who submit the highest scoring RTP responses evaluated in accordance with the RTP, to take forward to the invitation to submit initial tender stage of the CFP procurement process."
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b88c",
+  "notice_id": "106652-2026",
+  "published": "2026-11-10T12:50:27Z",
+  "title": "Community Equipment Services (CES) Cleaning Contract",
+  "description": "Cumberland Council requires a contract for the cleaning, decontamination & inspection of community equipment issued to individuals living in the community. The service shall ensure equipment is safe, hygienic, fit for purpose, and compliant with all relevant legislation and industry standards",
+  "buyer": "Cumberland Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 500000.0,
+  "deadline": "2026-12-07T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/106652-2026",
+  "cpv_codes": [
+   "90910000"
+  ],
+  "regions": [
+   "UKD1"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 500000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "90910000"
+    ],
+    "regions": [
+     "UKD1"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b897",
+  "notice_id": "106679-2026",
+  "published": "2026-11-10T13:35:38Z",
+  "title": "ID 6841048 - DfC - The Provision of Cleaning Services to National Museums Northern Ireland",
+  "description": "National Museums Northern Ireland seeks to award a contract for the Provision of Cleaning Services to its four museums and two stores, Ulster Museum, Belfast, Ulster Folk Museum, Cultra, Co Down, Ulster Transport Museum, Cultra, Co Down, Ulster American Folk Park, Omagh and its Belfast Stores on Heron Road. Suppliers should refer to the CfT documents for full details of the requirements of this contract.",
+  "buyer": "National Museums Northern Ireland",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 5000000.0,
+  "deadline": "2026-12-10T15:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/106679-2026",
+  "cpv_codes": [
+   "79993100",
+   "90910000"
+  ],
+  "regions": [],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 5000000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "79993100",
+     "90910000"
+    ],
+    "regions": [],
+    "selection_criteria": "As per Tender documentation."
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b8f4",
+  "notice_id": "106848-2026",
+  "published": "2026-11-10T16:27:41Z",
+  "title": "Rathfern Primary School - Cleaning Tender Apr27",
+  "description": "Educo Consultancy & Facilities Management are completing a competitive tendering procedure for the cleaning services on behalf of the Rathfern Primary School in the London Borough of Lewisham. \nEduco are seeking sufficiently experienced contract cleaning companies to formally express their interest and engage in the Tendering process, by completing and submitting the required responses to key sections within the SQ uploaded at this stage. \nEduco requires any Contractor to have a clear safeguarding policy that includes an overarching declaration that the organisation acknowledges its duty of care and is committed to protecting all individuals from harm, regardless of age, disability, race, religion, sex, or sexual orientation.\nThe School require the appointed contractor to be fully responsible for the cleaning of the school buildings during term time and for deep cleans to be carried out during the school holidays.\nThe School is therefore seeking an experienced professional Contractor that operates high standards throughout, to include staff welfare and environmental conservation as the school views this as a necessity in delivering a consistent quality service, and this will be a key component in the final evaluation of the tender process.",
+  "buyer": "Educo",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 280000.0,
+  "deadline": "2026-12-15T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/106848-2026",
+  "cpv_codes": [
+   "90919300"
+  ],
+  "regions": [
+   "UKI44"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 280000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "90919300"
+    ],
+    "regions": [
+     "UKI44"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07897c",
+  "notice_id": "106859-2026",
+  "published": "2026-11-10T16:34:32Z",
+  "title": "BaDC-1727 Retford Buttermarket Food Hall Operator Opportunity",
+  "description": "Bassetlaw District Council (the Council) wishes to invite tenders to appoint a suitably experienced operator to occupy and operate an indoor street food market within the Retford Town Hall's Buttermarket.\nThe operator will be responsible for all aspects of delivery, vendor management and commercial performance, in return for the right to trade from the premises and an opportunity to influence the final design and fit-out of the space.\nThe Council's objectives in appointing an operator are to:\n•\tAnimate and activate Retford town centre\n•\tSupport independent and start-up food businesses\n•\tProvide a high-quality, diverse and affordable food offer\n•\tIncrease footfall and dwell time\n•\tSupport the evening and weekend economy\n•\tDeliver social and economic value for the local area\nThe Buttermarket is anticipated to be available to the operator for commercial operation from Winter 2026/Spring 2027 subject to detailed design agreement and construction programme. The Council envisions the successful provider from this tender to join as a partner through this design process. This interim period for design and Council construction will ensure the final installation is fit for purpose and encourages optimal commercial operation for the appointed end user.\nLocation\nLocated on the Market Square, Retford Town Hall is well positioned to amplify the offerings of the town, however, the site is currently greatly underutilised, and its facilities require significant modernisation. The Buttermarket is the ground floor premise of the wider Retford Town Hall with its own level and independent access along the Town Hall Yard and direct access to the Market Square. There is ample area (~260m2) to enhance this space to provide a series of catering focused opportunities while also creating an inclusive communal space, designed to host events that appeal across all age groups.\nAccording to a recent market summary of Retford undertaken by CACI, the town boasts a sizable catchment area with a total market potential of £122.1 million. Additionally, Retford enjoys a high catchment market share of 16%, indicating a strong local spend for retailers and food businesses opening in the town centre. The total market potential for catering alone is £30.1 million.\nThe overall spend remains below the regional average, indicating a need for Retford to build up a critical mass of retail and leisure offer to increase its attractiveness. Annual household spent on catering is £2,060 which is 5% lower than the East Midlands average and spend on alcohol on premises is 10% below the regional average demonstrating there is available spend for these types of offers not currently being realised in Retford.\nMandatory Site Visit\nAttendance at a mandatory supervised site visit is a condition of participation in this procurement process.\nThe site visit will take place at: Buttermarket, Retford Town Hall, DN22 6DE\nSite visits will be conducted on 16th November 2026.\nBidders must register in advance to attend the site visit. Instructions for registering and arranging attendance are set out in Section 7.2 of this document.\nOnly bidders who have successfully registered and attended a site visit in accordance with these instructions will be eligible to submit a tender.\nPlease note: The Council reserves the right to eliminate bids from the procurement process (without evaluation), that are received from any potential supplier that has not attended a site visit.\nFull details of the opportunity and the Council's requirements are set out in the tender documents.\nTerm\nThe Council would optimally seek a 5-year lease with a break clause at Year 3 and the opportunity to extend a further 5 years at year 5 (3+2+5 year agreement).\nProcurement Procedure\nThis is a competitive flexible procedure. Initial tenders will be scored based on price quality as out lined in document 1.\nUp to the top 3 bidders will then be invited to a presentation stage which will be scored out of 100 (the scoring for which is in appendix 5).\nThe final tender score will be calculated based on the weightings of the price and quality score from the previous round making up  90% of score and the presentation will form the remaining 10%.",
+  "buyer": "Bassetlaw District Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 18000000.0,
+  "deadline": "2026-11-27T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/106859-2026",
+  "cpv_codes": [
+   "79993000"
+  ],
+  "regions": [
+   "UKF15"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 18000000.0,
+    "contract_start": "2027-01-04",
+    "contract_end": "2032-01-03",
+    "cpv_codes": [
+     "79993000"
+    ],
+    "regions": [
+     "UKF15"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-069ded",
+  "notice_id": "106942-2026",
+  "published": "2026-11-11T09:35:54Z",
+  "title": "Framework Agreement for the Provision of Facilities Management Repair and Maintenance Services",
+  "description": "North East Lincolnshire Council (the Authority) is seeking to establish a four (4) year framework for the provision of facilities management repair and maintenance services to assets owned and leased by the Authority throughout the borough. Assets include properties within leisure, corporate, commercial, industrial, education and residential sectors.\nThe facilities management repair and maintenance services are being split into the following lots:\nLot 1a - Asbestos Surveying and Analytical Works\nLot 1b - Asbestos Emergency Reactive Works\nLot 1c - Asbestos Removal Works\nLot 1d - Asbestos Laboratory Services\nLot 2a - Electrical Reactive and Planned Works\nLot 2b - Electrical Statutory Planned Preventative Maintenance (PPM)\nLot 3a - General Building Works\nLot 3b - General Building Works - Flooring\nLot 4 - Joinery and Carpentry\nLot 5a - Mechanical Reactive and Planned Works\nLot 5b - Mechanical Statutory Planned Preventative Maintenance (PPM)",
+  "buyer": "North East Lincolnshire Borough Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 8805241.0,
+  "deadline": "2027-01-11T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/106942-2026",
+  "cpv_codes": [
+   "45233260",
+   "45259000",
+   "45262300",
+   "45262520",
+   "45262660",
+   "45310000",
+   "45330000",
+   "45350000",
+   "45410000",
+   "45420000",
+   "45432100",
+   "45432110",
+   "45432111",
+   "45443000",
+   "45453000",
+   "50531100",
+   "50710000",
+   "50711000",
+   "50720000",
+   "71313410",
+   "71315300",
+   "71315400",
+   "71600000",
+   "71620000",
+   "71630000",
+   "71900000",
+   "90650000"
+  ],
+  "regions": [
+   "UKE13"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Asbestos Surveying and Analytical Works",
+    "description": "Suppliers shall be able to carry out various works with asbestos containing materials including: Sampling,  Air Monitoring, Management Surveys, Reinspection Surveys, Refurbishment Surveys, Demolition Surveys",
+    "value_gbp": 257600.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "71313410",
+     "71315300",
+     "71315400",
+     "71600000",
+     "71900000"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17020\nISO / IEC 17025\nBOHS P401 (Laboratory testing)\nBOHS P402 (Surveying)\nBOHS P403 (Air Sampling / Fibre Counting)\nBOHS P404 (Enclosure Clearances)\nOne or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\n•\tSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation.\nCSCS affiliated AMI Skills Card for all staff delivering orders under this Framework\nEnhanced DBS Checks for all staff would be delivering orders under this Framework\nEquivalents will be considered by the Authority. Tenderers must provide sufficient detail and supporting documentation to demonstrate equivalency. Failure to provide the evidence will result in the Tenderer being deemed non-compliant. Failure to provide evidence and/or sufficiently demonstrate equivalence through their evidence will result in a score of Fail for the relevant question.\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents."
+   },
+   {
+    "lot_id": "1b",
+    "title": "Asbestos Emergency Reactive Work",
+    "description": "Suppliers shall be able to carry out various works with asbestos containing materials including:\nEmergency Removals \nEmergency Sampling \nEmergency Analytical",
+    "value_gbp": 82800.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "45262660",
+     "71600000",
+     "90650000"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17020\nISO / IEC 17025\nBOHS P401 (Laboratory testing)\nBOHS P402 (Surveying)\nBOHS P403 (Air Sampling / Fibre Counting)\nBOHS P404 (Enclosure Clearances)\nOne or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\n•\tSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation.\nCSCS affiliated AMI Skills Card for all staff delivering orders under this Framework.\nEnhanced DBS Checks for all staff would be delivering orders under this Framework\nUpper Tier Waste Carriers Licence\nEquivalents will be considered by the Authority. Tenderers must provide sufficient detail and supporting documentation to demonstrate equivalency. Failure to provide the evidence will result in the Tenderer being deemed non-compliant. Failure to provide evidence and/or sufficiently demonstrate equivalence through their evidence will result in a score of Fail for the relevant question.  \nFurther details about the conditions of participation and award criteria can be found in the associated tender documents."
+   },
+   {
+    "lot_id": "1c",
+    "title": "Asbestos Removal Work",
+    "description": "Suppliers shall be able to carry out various works with asbestos containing materials including:\nLicenced Removal \nNon-Licenced Removal \nNotifiable Non-Licenced Removal \nFly Tip Removal",
+    "value_gbp": 1196000.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "45262660",
+     "90650000"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17020\nISO / IEC 17025\nBOHS P401 (Laboratory testing)\nBOHS P403 (Air Sampling / Fibre Counting)\nHSE Asbestos Removal Licence (for Notifiable work)\nMembership of a relevant industry body for example ARCA / ACAD\nOne or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\nSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation.\nCSCS affiliated AMI Skills Card for all staff delivering orders under this Framework.\nEnhanced DBS Checks for all staff would be delivering orders under this Framework\nAn Upper Tier Waste Carriers Licence\nEquivalents will be considered by the Authority. Tenderers must provide sufficient detail and supporting documentation to demonstrate equivalency. Failure to provide the evidence will result in the Tenderer being deemed non-compliant. Failure to provide evidence and/or sufficiently demonstrate equivalence through their evidence will result in a score of Fail for the relevant question.\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents."
+   },
+   {
+    "lot_id": "1d",
+    "title": "Laboratory Services",
+    "description": "Suppliers shall be able to carry out various works with asbestos containing materials including:\nSampling Analysis",
+    "value_gbp": 55200.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "71620000",
+     "71900000"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17025\nBOHS P401 (Laboratory testing)\nEquivalents will be considered by the Authority. Tenderers must provide sufficient detail and supporting documentation to demonstrate equivalency. Failure to provide the evidence will result in the Tenderer being deemed non-compliant. Failure to provide evidence and/or sufficiently demonstrate equivalence through their evidence will result in a score of Fail for the relevant question.\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents."
+   },
+   {
+    "lot_id": "2a",
+    "title": "Electrical Reactive and Planned Works",
+    "description": "Reactive and Planned works across the Authority's property portfolio in relation to all types of electrical works.\nAs a minimum, the Supplier shall be capable of delivering the following if required by the Authority:  \nInstallation of new mains wiring including lighting and small power, including following mains upgrades and meter changes. \nEmergency Call Outs (24/7/365) to power outages and electrical issues. \nLighting design and upgrades. \nFault finding and emergency repairs. \nMaking safe of electrical issues e.g. following vandalism at void sites, following flood damage. \nEmergency Lighting failures. \nMinor Works Electrical Installations including replacement of faulty sockets, switches, accessories, replacement of failed consumer units / distribution boards. \nRepair of door entry and intercom systems. \nRepairs to CCTV power supplies and associated electrical infrastructure. \nEarthing and bonding repairs. \nPlaned replacement of electrical installations and equipment \nSupply and installation of sub-meters",
+    "value_gbp": 3325085.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "45310000",
+     "50711000"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nOne or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\n•\tSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation.\nNational Inspection Council for Electrical Installation Contracting (NICEIC) Certification \nStaff delivering orders under this Framework to hold City & Guilds / NVQ Electrical Installation Standard Level 3 \nStaff delivering orders under this Framework to hold City & Guilds Level 3 Award in the Requirements for Electrical Installations BS 7671:2018+A2:2022 (Currently 18th Edition IET Wiring Regulations (BS 7671))\nAn Upper Tier Waste Carriers Licence\nEnvironmental Policy (where required through Legislation)\nEnhanced DBS Checks for all staff would be delivering orders under this Framework\nEquivalents will be considered by the Authority. Tenderers must provide sufficient detail and supporting documentation to demonstrate equivalency. Failure to provide the evidence will result in the Tenderer being deemed non-compliant. Failure to provide evidence and/or sufficiently demonstrate equivalence through their evidence will result in a score of Fail for the relevant question.\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents."
+   },
+   {
+    "lot_id": "2b",
+    "title": "Electrical Statutory Planned Preventative Maintenance (PPM)",
+    "description": "Portable Appliance Testing (PAT) - The Provision and                                                Use of Work Equipment Regulations 1998 & ISBN 978-0-86341-833-4 \nElectrical - Fixed Electrical Installations - Electricity at Work Regulations 1989 and BS7671 18th Edition (BS7671:2018+A3:2024) including all amendments. \nFan Convectors - installed to Approved Document F and Approved Document P of the Building Regulations \nLighting Conductors - Completed by a competent person to BS 7430:2011 + A1:2015 in line with BS EN62305 \nInterceptor Alarm - British & European Standard BS EN 858-1, PPG3 & ISO 14001 \nEmergency Lighting - Electricity at Work Regulation 1989, Building Regulations Approved Documents, BS 5266-1:2025), BS EN 50172:2024, I.C.E.L 1008 and Regulatory Reform (Fire Safety Order 2005) \nDisabled Toilet Alarm - The Building Regulations to Approved Document M Part 12015 edition incorporating 2016 amendments and Approved Document M Part 2 2015 edition incorporating 2020 and 2024 amendments, BS 8300-2:2018 Design of Buildings Part 2 \nDucting - Fire, Smoke & Volume Control Dampers - BS EN 12101-8 & BS 9999",
+    "value_gbp": 151028.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "50711000",
+     "71630000"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nOne or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\n•\tSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation.\nNational Inspection Council for Electrical Installation Contracting (NICEIC) Certification\nStaff delivering orders under this Framework to hold City & Guilds / NVQ Electrical Installation Standard Level 3\nStaff delivering orders under this Framework to hold City & Guilds Level 3 Award in the Requirements for Electrical Installations BS 7671:2018+A2:2022 (Currently 18th Edition IET Wiring Regulations (BS 7671))\nAn Upper Tier Waste Carriers Licence\nEnvironmental Policy (where required through Legislation)\nEnhanced DBS Checks for all staff would be delivering orders under this Framework\nEquivalents will be considered by the Authority. Tenderers must provide sufficient detail and supporting documentation to demonstrate equivalency. Failure to provide the evidence will result in the Tenderer being deemed non-compliant. Failure to provide evidence and/or sufficiently demonstrate equivalence through their evidence will result in a score of Fail for the relevant question.\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents."
+   },
+   {
+    "lot_id": "3a",
+    "title": "General Building Works",
+    "description": "The scope of the services required to be delivered by the Supplier under this lot are detailed below:\nConcreting \nPlastering \nRendering \nBrick work repairs",
+    "value_gbp": 630134.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "45233260",
+     "45262300",
+     "45262520",
+     "45410000",
+     "45443000",
+     "45453000"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nOne or more of the following accreditation / certification schemes: \n- Constructionline Registration \n- Contractors Health and Safety Assessment Scheme (CHAS) \n- SafeContractor \n- Safety Schemes in Procurement (SSIP) accreditation. \nAn Upper Tier Waste Carriers Licence \nCSCS card for all staff delivering orders under this Framework. \nEnhanced DBS Checks for all staff would be delivering orders under this Framework \nEnvironmental Policy (where required through Legislation)\nEquivalents will be considered by the Authority. Tenderers must provide sufficient detail and supporting documentation to demonstrate equivalency. Failure to provide the evidence will result in the Tenderer being deemed non-compliant. Failure to provide evidence and/or sufficiently demonstrate equivalence through their evidence will result in a score of Fail for the relevant question.\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents."
+   },
+   {
+    "lot_id": "3b",
+    "title": "General Building Work - Flooring",
+    "description": "Supply, installation and removal of flooring.",
+    "value_gbp": 445940.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "45432100",
+     "45432110",
+     "45432111"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nOne or more of the following accreditation / certification schemes: \n- Constructionline Registration \n- Contractors Health and Safety Assessment Scheme (CHAS) \n- SafeContractor \n- Safety Schemes in Procurement (SSIP) accreditation. \nAn Upper Tier Waste Carriers Licence \nCSCS card for all staff delivering orders under this Framework. \nEnhanced DBS Checks for all staff would be delivering orders under this Framework \nEnvironmental Policy (where required through Legislation) \nEquivalents will be considered by the Authority. Tenderers must provide sufficient detail and supporting documentation to demonstrate equivalency. Failure to provide the evidence will result in the Tenderer being deemed non-compliant. Failure to provide evidence and/or sufficiently demonstrate equivalence through their evidence will result in a score of Fail for the relevant question.\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents."
+   },
+   {
+    "lot_id": "4",
+    "title": "Joinery and Carpentry",
+    "description": "General carpentry and joinery including but not limited to the supply, installation, repair, removal and disposal of the following: \n- installing cabinetry \n- doors \n- gates \n- fencing \n- banisters",
+    "value_gbp": 339303.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "45420000"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nOne or more of the following accreditation / certification schemes: \n- Constructionline Registration \n- Contractors Health and Safety Assessment Scheme (CHAS) \n- SafeContractor \n- Safety Schemes in Procurement (SSIP) accreditation. \nCSCS card for all staff delivering orders under this Framework. \nEnhanced DBS Checks for all staff would be delivering orders under this Framework \nAn Upper Tier Waste Carriers Licence \nEnvironmental Policy (where required through Legislation) \nEquivalents will be considered by the Authority. Tenderers must provide sufficient detail and supporting documentation to demonstrate equivalency. Failure to provide the evidence will result in the Tenderer being deemed non-compliant. Failure to provide evidence and/or sufficiently demonstrate equivalence through their evidence will result in a score of Fail for the relevant question.\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents."
+   },
+   {
+    "lot_id": "5a",
+    "title": "Mechanical Reactive and Planned Works",
+    "description": "Reactive and Planned works across the Authority's property portfolio in relation to all types of Mechanical works.\nAs a minimum, the Supplier shall be capable of delivering the following works under this Framework:  \nBoiler breakdown repairs  \nHeating system fault finding  \nPump repairs and replacement  \nRadiator leaks and repairs  \nValve and actuator replacement  \nHeating control system repairs \nBurst pipe repairs  \nWater leaks and emergency isolation  \nBlocked and damaged pipework  \nSanitaryware repairs and replacement  \nTap and shower repairs  \nHot water cylinder repairs  \nWater heater repairs  \nDrainage and waste pipe repairs \nEmergency gas leak investigations  \nGas pipework repairs  \nCommercial and domestic boiler repairs  \nEmergency isolation of gas supplies \nVentilation plant breakdowns  \nExtract fan replacement  \nAir handling unit (AHU) repairs  \nControls and BMS-related repairs  \nKitchen extract system repairs \nAsset replacement programmes \nPlumbing Upgrades",
+    "value_gbp": 2237066.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "45259000",
+     "45330000",
+     "45350000"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nOne or more of the following accreditation / certification schemes: \n- Constructionline Registration \n- Contractors Health and Safety Assessment Scheme (CHAS) \n- SafeContractor \n- Safety Schemes in Procurement (SSIP) accreditation. \nEnhanced DBS Checks for all staff would be delivering orders under this Framework \nAn Upper Tier Waste Carriers Licence \nEnvironmental Policy (where required through Legislation) \nOFTEC qualified engineers \nCity & Guilds (NVQ) Level 3 Mechanical Engineering Services installation & maintenance \nGas Safe Registered Supplier and staff delivering orders under this Framework Registered   \nWater Services Regulation Authority (OFWAT) approved."
+   },
+   {
+    "lot_id": "5b",
+    "title": "Mechanical Statutory Planned Preventative Maintenance (PPM)",
+    "description": "Planned Preventative Maintenance (PPM) shall be delivered in accordance with this Specification. Reactive works are limited to fault rectification arising from unplanned failures and shall only be within scope where expressly instructed by the Authority. Improvements, lifecycle replacement, major renewals, project works and variations are excluded from scope unless separately instructed.\nOil Boiler Servicing - OFTEC The Control of Pollution (Oil Storage) (England) Regulation 2001 \nGas Boiler Servicing - Gas Safety (Installation and Use) Regulation 1998 including Gas Tightness Test- Gas Safety (Installation and Use) Regulation 1998 \nGas Safety (Installation and Use) Regulation 1998 \nCatering Equipment - The Health and Safety at Work Act 1974, Provision and Use of Work Equipment Regulations 1998. Pressure Systems Safety Regulations 2000, Control of Substances Hazardous to Health Regulations 2002 and Electricity at Work Regulation 1989 \nUnvented Water Heaters \nVented Hot Water Boilers \nSump Pump - Building Regulations Approved Documents. \nMechanical Ventilation \nCold Water Storage",
+    "value_gbp": 85084.0,
+    "contract_start": "2027-04-12",
+    "contract_end": "2030-04-11",
+    "cpv_codes": [
+     "50531100",
+     "50710000",
+     "50720000"
+    ],
+    "regions": [
+     "UKE13"
+    ],
+    "selection_criteria": "Economic and Financial Standing Information - Pass/Fail - Conformation is needed the tender has up to date financial standing information on the Find a Tender Service. A financial stability check will be undertaken on the preferred tenderers.\nInsurance - Pass/Fail - Confirmation is needed that the tenderer holds or will hold at the start of the framework the following insurances and levels:\nEmployer's (Compulsory) Liability Insurance = £10m\nPublic Liability Insurance = £10m\nProfessional Indemnity Insurance = £5m\nProduct Liability Insurance = £5m\nFurther details about the conditions of participation and award criteria can be found in the associated tender documents.\nModern Slavery - Pass/Fail - Tenderers are required to confirm if they are a relevant commercial organisation or not and if they are, confirm that they have published a statement as required by Section 54 of the Modern Slavery Act.\nQualifications, Standards and Accreditations - Pass/Fail\nTenderers are required to confirm that they have or will have at the start of the framework the following:\nOne or more of the following accreditation / certification schemes: \n- Constructionline Registration \n- Contractors Health and Safety Assessment Scheme (CHAS) \n- SafeContractor \n- Safety Schemes in Procurement (SSIP) accreditation. \nEnhanced DBS Checks for all staff would be delivering orders under this Framework \nAn Upper Tier Waste Carriers Licence \nEnvironmental Policy (where required through Legislation) \nOFTEC qualified engineers \nCity & Guilds (NVQ) Level 3 Mechanical Engineering Services installation & maintenance \nGas Safe Registered Supplier and staff delivering orders under this Framework Registered   \nWater Services Regulation Authority (OFWAT) approved. \nEquivalents will be considered by the Authority. Tenderers must provide sufficient detail and supporting documentation to demonstrate equivalency. Failure to provide the evidence will result in the Tenderer being deemed non-compliant. Failure to provide evidence and/or sufficiently demonstrate equivalence through their evidence will result in a score of Fail for the relevant question."
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b99f",
+  "notice_id": "107117-2026",
+  "published": "2026-11-11T13:07:10Z",
+  "title": "General Maintenance Contract 2027-2030",
+  "description": "Tenders are invited to provide a general maintenance service in the village of Helsby, Cheshire. This will include safety checks of children's play and outdoor gym equipment, litter picking, bin emptying, planter maintenance, defibrillator checks, weed control and maintenance of benches and noticeboards. Full details are contained in the attached document. Questions should be directed to the Clerk - tel: [phone removed], or e-mail: [email removed]. Tenders to be received by 5pm on Monday 7 December 2026.",
+  "buyer": "Helsby Parish Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 45000.0,
+  "deadline": "2026-12-07T17:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/107117-2026",
+  "cpv_codes": [
+   "77000000"
+  ],
+  "regions": [
+   "UKC",
+   "UKD",
+   "UKE",
+   "UKF",
+   "UKG",
+   "UKH",
+   "UKI",
+   "UKJ",
+   "UKK"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 45000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "77000000"
+    ],
+    "regions": [
+     "UKC",
+     "UKD",
+     "UKE",
+     "UKF",
+     "UKG",
+     "UKH",
+     "UKI",
+     "UKJ",
+     "UKK"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b9ab",
+  "notice_id": "107141-2026",
+  "published": "2026-11-11T13:45:37Z",
+  "title": "Cemetery and Allotments Maintenance Contract",
+  "description": "Helsby Parish Council invites tenders from suitably qualified, competent and reliable contractors for the provision of maintenance services in Helsby Public Cemetery and the Council's two allotment sites at Queens Drive and Old Chester Road, Helsby, Cheshire. Full details are contained in the attached document. Questions should be directed to the Clerk via tel: [phone removed] or e-mail: [email removed]. Tenders to be received by 5pm on Monday 7th December 2026.",
+  "buyer": "Helsby Parish Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 28000.0,
+  "deadline": "2026-12-07T17:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/107141-2026",
+  "cpv_codes": [
+   "77000000"
+  ],
+  "regions": [
+   "UKC",
+   "UKD",
+   "UKE",
+   "UKF",
+   "UKG",
+   "UKH",
+   "UKI",
+   "UKJ",
+   "UKK"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 28000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "77000000"
+    ],
+    "regions": [
+     "UKC",
+     "UKD",
+     "UKE",
+     "UKF",
+     "UKG",
+     "UKH",
+     "UKI",
+     "UKJ",
+     "UKK"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-06c1f9",
+  "notice_id": "107220-2026",
+  "published": "2026-11-11T15:14:38Z",
+  "title": "HARD FACILITIES MANAGEMENT MAINTENANCE SERVICES",
+  "description": "The undertaking of Hard Facility Management to Extracare's Villages and Housing Schemes including Inspections, Health and Safety Checks, Periodic Servicing, Certification, Routine and Responsive Maintenance, Out of Hours Emergency Callouts, Major Works, Planned Works to Dwellings, Common Parts, Structures, Environs and to the Communal Mechanical and Electrical Installations of the Villages and Housing Schemes located in the East Midlands and the South East of England. The Works will be undertaken in Occupied Properties.\nThe Contract is in 2 Lots\nLot 2 East\nLot 4 South East\nSuppliers can submit tenders for both Lots. The Employer intends where four or more compliant Tenders are received, to award no more than one Lot to Supplier Tenderer where awarding only one Lot would otherwise leave a Lot unawarded or would result in a materially less advantageous outcome for the Employer.\nTenders will be evaluated in the order of Lot 2 and then Lot 4.  Lots will be awarded sequentially in that order to the Supplier submitting the most advantageous tender for each Lot, subject to the cap above. Where a Supplier has already been awarded Lot 2, its tender for Lot 4 will be discarded and each such Lot awarded to the next most advantageous compliant Tender\nThe Contract will be the JCT Measured Term Contract 2024, the payment mechanism will be a Bespoke M3NHF Schedule of Rates Version 8 for \"Building Trades\" works and a bespoke M3NHF Communal Mechanical and Electrical Works Schedule of Rates Version 8",
+  "buyer": "THE EXTRACARE CHARITABLE TRUST",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 47000000.0,
+  "deadline": "2026-12-07T15:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/107220-2026",
+  "cpv_codes": [
+   "31500000",
+   "39310000",
+   "39370000",
+   "45310000",
+   "45320000",
+   "45330000",
+   "45342000",
+   "45343000",
+   "45350000",
+   "45410000",
+   "45420000",
+   "45430000",
+   "45440000",
+   "45451000",
+   "45453000",
+   "50510000",
+   "50710000",
+   "50720000",
+   "50730000",
+   "50800000",
+   "51100000",
+   "71600000",
+   "71700000",
+   "71800000",
+   "71900000",
+   "80531200",
+   "90913100"
+  ],
+  "regions": [
+   "UKF",
+   "UKJ"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Lot 2 East",
+    "description": "The undertaking of Hard Facility Management to four of Extracare's Villages and Housing Schemes in the East Midlands including Inspections, Health and Safety Checks, Periodic Servicing, Certification, Routine and Responsive Maintenance, Out of Hours Emergency Callouts, Major Works, Planned Works to Dwellings, Common Parts, Structures, Environs and to the Communal Mechanical and Electrical Installations of the Villages and Housing Schemes located in the East Midlands. The Works will be undertaken in Occupied Properties.",
+    "value_gbp": 27000000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2032-03-31",
+    "cpv_codes": [
+     "31500000",
+     "39310000",
+     "39370000",
+     "45310000",
+     "45320000",
+     "45330000",
+     "45342000",
+     "45343000",
+     "45350000",
+     "45410000",
+     "45420000",
+     "45430000",
+     "45440000",
+     "45451000",
+     "45453000",
+     "50510000",
+     "50710000",
+     "50720000",
+     "50730000",
+     "50800000",
+     "51100000",
+     "71600000",
+     "71700000",
+     "71800000",
+     "71900000",
+     "80531200",
+     "90913100"
+    ],
+    "regions": [
+     "UKF"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "2",
+    "title": "Lot 4 South East",
+    "description": "The undertaking of Hard Facility Management to four of Extracare's Villages and Housing Schemes in the South East including Inspections, Health and Safety Checks, Periodic Servicing, Certification, Routine and Responsive Maintenance, Out of Hours Emergency Callouts, Major Works, Planned Works to Dwellings, Common Parts, Structures, Environs and to the Communal Mechanical and Electrical Installations of the Villages and Housing Schemes located in the East Midlands. The Works will be undertaken in Occupied Properties.",
+    "value_gbp": 20000000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2032-03-31",
+    "cpv_codes": [
+     "31500000",
+     "39310000",
+     "39370000",
+     "45310000",
+     "45320000",
+     "45330000",
+     "45342000",
+     "45343000",
+     "45350000",
+     "45410000",
+     "45420000",
+     "45430000",
+     "45440000",
+     "45451000",
+     "45453000",
+     "50510000",
+     "50710000",
+     "50720000",
+     "50730000",
+     "50800000",
+     "51100000",
+     "71600000",
+     "71700000",
+     "71800000",
+     "71900000",
+     "80531200",
+     "90913100"
+    ],
+    "regions": [
+     "UKJ"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-06155d",
+  "notice_id": "107285-2026",
+  "published": "2026-11-11T16:46:11Z",
+  "title": "Repairs Framework 2026",
+  "description": "Believe Housing Limited (believe housing) wish to appoint contractors for the following lots:\n•\tScaffold\n•\tDrainage\n•\tGlazing\n•\tWindows and Doors Replacements\n•\tFencing Renewals\n•\tWater Mains Replacement\n•\tHandrails \n•\tMetal work (including metal roofing, soffits, fascia's and garage doors)\n•\tGeneral Building Works\n•\tMajor Works\n•\tSpecialist Defects and Remedial Work \n•\tAriel Re-Siting Repair\n•\tPest Control & Proofing Works\n•\tSpecialist Structural Surveys\n•\tFlooring Works\n•\tKitchen Unit Wrapping Works\n•\tRamps (Repairs, renewals and removals)",
+  "buyer": "BELIEVE HOUSING LIMITED",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 16000000.0,
+  "deadline": "2026-12-18T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/107285-2026",
+  "cpv_codes": [
+   "32324400",
+   "34928220",
+   "34946110",
+   "34953000",
+   "39141000",
+   "39141400",
+   "43324000",
+   "44112200",
+   "44161200",
+   "44163112",
+   "44212310",
+   "44212315",
+   "44212317",
+   "44221000",
+   "44221100",
+   "44221110",
+   "44221200",
+   "44221240",
+   "45232452",
+   "45260000",
+   "45261213",
+   "45261900",
+   "45262100",
+   "45262110",
+   "45262120",
+   "45262321",
+   "45262600",
+   "45262670",
+   "45262690",
+   "45312320",
+   "45340000",
+   "45341000",
+   "45342000",
+   "45421110",
+   "45421112",
+   "45421130",
+   "45421131",
+   "45421132",
+   "45432100",
+   "45432130",
+   "45441000",
+   "45450000",
+   "45453000",
+   "50700000",
+   "50800000",
+   "71315300",
+   "71355000",
+   "90922000"
+  ],
+  "regions": [
+   "UKC14"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Lot 1- Scaffolding",
+    "description": "To undertake scaffolding works",
+    "value_gbp": 960000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "44212310",
+     "44212315",
+     "44212317",
+     "45262100",
+     "45262110",
+     "45262120"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "2",
+    "title": "Lot 2- Drainage",
+    "description": "To undertake Drainage works.",
+    "value_gbp": 2080000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "43324000",
+     "44163112",
+     "45232452"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "3",
+    "title": "Lot 3- Glazing",
+    "description": "To Provide glazing",
+    "value_gbp": 1480000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "45441000"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "4",
+    "title": "Lot 4- Window and Door replacement",
+    "description": "To undertake window and door replacement",
+    "value_gbp": 880000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "44221000",
+     "44221100",
+     "44221110",
+     "44221200",
+     "45421110",
+     "45421112",
+     "45421130",
+     "45421131",
+     "45421132"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "5",
+    "title": "Lot 5- Fencing renewal",
+    "description": "To undertake fencing renewals",
+    "value_gbp": 480000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "34928220",
+     "45342000"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "6",
+    "title": "Lot 6- Water Mains Replacement",
+    "description": "To undertake Water Mains Replacements",
+    "value_gbp": 380000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "44161200"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "7",
+    "title": "Lot 7- Handrails",
+    "description": "To undertake Handrail works",
+    "value_gbp": 140000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "34946110",
+     "45340000",
+     "45341000"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "8",
+    "title": "Lot 8- Metal works",
+    "description": "To undertake Metal works (Including metal roofing, Soffits, fascias, Garage doors)",
+    "value_gbp": 80000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "44221240",
+     "45261213",
+     "45262670"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "9",
+    "title": "Lot 9- General Building works",
+    "description": "To undertake general building works",
+    "value_gbp": 200000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "45260000",
+     "45261900",
+     "45450000",
+     "50700000",
+     "50800000"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "10",
+    "title": "Lot 10- Major repairs",
+    "description": "To undertake Major repairs",
+    "value_gbp": 8000000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "45260000",
+     "45261900",
+     "45262690",
+     "45453000"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "11",
+    "title": "Lot 11- Specialist defect and remedial works",
+    "description": "To undertake Specialist defect and remedial works",
+    "value_gbp": 20000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "45262600",
+     "45450000",
+     "45453000",
+     "50800000"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "12",
+    "title": "Lot 12- Aerial Resiting works",
+    "description": "To undertake Aerial resiting works",
+    "value_gbp": 40000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "32324400",
+     "45312320"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "13",
+    "title": "Lot 13- Pest control & Proofing Works",
+    "description": "To undertake Pest Control & Proofing works",
+    "value_gbp": 400000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "90922000"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "14",
+    "title": "Lot 14- Specialist structural Surveys",
+    "description": "To undertake Specialist Structural Surveys",
+    "value_gbp": 100000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "71315300",
+     "71355000"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "15",
+    "title": "Lot 15- Flooring Works",
+    "description": "To undertake Flooring Works",
+    "value_gbp": 660000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "44112200",
+     "45262321",
+     "45432100",
+     "45432130"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "16",
+    "title": "Lot 16- Kitchen unit Wrapping works",
+    "description": "To undertake Kitchen Unit Wrapping works",
+    "value_gbp": 20000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "39141000",
+     "39141400",
+     "45450000"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "17",
+    "title": "Lot 17- Ramps",
+    "description": "To undertake Ramp works (Repair, Renew and removal)",
+    "value_gbp": 80000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "34953000"
+    ],
+    "regions": [
+     "UKC14"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07ba21",
+  "notice_id": "107354-2026",
+  "published": "2026-11-12T07:12:49Z",
+  "title": "ITT for Bangladesh FM Services FA67BSS32026",
+  "description": "British Council Bangladesh invitation to tender from reputed and experienced vendors to provide facilities management services in different offices across Bangladesh. \nFor details, please refer to attached documents. It has all the required scope of work, specifications, timescales, instructions for responding along with standard terms & conditions.",
+  "buyer": "British Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 240000.0,
+  "deadline": "2026-12-08T18:59:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/107354-2026",
+  "cpv_codes": [
+   "79993000"
+  ],
+  "regions": [],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 240000.0,
+    "contract_start": "2027-01-22",
+    "contract_end": "2030-01-21",
+    "cpv_codes": [
+     "79993000"
+    ],
+    "regions": [],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07ba85",
+  "notice_id": "107545-2026",
+  "published": "2026-11-12T13:18:08Z",
+  "title": "NHSDG Estates & Property - Term Joinery Contractor",
+  "description": "The key services being sought are in relation to Term Joinery Contractor are planned works, routine maintenance works, and unplanned reactive works from time to time. In addition, a 365 day emergency on call service is to be provided as part of this service and is applicable to NHSDG Estates properties throughout Dumfries & Galloway.",
+  "buyer": "Dumfries and Galloway Health Board",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 180000.0,
+  "deadline": "2026-12-17T12:00:00Z",
+  "url": "https://api.publiccontractsscotland.gov.uk/v1/Notice?id=ocds-r6ebe6-0000848332",
+  "cpv_codes": [
+   "45420000",
+   "45421000",
+   "50700000"
+  ],
+  "regions": [
+   "UKM92"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Nithsdale",
+    "description": "The key services being sought are in relation to Term Joinery Contractor are planned works, routine maintenance works, and unplanned reactive works from time to time. In addition, a 365 day emergency on call service is to be provided as part of this service and is applicable to NHSDG Estates properties throughout Dumfries & Galloway. Lot 1 - Nithsdale",
+    "value_gbp": 25000.0,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "45420000",
+     "45421000"
+    ],
+    "regions": [
+     "UKM92"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "2",
+    "title": "Annan & Eskdale",
+    "description": "The key services being sought are in relation to Term Joinery Contractor are planned works, routine maintenance works, and unplanned reactive works from time to time. In addition, a 365 day emergency on call service is to be provided as part of this service and is applicable to NHSDG Estates properties throughout Dumfries & Galloway. Lot 2 – Annan & Eskdale",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "45420000",
+     "45421000"
+    ],
+    "regions": [
+     "UKM92"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "3",
+    "title": "Stewartry",
+    "description": "The key services being sought are in relation to Term Joinery Contractor are planned works, routine maintenance works, and unplanned reactive works from time to time. In addition, a 365 day emergency on call service is to be provided as part of this service and is applicable to NHSDG Estates properties throughout Dumfries & Galloway. Lot 3 – Stewartry",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "45420000",
+     "45421000"
+    ],
+    "regions": [
+     "UKM92"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "4",
+    "title": "Wigtown",
+    "description": "The key services being sought are in relation to Term Joinery Contractor are planned works, routine maintenance works, and unplanned reactive works from time to time. In addition, a 365 day emergency on call service is to be provided as part of this service and is applicable to NHSDG Estates properties throughout Dumfries & Galloway. Lot 4 – Wigtown",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "45420000",
+     "45421000"
+    ],
+    "regions": [
+     "UKM92"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bad0",
+  "notice_id": "107673-2026",
+  "published": "2026-11-12T15:29:39Z",
+  "title": "ET194 - Minor Building Works, Joinery and Redecoration Services",
+  "description": "LSTM is inviting suitably qualified and experienced contractors to tender for the provision of minor building and redecoration works, in support of LSTM’s operational requirements across its Liverpool and Chester estate.\nLSTM is seeking to appoint a suitably qualified and experienced framework of up to three contractor(s) to provide planned and reactive minor building works across its estate. The requirement will primarily comprise joinery, painting and decorating, plastering and associated minor repair and refurbishment works.",
+  "buyer": "Liverpool School of Tropical Medicine",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 300000.0,
+  "deadline": "2026-12-14T17:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/107673-2026",
+  "cpv_codes": [
+   "45000000",
+   "45421000",
+   "45442100",
+   "45453000"
+  ],
+  "regions": [
+   "UKD72"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 300000.0,
+    "contract_start": "2027-01-18",
+    "contract_end": "2029-01-17",
+    "cpv_codes": [
+     "45000000",
+     "45421000",
+     "45442100",
+     "45453000"
+    ],
+    "regions": [
+     "UKD72"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-078bd9",
+  "notice_id": "107780-2026",
+  "published": "2026-11-12T18:13:32Z",
+  "title": "Procurement for Communal Cleaning, Grounds Maintenance and Window Cleaning in Central and East of England (Habinteg)(Split into Lots)",
+  "description": "Habinteg Housing Association wishes to appoint one or more Supplier(s) to deliver communal cleaning, window cleaning and grounds maintenance services across its residential schemes in Central and East England.\nThe services are intended to ensure that communal areas are maintained to an appropriate standard, providing safe, clean and well-maintained environments for residents.\nThe opportunity has been divided into four Lots, comprising:\n- Lot 1: Milton Keynes & Dunstable Grounds Maintenance Services\n- Lot 2: Communal Cleaning in Letchworth\n- Lot 3: Thetford & Hoveton Grounds Maintenance and Communal Cleaning Services\n- Lot 4: Essex & Ipswich Grounds Maintenance, Communal Cleaning and Window Cleaning Services\nThe successful Supplier(s) will be expected to provide services to all sites within the Lot(s) awarded.\nSuppliers may submit a Tender Response for any or all Lots. Each Lot will be evaluated independently, and there is no restriction on the number of Lots that may be awarded to an individual Supplier.\nHabinteg welcomes bids from suppliers of all sizes, including small and medium-sized enterprises (SMEs), and has structured the opportunity into Lots to encourage competition and maximise opportunities for local suppliers.\nSuppliers are required to attend a mandatory site visit for the Lot(s) they intend to bid for. Site visit dates, locations and the registration process are detailed within Schedule 1. Suppliers are responsible for ensuring that they attend all mandatory site visits relevant to their Tender Response. Attendance must be registered no later than 12:00 noon on 30th October 2026.\nHabinteg has established Lot-specific and site-specific budget caps as detailed within the relevant Schedule 4 - Pricing Schedule. Suppliers must ensure that submitted pricing does not exceed the applicable budget cap(s).\nHabinteg is seeking to establish constructive and collaborative relationships with its appointed Supplier(s), working in partnership to deliver high-quality services, achieve value for money and support positive outcomes for residents throughout the Contract Term.\nWithin the Pricing Schedule, Habinteg has identified the schemes and properties currently requiring service delivery. Should this portfolio require amendment during the Contract Term, including the addition, removal or alteration of schemes, properties or service requirements, this shall be considered the materialisation of a known risk and shall be managed in accordance with the provisions of the Contract.\nPlease note that Shared Services for Housing Ltd (SSfH) is acting as the managing organisation and procurement lead on behalf of Habinteg Housing Association for this Tendering Procedure.",
+  "buyer": "Habinteg Housing Association Limited",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 448285.99,
+  "deadline": "2026-12-02T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/107780-2026",
+  "cpv_codes": [
+   "77314000",
+   "90911000"
+  ],
+  "regions": [
+   "UKH"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Milton Keynes & Dunstable Grounds Maintenance Services",
+    "description": "Habinteg requires a Supplier to provide grounds maintenance to schemes in Milton Keynes and Dunstable.\nFurther details can be found in the  associated tender documents\n(Schedule 1 and Schedule 2 - Lot 1).",
+    "value_gbp": 140802.7,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "77314000",
+     "90911000"
+    ],
+    "regions": [
+     "UKH"
+    ],
+    "selection_criteria": "Please refer to full associated tender documents (Schedule 1 and the ProContract Evaluation Questionnaire).\nPlease refer to full associated tender documents (Schedule 1 and the ProContract Evaluation Questionnaire)."
+   },
+   {
+    "lot_id": "2",
+    "title": "Communal Cleaning in Letchworth",
+    "description": "Habinteg requires a Supplier to provide services to a scheme in Letchworth. Further details can be found in the  associated tender documents (Schedule 1 and Schedule 2 - Lot 2).",
+    "value_gbp": 31323.59,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "77314000",
+     "90911000"
+    ],
+    "regions": [
+     "UKH"
+    ],
+    "selection_criteria": "Please refer to full associated tender documents (Schedule 1 and the ProContract Evaluation Questionnaire).\nPlease refer to full associated tender documents (Schedule 1 and the ProContract Evaluation Questionnaire)."
+   },
+   {
+    "lot_id": "3",
+    "title": "Thetford & Hoveton Grounds Maintenance and  Communal Cleaning",
+    "description": "Habinteg requires a Supplier to provide services to schemes in Hoveton and Thetford, Norfolk.\nFurther details can be found in the  associated tender documents\n(Schedule 1 and Schedule 2 - Lot 3).",
+    "value_gbp": 45248.62,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "77314000",
+     "90911000"
+    ],
+    "regions": [
+     "UKH"
+    ],
+    "selection_criteria": "Please refer to full associated tender documents (Schedule 1 and the ProContract Evaluation Questionnaire).\nPlease refer to full associated tender documents (Schedule 1 and the ProContract Evaluation Questionnaire)."
+   },
+   {
+    "lot_id": "4",
+    "title": "Essex & Ipswich Grounds Maintenance, Communal Cleaning and Window Cleaning Services",
+    "description": "Habinteg requires a Supplier to provide services to schemes in Ipswich and Essex.\nFurther details can be found in the  associated tender documents\n(Schedule 1 and Schedule 2 - Lot 4).",
+    "value_gbp": 230911.08,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "77314000",
+     "90911000"
+    ],
+    "regions": [
+     "UKH"
+    ],
+    "selection_criteria": "Please refer to full associated tender documents (Schedule 1 and the ProContract Evaluation Questionnaire).\nPlease refer to full associated tender documents (Schedule 1 and the ProContract Evaluation Questionnaire)."
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-077a98",
+  "notice_id": "107886-2026",
+  "published": "2026-11-13T10:56:16Z",
+  "title": "Provision of Cleaning and Associated Services",
+  "description": "The Supplier shall provide a comprehensive cleaning service throughout the premises delivered in a safe and efficient manner. The Supplier shall take responsibility for maintaining all identified internal cleanable areas including fixtures, fittings, furniture and finishes, to minimise degradation, enhance asset life cycle and ensure high standards are maintained. The Supplier is required to provide a high quality service within the scope of the Specification to include, but not be limited to:\n- Routine Cleaning\n- Periodic Cleaning\n- Reactive Cleaning\n- Window Cleaning\n- Consumables\n- Facilities Support Services",
+  "buyer": "Registers of Scotland",
+  "status": null,
+  "main_category": "services",
+  "value_gbp": null,
+  "deadline": null,
+  "url": "https://api.publiccontractsscotland.gov.uk/v1/Notice?id=ocds-r6ebe6-0000843962",
+  "cpv_codes": [
+   "90910000"
+  ],
+  "regions": [],
+  "lots": []
+ },
+ {
+  "ocid": "ocds-h6vhtk-077df2",
+  "notice_id": "107905-2026",
+  "published": "2026-11-13T11:16:41Z",
+  "title": "Passive Fire Protection Remedial Repairs at Abbey House, Abingdon",
+  "description": "This Invitation to Tender  is issued to those bidders wishing to provide a tender to Vale of White Horse District Council  for Passive Fire Protection Remedial Repairs at their premises at Abbey House, Abingdon, Oxfordshire.\nThe Works contract will comprise of passive fire protection remedial works to fire doors and will also require some fire compartmentalisation to be undertaken. Technical details, including building schematics and fire survey reports, can be found within the suite of tender documents.",
+  "buyer": "Vale of White Horse District Council",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 220000.0,
+  "deadline": "2026-11-16T17:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/107905-2026",
+  "cpv_codes": [
+   "45343000"
+  ],
+  "regions": [
+   "UKJ14"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 220000.0,
+    "contract_start": "2027-01-18",
+    "contract_end": "2027-06-30",
+    "cpv_codes": [
+     "45343000"
+    ],
+    "regions": [
+     "UKJ14"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bb77",
+  "notice_id": "107934-2026",
+  "published": "2026-11-13T11:42:23Z",
+  "title": "Facilities Maintenance (Fire Protection Systems Inspection, Testing, Maintenance and Compliance) Services",
+  "description": "Liverpool Experience Campus (LEX~) is inviting potential suppliers to tender for the services of Facilities Maintenance (Fire Protection Systems Inspection, Testing, Maintenance and Compliance) Services.  This is for the entire campus that covers M&S Bank Arena, Conference Centre, Exhibition Centre Liverpool and Pullman Hotel.\nLEX will award a contract for 3 years.  This contract has been valued at approximately £22,000 per annum and therefore is valued at £66,000 for the entire 3-year period.\nTo respond to this opportunity, please use the following link: https://www.delta-esourcing.com/respond/DP3T3G5QE5\nFor more information about this opportunity, please visit the eSourcing portal at: \nhttps://www.delta-esourcing.com/tenders/UK-UK-Liverpool:-Fire-detection-systems./DP3T3G5QE5\nTo respond to this opportunity, please click here: \nhttps://www.delta-esourcing.com/respond/DP3T3G5QE5",
+  "buyer": "Liverpool Experience Campus Ltd",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 66000.0,
+  "deadline": "2026-12-03T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/107934-2026",
+  "cpv_codes": [
+   "31625100",
+   "35111300",
+   "35111320",
+   "35111400",
+   "35111500",
+   "39525400",
+   "44482000",
+   "44482200",
+   "45343000",
+   "45343220",
+   "51700000"
+  ],
+  "regions": [
+   "UKD72"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 66000.0,
+    "contract_start": "2027-02-01",
+    "contract_end": "2030-01-31",
+    "cpv_codes": [
+     "31625100",
+     "35111300",
+     "35111320",
+     "35111400",
+     "35111500",
+     "39525400",
+     "44482000",
+     "44482200",
+     "45343000",
+     "45343220",
+     "51700000"
+    ],
+    "regions": [
+     "UKD72"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bbb2",
+  "notice_id": "108016-2026",
+  "published": "2026-11-13T13:22:49Z",
+  "title": "Warden Call Equipment, Smoke Alarms and Automatic Doors - Maintenance, Repairs and Digital Upgrade",
+  "description": "Trust wishes to appoint a suitably competent contractor to deliver planned preventative maintenance, reactive repairs and associated replacement works for warden call equipment, grouped and dispersed alarm systems, domestic smoke, heat and carbon monoxide alarms, door entry systems and automatic doors across Trust developments and dwellings. The contract also includes support for system upgrades, maintenance of connected peripherals and attendance to reported faults in accordance with the Specification of Requirements.",
+  "buyer": "Trust Housing Association Ltd",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 5500000.0,
+  "deadline": "2027-01-08T12:00:00Z",
+  "url": "https://api.publiccontractsscotland.gov.uk/v1/Notice?id=ocds-r6ebe6-0000842011",
+  "cpv_codes": [
+   "50330000",
+   "50600000",
+   "50610000"
+  ],
+  "regions": [
+   "UKM"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": "This procurement is being conducted in accordance with the Procurement Reform (Scotland) Act 2014, the Public Contracts (Scotland) Regulations 2015, and all relevant statutory guidance and procurement policy applicable to regulated procurements in Scotland.\nFull information can be found in the Invitation to Tender, Conditions of Contract and associated appendices",
+    "value_gbp": 5500000.0,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "50330000",
+     "50610000"
+    ],
+    "regions": [
+     "UKM"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bbcd",
+  "notice_id": "108059-2026",
+  "published": "2026-11-13T14:21:56Z",
+  "title": "Community Gateway Association Cleaning Services",
+  "description": "The Scope of Services includes:\n•Cleaning of communal areas, offices and associated washrooms\n•Interior and exterior window cleaning\n•Washroom and hygiene services/ safe disposal of hazardous waste\n•Replenishment of consumables\n•Litter picking\n•Deep cleaning / periodic cleaning\n•Emergency / reactive cleaning callouts\n•Floor cleaning and maintenance\nThe Services are provided at the following locations:\n•Harbour House – CGA Head Office – PR2 2DW\n•Almelo House - PR1 7TR\n•Andrew Court - PR1 5HX\n•Astley Court -PR1 1QU\n•Brookhaven - PR5 6BG \n•Chain Caul Way – Industrial Unit - PR2 2YL \n•Chapelfold - PR2 3ZJ\n•Ingolcroft - PR2 3ZH\n•Oaktree Court - PR2 1PQ\n•The Filberts - PR2 3YT  \n•The Spires - Sheltered accommodation - PR1 2YJ\n•The Watermills - PR3 5FB\n•Windsor Court - PR2 8EZ  \n•The Atrium – Extra Care Scheme- PR2 6FY\n•The Courtyards – Extra Care Scheme - PR2 3WQ\n•Sunningdale - PR4 0AX\n•The Crossings (sheltered accommodation currently in development expected to be open by January 2027)\nThe main objectives of this procurement are to:\n•Provide high quality Services\n•Achieve high levels of customer satisfaction\n•Achieve value for money\n•Deliver tangible and relevant social value\nFull details of the Services required are contained in the Specification as set out in Appendix 1 of the ITT document. \nThe Contract is expected to commence in June 2027.\nThe Contract will last for an initial period of 3 years, with an option to extend at CGA’s discretion for a further 1 year, and 1 additional year, giving a total potential maximum term of 5 years. \nA single Service Provider will be appointed.\nThis tender is being administered on behalf of CGA by Clarity Procurement Solutions Limited.\nThe total estimated value is £1,850,000 including VAT over 5 years (£370,000 per annum including VAT). This excludes annual price indexation\nFor more information about this opportunity, please visit the eSourcing portal at: \nhttps://www.delta-esourcing.com/tenders/UK-UK-Preston:-Cleaning-services./9M9E563C99\nTo respond to this opportunity, please click here: \nhttps://www.delta-esourcing.com/respond/9M9E563C99",
+  "buyer": "Community Gateway Association Limited",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 1850000.0,
+  "deadline": null,
+  "url": "https://www.find-tender.service.gov.uk/Notice/108059-2026",
+  "cpv_codes": [
+   "90910000",
+   "90911000",
+   "90911100",
+   "90911200",
+   "90911300"
+  ],
+  "regions": [
+   "UKD4"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 1850000.0,
+    "contract_start": "2027-06-30",
+    "contract_end": "2030-06-29",
+    "cpv_codes": [
+     "90910000",
+     "90911000",
+     "90911100",
+     "90911200",
+     "90911300"
+    ],
+    "regions": [
+     "UKD4"
+    ],
+    "selection_criteria": "As set out in the tender documents\nAs set out in the tender documents"
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-061262",
+  "notice_id": "108075-2026",
+  "published": "2026-11-13T14:47:55Z",
+  "title": "Diagnostic and Capital Equipment and Related Accessories and Services",
+  "description": "NHS Supply Chain intends to etablish a National Framework Agreement for the provision of Diagnostic and Capital Equipment and Related Accessories and Services.\nThe requirements have been divided into the following Lots:\nLot 1 – Diagnostic Imaging and Radiology \nLot 2 – Specialist Imaging Equipment\nLot 3 – Decontamination Capital Equipment \nLot 4 –  Radiotherapy  \nLot 5 – Endoscopic Imaging Equipment, Reusable Endoscopes and Robotics \nLot 6 – Internal Radiation Therapies \nLot 7 – Capital Medical Devices \nThe Authority intends to establish an eight (8) year Open Framework. This Tender Notice relates to the award of the first Framework under the Open Framework, which will have a term of three (3) years.\nThe Authority estimates that the total value of purchases under the first three (3) year Framework will be approximately £4,325,783,082 excluding VAT. This value is approximate only and may vary depending on the requirements of the bodies purchasing under the Framework.\nThe anticipated total value of purchases across the full eight (8) year Open Framework is approximately £12,768,690,438 excluding VAT.\nThe values provided are for guidance only and do not constitute a guarantee of business to any successful Tenderer.\nSubmission of expression of interest and procurement specific information:\nThis procurement exercise will be conducted on the NHS Supply Chain eTendering portal at https://nhssupplychain.app.jaggaer.com//\nCandidates wishing to be considered for this contract must register their expression of interest and provide additional procurement – specific information (if required) through the NHS Supply Chain eTendering portal as follows:\n1. Use URL https://nhssupplychain.app.jaggaer.com// to access the NHS Supply Chain Procurement portal.\n2. If not yet registered:\n— Click on the ‘Not Registered Yet’ link to access the registration page.\nComplete the registration pages as guided by the mini guide found on the landing page.\nPortal access.\nIf registration has been completed:\n— Login with URL https://nhssupplychain.app.jaggaer.com//\n— Click on ITTs Open to All Suppliers.\n— Select from the following ITTs:\nITT_2352 - Lot 1 – Diagnostic Imaging and Radiology\nITT_2353 - Lot 2 – Specialist Imaging Equipment\nITT_2354 - Lot 3 – Decontamination Capital Equipment\nITT_2355 - Lot 4 – Radiotherapy\nITT_2356  -  Lot 5 – Endoscopic Imaging Equipment, Reusable Endoscopes and Robotics\nITT_2357 - Lot 6 – Internal Radiation Therapies\nITT_2358 - Lot 7 – Capital Medical Devices - Excluding ASMS\nITT_2359 - Lot 7 – Capital Medical Devices - 7c - Architectural Surgical Medical Systems, Integrated Theatre Solutions (ASMS) only\nTenderers must respond to ITT_2351 - Diagnostic and Capital Equipment and Related Accessories and Services in addition to any Lots you intend to respond to.\nClick on Express Interest.\n— If you intend to respond select Intend to Respond.\nTenderers are encouraged to download the supplier handbook located within the eProcurement portal by following the 'Supplier Helpcentre' link within the Useful Links section of the Dashboard.\nFor any technical help with the portal please contact: Tel: [phone removed]",
+  "buyer": "SUPPLY CHAIN COORDINATION LIMITED",
+  "status": "active",
+  "main_category": "goods",
+  "value_gbp": 4325783082.0,
+  "deadline": "2026-12-21T15:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/108075-2026",
+  "cpv_codes": [
+   "31211110",
+   "31500000",
+   "31520000",
+   "31524000",
+   "31682200",
+   "33100000",
+   "33110000",
+   "33111000",
+   "33111100",
+   "33111400",
+   "33111610",
+   "33111650",
+   "33111700",
+   "33111710",
+   "33111720",
+   "33111721",
+   "33111800",
+   "33112000",
+   "33112200",
+   "33112300",
+   "33113000",
+   "33113110",
+   "33115000",
+   "33115100",
+   "33115200",
+   "33120000",
+   "33123220",
+   "33124100",
+   "33124120",
+   "33125000",
+   "33128000",
+   "33150000",
+   "33151000",
+   "33151100",
+   "33151400",
+   "33153000",
+   "33161000",
+   "33162000",
+   "33162100",
+   "33164100",
+   "33166000",
+   "33167000",
+   "33168000",
+   "33168100",
+   "33169100",
+   "33169500",
+   "33172000",
+   "33172200",
+   "33191110",
+   "33192160",
+   "33192210",
+   "33192230",
+   "33192340",
+   "33195000",
+   "33195100",
+   "33195200",
+   "33696000",
+   "33696800",
+   "34911100",
+   "34991000",
+   "35261000",
+   "38341200",
+   "38500000",
+   "38510000",
+   "38511100",
+   "38512200",
+   "38513100",
+   "38514100",
+   "38515000",
+   "38518100",
+   "38519000",
+   "38519200",
+   "38519400",
+   "38519610",
+   "38519660",
+   "38634000",
+   "39714100",
+   "42912000",
+   "42912300",
+   "42924730",
+   "44115710",
+   "45200000",
+   "48180000",
+   "50000000",
+   "51400000",
+   "71541000",
+   "72212180"
+  ],
+  "regions": [
+   "UK"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Diagnostic Imaging and Radiology​",
+    "description": "This lot includes the below sub-categories:\n\t1a - Computed Tomography (CT) Scanners and Related Accessories and Services \n\t1b - Magnetic Resonance Imaging (MRI) Scanners and Related Accessories and Service\n        1c - Mobile X-Ray and Related Accessories and Services \n\t1d - Static X-Ray and Related Accessories and Services \n\t1e - Angiography Equipment and Related Accessories and Services \n\t1f - Fluoroscopy and Related Accessories and Services\n\t1g - Nuclear Medicine Imaging and Related Accessories and Services \n\t1h - Ultrasound and Related Accessories and Services \n\t1i - Specialist Ultrasound and Related Accessories and Services",
+    "value_gbp": 1203052107.0,
+    "contract_start": "2028-04-03",
+    "contract_end": "2031-04-02",
+    "cpv_codes": [
+     "33100000",
+     "33110000",
+     "33111000",
+     "33111100",
+     "33111400",
+     "33111610",
+     "33111700",
+     "33111710",
+     "33111720",
+     "33111721",
+     "33111800",
+     "33112000",
+     "33112200",
+     "33112300",
+     "33113000",
+     "33113110",
+     "33115000",
+     "33115100",
+     "33115200",
+     "33120000",
+     "33123220",
+     "33124100",
+     "33124120",
+     "33151100",
+     "33162000",
+     "33696800",
+     "45200000",
+     "48180000",
+     "50000000",
+     "51400000",
+     "71541000",
+     "72212180"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain. This should include, but not be limited to, sales, manufacturing, storage and distribution ('ISO Certification').\nLink for acceptable UKAS international equivalents - https://global-aci.org/en/full-members/"
+   },
+   {
+    "lot_id": "Lot 2",
+    "title": "Specialist Imaging Equipment​",
+    "description": "This lot includes the below sub-categories:\n\t2a - Digital Mammography, Breast Density Assessment Solutions and Related Accessories and Services\n\t2b - Mobile Image Intensifiers (MII) and Related Accessories and Services \n\t2c - Lithotripsy and Related Accessories and Services \n\t2d - Bone Densitometers and Related Accessories and Services \n\t2e - Specimen Imaging and Related Accessories and Services",
+    "value_gbp": 134426047.0,
+    "contract_start": "2028-04-03",
+    "contract_end": "2031-04-02",
+    "cpv_codes": [
+     "33100000",
+     "33110000",
+     "33111650",
+     "33111800",
+     "33120000",
+     "33124100",
+     "33153000",
+     "33162000",
+     "33696800",
+     "45200000",
+     "48180000",
+     "50000000",
+     "51400000",
+     "71541000",
+     "72212180"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain. This should include, but not be limited to, sales, manufacturing, storage and distribution ('ISO Certification').\nLink for acceptable UKAS international equivalents - https://global-aci.org/en/full-members/"
+   },
+   {
+    "lot_id": "Lot 3",
+    "title": "Decontamination Capital Equipment ​",
+    "description": "This lot includes the below sub-categories:\n\t3a – Endoscopy Decontamination Solutions and Related Accessories and Services\n\t3b – Centralised Decontamination and Related Accessories and Services \n\t3c – Water Treatment for Decontamination Equipment and Related Accessories and Services \n\t3d – High Level Disinfection of Ultrasound Probes and Non-Lumened Devices and Related Accessories and Services",
+    "value_gbp": 66944942.0,
+    "contract_start": "2028-04-03",
+    "contract_end": "2031-04-02",
+    "cpv_codes": [
+     "33100000",
+     "33169500",
+     "33191110",
+     "42912000",
+     "42912300",
+     "42924730",
+     "45200000",
+     "48180000",
+     "50000000",
+     "51400000",
+     "71541000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain. This should include, but not be limited to, sales, manufacturing, storage and distribution ('ISO Certification').\nLink for acceptable UKAS international equivalents - https://global-aci.org/en/full-members/"
+   },
+   {
+    "lot_id": "Lot 4",
+    "title": "Radiotherapy​",
+    "description": "This lot includes the below sub-categories:\n\t4a – Radiotherapy Treatment Systems and IT Solutions and Related Accessories and Services\n\t4b – Radiotherapy Ancillary Devices and Related Accessories and Services",
+    "value_gbp": 565956783.0,
+    "contract_start": "2028-04-03",
+    "contract_end": "2031-04-02",
+    "cpv_codes": [
+     "33100000",
+     "33110000",
+     "33111800",
+     "33120000",
+     "33124100",
+     "33150000",
+     "33151000",
+     "33151400",
+     "38341200",
+     "38500000",
+     "45200000",
+     "48180000",
+     "50000000",
+     "51400000",
+     "71541000",
+     "72212180"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain. This should include, but not be limited to, sales, manufacturing, storage and distribution ('ISO Certification').\nLink for acceptable UKAS international equivalents - https://global-aci.org/en/full-members/"
+   },
+   {
+    "lot_id": "Lot 5",
+    "title": "Endoscopic Imaging Equipment, Reusable Endoscopes and Robotics​",
+    "description": "This lot includes the below sub-categories:\n\t5a – Camera Stacks and Integrated Systems and Related Accessories and Services\n\t5b – Surgical Robots and Related Accessories and Services \n\t5c – Specialist Robots and Related Accessories and Services \n\t5d – Arthroscopy and Specialist Scopes and Related Accessories and Services \n\t5e – General Laparoscopy Scopes and Related Accessories and Services\n\t5f – Respiratory and Thoracic Scopes and Related Accessories and Services\n\t5g – Gastrointestinal (GI) Scopes and Relates Accessories and Services\n\t5h – Ear, Nose and Throat (ENT) Scopes and Related Accessories and Services\n\t5i – Urology Scopes and Related Accessories and Services",
+    "value_gbp": 1016771269.0,
+    "contract_start": "2028-04-03",
+    "contract_end": "2031-04-02",
+    "cpv_codes": [
+     "33100000",
+     "33110000",
+     "33111800",
+     "33120000",
+     "33124100",
+     "33125000",
+     "33162000",
+     "33168000",
+     "33168100",
+     "33169500",
+     "45200000",
+     "48180000",
+     "50000000",
+     "51400000",
+     "71541000",
+     "72212180"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain. This should include, but not be limited to, sales, manufacturing, storage and distribution ('ISO Certification').\nLink for acceptable UKAS international equivalents - https://global-aci.org/en/full-members/"
+   },
+   {
+    "lot_id": "6",
+    "title": "Internal Radiation Therapies",
+    "description": "This lot includes below sub-categories:\n6a – Brachytherapy Seeds and Related Accessories \n6b – Selective Internal Radiation Therapy (SIRT) and Related Accessories",
+    "value_gbp": 23919860.0,
+    "contract_start": "2028-04-03",
+    "contract_end": "2031-04-02",
+    "cpv_codes": [
+     "33100000",
+     "33151400",
+     "50000000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain. This should include, but not be limited to, sales, manufacturing, storage and distribution ('ISO Certification').\nLink for acceptable UKAS international equivalents - https://global-aci.org/en/full-members/"
+   },
+   {
+    "lot_id": "7",
+    "title": "Capital Medical Devices",
+    "description": "This lot includes the below sub-categories:\n7a – Patient Transfer Equipment and Related Accessories and Services\n7b – Operating and Mobile Interventional Radiology Tables and Related Accessories and Services \n7c – Architectural Surgical Medical Systems and Integrated Theatre Solutions and Related Accessories and Services \n7d – Electrosurgical Equipment and Related Accessories and Services\n7e – Medical Lasers and Related Accessories and Services\n7f – Anaesthesia Machines, Volatile Anaesthetic Gas Capture Systems and Related Accessories and Services\n7g – Neonatal Equipment and Relates Accessories and Services\n7h – Adult Paediatric Phototherapy Devices and Related Accessories and Services\n7i – Ventilator Equipment and Related Accessories and Services\n7j – Clinical and Pathology Microscopes and Related Accessories and Services\n7k – Contrast Media and Radiopharmaceutical Injectors, Consumables and Related Accessories and Services\n7l – Radiation Protection Products and Related Accessories and Services\n7m – Patient Monitoring Equipment, Bedside Equipment Alarm Monitoring Systems and Related Accessories and Services\n7n – Surgical Navigation Systems and Related Accessories and Services\n7o – Bladder Scanners and Related Accessories and Services",
+    "value_gbp": 1314712075.0,
+    "contract_start": "2028-04-03",
+    "contract_end": "2031-04-02",
+    "cpv_codes": [
+     "31211110",
+     "31500000",
+     "31520000",
+     "31524000",
+     "31682200",
+     "33100000",
+     "33110000",
+     "33111100",
+     "33111800",
+     "33120000",
+     "33124100",
+     "33128000",
+     "33161000",
+     "33162000",
+     "33162100",
+     "33164100",
+     "33166000",
+     "33167000",
+     "33169100",
+     "33169500",
+     "33172000",
+     "33172200",
+     "33192160",
+     "33192210",
+     "33192230",
+     "33192340",
+     "33195000",
+     "33195100",
+     "33195200",
+     "33696000",
+     "34911100",
+     "34991000",
+     "35261000",
+     "38510000",
+     "38511100",
+     "38512200",
+     "38513100",
+     "38514100",
+     "38515000",
+     "38518100",
+     "38519000",
+     "38519200",
+     "38519400",
+     "38519610",
+     "38519660",
+     "38634000",
+     "39714100",
+     "44115710",
+     "45200000",
+     "48180000",
+     "50000000",
+     "51400000",
+     "71541000",
+     "72212180"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain. This should include, but not be limited to, sales, manufacturing, storage and distribution ('ISO Certification').\nLink for acceptable UKAS international equivalents - https://global-aci.org/en/full-members/"
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bbe1",
+  "notice_id": "108100-2026",
+  "published": "2026-11-13T15:10:33Z",
+  "title": "Office Cleaning Services",
+  "description": "Maidstone Borough Council is inviting tenders from suitably qualified and experienced contractors for the provision of office cleaning services at various Council properties within Maidstone.\nIndicative Dates & Timeline for Procurement\nTender release: 13th November 2026\nDeadline for clarifications: 12:00pm 11th December 2026\nDeadline for submission of completed tenders: 12:00pm 18th December 2026\nEvaluation: w/c 21st December 2026\nAppointment of contractor: w/c 18th January 2027\nContract Commencement: 1st March 2027\nFor more information about this opportunity, please visit the eSourcing portal at: \nhttps://www.kentbusinessportal.org.uk/tenders/UK-UK-Kent:-Cleaning-services./RZ65QXNG9Y\nTo respond to this opportunity, please click here: \nhttps://www.kentbusinessportal.org.uk/respond/RZ65QXNG9Y",
+  "buyer": "Maidstone Borough Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 800000.0,
+  "deadline": "2026-12-18T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/108100-2026",
+  "cpv_codes": [
+   "90910000",
+   "90919200"
+  ],
+  "regions": [
+   "UKJ45"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 800000.0,
+    "contract_start": "2027-03-01",
+    "contract_end": "2030-02-28",
+    "cpv_codes": [
+     "90910000",
+     "90919200"
+    ],
+    "regions": [
+     "UKJ45"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bbe6",
+  "notice_id": "108109-2026",
+  "published": "2026-11-13T15:17:29Z",
+  "title": "009689 - Window and High Level Cleaning",
+  "description": "It is Newcastle City Council's (NCC's) intention to establish a framework for the provision of window and high-level cleaning at several Newcastle City Council Public Buildings and Residential Properties.\nThe proposed framework will be divided into the following Lots:-\n• Lot 1 Public Buildings\n• Lot 2 Residential Properties\n• Lot 3 Tree Top Village",
+  "buyer": "Newcastle City Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 140000.0,
+  "deadline": "2026-11-27T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/108109-2026",
+  "cpv_codes": [
+   "90900000"
+  ],
+  "regions": [
+   "UKC",
+   "UKD",
+   "UKE",
+   "UKF",
+   "UKG",
+   "UKH",
+   "UKI",
+   "UKJ",
+   "UKK"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Public Buildings",
+    "description": "Window and high level cleaning at Public Buildings, this includes all the properties detailed in APPENDIX K - Pricing Schedule of the tender pack.",
+    "value_gbp": 140000.0,
+    "contract_start": "2027-01-01",
+    "contract_end": "2028-12-31",
+    "cpv_codes": [
+     "90900000"
+    ],
+    "regions": [
+     "UKC",
+     "UKD",
+     "UKE",
+     "UKF",
+     "UKG",
+     "UKH",
+     "UKI",
+     "UKJ",
+     "UKK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "2",
+    "title": "Residential Properties",
+    "description": "Window and high level cleaning at Residential Properties, this includes all the properties detailed in APPENDIX K - Pricing Schedule of the tender pack.",
+    "value_gbp": 140000.0,
+    "contract_start": "2027-01-01",
+    "contract_end": "2028-12-31",
+    "cpv_codes": [
+     "90900000"
+    ],
+    "regions": [
+     "UKC",
+     "UKD",
+     "UKE",
+     "UKF",
+     "UKG",
+     "UKH",
+     "UKI",
+     "UKJ",
+     "UKK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "3",
+    "title": "Tree Top Village",
+    "description": "Window and high level cleaning at Tree Top Village this includes all the properties detailed in APPENDIX K - Pricing Schedule of the tender pack.",
+    "value_gbp": 140000.0,
+    "contract_start": "2027-01-01",
+    "contract_end": "2028-12-31",
+    "cpv_codes": [
+     "90900000"
+    ],
+    "regions": [
+     "UKC",
+     "UKD",
+     "UKE",
+     "UKF",
+     "UKG",
+     "UKH",
+     "UKI",
+     "UKJ",
+     "UKK"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bc12",
+  "notice_id": "108170-2026",
+  "published": "2026-11-13T16:15:29Z",
+  "title": "Dynamic Market for Services",
+  "description": "Peabody Trust intends to establish a Dynamic Market under the Procurement Act 2023 for the procurement of services and associated supplies by Peabody Trust and other eligible contracting authorities.\nPlease head to www.procurepublic.co.uk/tenders to access the application form.\nProcurePublic Ltd is appointed by Peabody Trust to act as the procurement and managing agent for the Dynamic Market and will manage its establishment, supplier admission, administration and ongoing operation on behalf of Peabody Trust.\nThe Dynamic Market is intended to provide a flexible and compliant procurement route covering professional, technical, operational, corporate, property, housing and resident-facing services required by contracting authorities.\nThe Dynamic Market will be divided into individual categories to enable contracting authorities to identify suppliers appropriate to the nature, location, value and requirements of a particular procurement.\nThe Services Dynamic Market comprises 38 categories (S1-S38) covering consultancy, inspection, management, professional services, corporate services, operational support, resident services, customer support and public engagement.\nThe Dynamic Market includes:\nS1 Building Surveying and Asset Surveys; \nS2 Architectural Design and Planning Services; \nS3 Engineering Design and Technical Consultancy; \nS4 Project Management, Employer's Agent and Clerk of Works;\nS5 Quantity Surveying and Cost Consultancy; \nS6 Building Safety, Fire Engineering and Compliance Consultancy; \nS7 Energy, Retrofit and Sustainability Consultancy; \nS8 Development Strategy, Land and Site Acquisition Services; \nS9 Planning, Viability and Development Management; \nS10 Procurement and Commercial Consultancy; \nS11 Legal Services; \nS12 Marketing, Communications and Digital Engagement; \nS13 Recruitment, Interim and Workforce Services; \nS14 Facilities Management and Soft Services; \nS15 Cleaning, Specialist Cleaning and Hygiene Services; \nS16 Security, Guarding and Waking Watch Services; \nS17 Grounds Maintenance and Arboriculture Services; \nS18 Waste, Recycling and Environmental Services; \nS19 Pest Control and Environmental Treatment; \nS20 Car Park Management and Enforcement; \nS21 Housing Management, Managing Agent and Property Management; \nS22 Temporary Accommodation, Lettings and Homelessness Support; \nS23 Removal, Storage, Decant and Relocation Services; \nS24 ICT Managed Services and Digital Transformation; \nS25 Cyber Security, Information Governance and Data Protection; \nS26 Data, Analytics, Asset Systems and Reporting; \nS27 Finance, Audit, Tax and Treasury Services; \nS28 Insurance, Claims and Risk Management; \nS29 Energy, Utilities, Metering and Billing Services; \nS30 Transport, Fleet and Logistics Services; \nS31 Training, Learning and Organisational Development; \nS32 Consultation, Research and Customer Insight; \nS33 Print, Mail, Scanning and Document Management; \nS34 Customer Contact, Call Handling and Out-of-Hours Services;\nS35 Translation, Interpretation and Accessibility Services; \nS36 Catering, Hospitality, Events and Venue Services; \nS37 Occupational Health, Wellbeing and Employee Support; \nS38 Grant Funding, Bid Writing and Social Value Support.",
+  "buyer": "PEABODY TRUST",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": null,
+  "deadline": null,
+  "url": "https://www.find-tender.service.gov.uk/Notice/108170-2026",
+  "cpv_codes": [
+   "38550000",
+   "50111100",
+   "50111110",
+   "50112000",
+   "50113000",
+   "50114000",
+   "50116000",
+   "55120000",
+   "55130000",
+   "55250000",
+   "55510000",
+   "55520000",
+   "60100000",
+   "60200000",
+   "60400000",
+   "60600000",
+   "63100000",
+   "63712400",
+   "64110000",
+   "64120000",
+   "65300000",
+   "65500000",
+   "66000000",
+   "66170000",
+   "66510000",
+   "70100000",
+   "70200000",
+   "70300000",
+   "70330000",
+   "70333000",
+   "71200000",
+   "71244000",
+   "71250000",
+   "71300000",
+   "71313410",
+   "71314000",
+   "71314100",
+   "71314200",
+   "71314300",
+   "71315000",
+   "71317000",
+   "71322100",
+   "71324000",
+   "71400000",
+   "71410000",
+   "71500000",
+   "71540000",
+   "71631300",
+   "72000000",
+   "72212460",
+   "72212461",
+   "72212730",
+   "72212731",
+   "72212732",
+   "72265000",
+   "72300000",
+   "72413000",
+   "72512000",
+   "72800000",
+   "73210000",
+   "75123000",
+   "75250000",
+   "77211400",
+   "77211500",
+   "77211600",
+   "77310000",
+   "77320000",
+   "79100000",
+   "79111000",
+   "79200000",
+   "79300000",
+   "79310000",
+   "79315000",
+   "79342320",
+   "79410000",
+   "79411000",
+   "79414000",
+   "79416000",
+   "79419000",
+   "79420000",
+   "79500000",
+   "79530000",
+   "79540000",
+   "79600000",
+   "79710000",
+   "79800000",
+   "79811000",
+   "79821000",
+   "79822200",
+   "79822300",
+   "79822400",
+   "79822500",
+   "79823000",
+   "79824000",
+   "79951000",
+   "79952000",
+   "79991000",
+   "79992000",
+   "79993000",
+   "79996100",
+   "79999100",
+   "80420000",
+   "80500000",
+   "85140000",
+   "85311000",
+   "85323000",
+   "90000000",
+   "90511000",
+   "90512000",
+   "90610000",
+   "90620000",
+   "90630000",
+   "90640000",
+   "90650000",
+   "90660000",
+   "90670000",
+   "90680000",
+   "90690000",
+   "90713000",
+   "90714000",
+   "90900000",
+   "90920000",
+   "92312211",
+   "98341000",
+   "98351000",
+   "98392000"
+  ],
+  "regions": [
+   "UK"
+  ],
+  "lots": [
+   {
+    "lot_id": "S1",
+    "title": "Building Surveying and Asset Surveys",
+    "description": "This Part covers building surveying, inspection, condition assessment and asset survey services. This includes, but is not limited to, stock condition surveys, measured surveys, defect diagnosis, dilapidations, building inspections, asset validation and associated reporting. The scope may include data capture, analysis, recommendations, specifications, technical advice, follow-up inspections and all associated professional and consultancy services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "71315000",
+     "71631300"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S2",
+    "title": "Architectural Design and Planning Services",
+    "description": "This Part covers architectural, design and planning services across residential, commercial, civic and public sector development. This includes, but is not limited to, architectural design, feasibility studies, planning applications, masterplanning, heritage design, landscape architecture and public realm design. The scope includes surveys associated with design, concept through detailed design, specifications, consultation, approvals, technical support and all associated professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "71200000",
+     "71400000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S3",
+    "title": "Engineering Design and Technical Consultancy",
+    "description": "This Part covers multidisciplinary engineering and technical consultancy. This includes, but is not limited to, structural, civil, mechanical, electrical, drainage, highways, transport, acoustic, ecological and specialist engineering services. The scope includes investigation, feasibility, surveys, calculations, modelling, design, specifications, technical assurance, inspections and all associated consultancy and professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "71300000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S4",
+    "title": "Project Management, Employer's Agent and Clerk of Works",
+    "description": "This Part covers project, programme and construction management services. This includes, but is not limited to, project management, employer's agent, construction management, clerk of works, contract administration, technical assurance and site supervision. The scope may include mobilisation, governance, programme management, risk, reporting, quality assurance, stakeholder management, completion and all associated professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "71500000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S5",
+    "title": "Quantity Surveying and Cost Consultancy",
+    "description": "This Part covers quantity surveying, cost consultancy and commercial management. This includes, but is not limited to, cost planning, estimating, benchmarking, procurement support, tender analysis, contract administration, valuations, cost control and commercial management. The scope includes pre- and post-contract services, final accounts, change control and all associated professional and advisory services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "71244000",
+     "71250000",
+     "71322100",
+     "71324000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S6",
+    "title": "Building Safety, Fire Engineering and Compliance Consultancy",
+    "description": "This Part covers building safety, fire safety, risk and compliance consultancy. This includes, but is not limited to, fire engineering, fire risk, building safety case support, golden thread requirements, compliance audits, health and safety advice, risk or hazard assessments and resident safety advice. The scope includes inspections, reviews, technical reports, assurance, strategy, remediation advice and all associated consultancy and professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "71313410",
+     "71317000",
+     "75250000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S7",
+    "title": "Energy, Retrofit and Sustainability Consultancy",
+    "description": "This Part covers energy, sustainability, retrofit and decarbonisation consultancy. This includes, but is not limited to, energy efficiency advice, retrofit assessment, PAS 2035 support, EPC-related services, carbon reporting, environmental auditing, energy management and sustainability strategy. The scope includes surveys, modelling, option appraisal, funding support where associated, specifications, monitoring and all associated professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "71314100",
+     "71314200",
+     "71314300",
+     "90713000",
+     "90714000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S8",
+    "title": "Development Strategy, Land and Site Acquisition Services",
+    "description": "This Part covers strategic property and development services associated with identifying and acquiring land, sites and property. This includes, but is not limited to, site search, site purchase, land assembly, option appraisal, acquisitions and associated real estate development advice. The scope may include negotiations, appraisals, market engagement, acquisition support and all associated property and professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "70100000",
+     "70200000",
+     "70300000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S9",
+    "title": "Planning, Viability and Development Management",
+    "description": "This Part covers planning, development management, viability and associated development advisory services. This includes, but is not limited to, planning promotion, financial viability, development funding advice, project management, procurement strategy and mobilisation of development opportunities. The scope includes appraisal, strategy, coordination, stakeholder engagement and all associated consultancy and professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "66170000",
+     "71410000",
+     "71540000",
+     "79420000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S10",
+    "title": "Procurement and Commercial Consultancy",
+    "description": "This Part covers procurement, commercial and category management consultancy. This includes, but is not limited to, procurement strategy, tender development and support, sourcing, category management, evaluation, commercial reviews and public procurement advice. The scope includes market engagement, documentation, evaluation support, governance, assurance, contract strategy and all associated advisory and professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "79111000",
+     "79410000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S11",
+    "title": "Legal Services",
+    "description": "This Part covers legal advisory and representation services relevant to contracting authorities and other public bodies. This includes, but is not limited to, public law, procurement, construction, property, development, housing, governance, regulatory matters and dispute resolution. The scope may include contentious and non-contentious advice, drafting, negotiation, representation, training and all associated legal and professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "79100000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S12",
+    "title": "Marketing, Communications and Digital Engagement",
+    "description": "This Part covers marketing, communications, public relations and digital engagement. This includes, but is not limited to, resident and stakeholder engagement, campaigns, branding, communications strategy, graphic design, websites, digital content and associated marketing activity. The scope includes research, planning, creative development, delivery, evaluation and all related communications and professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "72413000",
+     "79300000",
+     "79416000",
+     "79811000",
+     "79821000",
+     "79822200",
+     "79822300",
+     "79822400",
+     "79822500",
+     "79823000",
+     "79824000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S13",
+    "title": "Recruitment, Interim and Workforce Services",
+    "description": "This Part covers recruitment and workforce resourcing. This includes, but is not limited to, permanent recruitment, temporary staffing, interim appointments, agency workers, executive search, specialist and technical resourcing and candidate assessment. The scope may include sourcing, screening, assessment, onboarding support and all associated recruitment and workforce services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "79600000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S14",
+    "title": "Facilities Management and Soft Services",
+    "description": "This Part covers facilities management and associated building support services. This includes, but is not limited to, FM management, concierge, portering, reception, janitorial, caretaking and other building support activities. The scope may include mobilisation, management, helpdesk, service coordination, performance management and associated operational and ancillary services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "79991000",
+     "79992000",
+     "79993000",
+     "98341000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S15",
+    "title": "Cleaning, Specialist Cleaning and Hygiene Services",
+    "description": "This Part covers routine and specialist cleaning and hygiene services. This includes, but is not limited to, communal cleaning, building cleaning, window cleaning, deep cleaning, specialist cleaning, washroom services, sanitation and cleaning consumables. The scope may include emergency cleaning, periodic cleaning, hygiene management and all associated operational services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "90610000",
+     "90640000",
+     "90650000",
+     "90660000",
+     "90670000",
+     "90680000",
+     "90690000",
+     "90900000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S16",
+    "title": "Security, Guarding and Waking Watch Services",
+    "description": "This Part covers manned and operational security services. This includes, but is not limited to, guarding, patrols, waking watch, surveillance, concierge security, alarm monitoring and temporary or emergency safety cover. The scope may include mobilisation, control room functions, incident response, reporting, resident-facing security and associated operational services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "79710000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S17",
+    "title": "Grounds Maintenance and Arboriculture Services",
+    "description": "This Part covers grounds, landscape and arboricultural maintenance. This includes, but is not limited to, grass cutting, planting, green-area maintenance, arboriculture, tree maintenance, weed control, estate cleansing and winter maintenance. The scope may include planned and reactive services, inspections, emergency attendance and all associated environmental and grounds services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "77211400",
+     "77211500",
+     "77211600",
+     "77310000",
+     "77320000",
+     "90620000",
+     "90630000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S18",
+    "title": "Waste, Recycling and Environmental Services",
+    "description": "This Part covers waste collection, treatment, disposal, recycling and resource management. This includes, but is not limited to, household and commercial refuse, bulky waste, fly-tipping, confidential waste, hazardous waste and recycling. The scope may include collections, containers, treatment, disposal, recovery, reporting, compliance and associated environmental services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "90000000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S19",
+    "title": "Pest Control and Environmental Treatment",
+    "description": "This Part covers pest management and environmental treatment services. This includes, but is not limited to, pest control, rodent control, bird control, disinfection, extermination, infestation treatment, specialist sanitation and associated environmental health support. The scope includes surveys, treatment programmes, emergency response, monitoring, prevention and associated services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "90670000",
+     "90920000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S20",
+    "title": "Car Park Management and Enforcement",
+    "description": "This Part covers car park operation, management and enforcement. This includes, but is not limited to, parking management, enforcement, permits, ANPR operations, payment management and administration. The scope may include customer support, system management, reporting, appeals administration, mobilisation and associated parking services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "63712400",
+     "98351000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S21",
+    "title": "Housing Management, Managing Agent and Property Management",
+    "description": "This Part covers housing and residential property management. This includes, but is not limited to, managing agent services, tenancy and housing management, leasehold management, service charges, rent administration and estate management. The scope may include resident communications, compliance administration, property inspections, tenancy support, reporting and associated management services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "70330000",
+     "75123000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S22",
+    "title": "Temporary Accommodation, Lettings and Homelessness Support",
+    "description": "This Part covers temporary accommodation, lettings and homelessness-related services. This includes, but is not limited to, temporary accommodation procurement, nightly lets, private rented sector access, accommodation services, housing options and homelessness support. The scope may include sourcing, placement, tenancy support, landlord liaison, administration, management and associated services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "55250000",
+     "70333000",
+     "85311000",
+     "98341000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S23",
+    "title": "Removal, Storage, Decant and Relocation Services",
+    "description": "This Part covers resident and organisational relocation, removal and storage services. This includes, but is not limited to, resident decants, removals, packing, inventory management, storage, warehousing, access to stored goods, return moves and clearance. The scope includes planning, logistics, transport, handling and all associated relocation and operational services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "63100000",
+     "90511000",
+     "90512000",
+     "98392000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S24",
+    "title": "ICT Managed Services and Digital Transformation",
+    "description": "This Part covers ICT, managed technology and digital transformation services. This includes, but is not limited to, IT support, service desk, infrastructure, cloud services, systems implementation, portals, CRM and digital transformation. The scope may include strategy, consultancy, configuration, implementation, migration, integration, technical support, maintenance and associated technology services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "72000000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S25",
+    "title": "Cyber Security, Information Governance and Data Protection",
+    "description": "This Part covers cyber security, information assurance, information governance and data protection. This includes, but is not limited to, penetration testing, cyber assessments, computer audits, computer testing, security software, data protection audits, training and assurance. The scope may include strategy, testing, remediation advice, compliance reviews, policies, incident support and associated specialist services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "72212730",
+     "72212731",
+     "72212732",
+     "72800000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S26",
+    "title": "Data, Analytics, Asset Systems and Reporting",
+    "description": "This Part covers data management, analytics, systems and reporting. This includes, but is not limited to, data services, asset systems, dashboards, reporting, integrations, data cleansing, software configuration and performance analytics. The scope may include data migration, validation, modelling, system configuration, automation, visualisation, reporting and associated consultancy and support services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "72212460",
+     "72212461",
+     "72265000",
+     "72300000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S27",
+    "title": "Finance, Audit, Tax and Treasury Services",
+    "description": "This Part covers financial, accounting, audit, tax and treasury services. This includes, but is not limited to, accountancy, internal and external audit, fiscal services, tax, treasury, funding, pensions, banking, investment and financial management. The scope may include assurance, financial consultancy, reviews, reporting, strategy and associated professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "66000000",
+     "79200000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S28",
+    "title": "Insurance, Claims and Risk Management",
+    "description": "This Part covers insurance, brokerage, claims and risk services. This includes, but is not limited to, insurance brokerage, property insurance, liability insurance, claims handling, loss adjusting and risk management. The scope may include insurance programme design, market placement, renewals, claims administration, risk advice and associated professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "66510000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S29",
+    "title": "Energy, Utilities, Metering and Billing Services",
+    "description": "This Part covers energy and utility management services. This includes, but is not limited to, energy procurement, utilities bureau services, metering, meter reading, billing, heat network administration, electricity-related services and energy management. The scope may include procurement support, data management, billing validation, consumption analysis, reporting and associated energy services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "38550000",
+     "65300000",
+     "65500000",
+     "71314000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S30",
+    "title": "Transport, Fleet and Logistics Services",
+    "description": "This Part covers transport, fleet and logistics requirements. This includes, but is not limited to, fleet management, vehicle hire, community transport, passenger transport, courier services and operational logistics. The scope may include scheduling, fleet administration, transport coordination, vehicle management and associated operational and support services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "50111100",
+     "50111110",
+     "50112000",
+     "50113000",
+     "50114000",
+     "50116000",
+     "60100000",
+     "60200000",
+     "60400000",
+     "60600000",
+     "64120000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S31",
+    "title": "Training, Learning and Organisational Development",
+    "description": "This Part covers training, learning and organisational development. This includes, but is not limited to, specialist training, apprenticeships, e-learning, vocational training, leadership, management training, compliance training and tenant or resident training. The scope may include training needs analysis, course design, delivery, assessment, accreditation support and associated learning services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "80420000",
+     "80500000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S32",
+    "title": "Consultation, Research and Customer Insight",
+    "description": "This Part covers consultation, research, engagement and customer insight. This includes, but is not limited to, public consultation, resident surveys, market research, survey analysis, equality analysis, social research, engagement support and service evaluation. The scope may include methodology design, fieldwork, analysis, reporting, facilitation and associated research and advisory services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "79310000",
+     "79419000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S33",
+    "title": "Print, Mail, Scanning and Document Management",
+    "description": "This Part covers print, mail and document management services. This includes, but is not limited to, printing, distribution, mailing, postal services, scanning, archiving, document management, fulfilment and associated business administration support. The scope may include production, storage, digital conversion, distribution, indexing and associated operational services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "64110000",
+     "72512000",
+     "79800000",
+     "79996100",
+     "79999100"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S34",
+    "title": "Customer Contact, Call Handling and Out-of-Hours Services",
+    "description": "This Part covers customer contact and call-handling services. This includes, but is not limited to, call centres, telephone operator services, repairs contact handling, emergency and out-of-hours lines, appointment booking, customer support and overflow services. The scope may include mobilisation, scripts, systems, contact management, escalation, reporting and associated office and customer-care services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "79342320",
+     "79500000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S35",
+    "title": "Translation, Interpretation and Accessibility Services",
+    "description": "This Part covers translation, interpretation and accessible communication. This includes, but is not limited to, written translation, interpretation, accessible formats, braille, large print, BSL and other inclusive communications support. The scope may include transcription, document adaptation, production and delivery of accessible materials and associated language and communication services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "79530000",
+     "79540000",
+     "79823000",
+     "92312211"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S36",
+    "title": "Catering, Hospitality, Events and Venue Service",
+    "description": "This Part covers catering, hospitality, event and venue services. This includes, but is not limited to, catering, conferences, seminars, meetings, venues, community events, hospitality and public engagement events. The scope may include event planning, organisation, logistics, venue provision, refreshments and all associated event support services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "55120000",
+     "55130000",
+     "55510000",
+     "55520000",
+     "79951000",
+     "79952000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S37",
+    "title": "Occupational Health, Wellbeing and Employee Support",
+    "description": "This Part covers occupational health and workforce wellbeing services. This includes, but is not limited to, occupational health, employee assistance, counselling, wellbeing, absence management, health checks and workplace assessments. The scope may include referrals, assessments, advisory services, interventions, reporting, management support and associated health and HR consultancy.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "79414000",
+     "85140000",
+     "85323000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "S38",
+    "title": "Grant Funding, Bid Writing and Social Value Support",
+    "description": "This Part covers grant funding, bid development and social value advisory support. This includes, but is not limited to, grant identification and advice, bid writing, evaluation support, social value planning, community investment, research and impact reporting. The scope may include strategy, application development, business cases, monitoring, evaluation and all associated consultancy and professional services.",
+    "value_gbp": null,
+    "contract_start": null,
+    "contract_end": null,
+    "cpv_codes": [
+     "73210000",
+     "79315000",
+     "79411000",
+     "79419000"
+    ],
+    "regions": [
+     "UK"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bc16",
+  "notice_id": "108175-2026",
+  "published": "2026-11-13T16:19:19Z",
+  "title": "External Cyclical Maintenance",
+  "description": "The works include, but are not limited to, the provision of surveys and design services, consultation with customers including design development, and the scheduling and programming of all elements of the service. The works also encompass the installation, construction, repair, maintenance, renewal, reinstatement, replacement and/or improvement of structural components, roof coverings, fascias, bargeboards, soffits, rainwater goods, windows, external doors, fire safety measures, internal doors and frames, retrofit and energy efficiency measures, play areas, external paving, fencing and other environmental components, together with any additional works identified by the Client.\nWindow repairs or replacements undertaken as part of External Cyclical Maintenance Planned Schemes will generally involve a limited number of windows at an individual property. It is not anticipated that such schemes will require the replacement of a significant number of windows or the complete replacement of all windows within a property.\nThe works also include cyclical redecoration, comprising the redecoration of existing painted or decorated surfaces, including windows, doors, fascias, rainwater and sanitary pipework, walls, soffits to external elevations, and common areas including communal rooms. Cyclical redecoration may also extend to bin stores, garages, cycle sheds, fencing, railings, screens, gates and similar features located within boundaries, paths, drives, communal areas, staircases, access decks and balconies.\nCyclical redecoration shall be deemed to include the cleaning, where specified, of external surfaces of components and products such as windows, doors, soffits, fascias, cladding and other similar elements encountered during the works.\nThe works further include pre-decoration repairs, comprising the repair, maintenance, renewal, reinstatement or replacement of previously decorated elements and components where such works are required prior to cyclical redecoration. This includes the inspection, repair and adjustment of hinges, locking mechanisms, handles and security devices associated with UPVC windows and external or communal doors.\nThe works also include the identification, surveying, management, removal and disposal of asbestos-containing materials where these are discovered during the course of the works",
+  "buyer": "Northern Ireland Housing Executive",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 35283515.0,
+  "deadline": "2026-12-14T15:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/108175-2026",
+  "cpv_codes": [
+   "45210000"
+  ],
+  "regions": [
+   "UKN"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Lot 1 - South Region - North Down and Ards Area",
+    "description": "Lot 1 covers the delivery of External Cyclical Maintenance Works. The Housing Executive intends to award a Contract to the successful Supplier(s) to carry out the Works in accordance with the Contract documentation. Suppliers should review all Tender Documents in detail to fully understand the scope and requirements of the Works.",
+    "value_gbp": 14329092.0,
+    "contract_start": "2027-03-01",
+    "contract_end": "2032-12-01",
+    "cpv_codes": [
+     "45210000"
+    ],
+    "regions": [
+     "UKN"
+    ],
+    "selection_criteria": "Please see ITT documents for full details.\nPlease see ITT documents for full details."
+   },
+   {
+    "lot_id": "2",
+    "title": "Lot 2 - North Region - Mid and East Antrim Area",
+    "description": "Lot 2 covers the delivery of External Cyclical Maintenance Works. The Housing Executive intends to award a Contract to the successful Supplier(s) to carry out the Works in accordance with the Contract documentation. Suppliers should review all Tender Documents in detail to fully understand the scope and requirements of the Works.",
+    "value_gbp": 9700700.0,
+    "contract_start": "2027-03-01",
+    "contract_end": "2032-12-01",
+    "cpv_codes": [
+     "45210000"
+    ],
+    "regions": [
+     "UKN"
+    ],
+    "selection_criteria": "Please see ITT documents for full details.\nPlease see ITT documents for full details."
+   },
+   {
+    "lot_id": "3",
+    "title": "Lot 3 - South Region - South Down Area",
+    "description": "Lot 3 covers the delivery of External Cyclical Maintenance Works. The Housing Executive intends to award a Contract to the successful Supplier(s) to carry out the Works in accordance with the Contract documentation. Suppliers should review all Tender Documents in detail to fully understand the scope and requirements of the Works.",
+    "value_gbp": 11253723.0,
+    "contract_start": "2027-03-01",
+    "contract_end": "2032-12-01",
+    "cpv_codes": [
+     "45210000"
+    ],
+    "regions": [
+     "UKN"
+    ],
+    "selection_criteria": "Please see ITT documents for full details.\nPlease see ITT documents for full details."
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bc27",
+  "notice_id": "108202-2026",
+  "published": "2026-11-13T16:57:45Z",
+  "title": "Catering Equipment, Laundry/Dishwashers, Refrigeration PPM & Reactive Maintenance",
+  "description": "Lot 1 Catering Equipment, Lot 2 Laundry/Dishwashers, Lot 3 Refrigeration PPM & Reactive Maintenance.  These are activity based and activity is not guaranteed.",
+  "buyer": "KENT COMMUNITY HEALTH NHS FOUNDATION TRUST",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 550000.0,
+  "deadline": "2027-01-21T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/108202-2026",
+  "cpv_codes": [
+   "50883000"
+  ],
+  "regions": [],
+  "lots": [
+   {
+    "lot_id": "Lot 1",
+    "title": "Lot 1 Catering Equipment",
+    "description": "Catering Equipment PPM & Reactive Maintenance - Activity Based.  Activity is not guaranteed.",
+    "value_gbp": 220000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "50883000"
+    ],
+    "regions": [],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "Lot 2",
+    "title": "Lot 2 Laundry & Dishwashers",
+    "description": "Laundry & Dishwashers PPM and Reactive Maintenance.  Activity based.  Activity not guaranteed",
+    "value_gbp": 140000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "50883000"
+    ],
+    "regions": [],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "Lot 3",
+    "title": "Lot 3 Refrigeration",
+    "description": "Refrigeration PPM and Reactive Maintenance.  Activity based.  Activity is not guaranteed.",
+    "value_gbp": 190000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "50883000"
+    ],
+    "regions": [],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bc2a",
+  "notice_id": "108226-2026",
+  "published": "2026-11-13T17:21:45Z",
+  "title": "Managed Detection and Response (MDR) Service",
+  "description": "A comprehensive MDR service to support the protection of its users, information, systems and technology environment against cyber security threats. \nA managed cyber security service providing 24 hours a day, 7 days a week monitoring, detection, investigation and response capability, supported by appropriate security expertise, processes and technologies. \nThe anticipated scope includes: \n24/7 Security Operations Centre (SOC) monitoring and response; \nEndpoint Detection and Response (EDR) and/or Extended Detection and Response (XDR); \nIntegration with and monitoring of Microsoft 365 and Microsoft Entra ID; \nIdentity-based threat detection; \nSecurity alert investigation, triage and prioritisation; \nProactive threat hunting; \nThreat intelligence; \nIncident containment and remediation support; \nIncident escalation and notification; \nDigital forensics and incident investigation; \nIntegration with CHS's existing security and technology environment; \nOnboarding and deployment; \nSecurity reporting and service reviews; \nVulnerability and exposure insights; \nAccess to security specialists and escalation resources; \nSupport during significant cyber security incidents; and \nContinual service improvement. \nDetails of the following would also be beneficial: \nMDR service and operating models, including the division of responsibilities between CHS and the provider. \nTechnologies deployed or integrated with in delivering MDR services. \nIntegration with Microsoft 365, Microsoft Entra ID and other relevant security technologies. \nThreat detection, investigation, proactive threat hunting, containment and remediation capabilities. \nIncident response arrangements, including support for serious or high-impact cyber incidents. \n24/7 SOC operating models and SOC locations. \nRelevant security standards, certifications and independent assurance. \nSecurity data processing, retention, protection and residency arrangements. \nTypical severity classifications, response times and service levels. \nReporting, customer dashboards, service reviews and security metrics. \nOnboarding, implementation and transition arrangements. \nTypical licensing and commercial models.",
+  "buyer": "THE CAMBRIDGE HOUSING SOCIETY LTD",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 140000.0,
+  "deadline": "2026-12-09T23:59:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/108226-2026",
+  "cpv_codes": [
+   "72000000"
+  ],
+  "regions": [
+   "UKH"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 140000.0,
+    "contract_start": "2027-01-06",
+    "contract_end": "2030-01-05",
+    "cpv_codes": [
+     "72000000"
+    ],
+    "regions": [
+     "UKH"
+    ],
+    "selection_criteria": "Must be able to cover Windows, IOS , and Android mobile end point."
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bc2c",
+  "notice_id": "108230-2026",
+  "published": "2026-11-13T17:30:40Z",
+  "title": "CBC-2192-T-ZH Fire Systems and Equipment Servicing and Maintenance",
+  "description": "Central Bedfordshire Council is seeking a suitably qualified and BAFE-registered contractor to provide planned preventative maintenance, inspection, testing, repair and emergency call-out services for fire safety systems and equipment across its housing portfolio. \nServices include fire alarms, dry risers, fire extinguishers, sprinkler and mist systems, fire blankets, and automatic smoke ventilation systems, together with asset management and statutory compliance reporting.",
+  "buyer": "Central Bedfordshire Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 405000.0,
+  "deadline": "2026-12-14T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/108230-2026",
+  "cpv_codes": [
+   "50413100",
+   "51700000"
+  ],
+  "regions": [],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": null,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "50413100",
+     "51700000"
+    ],
+    "regions": [],
+    "selection_criteria": "Tenderers must demonstrate satisfactory economic and financial standing and provide the information requested within the Procurement Specific Questionnaire and Financial Standing Template (Appendix 6). Suppliers must register on the Central Digital Platform and provide Core Supplier Information, including financial information and exclusion grounds information in accordance with the Procurement Act 2023. The Council reserves the right to assess financial standing and exclude suppliers that do not demonstrate sufficient financial capacity to deliver the Contract.\nTenderers must demonstrate relevant experience, technical competence and capability in the provision of fire systems and equipment servicing, maintenance and responsive repair services. Suppliers must evidence experience of delivering similar contracts, appropriately qualified and competent personnel, suitable health and safety arrangements, and the ability to provide services across Central Bedfordshire Council's housing stock and associated premises. Tenderers must also demonstrate compliance with all relevant legislation, regulatory requirements, British Standards and manufacturer recommendations applicable to fire systems and associated fire safety equipment."
+   }
+  ]
+ }
+]

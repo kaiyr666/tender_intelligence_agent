@@ -31,7 +31,7 @@ The bid team, once a week. They run the tool for the last full week and open a M
 
 ## Data
 - Find a Tender OCDS API (`/api/1.0/ocdsReleasePackages`): public, no key, OGL v3.0 (attribution in the report and README).
-- Volume is unverified. The team reads 150–250 notices a week, but the API may return more. Slice 1 measures the fetched count, the pre-filter survivors and the cost of one extraction before anything depends on them.
+- Volume, measured for 9–15 Nov 2026: 2,258 releases of all stages, 463 active tender notices, and 59 that survive the pre-filter. Fetching a week takes about 3 minutes (23 pages).
 - Field coverage varies. Slice 1 checks real responses before the code relies on `value`, `tenderPeriod.endDate`, lots, CPV and delivery addresses.
 - Test fixtures are sanitised real notices.
 

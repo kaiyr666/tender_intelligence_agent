@@ -1,26 +1,39 @@
 {
-  "time": "2026-11-16 11:46",
+  "time": "2026-11-16 23:42",
   "cases": 3,
-  "case_accuracy": 1.0,
+  "case_accuracy": 0.333,
   "field_accuracy": {
-    "max_amount_gbp": 1.0
+    "max_amount_gbp": 0.333
   },
-  "failures": [],
+  "failures": [
+    {
+      "id": "sample-1",
+      "field": "max_amount_gbp",
+      "expected": 250000,
+      "got": null
+    },
+    {
+      "id": "sample-2",
+      "field": "max_amount_gbp",
+      "expected": 40000,
+      "got": null
+    }
+  ],
   "rows": [
     {
       "id": "sample-1",
-      "correct": true,
+      "correct": false,
       "output": {
         "word_count": 10,
-        "max_amount_gbp": 250000.0
+        "max_amount_gbp": null
       }
     },
     {
       "id": "sample-2",
-      "correct": true,
+      "correct": false,
       "output": {
         "word_count": 8,
-        "max_amount_gbp": 40000.0
+        "max_amount_gbp": null
       }
     },
     {

@@ -1,0 +1,1878 @@
+[
+ {
+  "ocid": "ocds-h6vhtk-07bbe6",
+  "id": "108109-2026",
+  "tag": [
+   "tender"
+  ],
+  "date": "2026-11-13T15:17:29Z",
+  "initiationType": "tender",
+  "parties": [
+   {
+    "name": "Newcastle City Council",
+    "id": "GB-PPON-PBHM-6848-TWYG",
+    "identifier": {
+     "scheme": "GB-PPON",
+     "id": "PBHM-6848-TWYG"
+    },
+    "address": {
+     "locality": "Newcastle Upon Tyne",
+     "country": "GB",
+     "countryName": "United Kingdom",
+     "region": "UKC22"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "url": "https://www.newcastle.gov.uk/",
+     "classifications": [
+      {
+       "scheme": "UK_CA_TYPE",
+       "id": "publicAuthoritySubCentralGovernment",
+       "description": "Public authority - sub-central government"
+      }
+     ]
+    }
+   }
+  ],
+  "buyer": {
+   "id": "GB-PPON-PBHM-6848-TWYG",
+   "name": "Newcastle City Council"
+  },
+  "tender": {
+   "id": "009689",
+   "legalBasis": {
+    "id": "2023/54",
+    "scheme": "UKPGA",
+    "uri": "https://www.legislation.gov.uk/ukpga/2023/54/contents"
+   },
+   "title": "009689 - Window and High Level Cleaning",
+   "description": "It is Newcastle City Council's (NCC's) intention to establish a framework for the provision of window and high-level cleaning at several Newcastle City Council Public Buildings and Residential Properties.\nThe proposed framework will be divided into the following Lots:-\n• Lot 1 Public Buildings\n• Lot 2 Residential Properties\n• Lot 3 Tree Top Village",
+   "status": "active",
+   "items": [
+    {
+     "id": "1",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "90900000",
+       "description": "Cleaning and sanitation services"
+      }
+     ],
+     "deliveryAddresses": [
+      {
+       "region": "UKC",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKD",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKE",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKF",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKG",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKH",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKI",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKJ",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKK",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      }
+     ],
+     "relatedLot": "1"
+    },
+    {
+     "id": "2",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "90900000",
+       "description": "Cleaning and sanitation services"
+      }
+     ],
+     "deliveryAddresses": [
+      {
+       "region": "UKC",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKD",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKE",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKF",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKG",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKH",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKI",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKJ",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKK",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      }
+     ],
+     "relatedLot": "2"
+    },
+    {
+     "id": "3",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "90900000",
+       "description": "Cleaning and sanitation services"
+      }
+     ],
+     "deliveryAddresses": [
+      {
+       "region": "UKC",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKD",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKE",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKF",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKG",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKH",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKI",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKJ",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      },
+      {
+       "region": "UKK",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      }
+     ],
+     "relatedLot": "3"
+    }
+   ],
+   "value": {
+    "amountGross": 168000,
+    "amount": 140000,
+    "currency": "GBP"
+   },
+   "procurementMethod": "open",
+   "procurementMethodDetails": "Below threshold - open competition",
+   "mainProcurementCategory": "services",
+   "aboveThreshold": false,
+   "techniques": {
+    "hasFrameworkAgreement": true,
+    "frameworkAgreement": {
+     "method": "withoutReopeningCompetition",
+     "type": "closed",
+     "description": "The proposed framework will be divided into the following Lots:-\n•\tLot 1\tPublic Buildings\n•\tLot 2\tResidential Properties\n•\tLot 3 \tTree Top Village\nNewcastle City Council plan to appoint one Supplier to each Lot."
+    }
+   },
+   "submissionMethodDetails": "www.open-uk.org\nProject # OPEN-PR-11112026092046051",
+   "submissionTerms": {
+    "electronicSubmissionPolicy": "allowed"
+   },
+   "tenderPeriod": {
+    "endDate": "2026-11-27T12:00:00Z"
+   },
+   "enquiryPeriod": {
+    "endDate": "2026-11-23T23:59:59Z"
+   },
+   "lots": [
+    {
+     "id": "1",
+     "title": "Public Buildings",
+     "description": "Window and high level cleaning at Public Buildings, this includes all the properties detailed in APPENDIX K - Pricing Schedule of the tender pack.",
+     "status": "active",
+     "value": {
+      "amountGross": 168000,
+      "amount": 140000,
+      "currency": "GBP"
+     },
+     "contractPeriod": {
+      "startDate": "2027-01-01T00:00:00Z",
+      "endDate": "2028-12-31T23:59:59Z",
+      "maxExtentDate": "2030-12-31T23:59:59Z"
+     },
+     "hasRenewal": true,
+     "renewal": {
+      "description": "2 x 12 months"
+     },
+     "hasOptions": true,
+     "options": {
+      "description": "• Lot 1 Public Buildings\n• Lot 2 Residential Properties\n• Lot 3 Tree Top Village"
+     },
+     "awardCriteria": {
+      "description": "40% Quality\n60% Price"
+     }
+    },
+    {
+     "id": "2",
+     "title": "Residential Properties",
+     "description": "Window and high level cleaning at Residential Properties, this includes all the properties detailed in APPENDIX K - Pricing Schedule of the tender pack.",
+     "status": "active",
+     "value": {
+      "amountGross": 168000,
+      "amount": 140000,
+      "currency": "GBP"
+     },
+     "contractPeriod": {
+      "startDate": "2027-01-01T00:00:00Z",
+      "endDate": "2028-12-31T23:59:59Z",
+      "maxExtentDate": "2030-12-31T23:59:59Z"
+     },
+     "hasRenewal": true,
+     "renewal": {
+      "description": "2 x 12 months"
+     },
+     "hasOptions": true,
+     "options": {
+      "description": "• Lot 1 Public Buildings\n• Lot 2 Residential Properties\n• Lot 3 Tree Top Village"
+     },
+     "awardCriteria": {
+      "description": "40% Quality\n60% Price"
+     }
+    },
+    {
+     "id": "3",
+     "title": "Tree Top Village",
+     "description": "Window and high level cleaning at Tree Top Village this includes all the properties detailed in APPENDIX K - Pricing Schedule of the tender pack.",
+     "status": "active",
+     "value": {
+      "amountGross": 168000,
+      "amount": 140000,
+      "currency": "GBP"
+     },
+     "contractPeriod": {
+      "startDate": "2027-01-01T00:00:00Z",
+      "endDate": "2028-12-31T23:59:59Z",
+      "maxExtentDate": "2030-12-31T23:59:59Z"
+     },
+     "hasRenewal": true,
+     "renewal": {
+      "description": "2 x 12 months"
+     },
+     "hasOptions": true,
+     "options": {
+      "description": "• Lot 1 Public Buildings\n• Lot 2 Residential Properties\n• Lot 3 Tree Top Village"
+     },
+     "awardCriteria": {
+      "description": "40% Quality\n60% Price"
+     }
+    }
+   ],
+   "documents": [
+    {
+     "id": "L-1",
+     "documentType": "biddingDocuments",
+     "description": "Project # OPEN-PR-11112026092046051",
+     "url": "www.open-uk.org"
+    },
+    {
+     "id": "108109-2026",
+     "documentType": "tenderNotice",
+     "noticeType": "UK4",
+     "description": "Tender notice on Find a Tender",
+     "url": "https://www.find-tender.service.gov.uk/Notice/108109-2026",
+     "datePublished": "2026-11-13T15:17:29Z",
+     "format": "text/html"
+    }
+   ]
+  },
+  "language": "en"
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bc2c",
+  "id": "108228-2026",
+  "tag": [
+   "tender"
+  ],
+  "date": "2026-11-13T17:27:44Z",
+  "initiationType": "tender",
+  "parties": [
+   {
+    "name": "Central Bedfordshire Council",
+    "id": "GB-PPON-PVNH-1137-QJBX",
+    "identifier": {
+     "scheme": "GB-PPON",
+     "id": "PVNH-1137-QJBX"
+    },
+    "address": {
+     "locality": "Shefford",
+     "country": "GB",
+     "countryName": "United Kingdom",
+     "region": "UKH25"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "classifications": [
+      {
+       "scheme": "UK_CA_TYPE",
+       "id": "publicAuthoritySubCentralGovernment",
+       "description": "Public authority - sub-central government"
+      }
+     ]
+    }
+   }
+  ],
+  "buyer": {
+   "id": "GB-PPON-PVNH-1137-QJBX",
+   "name": "Central Bedfordshire Council"
+  },
+  "tender": {
+   "id": "CBC-2192-T-ZH",
+   "legalBasis": {
+    "id": "2023/54",
+    "scheme": "UKPGA",
+    "uri": "https://www.legislation.gov.uk/ukpga/2023/54/contents"
+   },
+   "title": "CBC-2192-T-ZH Fire Systems and Equipment Servicing and Maintenance",
+   "description": "Central Bedfordshire Council is seeking a suitably qualified and BAFE-registered contractor to provide planned preventative maintenance, inspection, testing, repair and emergency call-out services for fire safety systems and equipment across its housing portfolio. \nServices include fire alarms, dry risers, fire extinguishers, sprinkler and mist systems, fire blankets, and automatic smoke ventilation systems, together with asset management and statutory compliance reporting.",
+   "status": "active",
+   "items": [
+    {
+     "id": "1",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "50413100",
+       "description": "Repair and maintenance services of gas-detection equipment"
+      },
+      {
+       "scheme": "CPV",
+       "id": "51700000",
+       "description": "Installation services of fire protection equipment"
+      }
+     ],
+     "relatedLot": "1"
+    }
+   ],
+   "value": {
+    "amountGross": 486000,
+    "amount": 405000,
+    "currency": "GBP"
+   },
+   "procurementMethod": "open",
+   "procurementMethodDetails": "Open procedure",
+   "mainProcurementCategory": "services",
+   "aboveThreshold": true,
+   "submissionMethodDetails": "Tender responses must be submitted electronically via the Central Bedfordshire Council In-Tend e-Tendering Portal. Suppliers must register and log in to access the procurement documents and submit their tender response. Responses submitted by any other means will not be accepted. All tender documents must be completed and returned in accordance with the Instructions to Suppliers and associated procurement documentation. Portal: https://supplier.in-tend.co.uk/centralbedfordshire/home",
+   "submissionTerms": {
+    "electronicSubmissionPolicy": "allowed",
+    "languages": [
+     "en"
+    ]
+   },
+   "tenderPeriod": {
+    "endDate": "2026-12-13T12:00:00+00:00"
+   },
+   "enquiryPeriod": {
+    "endDate": "2026-12-03T17:00:00+00:00"
+   },
+   "awardPeriod": {
+    "endDate": "2027-01-27T23:59:59+00:00"
+   },
+   "lots": [
+    {
+     "id": "1",
+     "status": "active",
+     "value": {
+      "amountGross": 486000,
+      "amount": 405000,
+      "currency": "AED"
+     },
+     "awardCriteria": {
+      "criteria": [
+       {
+        "type": "quality",
+        "name": "Quality",
+        "description": "Assessment of the supplier's proposed method of service delivery, resources, technical competence, industry standards and training arrangements, contract management and monitoring arrangements, health and safety management, and communication and customer care proposals.",
+        "numbers": [
+         {
+          "number": 50,
+          "weight": "percentageExact"
+         }
+        ]
+       },
+       {
+        "type": "price",
+        "name": "Price",
+        "description": "Evaluation of the completed Pricing Schedule based on the total net tendered price in accordance with the pricing methodology detailed in the procurement documents.",
+        "numbers": [
+         {
+          "number": 40,
+          "weight": "percentageExact"
+         }
+        ]
+       },
+       {
+        "type": "quality",
+        "name": "Social Value",
+        "description": "Evaluation of Social Value commitments using the Council's Social Value Calculator and supporting qualitative submission, including delivery of social, economic and environmental benefits within Central Bedfordshire.",
+        "numbers": [
+         {
+          "number": 10,
+          "weight": "percentageExact"
+         }
+        ]
+       }
+      ]
+     },
+     "selectionCriteria": {
+      "criteria": [
+       {
+        "type": "economic",
+        "description": "Tenderers must demonstrate satisfactory economic and financial standing and provide the information requested within the Procurement Specific Questionnaire and Financial Standing Template (Appendix 6). Suppliers must register on the Central Digital Platform and provide Core Supplier Information, including financial information and exclusion grounds information in accordance with the Procurement Act 2023. The Council reserves the right to assess financial standing and exclude suppliers that do not demonstrate sufficient financial capacity to deliver the Contract."
+       },
+       {
+        "type": "technical",
+        "description": "Tenderers must demonstrate relevant experience, technical competence and capability in the provision of fire systems and equipment servicing, maintenance and responsive repair services. Suppliers must evidence experience of delivering similar contracts, appropriately qualified and competent personnel, suitable health and safety arrangements, and the ability to provide services across Central Bedfordshire Council's housing stock and associated premises. Tenderers must also demonstrate compliance with all relevant legislation, regulatory requirements, British Standards and manufacturer recommendations applicable to fire systems and associated fire safety equipment."
+       }
+      ]
+     },
+     "suitability": {
+      "sme": true
+     },
+     "contractPeriod": {
+      "startDate": "2027-04-01T00:00:00+01:00",
+      "endDate": "2029-03-31T23:59:59+01:00",
+      "maxExtentDate": "2030-03-31T23:59:59+01:00"
+     },
+     "hasRenewal": true,
+     "renewal": {
+      "description": "Option to extend for up to one (1) additional year following the initial two (2) year contract term, at the sole discretion of Central Bedfordshire Council."
+     },
+     "description": null
+    }
+   ],
+   "documents": [
+    {
+     "id": "L-1",
+     "documentType": "biddingDocuments",
+     "description": "Full procurement documentation is available via the Council's e-tendering portal. Suppliers must register and log in to the In-Tend portal to access and download the Invitation to Tender, Tender Response Document, Specification, Pricing Schedule, Contract Documents and associated procurement documentation.",
+     "url": "https://supplier.in-tend.co.uk/centralbedfordshire/home"
+    },
+    {
+     "id": "conflictOfInterest",
+     "documentType": "conflictOfInterest",
+     "description": "Not published"
+    },
+    {
+     "id": "108228-2026",
+     "documentType": "tenderNotice",
+     "noticeType": "UK4",
+     "description": "Tender notice on Find a Tender",
+     "url": "https://www.find-tender.service.gov.uk/Notice/108228-2026",
+     "datePublished": "2026-11-13T17:27:44Z",
+     "format": "text/html"
+    }
+   ],
+   "contractTerms": {
+    "financialTerms": "Central Bedfordshire Council's standard payment terms are 30 days from receipt of a valid invoice. Suppliers may elect to participate in the Council's Supplier Incentive Scheme, which offers accelerated payment in exchange for a rebate, as detailed in the procurement documentation."
+   },
+   "riskDetails": "Key risks include failure to meet statutory inspection and maintenance requirements for fire safety systems, failure to achieve service response times, insufficient qualified resources, supply chain disruption affecting replacement parts and equipment, failure to comply with health and safety requirements, failure to maintain business continuity, and failure to satisfy regulatory requirements applicable to fire systems and associated equipment. Contract execution remains subject to completion of statutory consultation requirements."
+  },
+  "language": "en"
+ },
+ {
+  "id": "108230-2026",
+  "tag": [
+   "tenderUpdate"
+  ],
+  "date": "2026-11-13T17:30:40Z",
+  "initiationType": "tender",
+  "ocid": "ocds-h6vhtk-07bc2c",
+  "parties": [
+   {
+    "name": "Central Bedfordshire Council",
+    "id": "GB-PPON-PVNH-1137-QJBX",
+    "identifier": {
+     "scheme": "GB-PPON",
+     "id": "PVNH-1137-QJBX"
+    },
+    "address": {
+     "locality": "Shefford",
+     "country": "GB",
+     "countryName": "United Kingdom",
+     "region": "UKH25"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "classifications": [
+      {
+       "scheme": "UK_CA_TYPE",
+       "id": "publicAuthoritySubCentralGovernment",
+       "description": "Public authority - sub-central government"
+      }
+     ]
+    }
+   }
+  ],
+  "buyer": {
+   "id": "GB-PPON-PVNH-1137-QJBX",
+   "name": "Central Bedfordshire Council"
+  },
+  "tender": {
+   "id": "CBC-2192-T-ZH",
+   "legalBasis": {
+    "id": "2023/54",
+    "scheme": "UKPGA",
+    "uri": "https://www.legislation.gov.uk/ukpga/2023/54/contents"
+   },
+   "title": "CBC-2192-T-ZH Fire Systems and Equipment Servicing and Maintenance",
+   "description": "Central Bedfordshire Council is seeking a suitably qualified and BAFE-registered contractor to provide planned preventative maintenance, inspection, testing, repair and emergency call-out services for fire safety systems and equipment across its housing portfolio. \nServices include fire alarms, dry risers, fire extinguishers, sprinkler and mist systems, fire blankets, and automatic smoke ventilation systems, together with asset management and statutory compliance reporting.",
+   "status": "active",
+   "items": [
+    {
+     "id": "1",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "50413100",
+       "description": "Repair and maintenance services of gas-detection equipment"
+      },
+      {
+       "scheme": "CPV",
+       "id": "51700000",
+       "description": "Installation services of fire protection equipment"
+      }
+     ],
+     "relatedLot": "1"
+    }
+   ],
+   "value": {
+    "amountGross": 486000,
+    "amount": 405000,
+    "currency": "GBP"
+   },
+   "procurementMethod": "open",
+   "procurementMethodDetails": "Open procedure",
+   "mainProcurementCategory": "services",
+   "aboveThreshold": true,
+   "submissionMethodDetails": "Tender responses must be submitted electronically via the Central Bedfordshire Council In-Tend e-Tendering Portal. Suppliers must register and log in to access the procurement documents and submit their tender response. Responses submitted by any other means will not be accepted. All tender documents must be completed and returned in accordance with the Instructions to Suppliers and associated procurement documentation. Portal: https://supplier.in-tend.co.uk/centralbedfordshire/home",
+   "submissionTerms": {
+    "electronicSubmissionPolicy": "allowed",
+    "languages": [
+     "en"
+    ]
+   },
+   "tenderPeriod": {
+    "endDate": "2026-12-14T12:00:00+00:00"
+   },
+   "enquiryPeriod": {
+    "endDate": "2026-12-03T17:00:00+00:00"
+   },
+   "awardPeriod": {
+    "endDate": "2027-01-27T23:59:59+00:00"
+   },
+   "lots": [
+    {
+     "id": "1",
+     "status": "active",
+     "value": {
+      "amountGross": 486000,
+      "amount": 405000,
+      "currency": "AED"
+     },
+     "awardCriteria": {
+      "criteria": [
+       {
+        "type": "quality",
+        "name": "Quality",
+        "description": "Assessment of the supplier's proposed method of service delivery, resources, technical competence, industry standards and training arrangements, contract management and monitoring arrangements, health and safety management, and communication and customer care proposals.",
+        "numbers": [
+         {
+          "number": 50,
+          "weight": "percentageExact"
+         }
+        ]
+       },
+       {
+        "type": "price",
+        "name": "Price",
+        "description": "Evaluation of the completed Pricing Schedule based on the total net tendered price in accordance with the pricing methodology detailed in the procurement documents.",
+        "numbers": [
+         {
+          "number": 40,
+          "weight": "percentageExact"
+         }
+        ]
+       },
+       {
+        "type": "quality",
+        "name": "Social Value",
+        "description": "Evaluation of Social Value commitments using the Council's Social Value Calculator and supporting qualitative submission, including delivery of social, economic and environmental benefits within Central Bedfordshire.",
+        "numbers": [
+         {
+          "number": 10,
+          "weight": "percentageExact"
+         }
+        ]
+       }
+      ]
+     },
+     "selectionCriteria": {
+      "criteria": [
+       {
+        "type": "economic",
+        "description": "Tenderers must demonstrate satisfactory economic and financial standing and provide the information requested within the Procurement Specific Questionnaire and Financial Standing Template (Appendix 6). Suppliers must register on the Central Digital Platform and provide Core Supplier Information, including financial information and exclusion grounds information in accordance with the Procurement Act 2023. The Council reserves the right to assess financial standing and exclude suppliers that do not demonstrate sufficient financial capacity to deliver the Contract."
+       },
+       {
+        "type": "technical",
+        "description": "Tenderers must demonstrate relevant experience, technical competence and capability in the provision of fire systems and equipment servicing, maintenance and responsive repair services. Suppliers must evidence experience of delivering similar contracts, appropriately qualified and competent personnel, suitable health and safety arrangements, and the ability to provide services across Central Bedfordshire Council's housing stock and associated premises. Tenderers must also demonstrate compliance with all relevant legislation, regulatory requirements, British Standards and manufacturer recommendations applicable to fire systems and associated fire safety equipment."
+       }
+      ]
+     },
+     "suitability": {
+      "sme": true
+     },
+     "contractPeriod": {
+      "startDate": "2027-04-01T00:00:00+01:00",
+      "endDate": "2029-03-31T23:59:59+01:00",
+      "maxExtentDate": "2030-03-31T23:59:59+01:00"
+     },
+     "hasRenewal": true,
+     "renewal": {
+      "description": "Option to extend for up to one (1) additional year following the initial two (2) year contract term, at the sole discretion of Central Bedfordshire Council."
+     },
+     "description": null
+    }
+   ],
+   "documents": [
+    {
+     "id": "L-1",
+     "documentType": "biddingDocuments",
+     "description": "Full procurement documentation is available via the Council's e-tendering portal. Suppliers must register and log in to the In-Tend portal to access and download the Invitation to Tender, Tender Response Document, Specification, Pricing Schedule, Contract Documents and associated procurement documentation.",
+     "url": "https://supplier.in-tend.co.uk/centralbedfordshire/home"
+    },
+    {
+     "id": "conflictOfInterest",
+     "documentType": "conflictOfInterest",
+     "description": "Not published"
+    },
+    {
+     "id": "108230-2026",
+     "documentType": "tenderNotice",
+     "noticeType": "UK4",
+     "description": "Tender notice on Find a Tender",
+     "url": "https://www.find-tender.service.gov.uk/Notice/108230-2026",
+     "datePublished": "2026-11-13T17:30:40Z",
+     "format": "text/html"
+    }
+   ],
+   "contractTerms": {
+    "financialTerms": "Central Bedfordshire Council's standard payment terms are 30 days from receipt of a valid invoice. Suppliers may elect to participate in the Council's Supplier Incentive Scheme, which offers accelerated payment in exchange for a rebate, as detailed in the procurement documentation."
+   },
+   "riskDetails": "Key risks include failure to meet statutory inspection and maintenance requirements for fire safety systems, failure to achieve service response times, insufficient qualified resources, supply chain disruption affecting replacement parts and equipment, failure to comply with health and safety requirements, failure to maintain business continuity, and failure to satisfy regulatory requirements applicable to fire systems and associated equipment. Contract execution remains subject to completion of statutory consultation requirements."
+  },
+  "language": "en"
+ },
+ {
+  "id": "107855-2026",
+  "tag": [
+   "tenderCancellation"
+  ],
+  "date": "2026-11-13T10:14:47Z",
+  "initiationType": "tender",
+  "ocid": "ocds-h6vhtk-0789d8",
+  "parties": [
+   {
+    "name": "Herefordshire Council",
+    "id": "GB-PPON-PDTG-2978-LHCN",
+    "identifier": {
+     "scheme": "GB-PPON",
+     "id": "PDTG-2978-LHCN"
+    },
+    "address": {
+     "locality": "Hereford",
+     "country": "GB",
+     "countryName": "United Kingdom",
+     "region": "UKG11"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "classifications": [
+      {
+       "scheme": "UK_CA_TYPE",
+       "id": "publicAuthoritySubCentralGovernment",
+       "description": "Public authority - sub-central government"
+      }
+     ]
+    }
+   }
+  ],
+  "tender": {
+   "id": "ocds-h6vhtk-0789d8",
+   "legalBasis": {
+    "id": "2023/54",
+    "scheme": "UKPGA",
+    "uri": "https://www.legislation.gov.uk/ukpga/2023/54/contents"
+   },
+   "title": "Registration Services Booking and Management System",
+   "status": "cancelled",
+   "lots": [
+    {
+     "id": "1",
+     "status": "cancelled"
+    }
+   ],
+   "documents": [
+    {
+     "id": "107855-2026",
+     "documentType": "tenderCancellationNotice",
+     "noticeType": "UK12",
+     "description": "Procurement termination notice on Find a Tender",
+     "url": "https://www.find-tender.service.gov.uk/Notice/107855-2026",
+     "datePublished": "2026-11-13T10:14:47Z",
+     "format": "text/html"
+    }
+   ]
+  },
+  "awards": [
+   {
+    "id": "1",
+    "status": "cancelled",
+    "statusDetails": "The Council has concluded that further review of the project scope, requirements, and budget is necessary. The Council therefore regrets to advise that it has decided to withdraw the current procurement exercise with immediate effect.\nFollowing the review the relevant new notices will be published accordingly.",
+    "finalStatusDate": "2026-11-12T00:00:00Z",
+    "relatedLots": [
+     "1"
+    ]
+   }
+  ],
+  "language": "en"
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b7a8",
+  "id": "106268-2026",
+  "date": "2026-11-09T14:05:13Z",
+  "tag": [
+   "planning",
+   "tender"
+  ],
+  "description": "Aster Group will be procuring via CHIC's 'All Under One Roof' DPS (Lot 20 - Decoration Services).\nAn expression of interest (EOI) is live currently and due to end on the 12th of November. Submission of an EOI is not a compulsory requirement to be included in the tender itself which is anticipated to launch on the 23rd of November (there is possibility of this changing).\nThis notice is to inform the market of Aster Group's intention to procure using CHIC's DPS and to invite contractors to contact CHIC, should they wish to participate.\nTo be onboarded onto CHIC's DPS, contractors should contact:\nbids@example.org\nContractors must be contact CHIC by the 19th of November. Application to join CHIC's DPS does not guarantee that contractors will be onboarded and it is subject to CHIC's onboarding criteria.",
+  "initiationType": "tender",
+  "tender": {
+   "id": "ocds-h6vhtk-07b7a8",
+   "legalBasis": {
+    "id": "32014L0024",
+    "scheme": "CELEX"
+   },
+   "title": "CP-401 - Aster Group External Decorations",
+   "status": "active",
+   "classification": {
+    "scheme": "CPV",
+    "id": "45443000",
+    "description": "Facade work"
+   },
+   "mainProcurementCategory": "works",
+   "description": "Aster Group is a housing association which provides quality, affordable homes to thousands of people across the south of England and London. Its vision is that everyone has a home. See our website for more details www.aster.co.uk/corporate/about-us\nThe not-for-dividend business was established in 1990 and has £2.5 billion worth of social housing assets. The Group reinvests profits from open market sale and shared ownership to support the development of affordable homes. It owns and maintains over 37,000 homes and employs over 2,000 people.\nCentral and Cecil Housing Trust (C&C), East Boro Housing Trust (EBHT) and Enham Trust form part of the Aster Group. For further information visit: www.ccht.org.uk, www.ebht.org.uk and www.enhamtrust.org.uk.\nAster Group Limited (\"Aster\") has a requirement for three contractors to provide External Decoration services, including but not limited to:\n•\tRedecoration of all previously painted external surfaces and internal common parts.\n•\tMinor external fabric repairs including:\no\tRenewal of fascias and soffits where required (to match existing).\no\tRenewal of timber canopies where required.\no\tRepointing of brick work.\n•\tMinor prior to paint repairs.\n•\tTimber window repairs.\n•\tRenewal of communal floor finishes where required.\nAster's requirement is across its full geographical coverage and will be split into the following lots with the corresponding approx. number of properties:\n•\tLot 1 (East)\no\tBerkshire - 205\no\tHampshire - 8416\no\tOxfordshire - 612\no\tWiltshire (incl. Gloucestershire) - 8606\n•\tLot 2 (London and Outer Areas)\no\tLondon - 1969\no\tSurrey - 441\no\tSussex - 736\n•\tLot 3 (West)\no\tDorset - 803\no\tSomerset (incl. Bristol) - 5339\no\tDevon and Cornwall - 3208\nNB: The property numbers are approximate and may make up multi dwelling properties.\nSuppliers may submit bids for multiple lots; however, only one supplier will be awarded each lot. Where a supplier achieves the highest ranking in more than one lot, Aster Group reserves the right to determine which lot will be awarded to that supplier. In such circumstances, the lot not awarded to the highest-ranked supplier will instead be awarded to the supplier ranked second for that lot.\nAster's procurement for external decorations is anticipated to be a single stage tender process and will be undertaken via CHIC's All Under One Roof' DPS (Lot 20 - Decoration Services).\nThe evaluation criteria is anticipated to be 60/40 (price/quality).\nAster has a target start date of May 2027, by which point mobilisation should be completed (TUPE is applicable) and contractors are fully onboarded to Aster's Approved Supplier List and familiar with its Contractor Portal. By the contract start date, the contractor should ensure a fully resourced programme is made available to Aster.\nThe form of contract Aster anticipated to contract with is the JCT Measured Term Contract (2024 edition) containing Aster amendments.",
+   "value": {
+    "amount": 31500000,
+    "currency": "GBP"
+   },
+   "lotDetails": {
+    "maximumLotsBidPerSupplier": Infinity,
+    "maximumLotsAwardedPerSupplier": 1
+   },
+   "lots": [
+    {
+     "id": "1",
+     "title": "Lot 1 (East)",
+     "description": "See prior description. Additional information: The contract term is 84 months split into the following:\n7 YEARS (3+1+1+1+1)",
+     "contractPeriod": {
+      "durationInDays": 2520
+     },
+     "status": "active"
+    },
+    {
+     "id": "2",
+     "title": "Lot 2 (London and Outer Areas)",
+     "description": "See prior description. Additional information: The contract term is 84 months split into the following:\n7 YEARS (3+1+1+1+1)",
+     "contractPeriod": {
+      "durationInDays": 2520
+     },
+     "status": "active"
+    },
+    {
+     "id": "3",
+     "title": "Lot 3 (West)",
+     "description": "See prior description. Additional information: The contract term is 84 months split into the following:\n7 YEARS (3+1+1+1+1)",
+     "contractPeriod": {
+      "durationInDays": 2520
+     },
+     "status": "active"
+    }
+   ],
+   "items": [
+    {
+     "id": "1",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "45443000",
+       "description": "Facade work"
+      }
+     ],
+     "deliveryAddresses": [
+      {
+       "region": "UKJ"
+      }
+     ],
+     "deliveryLocation": {
+      "description": "Berkshire\nHampshire \nOxfordshire\nWiltshire (incl. Gloucestershire)"
+     },
+     "relatedLot": "1"
+    },
+    {
+     "id": "2",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "45443000",
+       "description": "Facade work"
+      }
+     ],
+     "deliveryAddresses": [
+      {
+       "region": "UKI"
+      }
+     ],
+     "deliveryLocation": {
+      "description": "London\nSurrey\nSussex"
+     },
+     "relatedLot": "2"
+    },
+    {
+     "id": "3",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "45443000",
+       "description": "Facade work"
+      }
+     ],
+     "deliveryAddresses": [
+      {
+       "region": "UKK"
+      }
+     ],
+     "deliveryLocation": {
+      "description": "Dorset\nSomerset (incl. Bristol) \nDevon and Cornwall"
+     },
+     "relatedLot": "3"
+    }
+   ],
+   "participationFees": [
+    {
+     "id": "1",
+     "type": [
+      "document"
+     ]
+    }
+   ],
+   "crossBorderLaw": "UK",
+   "submissionMethod": [
+    "electronicSubmission"
+   ],
+   "submissionMethodDetails": "https://www.chicltd.co.uk/",
+   "procurementMethod": "selective",
+   "procurementMethodDetails": "Restricted procedure",
+   "tenderPeriod": {
+    "endDate": "2026-11-23"
+   },
+   "submissionTerms": {
+    "languages": [
+     "en"
+    ]
+   }
+  },
+  "parties": [
+   {
+    "name": "ASTER GROUP LIMITED",
+    "id": "GB-COH-IP29573R",
+    "identifier": {
+     "legalName": "ASTER GROUP LIMITED",
+     "id": "IP29573R",
+     "scheme": "GB-COH"
+    },
+    "address": {
+     "locality": "Devizes",
+     "region": "UKK15",
+     "countryName": "United Kingdom"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "url": "http://www.aster.co.uk",
+     "classifications": [
+      {
+       "scheme": "TED_CA_TYPE",
+       "id": "BODY_PUBLIC",
+       "description": "Body governed by public law"
+      },
+      {
+       "scheme": "COFOG",
+       "id": "06",
+       "description": "Housing and community amenities"
+      }
+     ]
+    }
+   },
+   {
+    "name": "Communities and Housing Investment Consortium Ltd (CHIC)",
+    "id": "GB-COH-7266506",
+    "identifier": {
+     "legalName": "Communities and Housing Investment Consortium Ltd (CHIC)",
+     "id": "7266506",
+     "scheme": "GB-COH"
+    },
+    "address": {
+     "locality": "Birmingham",
+     "region": "UK",
+     "countryName": "United Kingdom"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "url": "https://www.chicltd.co.uk/"
+    }
+   },
+   {
+    "name": "Aster Group Limited",
+    "id": "GB-FTS-171510",
+    "identifier": {
+     "legalName": "Aster Group Limited"
+    },
+    "address": {
+     "locality": "Devizes",
+     "countryName": "United Kingdom"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "reviewBody"
+    ]
+   }
+  ],
+  "buyer": {
+   "id": "GB-COH-IP29573R",
+   "name": "ASTER GROUP LIMITED"
+  },
+  "language": "en"
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bbcd",
+  "buyerID": [],
+  "id": "108059-2026",
+  "tag": [
+   "tender"
+  ],
+  "date": "2026-11-13T14:21:56Z",
+  "initiationType": "tender",
+  "parties": [
+   {
+    "name": "Community Gateway Association Limited",
+    "id": "GB-PPON-PBDZ-8761-JYXZ",
+    "identifier": {
+     "scheme": "GB-PPON",
+     "id": "PBDZ-8761-JYXZ"
+    },
+    "address": {
+     "locality": "Preston",
+     "country": "GB",
+     "countryName": "United Kingdom",
+     "region": "UKD45"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "classifications": [
+      {
+       "scheme": "UK_CA_TYPE",
+       "id": "publicAuthoritySubCentralGovernment",
+       "description": "Public authority - sub-central government"
+      }
+     ]
+    }
+   }
+  ],
+  "buyer": {
+   "id": "GB-PPON-PBDZ-8761-JYXZ",
+   "name": "Community Gateway Association Limited"
+  },
+  "tender": {
+   "id": "CGAPR028",
+   "legalBasis": {
+    "id": "2023/54",
+    "scheme": "UKPGA",
+    "uri": "https://www.legislation.gov.uk/ukpga/2023/54/contents"
+   },
+   "title": "Community Gateway Association Cleaning Services",
+   "description": "The Scope of Services includes:\n•Cleaning of communal areas, offices and associated washrooms\n•Interior and exterior window cleaning\n•Washroom and hygiene services/ safe disposal of hazardous waste\n•Replenishment of consumables\n•Litter picking\n•Deep cleaning / periodic cleaning\n•Emergency / reactive cleaning callouts\n•Floor cleaning and maintenance\nThe Services are provided at the following locations:\n•Harbour House – CGA Head Office – PR2 2DW\n•Almelo House - PR1 7TR\n•Andrew Court - PR1 5HX\n•Astley Court -PR1 1QU\n•Brookhaven - PR5 6BG \n•Chain Caul Way – Industrial Unit - PR2 2YL \n•Chapelfold - PR2 3ZJ\n•Ingolcroft - PR2 3ZH\n•Oaktree Court - PR2 1PQ\n•The Filberts - PR2 3YT  \n•The Spires - Sheltered accommodation - PR1 2YJ\n•The Watermills - PR3 5FB\n•Windsor Court - PR2 8EZ  \n•The Atrium – Extra Care Scheme- PR2 6FY\n•The Courtyards – Extra Care Scheme - PR2 3WQ\n•Sunningdale - PR4 0AX\n•The Crossings (sheltered accommodation currently in development expected to be open by January 2027)\nThe main objectives of this procurement are to:\n•Provide high quality Services\n•Achieve high levels of customer satisfaction\n•Achieve value for money\n•Deliver tangible and relevant social value\nFull details of the Services required are contained in the Specification as set out in Appendix 1 of the ITT document. \nThe Contract is expected to commence in June 2027.\nThe Contract will last for an initial period of 3 years, with an option to extend at CGA’s discretion for a further 1 year, and 1 additional year, giving a total potential maximum term of 5 years. \nA single Service Provider will be appointed.\nThis tender is being administered on behalf of CGA by Clarity Procurement Solutions Limited.\nThe total estimated value is £1,850,000 including VAT over 5 years (£370,000 per annum including VAT). This excludes annual price indexation\nFor more information about this opportunity, please visit the eSourcing portal at: \nhttps://www.delta-esourcing.com/tenders/UK-UK-Preston:-Cleaning-services./9M9E563C99\nTo respond to this opportunity, please click here: \nhttps://www.delta-esourcing.com/respond/9M9E563C99\nQuestions to jane.example@example.org or call 0113 496 0002.",
+   "status": "active",
+   "items": [
+    {
+     "id": "1",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "90910000",
+       "description": "Cleaning services"
+      },
+      {
+       "scheme": "CPV",
+       "id": "90911000",
+       "description": "Accommodation, building and window cleaning services"
+      },
+      {
+       "scheme": "CPV",
+       "id": "90911100",
+       "description": "Accommodation cleaning services"
+      },
+      {
+       "scheme": "CPV",
+       "id": "90911200",
+       "description": "Building-cleaning services"
+      },
+      {
+       "scheme": "CPV",
+       "id": "90911300",
+       "description": "Window-cleaning services"
+      }
+     ],
+     "deliveryAddresses": [
+      {
+       "region": "UKD4",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      }
+     ],
+     "relatedLot": "1"
+    }
+   ],
+   "value": {
+    "amountGross": 1850000.0,
+    "currency": "GBP"
+   },
+   "procurementMethod": "selective",
+   "procurementMethodDetails": "Competitive flexible procedure",
+   "procedure": {
+    "features": "This procurement procedure follows a Preliminary Market Engagement (PME) exercise, undertaken in accordance with Section 6 of the Procurement Act 2023. A summary of the Preliminary Market Engagement exercise is included in the tender documents.\nCGA is using the Competitive Flexible Procedure in accordance with section 20(2)(b) the Procurement Act 2023 (the PA2023). Bidders are deemed to understand the processes that CGA is required to follow under the PA2023.\nThe procedure will consist of the following stages:\nStage 1 – Procurement Specific Questionnaire\nBidders must complete and submit the Procurement Specific Questionnaire (PSQ) – this document. The PSQ sets out the conditions of participation for this procurement and will consist of:\n•Pass/fail questions\n•Information only questions\n•Scored questions\nThe PSQ will used to determine each Bidder’s eligibility and suitability to perform the Contract\nThe top 4 scoring Bidders in Stage 1 will be shortlisted to Stage 2 Invitation to Tender.\nStage 2 – Invitation to Tender Stage\nThe Invitation to Tender (ITT) Stage will be used to evaluate each Bidders detailed proposal to deliver the Contract and will consist of:\noQuality evaluation\n      oWritten submission\n      oBidder interview\noPricing evaluation\nOnly short listed Bidders are required to complete and submit the ITT document. The ITT document is made available at the PSQ stage for information only and to enable Bidders to gain an understanding of the ITT process should they be short listed.\nPlease do not complete or submit the ITT document at the PSQ stage."
+   },
+   "mainProcurementCategory": "services",
+   "aboveThreshold": true,
+   "submissionMethodDetails": "https://www.delta-esourcing.com/respond/9M9E563C99",
+   "submissionTerms": {
+    "electronicSubmissionPolicy": "allowed",
+    "languages": [
+     "en"
+    ]
+   },
+   "expressionOfInterestDeadline": "2026-12-15T12:00:00+00:00",
+   "enquiryPeriod": {
+    "endDate": "2026-12-03T12:00:00+00:00"
+   },
+   "awardPeriod": {
+    "endDate": "2027-04-30T23:59:59+01:00"
+   },
+   "lots": [
+    {
+     "id": "1",
+     "status": "active",
+     "value": {
+      "amountGross": 1850000.0,
+      "currency": "GBP"
+     },
+     "awardCriteria": {
+      "criteria": [
+       {
+        "type": "quality",
+        "name": "Services Delivery",
+        "numbers": [
+         {
+          "number": 30,
+          "weight": "percentageExact"
+         }
+        ]
+       },
+       {
+        "type": "quality",
+        "name": "Contract Management",
+        "numbers": [
+         {
+          "number": 10,
+          "weight": "percentageExact"
+         }
+        ]
+       },
+       {
+        "type": "quality",
+        "name": "Customer Care",
+        "numbers": [
+         {
+          "number": 10,
+          "weight": "percentageExact"
+         }
+        ]
+       },
+       {
+        "type": "quality",
+        "name": "Social Value",
+        "numbers": [
+         {
+          "number": 5,
+          "weight": "percentageExact"
+         }
+        ]
+       },
+       {
+        "type": "quality",
+        "name": "Health and Safety",
+        "numbers": [
+         {
+          "number": 5,
+          "weight": "percentageExact"
+         }
+        ]
+       },
+       {
+        "type": "price",
+        "name": "Pricing Document",
+        "numbers": [
+         {
+          "number": 40,
+          "weight": "percentageExact"
+         }
+        ]
+       }
+      ]
+     },
+     "selectionCriteria": {
+      "criteria": [
+       {
+        "type": "economic",
+        "description": "As set out in the tender documents"
+       },
+       {
+        "type": "technical",
+        "description": "As set out in the tender documents"
+       }
+      ]
+     },
+     "suitability": {
+      "sme": true
+     },
+     "contractPeriod": {
+      "startDate": "2027-06-30T00:00:00+01:00",
+      "endDate": "2030-06-29T23:59:59+01:00",
+      "maxExtentDate": "2032-06-29T23:59:59+01:00"
+     },
+     "hasRenewal": true,
+     "renewal": {
+      "description": "The Contract will last for an initial period of 3 years, with an option to extend at CGA’s discretion for a further 1 year, and 1 additional year, giving a total potential maximum term of 5 years."
+     },
+     "description": null
+    }
+   ],
+   "documents": [
+    {
+     "id": "conflictOfInterest",
+     "documentType": "conflictOfInterest",
+     "description": "Not published"
+    },
+    {
+     "id": "108059-2026",
+     "documentType": "tenderNotice",
+     "noticeType": "UK4",
+     "description": "Tender notice on Find a Tender",
+     "url": "https://www.find-tender.service.gov.uk/Notice/108059-2026",
+     "datePublished": "2026-11-13T14:21:56Z",
+     "format": "text/html"
+    }
+   ]
+  },
+  "language": "en"
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bbdc",
+  "id": "108091-2026",
+  "tag": [
+   "tender"
+  ],
+  "date": "2026-11-13T15:02:25Z",
+  "initiationType": "tender",
+  "parties": [
+   {
+    "name": "Bedford Borough Council",
+    "id": "GB-PPON-PLCV-4616-VTHL",
+    "identifier": {
+     "scheme": "GB-PPON",
+     "id": "PLCV-4616-VTHL"
+    },
+    "address": {
+     "locality": "Bedford",
+     "country": "GB",
+     "countryName": "United Kingdom",
+     "region": "UKH24"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "classifications": [
+      {
+       "scheme": "UK_CA_TYPE",
+       "id": "publicAuthoritySubCentralGovernment",
+       "description": "Public authority - sub-central government"
+      }
+     ]
+    }
+   }
+  ],
+  "buyer": {
+   "id": "GB-PPON-PLCV-4616-VTHL",
+   "name": "Bedford Borough Council"
+  },
+  "tender": {
+   "id": "ocds-h6vhtk-07bbdc",
+   "legalBasis": {
+    "id": "2023/54",
+    "scheme": "UKPGA",
+    "uri": "https://www.legislation.gov.uk/ukpga/2023/54/contents"
+   },
+   "title": "Play Area Works and maintenance",
+   "description": "Bedford Borough Council is inviting tenders for the provision of Play Area Maintenance Services",
+   "status": "active",
+   "items": [
+    {
+     "id": "1",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "45212290",
+       "description": "Repair and maintenance work in connection with sports facilities"
+      },
+      {
+       "scheme": "CPV",
+       "id": "50870000",
+       "description": "Repair and maintenance services of playground equipment"
+      }
+     ],
+     "deliveryAddresses": [
+      {
+       "region": "UKH24",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      }
+     ],
+     "relatedLot": "1"
+    }
+   ],
+   "value": {
+    "amountGross": 118800.0,
+    "amount": 99000.0,
+    "currency": "GBP"
+   },
+   "procurementMethod": "open",
+   "procurementMethodDetails": "Below threshold - open competition",
+   "mainProcurementCategory": "services",
+   "aboveThreshold": false,
+   "submissionMethodDetails": "https://supplier.in-tend.co.uk/bedford/home",
+   "submissionTerms": {
+    "electronicSubmissionPolicy": "allowed"
+   },
+   "tenderPeriod": {
+    "endDate": "2026-11-30T12:00:00Z"
+   },
+   "lots": [
+    {
+     "id": "1",
+     "status": "active",
+     "value": {
+      "amountGross": 118800.0,
+      "amount": 99000.0,
+      "currency": "GBP"
+     },
+     "suitability": {
+      "sme": true,
+      "vcse": true
+     },
+     "contractPeriod": {
+      "startDate": "2027-01-01T00:00:00Z",
+      "endDate": "2028-12-31T23:59:59Z"
+     },
+     "awardCriteria": {
+      "description": "70% price 30% quality"
+     }
+    }
+   ],
+   "documents": [
+    {
+     "id": "108091-2026",
+     "documentType": "tenderNotice",
+     "noticeType": "UK4",
+     "description": "Tender notice on Find a Tender",
+     "url": "https://www.find-tender.service.gov.uk/Notice/108091-2026",
+     "datePublished": "2026-11-13T15:02:25Z",
+     "format": "text/html"
+    }
+   ]
+  },
+  "language": "en"
+ },
+ {
+  "buyerID": [],
+  "id": "108243-2026",
+  "tag": [
+   "planning"
+  ],
+  "date": "2026-11-13T20:30:09Z",
+  "initiationType": "tender",
+  "ocid": "ocds-h6vhtk-079710",
+  "parties": [
+   {
+    "name": "Police and Crime Commissioner for Lancashire",
+    "id": "GB-PPON-PDVC-9719-ZQGL",
+    "identifier": {
+     "scheme": "GB-PPON",
+     "id": "PDVC-9719-ZQGL"
+    },
+    "address": {
+     "locality": "Preston",
+     "country": "GB",
+     "countryName": "United Kingdom",
+     "region": "UKD45"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "classifications": [
+      {
+       "scheme": "UK_CA_TYPE",
+       "id": "publicAuthoritySubCentralGovernment",
+       "description": "Public authority - sub-central government"
+      }
+     ]
+    }
+   }
+  ],
+  "buyer": {
+   "id": "GB-PPON-PDVC-9719-ZQGL",
+   "name": "Police and Crime Commissioner for Lancashire"
+  },
+  "planning": {
+   "milestones": [
+    {
+     "id": "engagement",
+     "type": "engagement",
+     "description": "A questionnaire can be found that will be used to gather data relating to the Vehicle Repairs Service opportunity.\nThe link to the questionnaire is - https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.cloud.microsoft%2FPages%2FResponsePage.aspx%3Fid%3DEE9SXHc8PUKMgoQvwqIq-1-sEKF3fYJEjZaHn1liNN5UNDJCN0xWMEk2Vlc1WlhVM05HSEVMVEVYUC4u&data=05%7C02%7CRachel.Astbury%40lancashire.police.uk%7C3b9dc4286c1e407d121608df40a2feef%7C5c524f103c77423d8c82842fc2a22afb%7C0%7C0%7C639300740943891681%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=89zn0Jy0XLLVxs0Lw8HCAYJT6%2Bx99DsOQovTZrS7TJc%3D&reserved=0",
+     "dueDate": "2026-11-27T23:59:59Z",
+     "status": "scheduled"
+    }
+   ],
+   "documents": [
+    {
+     "id": "108243-2026",
+     "documentType": "marketEngagementNotice",
+     "noticeType": "UK2",
+     "description": "Preliminary market engagement notice on Find a Tender",
+     "url": "https://www.find-tender.service.gov.uk/Notice/108243-2026",
+     "datePublished": "2026-11-13T20:30:09Z",
+     "format": "text/html"
+    }
+   ]
+  },
+  "tender": {
+   "id": "ocds-h6vhtk-079710",
+   "legalBasis": {
+    "id": "2023/54",
+    "scheme": "UKPGA",
+    "uri": "https://www.legislation.gov.uk/ukpga/2023/54/contents"
+   },
+   "title": "Vehicle Repairs Service",
+   "description": "Lancashire Constabulary’s Fleet Departmentrequire Accident/Collision and Vehicle MechanicalRepair Service to repair and maintain vehicles. TheAuthority is seeking to procure the services ofbetween 5 and 8 suppliers to provide a broad rangeof repairs to Police Vehicles, to support our VehicleMaintenance Strategies over a 2 year period, withthe option to extend for a further 2 years.\nThe existing Lancashire Constabulary VehicleRepairs Service Framework Agreement is due toexpire 30th September 2027. The Constabulary will be replacing this with a new framework, estimatedto start on 1st October 2027.\nThe estimated spend for the replacementframework will be in the region of £4 million.\nSuppliers will need to be located within a 60-mileradius (via Google Maps) to our Headquarters site(PR4 5SB). This will enable site visits for vehicleinspections and face to face contract managementto take place at a location based within a distancethat would not add unnecessary costs or delay to the service.\nThis criterion is also essential to meet carbonreduction and net zero targets, in addition to ourobligation to reduce contract costs.\nSuppliers outside of the specified radius arepermitted to set up/utilise appropriatesubcontracting arrangements within the radius. Thiscan include the location and use of suitable sub-contractors who may be able to carry out thisservice on behalf of the supplier.\nAll vehicle repairs shall be completed strictly inaccordance with the vehicle manufacturer's latestrepair methods, technical bulletins, approved repairprocedures and specifications current at the time ofrepair.\nUnder no circumstances shall repair methods beused that deviate from manufacturer-approvedprocesses unless written approval is obtained fromthe Lancashire Constabulary.\nQualifications that technicians undertaking repairsmust possess include:\n• ATA Accreditation (or equivalent).\n• Manufacturer-specific training where available.\n• Evidence of ongoing CPD and technical updates.\nLancashire Constabulary will be conducting Pre-Market Engagement. Please keep an eye out forthe UK2 Notice, and information included on ourexternal websites.",
+   "items": [
+    {
+     "id": "1",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "34114200",
+       "description": "Police cars"
+      },
+      {
+       "scheme": "CPV",
+       "id": "50111000",
+       "description": "Fleet management, repair and maintenance services"
+      }
+     ],
+     "deliveryAddresses": [
+      {
+       "region": "UKD4",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      }
+     ],
+     "relatedLot": "1"
+    }
+   ],
+   "value": {
+    "amountGross": 4800000,
+    "amount": 4000000,
+    "currency": "GBP"
+   },
+   "mainProcurementCategory": "services",
+   "techniques": {
+    "hasFrameworkAgreement": true
+   },
+   "lots": [
+    {
+     "id": "1",
+     "suitability": {
+      "sme": true
+     },
+     "contractPeriod": {
+      "startDate": "2027-10-01T00:00:00+01:00",
+      "endDate": "2029-10-01T23:59:59+01:00",
+      "maxExtentDate": "2031-10-01T23:59:59+01:00"
+     },
+     "hasRenewal": true,
+     "description": null,
+     "status": "planned"
+    }
+   ],
+   "status": "planned"
+  },
+  "language": "en"
+ },
+ {
+  "buyerID": [],
+  "id": "108159-2026",
+  "tag": [
+   "planningUpdate"
+  ],
+  "date": "2026-11-13T16:01:51Z",
+  "initiationType": "tender",
+  "ocid": "ocds-h6vhtk-07bb00",
+  "parties": [
+   {
+    "name": "University of Sunderland",
+    "id": "GB-PPON-PVDN-7726-TBVN",
+    "identifier": {
+     "scheme": "GB-PPON",
+     "id": "PVDN-7726-TBVN"
+    },
+    "address": {
+     "locality": "Sunderland",
+     "country": "GB",
+     "countryName": "United Kingdom",
+     "region": "UKC23"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "classifications": [
+      {
+       "scheme": "UK_CA_TYPE",
+       "id": "publicAuthoritySubCentralGovernment",
+       "description": "Public authority - sub-central government"
+      }
+     ]
+    }
+   }
+  ],
+  "buyer": {
+   "id": "GB-PPON-PVDN-7726-TBVN",
+   "name": "University of Sunderland"
+  },
+  "planning": {
+   "milestones": [
+    {
+     "id": "engagement",
+     "type": "engagement",
+     "description": "Scope of Engagement\nThe University is undertaking Preliminary Market Engagement to better understand the market's capability and capacity to deliver an agile and responsive Occupational Health Service that supports healthcare students in their academic and placement environments protecting student and patient safety.\nThe University requires comprehensive Occupational Health service provision to support students across a range of healthcare programmes where placement providers, professional bodies, or regulatory requirements necessitate pre-placement health screening, pre-placement clearance, , immunisation reviews, vaccination programmes, fitness to study assessments, and associated occupational health services.\nThe purpose of this engagement is to inform the University's future procurement strategy and service specification. The University is particularly interested in understanding how suppliers can provide timely, accessible, locally delivered services to students near to the University City Campus in Sunderland whilst maintaining consistent service quality, regulatory compliance, and positive student experience.\nThe University welcomes responses from organisations capable of delivering some or all of the following services:\n•Pre-placement occupational health screening and health declaration reviews.\n•Clearance certification and reporting to support placement requirements.\n•Fitness to study s and fitness-for-placement assessments. \n•Immunisation reviews and vaccination programmes.\n•Blood testing, serology, and associated laboratory services.\n•Timely and evidence-based occupational health assessments following referral from programme leaders, placement teams, student support services, or designated University representatives. Assessments should consider the impact of physical health conditions, mental health conditions, neurodiversity, disability, long-term health conditions, and other health-related factors on a student's ability to safely participate in academic learning and clinical placement activities.\n•Secure handling and management of sensitive health information.\n•Electronic system, which University of Sunderland staff can access to make management referrals and obtain up-to-date information on fit certificates, immunisation records, student appointment history, and relevant student management reports.\n•Face-to-face, remote, and digital service delivery options.\nAreas of Interest\nThe University wishes to understand:\n•The supplier's ability to provide local access to Occupational Health services across the Northeast.\n•Availability of clinic networks, partner arrangements, mobile services, and remote assessment capabilities.\n•Capacity to accommodate varying student volumes throughout the academic year, including peak intake periods.\n•Typical turnaround times for assessments, testing, vaccination programmes, and clearance certification.\n•Approaches to managing urgent or accelerated placement clearance requirements and management referrals.\n•Service management, reporting, and contract monitoring capabilities.\n•Business continuity and resilience arrangements.\n•Pricing and commercial delivery models.\n•Electronic management systems / digital platforms for information sharing\n•Opportunities for innovation and service improvement.\n•Experience supporting Higher Education Institutions and placement-based academic programmes\nSupplier Engagement Process\nInterested organisations are invited to submit a written response outlining their capability, experience, and approach to delivering the services described within this notice.\nDue to resource and time constraints, the University intends to invite a maximum of five (5) suppliers to participate in further market engagement activities. These activities may include supplier presentations, clarification meetings, demonstrations, or structured market engagement workshops.\nWhere more than five responses are received, the University may shortlist suppliers based on the relevance of their experience, capability to deliver locally accessible services, capacity, and overall suitability to inform the University's future procurement strategy.\nThe University reserves the right to invite fewer than five suppliers where, in its opinion, insufficient responses are received that demonstrate the required experience, capability, or capacity.\nParticipation in this Preliminary Market Engagement exercise will not confer any advantage in any future procurement exercise and will not be a prerequisite for participation in any subsequent tender opportunity.\nInformation Requested from Suppliers\nSuppliers responding to this notice are requested to provide:\n1.An overview of their organisation and relevant Occupational Health service provision.\n2.Details of experience delivering Occupational Health services to Higher Education institutions, healthcare education providers, or other placement-based programmes.\n3.Details of geographic coverage, including clinic locations, partner networks, and remote service capabilities.\n4.Typical turnaround times for: \noHealth questionnaire reviews;\noOccupational Health clearance assessments;\noImmunisation reviews;\noBlood testing and laboratory services; and\noIssue of placement clearance certificates\noManagement referrals\n5.Capacity to support large student cohorts' intakes throughout an academic year.\n6.Examples of management information and reporting available to clients.\n7.Information on the Electronic management system / digital platforms used for information sharing \n8.Information on innovative approaches, digital platforms, or service enhancements that may improve efficiency or student experience.\n9.Any market considerations, risks, or opportunities that the University should take into account when developing its future procurement strategy.\nYour response should be on no more than 4 sides of A4. Saved to PDF\nResponses must be submitted to bids@example.org by 12:00 on the 27th of November. \nThe University will inform those that have been selected for the interview stage of the Pre Market Engagement by December 4th. Interview stage will take place Thursday 10th. \nThis engagement is intended solely to inform the University's understanding of the market and to assist in the development of a future procurement approach. No commitment is being made at this stage to commence a procurement process or award a contract.",
+     "dueDate": "2026-11-27T23:59:59+00:00",
+     "status": "scheduled"
+    }
+   ],
+   "documents": [
+    {
+     "id": "108159-2026",
+     "documentType": "marketEngagementNotice",
+     "noticeType": "UK2",
+     "description": "Preliminary market engagement notice on Find a Tender",
+     "url": "https://www.find-tender.service.gov.uk/Notice/108159-2026",
+     "datePublished": "2026-11-13T16:01:51Z",
+     "format": "text/html"
+    }
+   ]
+  },
+  "tender": {
+   "id": "UoS/occupational Health/ 1026",
+   "legalBasis": {
+    "id": "2023/54",
+    "scheme": "UKPGA",
+    "uri": "https://www.legislation.gov.uk/ukpga/2023/54/contents"
+   },
+   "title": "Provision of Occupational Health Services for healthcare students",
+   "description": "The University is seeking to procure a comprehensive Occupational Health Service to support students enrolled on healthcare programmes that include mandatory clinical, practice-based or work placement activities. The service must support compliance with university, placement provider, professional body and regulatory requirements while promoting student wellbeing, fitness to study, and patient safety.\nThe provider will be required to deliver an agile, responsive and student-focused service, with accessible provision located within reasonable travelling distance of the University of Sunderland and placement locations across the Northeast. Services should be available through a combination of face-to-face, remote and digital delivery models.\nThe scope of services includes:\n•Pre-placement occupational health screening and health declaration reviews.\n•Placement clearance assessment, certification and reporting.\n•Fitness to study and fitness for placement assessments.\n•Occupational health management referrals to support students experiencing physical health conditions, mental health conditions, disability, neurodiversity, long-term health conditions or other circumstances that may impact their ability to participate safely in academic or placement activities.\n•Evidence-based recommendations on reasonable adjustments, support measures, placement restrictions and return-to-study arrangements in accordance with the Equality Act 2010.\n•Immunisation reviews, vaccination programmes and immunity status management.\n•Blood testing, serology and associated laboratory services.\n•Occupational health advice, guidance and referral services.\n•Mental health and wellbeing assessments where relevant to study or placement activity.\n•Secure management of confidential health records and sensitive personal information.\n•An electronic case management system enabling authorised University staff to submit referrals, monitor case progress, access clearance certification and immunisation records, and obtain management information reports.\n•Service reporting, governance, quality assurance and regulatory compliance.\nThe University is particularly interested in suppliers' capability and capacity to provide timely service delivery, local clinical access, scalable support during peak student intake periods, robust digital systems, effective contract management arrangements, and innovative approaches that enhance the student experience while maintaining high standards of occupational health practice and patient safety.",
+   "items": [
+    {
+     "id": "1",
+     "additionalClassifications": [
+      {
+       "scheme": "CPV",
+       "id": "85100000",
+       "description": "Health services"
+      },
+      {
+       "scheme": "CPV",
+       "id": "85140000",
+       "description": "Miscellaneous health services"
+      },
+      {
+       "scheme": "CPV",
+       "id": "85147000",
+       "description": "Company health services"
+      }
+     ],
+     "deliveryAddresses": [
+      {
+       "region": "UKC23",
+       "country": "GB",
+       "countryName": "United Kingdom"
+      }
+     ],
+     "relatedLot": "1"
+    }
+   ],
+   "value": {
+    "amountGross": 1000000.0,
+    "currency": "GBP"
+   },
+   "mainProcurementCategory": "services",
+   "aboveThreshold": true,
+   "lots": [
+    {
+     "id": "1",
+     "contractPeriod": {
+      "startDate": "2027-07-01T00:00:00+01:00",
+      "endDate": "2030-06-30T23:59:59+01:00",
+      "maxExtentDate": "2032-06-30T23:59:59+01:00"
+     },
+     "hasRenewal": true,
+     "description": null,
+     "status": "planning"
+    }
+   ],
+   "status": "planning"
+  },
+  "language": "en"
+ },
+ {
+  "ocid": "ocds-h6vhtk-07bc37",
+  "id": "108255-2026",
+  "tag": [
+   "award",
+   "contract"
+  ],
+  "date": "2026-11-15T13:39:07Z",
+  "initiationType": "tender",
+  "parties": [
+   {
+    "name": "UK Research & Innovation (UKRI)",
+    "id": "GB-PPON-PDQJ-7126-JDHG",
+    "identifier": {
+     "scheme": "GB-PPON",
+     "id": "PDQJ-7126-JDHG"
+    },
+    "address": {
+     "locality": "Swindon, Wiltshire",
+     "country": "GB",
+     "countryName": "United Kingdom",
+     "region": "UKK14"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "url": "https://www.ukri.org/",
+     "classifications": [
+      {
+       "scheme": "UK_CA_TYPE",
+       "id": "publicAuthorityCentralGovernment",
+       "description": "Public authority - central government"
+      }
+     ]
+    }
+   },
+   {
+    "name": "Services Design Solution Ltd",
+    "id": "GB-PPON-PHQC-1837-BTVG",
+    "identifier": {
+     "scheme": "GB-PPON",
+     "id": "PHQC-1837-BTVG"
+    },
+    "address": {
+     "locality": "PLYMOUTH",
+     "country": "GB",
+     "countryName": "United Kingdom",
+     "region": "UKK41"
+    },
+    "contactPoint": {
+     "name": "Jane Example",
+     "email": "bids@example.org",
+     "telephone": "0113 496 0001"
+    },
+    "roles": [
+     "supplier"
+    ],
+    "details": {
+     "scale": "sme",
+     "vcse": false
+    }
+   }
+  ],
+  "buyer": {
+   "id": "GB-PPON-PDQJ-7126-JDHG",
+   "name": "UK Research & Innovation (UKRI)"
+  },
+  "tender": {
+   "id": "UKRI-4453 Lot 6_03",
+   "legalBasis": {
+    "id": "2023/54",
+    "scheme": "UKPGA",
+    "uri": "https://www.legislation.gov.uk/ukpga/2023/54/contents"
+   },
+   "title": "UKRI-4453 Lot 6_03 R100 First Floor Fit-Out",
+   "description": "R100 First Floor Fit-Out Services for UKRI-STFC",
+   "status": "complete",
+   "procurementMethod": "selective",
+   "procurementMethodDetails": "Below threshold - award under framework",
+   "competitive": false,
+   "lots": [
+    {
+     "id": "1",
+     "status": "complete"
+    }
+   ]
+  },
+  "awards": [
+   {
+    "id": "1",
+    "status": "active",
+    "mainProcurementCategory": "services",
+    "suppliers": [
+     {
+      "id": "GB-PPON-PHQC-1837-BTVG",
+      "name": "Services Design Solution Ltd"
+     }
+    ],
+    "items": [
+     {
+      "id": "1",
+      "additionalClassifications": [
+       {
+        "scheme": "CPV",
+        "id": "71334000",
+        "description": "Mechanical and electrical engineering services"
+       }
+      ],
+      "relatedLot": "1"
+     }
+    ],
+    "relatedLots": [
+     "1"
+    ]
+   }
+  ],
+  "contracts": [
+   {
+    "id": "1",
+    "awardID": "1",
+    "status": "active",
+    "period": {
+     "startDate": "2026-11-06T00:00:00Z",
+     "endDate": "2027-03-31T23:59:59+01:00"
+    },
+    "value": {
+     "amountGross": 19824.0,
+     "amount": 16520.0,
+     "currency": "GBP"
+    },
+    "aboveThreshold": false,
+    "dateSigned": "2026-11-05T00:00:00Z",
+    "documents": [
+     {
+      "id": "108255-2026",
+      "documentType": "contractNotice",
+      "noticeType": "UK7",
+      "description": "Contract details notice on Find a Tender",
+      "url": "https://www.find-tender.service.gov.uk/Notice/108255-2026",
+      "datePublished": "2026-11-15T13:39:07Z",
+      "format": "text/html"
+     }
+    ]
+   }
+  ],
+  "relatedProcesses": [
+   {
+    "id": "framework",
+    "relationship": [
+     "framework"
+    ],
+    "scheme": "ocid",
+    "identifier": "ocds-h6vhtk-050a95",
+    "relatedLots": [
+     "6"
+    ],
+    "uri": "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages/ocds-h6vhtk-050a95"
+   }
+  ],
+  "language": "en"
+ }
+]
