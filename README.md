@@ -36,7 +36,8 @@ Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 - **Phone masking over-masks.** Any 10–11 digit reference starting with 0 is masked as if it were a phone number.
 - **Values in other currencies are treated as unknown.** One UK lot that week was labelled AED in the source data.
 - **A week's fetch takes about 3 minutes,** because the API's stage filter is unreliable and every stage has to be fetched (D11).
-- **Accreditation names are matched loosely.** A requirement for "Cyber Essentials Plus" counts as held because the company holds "Cyber Essentials". "X or equivalent" is treated as X, so a notice asking for "CHAS or equivalent" is rejected even though SafeContractor would qualify.
+- **Accreditation names are matched loosely.** A requirement for "Cyber Essentials Plus" counts as held because the company holds "Cyber Essentials". "X or equivalent" with only X named is treated as X, so "CHAS or equivalent" is rejected even though SafeContractor would qualify. Groups that name the alternatives ("CHAS, SafeContractor or Constructionline") are handled.
+- **Staff checks and licences never gate** (DBS, CSCS, SIA licences, waste-carrier registration, Gas Safe, insurance; D22). A notice that truly depends on one the company cannot get is still shortlisted.
 - **Red flags (TUPE, short deadline, closed framework call-off) are extracted but not scored.** A call-off only open to existing framework suppliers can still be shortlisted; the flag is there for the bid team to see.
 - **Lots the model leaves out are not scored.** If the extraction covers none of a notice's lots, the notice goes to "needs review"; if it covers some, the missing ones are ignored.
 - **A provider error stops the run** (bad key, network). Extractions done so far are cached, so running again continues where it stopped.

@@ -519,3 +519,7 @@ def test_held_accreditation_matches_ignoring_case_and_punctuation(requirement):
 
 def test_accreditation_not_in_profile_is_not_held():
     assert holds("CHAS", PROFILE) is False
+
+
+def test_either_of_group_is_held_when_the_company_holds_one_scheme_in_it():
+    assert holds("one of: CHAS, SafeContractor or Constructionline", PROFILE) is True

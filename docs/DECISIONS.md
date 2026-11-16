@@ -128,6 +128,12 @@
 - **Why:** a bad key would otherwise produce a report of 60 "needs review" notices that looks like a result. Stopping is clearer, and the cache makes rerunning cheap.
 - **Revisit if:** transient API errors stop weekly runs often.
 
+## D22: Only organisation-level certifications can be a mandatory-accreditation gate
+- **Chose:** the extract prompt lists as mandatory only audited, organisation-level certificates and scheme memberships (ISO standards, Cyber Essentials, SSIP schemes, SIA Approved Contractor, NICEIC, BAFE). Staff checks and cards (DBS, CSCS, SIA licences), statutory registrations and licences (waste carrier, Gas Safe), insurance and policies are not extracted, so they never gate. "One of" groups are recorded as one entry, and they count as held when the company holds any scheme in the group.
+- **Alternatives:** (a) gate on every stated requirement, staff checks included; (b) add DBS, CSCS and a waste-carrier licence to the profile's `held` list.
+- **Why:** (a) rejects in-region FM frameworks the company would bid for. Draft eval label 106942 (North East Lincolnshire FM repairs) failed every lot on CSCS, DBS and waste-carrier wording. Yet a security and cleaning firm DBS-checks staff as a matter of course, CSCS cards are per worker, and a waste-carrier registration is quick to get, so none of these is a reason to skip a tender. A wrong reject is a missed tender, the client's main pain, while a wrong pass costs one notice the bid team opens. (b) would write facts about the client into config that nobody has confirmed. The cost: a notice that truly hinges on a licence the company cannot get is shortlisted, and the bid team sees it when they open it.
+- **Revisit if:** the client confirms which staff vetting and licences they hold, or the eval shows shortlisted notices that fail on such a requirement.
+
 <!--
 Template:
 ## Dn: <decision>
