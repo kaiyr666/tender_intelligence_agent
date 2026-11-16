@@ -1,0 +1,35 @@
+{
+  "time": "2026-11-16 11:46",
+  "cases": 3,
+  "case_accuracy": 1.0,
+  "field_accuracy": {
+    "max_amount_gbp": 1.0
+  },
+  "failures": [],
+  "rows": [
+    {
+      "id": "sample-1",
+      "correct": true,
+      "output": {
+        "word_count": 10,
+        "max_amount_gbp": 250000.0
+      }
+    },
+    {
+      "id": "sample-2",
+      "correct": true,
+      "output": {
+        "word_count": 8,
+        "max_amount_gbp": 40000.0
+      }
+    },
+    {
+      "id": "sample-3",
+      "correct": true,
+      "output": {
+        "word_count": 8,
+        "max_amount_gbp": null
+      }
+    }
+  ]
+}

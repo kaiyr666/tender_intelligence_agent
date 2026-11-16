@@ -1,0 +1,3 @@
+{"id": "sample-1", "input": "Leeds City Council invites bids worth £250,000 for cleaning services.", "expected": {"max_amount_gbp": 250000}}
+{"id": "sample-2", "input": "Two lots: £12,500 and £40,000. Deadline 1 March.", "expected": {"max_amount_gbp": 40000}}
+{"id": "sample-3", "input": "Value to be confirmed at a later stage.", "expected": {"max_amount_gbp": null}}
