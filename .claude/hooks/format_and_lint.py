@@ -11,8 +11,9 @@ import sys
 
 def main() -> None:
     try:
-        event = json.load(sys.stdin)
-    except json.JSONDecodeError:
+        # Claude Code sends UTF-8; reading with the Windows code page garbles non-ASCII paths.
+        event = json.loads(sys.stdin.buffer.read().decode("utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
         return
 
     path = (event.get("tool_input") or {}).get("file_path", "")
@@ -25,6 +26,8 @@ def main() -> None:
         ["ruff", "check", "--output-format", "concise", path],
         capture_output=True,
         text=True,
+        encoding="utf-8",  # ruff writes UTF-8; the Windows default code page cannot decode it
+        errors="replace",
         check=False,
     )
     if result.returncode != 0:

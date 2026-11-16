@@ -23,6 +23,8 @@ def main() -> None:
         ["pytest", "-q", "-x", "--no-header", "-p", "no:cacheprovider"],
         capture_output=True,
         text=True,
+        encoding="utf-8",  # pytest writes UTF-8; the Windows default code page cannot decode it
+        errors="replace",
         check=False,
         cwd=os.environ.get("CLAUDE_PROJECT_DIR") or None,
     )
