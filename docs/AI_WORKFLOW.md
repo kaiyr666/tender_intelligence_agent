@@ -11,3 +11,4 @@ This project was built AI-first: **Claude Code** wrote the code under a written 
 <!-- One line per notable event: what was delegated, what a review or test caught, what the human overruled and why. -->
 | Step | What happened | Human decision |
 |---|---|---|
+| Spec | Claude turned the brief into a spec, a 5-slice plan and 7 decisions, and asked four scoping questions first (lots, hard gates, shortlist cut, stretch items). | Chose one row per notice scored on its best lot, a score threshold, and no stretch items. Overruled the brief's reading on gates: only value < £100k, excluded main service and missing accreditation drop a tender; out of region and over £5m just lower the score. |

@@ -2,10 +2,10 @@
 
 ## Project
 <!-- /spec fills this section in from the brief. Keep it to five lines. -->
-- **What:** _not set yet — run `/spec`_
-- **For whom:** _not set yet_
+- **What:** a CLI that pulls UK Find a Tender notices for a date range, filters and scores them against a company profile, and writes a ranked, explained shortlist (Markdown + CSV).
+- **For whom:** the bid team of a UK facilities-management company (cleaning, security, building maintenance).
 - **In scope / out of scope:** see `docs/SPEC.md`
-- **Run:** `uv run python -m app`
+- **Run:** `uv run python -m app --from YYYY-MM-DD --to YYYY-MM-DD`
 - **Test:** `uv run pytest`
 
 ## How we work

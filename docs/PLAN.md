@@ -1,20 +1,22 @@
 # Plan
 
-<!-- Written by /spec. 3 to 5 slices in build order. Each one works end to end and can be shown. /slice ticks them off. -->
-
-- [ ] **Slice 1: <name>** (~45 min)
-  - Goal:
-  - Build:
-  - Test:
-- [ ] **Slice 2: <name>** (~45 min)
-  - Goal:
-  - Build:
-  - Test:
-- [ ] **Slice 3: Evaluation** (~30 min)
-  - Goal: measure quality on a labelled set
-  - Build: eval cases + harness, results in `docs/EVAL.md`
-  - Test: eval runs from a clean clone
-- [ ] **Slice 4: Wrap-up** (~30 min)
-  - Goal: a repo a reviewer understands in five minutes
-  - Build: README, where it breaks, next steps
-  - Test: fresh-clone instructions work
+- [ ] **Slice 1: Fetch and pre-filter** (~60 min)
+  - Goal: for a date range, see how many real notices arrive and which survive the code pre-filter.
+  - Build: `fetch.py` (OCDS client, paging, `Retry-After`, strips contact data, saves to `data/raw/`); a `Notice` model that normalises title, description, CPV, value, lots, deadline and NUTS regions; `config/profile.toml` (services, CPV prefixes, value band, regions, accreditations, weights, threshold); `prefilter.py`; the CLI prints counts (total / planning / kept / dropped by reason).
+  - Test: a sanitised fixture of real notices; a fake HTTP layer for paging and 429; pre-filter cases (closed deadline, < £100k, unknown value kept, unknown deadline kept, irrelevant CPV, planning stage).
+- [ ] **Slice 2: Extract and score** (~60 min)
+  - Goal: every pre-filtered notice gets validated fields and an explainable score.
+  - Build: `prompts/extract.md` and the `Extraction` Pydantic model; `score.py` (hard gates plus a weighted rubric, each criterion gives 0–1 and a reason); best-lot selection; a cost log per run checked against the $5 cap.
+  - Test: the fake provider for extraction; rubric unit tests (each gate, each criterion, unknown value is neutral, best lot chosen, threshold).
+- [ ] **Slice 3: Explain and report** (~40 min)
+  - Goal: the bid team gets the full weekly output.
+  - Build: `prompts/rationale.md` (rationale from extracted fields only); `report.py` writing `output/report.md` and `output/shortlist.csv` (rank, score, breakdown, key fields, deadline, link, flags, rationale); a "rejected after extraction" section, the planning count and OGL attribution. Run on the last full week.
+  - Test: a golden-file test of the report and CSV from a fixed scored input; check the rationale prompt gets no raw notice text.
+- [ ] **Slice 4: Evaluation** (~45 min)
+  - Goal: measure precision, recall and field accuracy against the targets.
+  - Build: about 30 real notices (cases chosen to include near misses) in `evals/cases.jsonl`, with Claude-drafted bid / no-bid labels and one-line reasons that the human checks; the harness reports precision, recall, per-field accuracy and cost; threshold tuned and results written to `docs/EVAL.md`.
+  - Test: the eval runs from a clean clone on cached notices.
+- [ ] **Slice 5: Wrap-up** (~30 min)
+  - Goal: a repo a reviewer understands in five minutes.
+  - Build: README (how it works, results, where it breaks, next steps including the MCP server and incumbent lookup), and the final AI_WORKFLOW log.
+  - Test: the fresh-clone instructions work.
