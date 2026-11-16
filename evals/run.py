@@ -24,7 +24,9 @@ def matches(expected, actual) -> bool:
 
 
 def main() -> None:
-    cases = [json.loads(line) for line in CASES.read_text().splitlines() if line.strip()]
+    cases = [
+        json.loads(line) for line in CASES.read_text(encoding="utf-8").splitlines() if line.strip()
+    ]
     per_field = defaultdict(lambda: [0, 0])  # field -> [correct, total]
     rows, failures = [], []
 
@@ -57,7 +59,9 @@ def main() -> None:
         "field_accuracy": {f: round(c / t, 3) for f, (c, t) in per_field.items()},
     }
     RESULTS.parent.mkdir(exist_ok=True)
-    RESULTS.write_text(json.dumps({**summary, "failures": failures, "rows": rows}, indent=2))
+    RESULTS.write_text(
+        json.dumps({**summary, "failures": failures, "rows": rows}, indent=2), encoding="utf-8"
+    )
 
     print(f"Eval {summary['time']}: {summary['cases']} cases")
     print("\n| Metric | Score |\n|---|---|")
