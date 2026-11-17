@@ -11,10 +11,12 @@ from pathlib import Path
 
 from app.assess import assess, format_assessment
 from app.config import get_settings
+from app.explain import write_rationales
 from app.extract import ExtractionCache
 from app.fetch import FetchError
 from app.llm import ProviderError, Usage, get_provider
 from app.profile import load_profile
+from app.report import RunSummary, write_report
 from app.screen import DATA_DIR, format_summary, last_full_week, save_notices, screen
 
 CACHE_DIR = Path(__file__).resolve().parents[2] / "data" / "cache" / "extractions"
@@ -59,6 +61,24 @@ def main() -> None:
     except ProviderError as error:
         sys.exit(f"{error}\nExtractions done so far are cached; run again to continue.")
     print(format_assessment(results, usage))
+
+    rationales = write_rationales(results, get_provider(), usage)
+    run = RunSummary(
+        date_from=args.date_from,
+        date_to=args.date_to,
+        generated_at=now,
+        tender_count=len(result.screened),
+        prefilter_kept=len(result.kept),
+        planning_count=result.planning_count,
+        complete=result.complete,
+        problem=result.problem,
+        llm_calls=usage.calls,
+        cost_usd=usage.cost_usd,
+        threshold=profile.scoring.shortlist_threshold,
+        weights=profile.scoring.weights.model_dump(),
+    )
+    report_path, csv_path = write_report(results, rationales, run)
+    print(f"Report: {report_path}\nCSV:    {csv_path}  (LLM cost in total ${usage.cost_usd:.2f})")
 
 
 if __name__ == "__main__":

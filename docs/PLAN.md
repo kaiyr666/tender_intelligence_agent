@@ -11,7 +11,7 @@ About 210 minutes of slices. The rest of the 5 hours covers the spec (done), the
   - Goal: every pre-filtered notice ends up scored, rejected with a reason, or marked for review.
   - Build: `prompts/extract.md` and a per-lot `Extraction` model with supporting quotes for gate fields; token usage recorded in `llm.py`; an extraction cache; a budget check before each call; `score.py` (gates and weighted rubric per lot, best eligible lot chosen, quote check for LLM-driven gates). Draft eval labels and expected fields alongside, for the human to check.
   - Test: the fake provider; a mixed notice (office-cleaning lot plus hospital-cleaning lot) shortlists on the good lot; each gate and criterion; unknown value is neutral; a gate with no matching quote goes to "needs review"; optional versus mandatory accreditation wording; instructions embedded in notice text are ignored; one failed extraction among good ones; budget reached leaves the rest "not processed".
-- [ ] **Slice 3: Explain and report** (~30 min)
+- [x] **Slice 3: Explain and report** (~30 min). Done, decisions D23–D24. The 9–15 Nov run gave 28 rationales for $0.03.
   - Goal: the bid team gets the full weekly output.
   - Build: `prompts/rationale.md` (from extracted fields only); `report.py` writing `output/report.md` and `output/shortlist.csv` with the four groups, planning count, cost, incomplete banner and OGL attribution. Plain layout, no polish. Run on the last full week.
   - Test: a golden-file test of the report and CSV from a fixed scored input; the rationale prompt gets no raw notice text.

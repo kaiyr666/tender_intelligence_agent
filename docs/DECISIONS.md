@@ -135,6 +135,18 @@
 - **Why:** (a) rejects in-region FM frameworks the company would bid for. Draft eval label 106942 (North East Lincolnshire FM repairs) failed every lot on CSCS, DBS and waste-carrier wording. Yet a security and cleaning firm DBS-checks staff as a matter of course, CSCS cards are per worker, and a waste-carrier registration is quick to get, so none of these is a reason to skip a tender. A wrong reject is a missed tender, the client's main pain, while a wrong pass costs one notice the bid team opens. (b) would write facts about the client into config that nobody has confirmed. The cost: a notice that truly hinges on a licence the company cannot get is shortlisted, and the bid team sees it when they open it.
 - **Revisit if:** the client confirms which staff vetting and licences they hold, or the eval shows shortlisted notices that fail on such a requirement.
 
+## D23: The rationale sees scored fields only, and never blocks the report
+- **Chose:** the rationale prompt gets the best lot's criterion scores and reasons, its extracted labels and numbers, accreditation names and red-flag kinds. It never gets the title, buyer, description or quotes. A rationale that fails (invalid output, budget, provider error) is replaced by "Rationale not written (...); see the score breakdown", and after a budget or provider error no further rationale calls are made.
+- **Alternatives:** pass the notice text for a richer rationale; stop the run on a provider error as extraction does (D21).
+- **Why:** the spec says the rationale uses extracted fields only, so it cannot claim anything scoring did not see, and keeping notice text out also keeps third-party text away from this prompt. Unlike a failed extraction, a missing rationale changes no outcome: the score breakdown is printed next to it, so the report is still correct and worth writing.
+- **Revisit if:** the bid team finds the rationales only repeat the breakdown. Then add short extracted quotes, which are checked against the notice, to the facts.
+
+## D24: The CSV holds every assessed notice, with its outcome
+- **Chose:** `shortlist.csv` has one row per notice that reached extraction (all four report groups), with `outcome`, rank for shortlisted rows, scores per criterion, reason and rationale. Text cells that start with `=`, `+`, `-`, `@` or a tab are prefixed with `'`, and the file is UTF-8 with a byte-order mark.
+- **Alternatives:** shortlisted rows only, as the file name suggests.
+- **Why:** the spec calls the CSV "the same data" as the report, and the team needs the needs-review and rejected rows to check the tool's calls; filtering on `outcome` in a spreadsheet is one click. Titles come from third parties, so a title starting with `=` must not run as a formula in Excel, and Excel needs the byte-order mark to read "£".
+- **Revisit if:** the team's tracker import wants shortlisted rows only.
+
 <!--
 Template:
 ## Dn: <decision>

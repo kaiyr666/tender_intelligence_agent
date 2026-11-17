@@ -1,0 +1,6 @@
+rank,outcome,score,notice_id,title,buyer,best_lot,deadline,value_gbp,score_service,score_region,score_value,score_accreditations,score_mobilisation,score_deadline,red_flags,reason,rationale,url
+1,shortlisted,0.95,100002-2026,"'=HYPERLINK(""x"") Cleaning | Leeds offices",Buyer 2,Lot 1: Offices | north,2026-12-04,250000,1.00,1.00,1.00,1.00,0.50,1.00,TUPE,Lot 1: Offices | north scores 0.95 (threshold 0.60),Office cleaning in Leeds | in the value band. TUPE applies.,https://www.find-tender.service.gov.uk/Notice/100002-2026
+2,shortlisted,0.75,100001-2026,"Security guarding, Hull",Buyer 1,whole notice,2026-12-04,250000,1.00,0.00,1.00,1.00,0.50,1.00,,whole notice scores 0.75 (threshold 0.60),"Guarding in Hull, outside the North. <b>Value</b> fits.",https://www.find-tender.service.gov.uk/Notice/100001-2026
+,rejected,,100003-2026,Maintenance framework,Buyer 3,,,,,,,,,,,"requires CHAS, which the company does not hold",,https://www.find-tender.service.gov.uk/Notice/100003-2026
+,needs review,,100004-2026,Hospital cleaning,Buyer 4,,2026-12-04,250000,,,,,,,,the extraction failed: the model did not return valid output,,https://www.find-tender.service.gov.uk/Notice/100004-2026
+,not processed,,100005-2026,Caretaking,Buyer 5,,2026-12-04,250000,,,,,,,,the LLM budget was reached before this notice,,https://www.find-tender.service.gov.uk/Notice/100005-2026

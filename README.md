@@ -15,6 +15,7 @@ cp .env.example .env   # then add your API key to .env
 uv run python -m app
 ```
 With an OpenAI key, `.env` needs `OPENAI_API_KEY`, `LLM_PROVIDER=openai`, `LLM_MODEL=<model>`, and the model's price in USD per million tokens as `LLM_INPUT_USD_PER_MTOK` and `LLM_OUTPUT_USD_PER_MTOK`. The run refuses to start without a price, because the budget (`LLM_BUDGET_USD`, default 2.50) needs it.
+The run writes `output/report.md` and `output/shortlist.csv` (git-ignored).
 Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 
 ## How it works
@@ -47,6 +48,10 @@ Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 - **Lots the model leaves out are not scored.** If the extraction covers none of a notice's lots, the notice goes to "needs review"; if it covers some, the missing ones are ignored.
 - **A provider error stops the run** (bad key, network). Extractions done so far are cached, so running again continues where it stopped.
 - **The budget stops early rather than late.** Each call is checked against its worst case (full output allowance), so a run can stop with up to one call's maximum unspent.
+- **Rationales are not checked in code.** The prompt gets only scored fields (D23) and the real week's 28 rationales matched them, but nothing verifies a number or place in the text. They also mostly restate the score breakdown.
+- **Rationales are not cached.** Every run pays for them again (about $0.03 for a week).
+- **Scottish notices link to the Public Contracts Scotland API,** not a page a person can read, because that is the URL the source data gives.
+- **The report shows the notice's total value,** not the best lot's; the lot's value is in the score breakdown.
 - **Scoring numbers are first guesses** (unknown = 0.5, over £5m = 0.3, minor excluded service −0.25, threshold 0.6) until the eval in slice 4 tunes them.
 
 ## Next steps (if this were a paid engagement)
