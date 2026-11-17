@@ -8,10 +8,10 @@ from datetime import UTC, date, datetime
 from pathlib import Path
 
 import pytest
-from app.report import RunSummary, render_csv, render_report, write_report
 
 from app.extract import Extraction, RedFlag
 from app.notices import Notice
+from app.report import RunSummary, render_csv, render_report, write_report
 from app.score import (
     ELIGIBLE,
     GATED,

@@ -4,7 +4,6 @@ import json
 from datetime import UTC, datetime, timedelta
 
 from app.explain import write_rationales
-
 from app.extract import WHOLE_NOTICE, Extraction, RedFlag
 from app.llm import Usage
 from app.notices import Notice
