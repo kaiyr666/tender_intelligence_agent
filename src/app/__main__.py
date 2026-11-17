@@ -16,7 +16,7 @@ from app.extract import ExtractionCache
 from app.fetch import FetchError
 from app.llm import ProviderError, Usage, get_provider
 from app.profile import load_profile
-from app.report import RunSummary, write_report
+from app.report import OUTPUT_DIR, RunSummary, write_report
 from app.screen import DATA_DIR, format_summary, last_full_week, save_notices, screen
 
 CACHE_DIR = Path(__file__).resolve().parents[2] / "data" / "cache" / "extractions"
@@ -77,7 +77,7 @@ def main() -> None:
         threshold=profile.scoring.shortlist_threshold,
         weights=profile.scoring.weights.model_dump(),
     )
-    report_path, csv_path = write_report(results, rationales, run)
+    report_path, csv_path = write_report(results, rationales, run, OUTPUT_DIR)
     print(f"Report: {report_path}\nCSV:    {csv_path}  (LLM cost in total ${usage.cost_usd:.2f})")
 
 
