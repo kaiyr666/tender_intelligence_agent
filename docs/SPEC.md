@@ -13,7 +13,7 @@ The bid team, once a week. They run the tool for the last full week and open a M
 - **Pre-filter (code):** drops a notice when its deadline has passed, its stated value is under £100k, or none of its CPV codes (notice, items and lots) match the profile. A notice with no CPV code at all is kept. Planning-stage notices are counted, not shortlisted.
 - **Extract (LLM):** per lot (or once for a notice without lots): services and the primary service, delivery region, contract length, mobilisation time, mandatory accreditations and red flags (TUPE, short deadline, closed framework call-off). Unknown is an allowed value. Fields that drive a gate carry a supporting quote from the notice. Output is validated by Pydantic.
 - **Score (code):** each lot is gated and scored on all criteria from `config/profile.toml`: service fit, region, value band, accreditations, mobilisation and deadline. Each criterion gives 0–1 and a reason. Notice-wide requirements apply to every lot.
-- **Hard gates:** value under £100k, an excluded service as the lot's primary service, or a mandatory accreditation the company lacks. The two LLM-driven gates only reject when the supporting quote is found in the notice text; otherwise the notice goes to "needs review". Over £5m and out of region lower the score but are not gates.
+- **Hard gates:** value under £100k, a lot outside the North (out of region, UK-wide with no regional lot, or no region stated), an excluded service as the lot's primary service, or a mandatory accreditation the company lacks. The excluded-service and accreditation gates only reject when the supporting quote is found in the notice text; otherwise the notice goes to "needs review". The region gate rejects without a quote, also when the region was read from the text (D25). Over £5m lowers the score but is not a gate.
 - **Lots:** one row per notice, showing its best eligible lot by name.
 - **Shortlist:** a score threshold set in config and tuned on the eval set.
 - **Explain (LLM):** a 2–3 sentence rationale per shortlisted tender, written from the extracted fields only.
@@ -46,9 +46,9 @@ The bid team, once a week. They run the tool for the last full week and open a M
 - Runs from a fresh clone using the README commands. Tests never call a real LLM or the live API.
 
 ## Assumptions
-- Hard gates are as the client chose: value < £100k, excluded primary service, missing mandatory accreditation. Region and value over £5m are penalties only.
+- Hard gates are as the client chose: value < £100k, out of region (including UK-wide with no regional lot, and no region stated), excluded primary service, missing mandatory accreditation. Value over £5m is a penalty only. Region was a penalty until the client changed it after slice 3 (D25).
 - A minor mention of an excluded service (for example, cleaning that includes a clinic) is a penalty, not a gate.
 - Region comes from NUTS codes in delivery addresses when present (code), and from the text via the LLM otherwise. "North" means NUTS UKC, UKD and UKE.
-- A national contract with no regional lot scores 0 on region but is not dropped.
+- A national contract counts only through a lot in the North; a UK-wide lot with no regional split is rejected, as the brief says.
 - "New" means updated in the date range, so a notice amended this week appears again.
 - The demo uses the most recent full Monday–Sunday week.

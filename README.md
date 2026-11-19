@@ -31,15 +31,16 @@ Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 <!-- Honest limits: data it cannot handle, failure modes seen in the eval, what the reviews flagged and was not fixed. Write this yourself. -->
 - **The eval numbers are preliminary.** About 30 cases, partly hand-picked, with the threshold tuned on the same set. There is no held-out set (plan reviews 01 and 02, not fixed; see D9).
 - **Personal names in free text are not removed.** Contact details in `parties[]` are dropped and emails and phone numbers in descriptions are masked, but a name written into a description stays.
-- **Only the two LLM-driven gates are checked against the notice text.** Other extracted fields (region, contract length, mobilisation) are validated for shape, not for truth.
+- **Only the excluded-service and accreditation gates are checked against the notice text.** The region gate trusts the LLM's reading when a notice has no delivery address (D25), and other extracted fields (contract length, mobilisation) are validated for shape, not for truth.
 - **The 15-minute review target is not measured.** No bid manager has timed a real review.
 - **The CPV pre-filter misses relevant work coded outside the profile.** For example, fire-system servicing (50413100) and automatic-door maintenance (50330000) are dropped before the LLM sees them.
 - **Phone masking over-masks.** Any 10–11 digit reference starting with 0 is masked as if it were a phone number.
 - **Values in other currencies are treated as unknown.** One UK lot that week was labelled AED in the source data.
 - **A week's fetch takes about 3 minutes,** because the API's stage filter is unreliable and every stage has to be fetched (D11).
 - **Accreditation names are matched loosely.** A requirement for "Cyber Essentials Plus" counts as held because the company holds "Cyber Essentials". "X or equivalent" with only X named is treated as X, so "CHAS or equivalent" is rejected even though SafeContractor would qualify. Groups that name the alternatives ("CHAS, SafeContractor or Constructionline") are handled.
-- **A delivery-address list that covers most of England counts as in region.** Region scores 1 when any delivery code is in the North, so a notice listing every English region scores like a northern one, although the spec says a national contract should score 0. Seen on notice 108109 (whose text does say Newcastle).
-- **With threshold 0.6, out-of-region tenders fill the shortlist.** In the 9–15 Nov run, 28 of 59 notices were shortlisted, and 21 of those were outside the North or had no region stated. A perfect fit outside the North scores 0.75 (region weight 0.2), so the region penalty never keeps one out. To be tuned in slice 4.
+- **A delivery-address list that covers most of England counts as in region.** A lot passes the region gate when any delivery code is in the North, so a notice listing every English region passes like a northern one, although UK-wide contracts are meant to be rejected. Seen on notice 108109 (whose text does say Newcastle).
+- **Tenders outside the North are rejected, and so are UK-wide contracts and notices that do not say where the work is** (D25, the client's rule). A northern tender that does not state its region, or whose region the LLM misreads, is rejected without review. Seen on 106476 (Sheffield College HVAC servicing, 0.85 before the change): the notice names Sheffield but has no delivery code, and the LLM did not turn the place name into a region. In the 9–15 Nov run the shortlist fell from 28 to 7.
+- **Region no longer separates eligible lots.** Every eligible lot scores 1 on region, so a lot whose main service the company does not offer reaches 0.65 when everything else is perfect, above the 0.60 threshold. To be tuned in slice 4.
 - **A lot whose main service the company does not offer can still be shortlisted.** Service fit is only 35% of the score: notice 106652 (community equipment decontamination, "other") reached exactly 0.60.
 - **Specialist M&E counts as building maintenance.** Lifts, fire-safety systems, boiler controls and heating frameworks were all classed as "planned and reactive building maintenance" and score 1.0 on service. The profile's service labels are too broad to separate them.
 - **Mobilisation is almost never stated,** so it scores 0.5 nearly everywhere and caps a lot's score at 0.95.
@@ -59,7 +60,8 @@ Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 1. Label 100+ notices from weeks the threshold never saw, and report results on that held-out set.
 2. Time a bid manager reviewing one weekly report, and record shortlist size and confusing entries.
 3. Require supporting quotes for every extracted field, not only the gate fields.
-4. Incumbent lookup from award notices, and an MCP server (`search_tenders`, `get_tender`, `shortlist`).
+4. Apply the region gate in the pre-filter for notices with delivery addresses, so out-of-region notices cost no LLM call.
+5. Incumbent lookup from award notices, and an MCP server (`search_tenders`, `get_tender`, `shortlist`).
 
 ## How AI was used
 Built with Claude Code and reviewed by Codex; see [docs/AI_WORKFLOW.md](docs/AI_WORKFLOW.md).

@@ -1,10 +1,13 @@
 """Code step: gate and score every lot of an extracted notice against the profile.
 
 Each criterion gives 0-1 with a reason; the lot score is their weighted mean.
-A notice is shown by its best eligible lot. The two gates that rely on the
-LLM (excluded main service, missing mandatory accreditation) only reject when
-their supporting quote is found in the notice; otherwise the notice goes to
-"needs review", because a wrong hard reject is a missed tender (D8).
+A notice is shown by its best eligible lot. The gates are value under the
+minimum, a region outside the profile's (D25), an excluded main service and a
+missing mandatory accreditation. The last two rely on the LLM and only reject
+when their supporting quote is found in the notice; otherwise the notice goes
+to "needs review", because a wrong hard reject is a missed tender (D8). The
+region gate has no quote check when the region comes from the notice text: the
+client chose to reject those too (D25).
 """
 
 import re
@@ -97,12 +100,17 @@ def score_lot(
     gates, reviews = [], []
     if value is not None and value < profile.value.min_gbp:
         gates.append(f"value £{value:,.0f} is under £{profile.value.min_gbp:,.0f}")
+    region = _region_fit(notice, lot, lot_x, profile)
+    # Only work in the profile's region is bid for; out of region, UK-wide and not stated
+    # all score below 1 and are rejected (D25).
+    if region.score < 1.0:
+        gates.append(f"not in the company's region: {region.reason}")
     _check_excluded_service(lot_x, profile, text, gates, reviews)
     _check_accreditations(required, profile, text, gates, reviews)
 
     criteria = [
         _service_fit(lot_x, profile),
-        _region_fit(notice, lot, lot_x, profile),
+        region,
         _value_fit(value, profile),
         _accreditation_fit(preferred, profile),
         _mobilisation_fit(lot_x.mobilisation_weeks, profile),

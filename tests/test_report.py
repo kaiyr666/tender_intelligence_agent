@@ -69,11 +69,11 @@ def notice(number, title, value=250_000, deadline=datetime(2026, 12, 4, 12, tzin
     )
 
 
-def criteria(region_score=1.0, region_reason="in region (UKE, from delivery address)"):
+def criteria(value_score=1.0, value_reason="£250,000 is in the value band"):
     return [
         Criterion("service", 1.0, "main service is office and commercial cleaning"),
-        Criterion("region", region_score, region_reason),
-        Criterion("value", 1.0, "£250,000 is in the value band"),
+        Criterion("region", 1.0, "in region (UKE, from delivery address)"),
+        Criterion("value", value_score, value_reason),
         Criterion("accreditations", 1.0, "no preferred accreditations listed"),
         Criterion("mobilisation", 0.5, "mobilisation time not stated"),
         Criterion("deadline", 1.0, "18 days to respond (needs 14)"),
@@ -107,16 +107,17 @@ def extraction(red_flags=()):
 
 def scored_results():
     """Two shortlisted (lower score first, to check ranking), one of each other group."""
-    second = lot("whole", "whole notice", 0.75, region_score=0.0, region_reason="out of region")
+    over_band = "£6,000,000 is over £5,000,000"
+    second = lot("whole", "whole notice", 0.85, value_score=0.3, value_reason=over_band)
     best = lot("1", "Lot 1: Offices | north", 0.95)
     clinical = lot("2", "Lot 2: Wards", 0.4, GATED, ["main service is clinical cleaning"])
     tupe = RedFlag(kind="tupe", quote="TUPE applies")
     gated = lot("whole", "whole notice", 0.6, GATED, ["requires CHAS"])
     return [
         NoticeResult(
-            notice(1, "Security guarding, Hull"),
+            notice(1, "Security guarding, Hull", value=6_000_000),
             SHORTLISTED,
-            "whole notice scores 0.75 (threshold 0.60)",
+            "whole notice scores 0.85 (threshold 0.60)",
             second,
             [second],
             extraction(),
@@ -157,7 +158,7 @@ def scored_results():
 
 
 RATIONALES = {
-    "100001-2026": "Guarding in Hull, outside the North. <b>Value</b> fits.",
+    "100001-2026": "Guarding in Hull, in region. <b>Value</b> is over the band.",
     "100002-2026": "Office cleaning in Leeds | in the value band. TUPE applies.",
 }
 

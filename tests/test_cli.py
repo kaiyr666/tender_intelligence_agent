@@ -48,6 +48,10 @@ OFFICE = release(1, "Office cleaning, Leeds", "Daily office cleaning of civic of
 CATERING = release(2, "School services", f"{CATERING_QUOTE}.", "90910000")
 IT = release(3, "Network support", "IT network support.", "72000000")
 PLANNING = release(4, "Future guarding", "Market engagement.", "79710000", tag="planning")
+# A good fit in everything but region: delivered in Kent (UKJ), outside the North (D25).
+KENT = release(
+    5, "Office cleaning, Maidstone", "Daily office cleaning.", "90910000", region="UKJ45"
+)
 
 
 def extraction(primary, quote=None):
@@ -109,7 +113,7 @@ class FakeApi:
         if url == first_page_url(DATE_FROM, DATE_TO):
             return FakeResponse(page([OFFICE, CATERING], PAGE_2))
         if url == PAGE_2 and not self.page_2_fails:
-            return FakeResponse(page([IT, PLANNING]))
+            return FakeResponse(page([IT, KENT, PLANNING]))
         if url == PAGE_2:
             raise urllib.error.HTTPError(url, 503, "busy", {"Retry-After": "0"}, io.BytesIO())
         raise AssertionError(f"unexpected URL {url}")
@@ -152,26 +156,29 @@ def cli_run(tmp_path, monkeypatch, fake_llm):
 
 
 def test_a_week_runs_from_fetch_to_report(cli_run, fake_llm, tmp_path):
-    fake_llm.reply_with(
-        OFFICE_EXTRACTION, CATERING_EXTRACTION, json.dumps({"rationale": RATIONALE})
-    )
+    rationale = json.dumps({"rationale": RATIONALE})
+    # The Kent notice's extraction says UKE, but its delivery address (UKJ45) wins.
+    fake_llm.reply_with(OFFICE_EXTRACTION, CATERING_EXTRACTION, OFFICE_EXTRACTION, rationale)
 
     report, rows = cli_run(FakeApi())
 
     assert "## Shortlisted (1)" in report
     assert "Office cleaning, Leeds" in report
     assert RATIONALE in report
-    assert "## Rejected after extraction (1)" in report
+    assert "## Rejected after extraction (2)" in report
     assert "main service is catering" in report
-    assert "3 tender notices; 2 kept by the pre-filter" in report
+    assert "not in the company's region: out of region (UKJ45, from delivery address)" in report
+    assert "4 tender notices; 3 kept by the pre-filter" in report
     assert "1 planning-stage notices" in report
     assert "INCOMPLETE" not in report
     assert "Open Government Licence v3.0" in report
     assert [(r["notice_id"], r["outcome"]) for r in rows] == [
         ("200001-2026", "shortlisted"),
         ("200002-2026", "rejected"),
+        ("200005-2026", "rejected"),
     ]
-    assert len(fake_llm.calls) == 3  # two extractions and one rationale; IT never reaches the LLM
+    # Three extractions and one rationale; the IT notice never reaches the LLM.
+    assert len(fake_llm.calls) == 4
     assert (tmp_path / "raw" / "notices_2026-11-09_2026-11-15.json").exists()
 
 
@@ -189,10 +196,12 @@ def test_a_fetch_that_stops_partway_still_reports_with_a_banner(cli_run, fake_ll
 
 def test_a_rerun_uses_cached_extractions(cli_run, fake_llm):
     rationale = json.dumps({"rationale": RATIONALE})
-    fake_llm.reply_with(OFFICE_EXTRACTION, CATERING_EXTRACTION, rationale, rationale)
+    fake_llm.reply_with(
+        OFFICE_EXTRACTION, CATERING_EXTRACTION, OFFICE_EXTRACTION, rationale, rationale
+    )
 
     cli_run(FakeApi())
     report, _ = cli_run(FakeApi())
 
-    assert len(fake_llm.calls) == 4  # the second run only writes the rationale again
+    assert len(fake_llm.calls) == 5  # the second run only writes the rationale again
     assert "## Shortlisted (1)" in report

@@ -28,17 +28,17 @@ Office cleaning in Leeds \| in the value band. TUPE applies.
 | mobilisation | 0.50 | mobilisation time not stated |
 | deadline | 1.00 | 18 days to respond (needs 14) |
 
-### 2. Security guarding, Hull (0.75)
+### 2. Security guarding, Hull (0.85)
 
-- [100001-2026](https://www.find-tender.service.gov.uk/Notice/100001-2026) · Buyer 1 · deadline 2026-12-04 · notice value £250,000
+- [100001-2026](https://www.find-tender.service.gov.uk/Notice/100001-2026) · Buyer 1 · deadline 2026-12-04 · notice value £6,000,000
 
-Guarding in Hull, outside the North. &lt;b&gt;Value&lt;/b&gt; fits.
+Guarding in Hull, in region. &lt;b&gt;Value&lt;/b&gt; is over the band.
 
 | Criterion | Score | Reason |
 |---|---|---|
 | service | 1.00 | main service is office and commercial cleaning |
-| region | 0.00 | out of region |
-| value | 1.00 | £250,000 is in the value band |
+| region | 1.00 | in region (UKE, from delivery address) |
+| value | 0.30 | £6,000,000 is over £5,000,000 |
 | accreditations | 1.00 | no preferred accreditations listed |
 | mobilisation | 0.50 | mobilisation time not stated |
 | deadline | 1.00 | 18 days to respond (needs 14) |

@@ -32,7 +32,7 @@
 - **Why:** the team reads by notice, and per-lot rows multiply review time. Scoring only part of a lot could pair a northern cleaning lot with another lot's services or requirements (both Codex reviews, P1).
 - **Revisit if:** the team wants to track bids per lot.
 
-## D6: Hard gates versus penalties
+## D6: Hard gates versus penalties (region part superseded by D25)
 - **Chose:** gates for value < £100k, an excluded service as the main scope, and a missing mandatory accreditation. Value over £5m and out of region are penalties.
 - **Alternatives:** gate on region and on value over £5m as well (the brief reads that way).
 - **Why:** the client's decision. Over £5m can be bid with a partner, and region is often unclear in the text, so a penalty protects recall.
@@ -146,6 +146,13 @@
 - **Alternatives:** shortlisted rows only, as the file name suggests.
 - **Why:** the spec calls the CSV "the same data" as the report, and the team needs the needs-review and rejected rows to check the tool's calls; filtering on `outcome` in a spreadsheet is one click. Titles come from third parties, so a title starting with `=` must not run as a formula in Excel, and Excel needs the byte-order mark to read "£".
 - **Revisit if:** the team's tracker import wants shortlisted rows only.
+
+## D25: Region is a hard gate, including UK-wide and not stated
+- **Chose:** a lot is rejected when its delivery region is outside UKC, UKD and UKE, is UK-wide with no regional lot, or is not stated. Region comes from delivery-address codes when the notice has them, and from the LLM's reading of the text otherwise; both reject, with no quote check.
+- **Alternatives:** (a) keep region a penalty (D6) and raise its weight in slice 4; (b) Claude's recommendation: gate only out-of-region delivery addresses, keep UK-wide and unstated regions as penalties, and send regions read from the text to "needs review".
+- **Why:** the human's decision for the client after the first real week, where 21 of 28 shortlisted notices were outside the North or had no region. The brief says the client considers national contracts only when they are split into regional lots. A hard rule is clearer to the bid team than a weight, and re-scoring needs no new LLM calls.
+- **Cost:** a northern tender whose notice does not say where the work is, or whose region the LLM misreads, is rejected without review, which departs from D8 for this gate. Every eligible lot now scores 1 on region, so the 0.20 region weight no longer separates eligible lots and lowers the bar for the other five criteria: a lot whose main service the company does not offer reaches 0.65 when everything else is perfect.
+- **Revisit if:** the eval finds bid-labelled northern notices rejected on region, especially "not stated". Slice 4 should retune the region weight and the threshold.
 
 <!--
 Template:

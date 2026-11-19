@@ -49,6 +49,7 @@ max_gbp = 5_000_000
 
 [region]
 # NUTS 1 codes: UKC North East, UKD North West, UKE Yorkshire and the Humber.
+# A lot delivered elsewhere, UK-wide with no regional lot, or with no stated region is rejected.
 nuts_codes = ["UKC", "UKD", "UKE"]
 
 [accreditations]
