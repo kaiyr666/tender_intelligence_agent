@@ -154,6 +154,13 @@
 - **Cost:** a northern tender whose notice does not say where the work is, or whose region the LLM misreads, is rejected without review, which departs from D8 for this gate. Every eligible lot now scores 1 on region, so the 0.20 region weight no longer separates eligible lots and lowers the bar for the other five criteria: a lot whose main service the company does not offer reaches 0.65 when everything else is perfect.
 - **Revisit if:** the eval finds bid-labelled northern notices rejected on region, especially "not stated". Slice 4 should retune the region weight and the threshold.
 
+## D26: The LLM maps named places to a region
+- **Chose:** the extract prompt tells the model to give the NUTS 1 code for a named town, city, county or site where the work is done ("across the Sheffield College estate" → UKE), and to leave the region empty only when no place is named. Delivery-address codes still win when present (code).
+- **Alternatives:** a place-name lookup table in code; leaving "not stated" as it was.
+- **Why:** since D25 an empty region is a hard reject, and Sheffield College's HVAC servicing (106476, Yorkshire) was rejected only because its notice had no delivery code. Placing a named town in a NUTS 1 region is reading, which is the LLM's job; a lookup table would need a gazetteer of every UK place and would still miss "the Trust's sites".
+- **Cost:** the region the gate relies on is still the LLM's reading, with no quote check (D25). Changing the prompt invalidated the cache, so the week's 59 notices were read again.
+- **Revisit if:** the eval shows regions guessed from the buyer's address rather than the place of work.
+
 <!--
 Template:
 ## Dn: <decision>

@@ -44,7 +44,8 @@ class LotExtraction(BaseModel):
         description="Exact words from the notice that show the primary service."
     )
     region_nuts1: list[str] = Field(
-        description="NUTS 1 codes where the work is delivered, 'UK' for UK-wide, [] if not stated."
+        description="NUTS 1 codes where the work is delivered, also from named places; "
+        "'UK' for UK-wide, [] if no place is named."
     )
     contract_length_months: int | None
     mobilisation_weeks: float | None
