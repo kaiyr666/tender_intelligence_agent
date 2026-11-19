@@ -17,6 +17,7 @@ About 210 minutes of slices. The rest of the 5 hours covers the spec (done), the
   - Test: a golden-file test of the report and CSV from a fixed scored input; the rationale prompt gets no raw notice text.
 - [ ] **Slice 4: Evaluation** (~40 min)
   - Goal: measure the shortlist and the extraction against the targets.
+  - First: apply the client's service answers (D27) to `config/profile.toml`: grounds maintenance as an offered service with its CPV codes, and specialist trade lots excluded.
   - Build: `evals/cases.jsonl` with the human-checked labels and expected fields ("not stated" allowed; set match for services and accreditations, exact region, dates to the day, durations in months); the harness runs the whole pipeline, pre-filter included, against a frozen date and reports TP/FP/FN, precision, recall, pre-filter recall, per-field accuracy with coverage, and cost; threshold tuned; results in `docs/EVAL.md`, described as preliminary.
   - Test: the eval runs from a clean clone on cached notices.
 - [ ] **Slice 5: Wrap-up** (~20 min)

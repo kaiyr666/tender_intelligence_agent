@@ -161,6 +161,13 @@
 - **Cost:** the region the gate relies on is still the LLM's reading, with no quote check (D25). Changing the prompt invalidated the cache, so the week's 59 notices were read again.
 - **Revisit if:** the eval shows regions guessed from the buyer's address rather than the place of work.
 
+## D27: The client's answers on service scope
+- **Chose:** (1) minor works, joinery and redecoration count as building maintenance; (2) the company does grounds maintenance; (3) specialist cleaning such as decontaminating community care equipment is not its work; (4) lots over £5m stay a score penalty, not a reject; (5) specialist trade lots in maintenance frameworks (scaffolding, drainage, glazing, windows, fencing and similar) are not bid for. The draft eval labels follow these answers.
+- **Alternatives:** keep the drafting agent's guesses (it labelled 107673 and 107285 low confidence, and 106185 no-bid).
+- **Why:** the human's answers for the client, needed so the eval measures the tool against the client's judgement rather than an AI's.
+- **Cost:** (2) widens the brief's service list (cleaning, security, building maintenance). The profile does not yet match (2) and (5): grounds maintenance is not an offered service or CPV code, and specialist trades are classed as building maintenance, so 107285 was shortlisted on its drainage lot. Slice 4 updates `config/profile.toml` before tuning.
+- **Revisit if:** the bid team disagrees with any of these on a real weekly report.
+
 <!--
 Template:
 ## Dn: <decision>
