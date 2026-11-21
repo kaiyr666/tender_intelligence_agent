@@ -20,9 +20,9 @@
 | 2026-11-21 | Tuning | 32 (8) | 100% (8/8) | 100% (8/8) | 100% | 100% (8/8) | Construction codes reach the LLM, £0 is not stated (D32) |
 | 2026-11-21 | Check | 10 (8) | 100% (8/8) | 100% (8/8) | 100% | 100% (8/8) | Fixed on this set, so no longer independent |
 | 2026-11-21 | All | 42 (16) | 100% (16/16) | 100% (16/16) | 100% | 100% (16/16) | |
-| 2026-11-22 | Blind week | 137 (5) | 80% (4/5) | 80% (4/5) | 80% (4/5) | not checked | Unseen week 26 Oct–1 Nov, screened by the human, after review (D33) |
+| 2026-11-22 | Blind week | 137 (4) | 60% (3/5) | 75% (3/4) | 75% (3/4) | not checked | Unseen week 26 Oct–1 Nov, screened by the human, after review (D33) |
 
-Targets: recall ≥ 80%, precision ≥ 60%. Before D32 they were met on the tuning set and **recall was missed on the check set** (50%), entirely through the pre-filter. After D32 both sets reach 100%, but both have now been used for fixes, so these figures show the fixes work, not how the tool does on unseen weeks. On the one unseen week (below) both targets are met after review, at 4 of 5, which is too few bids to call them met.
+Targets: recall ≥ 80%, precision ≥ 60%. Before D32 they were met on the tuning set and **recall was missed on the check set** (50%), entirely through the pre-filter. After D32 both sets reach 100%, but both have now been used for fixes, so these figures show the fixes work, not how the tool does on unseen weeks. On the one unseen week (below), after review, precision meets its target at 3 of 5 and recall misses it at 3 of 4; four bids are too few to call either way.
 
 Field accuracy on all 42, after D32 (coverage 86%: the 6 notices still dropped by the pre-filter are not extracted):
 
@@ -45,17 +45,17 @@ Threshold sweep, tuning set: precision 100% throughout; recall 100% from 0.50 to
 |---|---|---|---|---|---|---|
 | Blind, maybes as no | 2 | 2 | 0 | 3 | 40% (2/5) | 100% (2/2) |
 | Blind, maybes as bid | 9 | 2 | 7 | 3 | 40% (2/5) | 22% (2/9) |
-| After review | 5 | 4 | 1 | 1 | 80% (4/5) | 80% (4/5) |
+| After review | 4 | 3 | 1 | 2 | 60% (3/5) | 75% (3/4) |
 
-- **Review groups:** 1 tool error, 0 missing rules, 8 marks changed by the human, 1 borderline.
+- **Review groups:** 2 tool errors, 0 missing rules, 7 marks changed by the human, 1 borderline.
   - **Tool error:** structural repairs to Blackpool Tower (102242; engineering and structural steel codes) were read as building maintenance and shortlisted at 0.95. It reached the LLM only through D32's construction codes: this is the precision risk D32 named.
-  - **Changed marks:** six maybes became no for the reason the tool gave (Scotland, no region stated, not an offered service). Two blanks became bids once the lots were read: L&Q fire risk assessment remedials, Lot 3 North West (100987), and EEM's fire doors framework, a national-coverage lot (100829). The second also came in through D32.
+  - **Tool error:** EEM's fire doors framework, Lot 3b.2 (100829), shortlisted at 0.90. It is a national-coverage lot whose delivery codes list every English region, and the region gate passes a lot when any code is northern. The human first reviewed it as a bid; the client's rule (D25, confirmed 22 Nov) rejects national lots. It also came in through D32.
+  - **Changed marks:** six maybes became no for the reason the tool gave (Scotland, no region stated, not an offered service). One blank became a bid once the lots were read: L&Q fire risk assessment remedials, Lot 3 North West (100987).
   - **Borderline:** Newcastle bin and scooter stores (102758), supply and installation at housing blocks, coded 44000000 (construction products) and dropped by the pre-filter. The one miss.
 - **How to read it:**
-  - Five bids: each one moves recall or precision by 20 points, so these are counts, not rates.
-  - The reviewed figures lean towards the tool: both blank-to-bid changes were made after seeing the tool shortlist them. Both rest on lot facts the 300-character summary did not show, but anchoring cannot be ruled out. The blind rows bound the result from the other side.
-  - D32 on this week: one bid found (100829) and the one false positive (102242).
-  - The human would bid a national-coverage lot whose delivery codes list every English region (100829). D25 and "Where it breaks" treat that as a weakness of the region gate, so the client's rule on national lots needs confirming.
+  - Four bids: each one moves recall by 25 points, so these are counts, not rates.
+  - The reviewed figures may lean towards the tool: the blank-to-bid change (100987) was made after seeing the tool shortlist it. It rests on lot facts the 300-character summary did not show, but anchoring cannot be ruled out. The blind rows bound the result from the other side.
+  - D32 on this week: no bid found, and both false positives (102242, 100829) came in through it. On the check set it found three bids; whether it pays overall needs more weeks.
 - **Time:** the manual screen of 137 already narrowed notices took about 1 hour. The tool's shortlist was 5 notices; reviewing its 10 disagreements took 15 minutes.
 
 ## Instructive failures
@@ -67,5 +67,5 @@ Smaller misses: 108100's 6-week mobilisation was not extracted; MDSAP was writte
 
 ## What would improve it most
 - **A shadow pilot:** the bid team runs the tool beside its manual screen for 3 to 4 weeks and records its own decisions next to the CSV, about 20 to 30 real bid decisions. One blind week gave 5 bids; about 60 would pin recall to within ±10 points.
-- Separate structural and heritage repair (engineering, structural steel) from building maintenance in the service definitions, and confirm the rule for national-coverage lots.
+- Separate structural and heritage repair (engineering, structural steel) from building maintenance in the service definitions, and reject national-coverage lots in the region gate (D25 clarified).
 - Apply the region gate in the pre-filter when a notice has delivery addresses: after D32 most of the extra LLM calls are notices the region gate rejects anyway.
