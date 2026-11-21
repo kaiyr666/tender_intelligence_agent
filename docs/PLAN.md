@@ -26,6 +26,11 @@ About 210 minutes of slices. The rest of the 5 hours covers the spec (done), the
     6. **Ask the human:** add about 10 more northern notices to the eval set (only 8 of 32 are bids), and commit the eval extractions so the eval runs without an API key.
   - Build: `evals/cases.jsonl` with the human-checked labels and expected fields ("not stated" allowed; set match for services and accreditations, exact region, dates to the day, durations in months); the harness runs the whole pipeline, pre-filter included, against a frozen date and reports TP/FP/FN, precision, recall, pre-filter recall, per-field accuracy with coverage, and cost; threshold tuned; results in `docs/EVAL.md`, described as preliminary.
   - Test: the eval runs from a clean clone on cached notices.
+- [x] **Slice 4b: Pre-filter fixes** (~25 min, added on 21 Nov at the human's request). Done, decision D32. Construction (45) codes reach the LLM, and £0 is read as "not stated". Check-set recall went from 4/8 to 8/8, but the check set has now been used for tuning. The 9–15 Nov shortlist was unchanged (8) at twice the reads ($0.29).
+- [ ] **Slice 4c: Fresh held-out set** (added on 21 Nov at the human's request; beyond the 5-hour box)
+  - Goal: measure recall on notices no fix was made on.
+  - Build: label every notice delivered in the North, UK-wide or with no stated region, whatever its CPV code, from about two weeks not yet used (19 Oct to 1 Nov); out-of-region notices are no-bid by rule (D25). Claude drafts labels from the client's rules before the tool reads them; the human checks them. Report it as a third, held-out set.
+  - Test: the eval still runs offline from a clean clone.
 - [ ] **Slice 5: Wrap-up** (~20 min)
   - Goal: a repo a reviewer understands in five minutes.
   - Build: README (how it works, results, where it breaks, next steps) and the final AI_WORKFLOW log.

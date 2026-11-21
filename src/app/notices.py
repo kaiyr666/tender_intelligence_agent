@@ -7,9 +7,15 @@ organisation name, and emails and phone numbers in free text are masked.
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, time
 
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 from app.sanitise import mask_contacts
+
+
+def _zero_is_not_stated(value: float | None) -> float | None:
+    """Buyers enter £0 as a placeholder, so it means "not stated", not a value under £100k."""
+    return None if value == 0 else value
+
 
 NOTICE_URL = "https://www.find-tender.service.gov.uk/Notice/{notice_id}"
 
@@ -30,6 +36,8 @@ class Lot(BaseModel):
     regions: list[str]
     selection_criteria: str | None
 
+    _value = field_validator("value_gbp")(_zero_is_not_stated)
+
 
 class Notice(BaseModel):
     ocid: str
@@ -46,6 +54,8 @@ class Notice(BaseModel):
     cpv_codes: list[str]
     regions: list[str]
     lots: list[Lot]
+
+    _value = field_validator("value_gbp")(_zero_is_not_stated)
 
 
 @dataclass(frozen=True)

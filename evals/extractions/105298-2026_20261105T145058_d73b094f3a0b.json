@@ -1,0 +1,22 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "office and commercial cleaning"
+   ],
+   "primary_service": "office and commercial cleaning",
+   "primary_service_quote": "Suppliers of cleaning services to all College buildings",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

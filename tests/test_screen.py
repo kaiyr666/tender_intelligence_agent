@@ -28,9 +28,10 @@ def test_screen_counts_every_group():
     assert (result.planning_count, result.withdrawn_count) == (2, 1)
 
 
-def test_screen_keeps_the_relevant_cleaning_notices():
+def test_screen_keeps_the_notices_the_profile_codes_match():
     result = screen(*WEEK, NOW, fetch=fake_fetch())
-    assert {n.notice_id for n in result.kept} == {"108109-2026", "108059-2026"}
+    # 106268 (facade work, 45443000) is kept for the LLM since construction codes count (D32).
+    assert {n.notice_id for n in result.kept} == {"108109-2026", "108059-2026", "106268-2026"}
 
 
 def test_summary_shows_drop_reasons():

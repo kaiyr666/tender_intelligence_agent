@@ -72,7 +72,10 @@ def reason_for(notice, profile):
         "90919200",  # under 90910000
         "50711000",  # general electrical maintenance, a profile code itself
         "50711100",  # under 50711000
-        "45453100",  # under 45453000
+        "45453100",  # overhaul and refurbishment
+        "45000000",  # construction work: buyers code maintenance contracts with it (D32)
+        "45420000",  # joinery and carpentry installation (responsive repairs, 103529)
+        "45317300",  # electrical installation work (term electrical services, 103643)
         "77314000",  # grounds maintenance, under 77310000
         "98341130",  # an exact, fully specific profile code
         "50000000",  # broad code, exact
@@ -125,6 +128,10 @@ def test_unknown_value_is_kept(profile):
 
 def test_unknown_deadline_is_kept(profile):
     assert reason_for(make_notice(deadline=None), profile) is None
+
+
+def test_zero_value_is_kept_as_unknown(profile):
+    assert reason_for(make_notice(value_gbp=0), profile) is None
 
 
 def test_value_exactly_at_minimum_is_kept(profile):
@@ -218,5 +225,5 @@ def test_fixture_notices_get_expected_reasons(profile):
         "108059-2026": None,  # 90910000 family
         "108091-2026": LOW_VALUE,  # £99,000
         "108230-2026": NO_CPV_MATCH,  # 50413100, 51700000
-        "106268-2026": NO_CPV_MATCH,  # 45443000 facade work
+        "106268-2026": None,  # 45443000 facade work: the LLM reads 45 codes (D32)
     }

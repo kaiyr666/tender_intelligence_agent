@@ -94,8 +94,8 @@ codes = [
     "98341140", # caretaker services
     "50711000", # repair and maintenance of electrical building installations
     "50800000", # miscellaneous repair and maintenance
-    "45259000", # repair and maintenance of plant
-    "45453000", # overhaul and refurbishment work (often used for planned maintenance)
+    "45000000", # construction work: buyers code repairs and maintenance contracts with it, so
+                # the LLM reads these and the construction gate drops capital projects (D32)
     "77310000", # planting and maintenance of green areas (grounds maintenance, 77314000)
 ]
 # Broad parent codes that buyers sometimes use alone for relevant work. These match only

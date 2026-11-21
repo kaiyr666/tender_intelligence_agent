@@ -1,5 +1,5 @@
 {
- "time": "2026-11-21 20:39",
+ "time": "2026-11-21 22:18",
  "model": "gpt-6.1-terra",
  "frozen_now": "2026-11-16T09:00:00+00:00",
  "threshold": 0.7,
@@ -9,89 +9,89 @@
   "check": {
    "cases": 10,
    "bids": 8,
-   "tp": 4,
+   "tp": 8,
    "fp": 0,
-   "fn": 4,
+   "fn": 0,
    "tn": 2,
    "precision": 1.0,
-   "recall": 0.5,
-   "prefilter_recall": 0.5,
+   "recall": 1.0,
+   "prefilter_recall": 1.0,
    "chosen_lot_ok": 1.0,
    "fields": {
     "contract_length_months": {
      "accuracy": 1.0,
-     "coverage": 0.6
+     "coverage": 1.0
     },
     "mandatory_accreditations": {
      "accuracy": 1.0,
-     "coverage": 0.6
+     "coverage": 1.0
     },
     "mobilisation_weeks": {
      "accuracy": 1.0,
-     "coverage": 0.6
+     "coverage": 1.0
     },
     "primary_service": {
      "accuracy": 1.0,
-     "coverage": 0.6
+     "coverage": 1.0
     },
     "region_nuts1": {
-     "accuracy": 0.833,
-     "coverage": 0.6
+     "accuracy": 0.9,
+     "coverage": 1.0
     },
     "services": {
      "accuracy": 1.0,
-     "coverage": 0.6
+     "coverage": 1.0
     },
     "tupe": {
      "accuracy": 1.0,
-     "coverage": 0.6
+     "coverage": 1.0
     }
    },
    "sweep": [
     [
      0.5,
      1.0,
-     0.5
+     1.0
     ],
     [
      0.55,
      1.0,
-     0.5
+     1.0
     ],
     [
      0.6,
      1.0,
-     0.5
+     1.0
     ],
     [
      0.65,
      1.0,
-     0.5
+     1.0
     ],
     [
      0.7,
      1.0,
-     0.5
+     1.0
     ],
     [
      0.75,
      1.0,
-     0.5
+     1.0
     ],
     [
      0.8,
      1.0,
-     0.5
+     1.0
     ],
     [
      0.85,
      1.0,
-     0.5
+     0.875
     ],
     [
      0.9,
      1.0,
-     0.5
+     0.625
     ]
    ]
   },
@@ -109,31 +109,31 @@
    "fields": {
     "contract_length_months": {
      "accuracy": 1.0,
-     "coverage": 0.75
+     "coverage": 0.812
     },
     "mandatory_accreditations": {
-     "accuracy": 0.958,
-     "coverage": 0.75
+     "accuracy": 0.962,
+     "coverage": 0.812
     },
     "mobilisation_weeks": {
-     "accuracy": 0.958,
-     "coverage": 0.75
+     "accuracy": 0.962,
+     "coverage": 0.812
     },
     "primary_service": {
-     "accuracy": 0.833,
-     "coverage": 0.75
+     "accuracy": 0.808,
+     "coverage": 0.812
     },
     "region_nuts1": {
-     "accuracy": 0.958,
-     "coverage": 0.75
+     "accuracy": 0.962,
+     "coverage": 0.812
     },
     "services": {
-     "accuracy": 0.792,
-     "coverage": 0.75
+     "accuracy": 0.731,
+     "coverage": 0.812
     },
     "tupe": {
      "accuracy": 1.0,
-     "coverage": 0.75
+     "coverage": 0.812
     }
    },
    "sweep": [
@@ -188,89 +188,89 @@
  "all": {
   "cases": 42,
   "bids": 16,
-  "tp": 12,
+  "tp": 16,
   "fp": 0,
-  "fn": 4,
+  "fn": 0,
   "tn": 26,
   "precision": 1.0,
-  "recall": 0.75,
-  "prefilter_recall": 0.75,
+  "recall": 1.0,
+  "prefilter_recall": 1.0,
   "chosen_lot_ok": 1.0,
   "fields": {
    "contract_length_months": {
     "accuracy": 1.0,
-    "coverage": 0.714
+    "coverage": 0.857
    },
    "mandatory_accreditations": {
-    "accuracy": 0.967,
-    "coverage": 0.714
+    "accuracy": 0.972,
+    "coverage": 0.857
    },
    "mobilisation_weeks": {
-    "accuracy": 0.967,
-    "coverage": 0.714
+    "accuracy": 0.972,
+    "coverage": 0.857
    },
    "primary_service": {
-    "accuracy": 0.867,
-    "coverage": 0.714
+    "accuracy": 0.861,
+    "coverage": 0.857
    },
    "region_nuts1": {
-    "accuracy": 0.933,
-    "coverage": 0.714
+    "accuracy": 0.944,
+    "coverage": 0.857
    },
    "services": {
-    "accuracy": 0.833,
-    "coverage": 0.714
+    "accuracy": 0.806,
+    "coverage": 0.857
    },
    "tupe": {
     "accuracy": 1.0,
-    "coverage": 0.714
+    "coverage": 0.857
    }
   },
   "sweep": [
    [
     0.5,
     1.0,
-    0.75
+    1.0
    ],
    [
     0.55,
     1.0,
-    0.75
+    1.0
    ],
    [
     0.6,
     1.0,
-    0.75
+    1.0
    ],
    [
     0.65,
     1.0,
-    0.75
+    1.0
    ],
    [
     0.7,
     1.0,
-    0.75
+    1.0
    ],
    [
     0.75,
     1.0,
-    0.75
+    1.0
    ],
    [
     0.8,
     1.0,
-    0.688
+    0.938
    ],
    [
     0.85,
     1.0,
-    0.688
+    0.875
    ],
    [
     0.9,
     1.0,
-    0.625
+    0.688
    ]
   ]
  },
@@ -663,13 +663,21 @@
    "case_id": "107905-2026",
    "case_set": "tuning",
    "bid": false,
-   "outcome": "dropped by pre-filter",
-   "reason": "no matching CPV code",
+   "outcome": "rejected",
+   "reason": "not in the company's region: out of region (UKJ14, from delivery address)",
    "best_score": null,
    "best_lot": null,
    "chosen_lot_ok": null,
    "wrongly_gated_lots": [],
-   "field_hits": {}
+   "field_hits": {
+    "primary_service": false,
+    "services": false,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
   },
   {
    "case_id": "107934-2026",
@@ -799,13 +807,21 @@
    "case_id": "108175-2026",
    "case_set": "tuning",
    "bid": false,
-   "outcome": "dropped by pre-filter",
-   "reason": "no matching CPV code",
+   "outcome": "rejected",
+   "reason": "not in the company's region: out of region (UKN, from delivery address)",
    "best_score": null,
    "best_lot": null,
    "chosen_lot_ok": null,
    "wrongly_gated_lots": [],
-   "field_hits": {}
+   "field_hits": {
+    "primary_service": true,
+    "services": false,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
   },
   {
    "case_id": "108202-2026",
@@ -896,7 +912,7 @@
    "case_set": "check",
    "bid": false,
    "outcome": "rejected",
-   "reason": "value £0 is under £100,000; main service is construction and capital works, which the company does not do",
+   "reason": "main service is construction and capital works, which the company does not do",
    "best_score": null,
    "best_lot": null,
    "chosen_lot_ok": null,
@@ -975,49 +991,81 @@
    "case_id": "103529-2026",
    "case_set": "check",
    "bid": true,
-   "outcome": "dropped by pre-filter",
-   "reason": "no matching CPV code",
-   "best_score": null,
-   "best_lot": null,
-   "chosen_lot_ok": null,
+   "outcome": "shortlisted",
+   "reason": "Lot 1: Void works scores 0.88 (threshold 0.70)",
+   "best_score": 0.879,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
    "wrongly_gated_lots": [],
-   "field_hits": {}
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
   },
   {
    "case_id": "104445-2026",
    "case_set": "check",
    "bid": true,
-   "outcome": "dropped by pre-filter",
-   "reason": "no matching CPV code",
-   "best_score": null,
-   "best_lot": null,
-   "chosen_lot_ok": null,
+   "outcome": "shortlisted",
+   "reason": "Lot 1 scores 0.84 (threshold 0.70)",
+   "best_score": 0.845,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
    "wrongly_gated_lots": [],
-   "field_hits": {}
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
   },
   {
    "case_id": "103643-2026",
    "case_set": "check",
    "bid": true,
-   "outcome": "dropped by pre-filter",
-   "reason": "no matching CPV code",
-   "best_score": null,
-   "best_lot": null,
-   "chosen_lot_ok": null,
+   "outcome": "shortlisted",
+   "reason": "Lot 1 scores 0.93 (threshold 0.70)",
+   "best_score": 0.931,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
    "wrongly_gated_lots": [],
-   "field_hits": {}
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
   },
   {
    "case_id": "105298-2026",
    "case_set": "check",
    "bid": true,
-   "outcome": "dropped by pre-filter",
-   "reason": "value under minimum",
-   "best_score": null,
-   "best_lot": null,
-   "chosen_lot_ok": null,
+   "outcome": "shortlisted",
+   "reason": "Lot 1 scores 0.88 (threshold 0.70)",
+   "best_score": 0.875,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
    "wrongly_gated_lots": [],
-   "field_hits": {}
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
   }
  ]
 }

@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pytest
 
-from app.notices import NOTICE_URL, build_notices, to_notice
+from app.notices import NOTICE_URL, Lot, Notice, build_notices, to_notice
 from app.sanitise import EMAIL_PLACEHOLDER, PHONE_PLACEHOLDER
 
 FIXTURE = Path(__file__).parent / "fixtures" / "releases_sample.json"
@@ -256,6 +256,31 @@ def test_url_falls_back_to_notice_url_without_a_tender_notice_document():
 def test_missing_value_and_deadline_are_none():
     notice = to_notice(synthetic())
     assert (notice.value_gbp, notice.deadline) == (None, None)
+
+
+def test_zero_value_is_not_stated():
+    notice = to_notice(synthetic(value={"amount": 0, "currency": "GBP"}))
+    assert notice.value_gbp is None
+
+
+def test_zero_value_in_a_saved_notice_is_not_stated():
+    saved = {**to_notice(synthetic()).model_dump(), "value_gbp": 0}
+    assert Notice.model_validate(saved).value_gbp is None
+
+
+def test_zero_lot_value_is_not_stated():
+    lot = Lot(
+        lot_id="1",
+        title=None,
+        description=None,
+        value_gbp=0,
+        contract_start=None,
+        contract_end=None,
+        cpv_codes=[],
+        regions=[],
+        selection_criteria=None,
+    )
+    assert lot.value_gbp is None
 
 
 def test_gross_value_is_used_when_net_amount_is_absent():

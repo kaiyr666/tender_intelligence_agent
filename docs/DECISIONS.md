@@ -192,6 +192,13 @@
 - **Why:** reusing `assess` means the eval measures the code that ships. Committed extractions make the numbers reproducible from a clean clone and in CI at no cost, and reruns no longer change with each LLM read. The two comparison rules came from the first run: 5 of 6 region "misses" were notices where the scorer correctly used delivery codes, and "SSIP accreditation" against "SSIP" is not an extraction error. Both are definitions of the field, not fixes to pass a case; the remaining misses stay misses.
 - **Revisit if:** the eval grows past about 100 cases, when a held-out split from weeks the threshold never saw becomes possible (D9).
 
+## D32: Construction codes reach the LLM; a value of £0 means "not stated"
+- **Chose:** `45000000` joins the profile codes, so every construction (45) code passes the pre-filter and the extraction's construction gate (with a quote) and the region gate decide; it covers the former 45259000 and 45453000. A notice or lot value of £0 is read as not stated, in the `Notice` and `Lot` models, so saved notices and eval cases get the same rule. This partly reverses D12, which kept 45 codes out to save LLM calls.
+- **Alternatives:** keep 45-coded notices only when the title or description says "repair" or "maintenance"; a cheap LLM relevance check for 45-coded notices (D1); a pre-filter on delivery-address region to cut the extra calls.
+- **Why:** the check set lost 3 of 8 bids to construction coding (103529, 104445, 103643) and one to a £0 value (105298). Measured on the fetched weeks: 65 to 82 notices a week are dropped only on 45 codes. Letting them through doubled what the 9–15 Nov run reads (61 to 122 notices, 62 calls, $0.29) and left its shortlist the same 8; every new notice was rejected as construction, M&E or out of region. A keyword list is the brittle wording match the client already suffers from, and it would be fitted to three notices. A relevance check adds a prompt and a step for a cost problem the $5 cap does not have. The region pre-filter is in the README's next steps.
+- **Cost:** the check set has now been used for tuning, so its 8 of 8 is not an independent measure; a fresh labelled set is planned next. Precision now leans more on the construction gate: a refurbishment the LLM reads as building maintenance would be shortlisted.
+- **Revisit if:** a weekly run nears its budget, or capital projects reach the shortlist.
+
 <!--
 Template:
 ## Dn: <decision>
