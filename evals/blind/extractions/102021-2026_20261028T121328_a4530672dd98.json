@@ -1,0 +1,22 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "IT services"
+   ],
+   "primary_service": "other: on-bus passenger information equipment",
+   "primary_service_quote": "design, supply, installation, commissioning, integration, maintenance and support of on-bus destination display equipment and an audio visual announcement (AVA) system",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 67,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

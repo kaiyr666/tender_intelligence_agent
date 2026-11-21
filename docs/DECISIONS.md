@@ -199,6 +199,13 @@
 - **Cost:** the check set has now been used for tuning, so its 8 of 8 is not an independent measure; a fresh labelled set is planned next. Precision now leans more on the construction gate: a refurbishment the LLM reads as building maintenance would be shortlisted.
 - **Revisit if:** a weekly run nears its budget, or capital projects reach the shortlist.
 
+## D33: The held-out check is a blind screen of one unseen week
+- **Chose:** the human marks every open notice of 26 Oct–1 Nov delivered in the North, UK-wide by lot or with no stated region (137, any CPV code), from notice facts only, before the tool reads the week; then reviews every maybe and every disagreement against the full notice and groups it (tool error, missing rule, changed mark, borderline). Results are reported blind and after review.
+- **Alternatives:** label two fresh weeks in full (1 to 2 hours); two AI labellers (Claude and GPT) with the human resolving disagreements; ship with the tuned figures only.
+- **Why:** every eval case had been used for fixes, and the client's question is whether the tool picks what its bid team would. A blind human screen answers that directly, covers the pre-filter, and fits the deadline. AI labels test rule-following, not the client's intent, and GPT shares a model family with the extractor. Full labelling spends most of its time on obvious no-bids. Locking the marks before the run keeps them from being anchored on the tool; the review is anchored, so both readings are kept.
+- **Cost:** one week gives few bids (5 after review), so the result is counts, not rates. The review changed two blanks to bids after seeing the tool's answer.
+- **Revisit if:** the client can run a shadow pilot (the tool beside the manual screen for 3 to 4 weeks), which replaces this with real decisions.
+
 <!--
 Template:
 ## Dn: <decision>

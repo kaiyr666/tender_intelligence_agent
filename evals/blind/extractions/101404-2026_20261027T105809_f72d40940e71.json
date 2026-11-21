@@ -1,0 +1,21 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "whole",
+   "services": [
+    "planned and reactive building maintenance",
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "The kitchen upgrades comprise the replacement of existing kitchens, the supply and installation of wall cabinets and base units",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "Replacement of the existing roof at Bullers Hill Office in Haldon, Devon, including removal and disposal of the existing roof covering, structural strengthening works, installation of a new galvanised standing seam composite roof system",
+   "region_nuts1": [
+    "UKK"
+   ],
+   "contract_length_months": 3,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

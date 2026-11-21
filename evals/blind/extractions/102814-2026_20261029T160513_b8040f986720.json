@@ -1,0 +1,22 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "whole",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "the provision, erecting, handover, maintaining and dismantling of on-hire scaffolding, to Falkirk Council housing properties",
+   "region_nuts1": [
+    "UKM"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

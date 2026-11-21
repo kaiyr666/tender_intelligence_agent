@@ -1,0 +1,864 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKC"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKC"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKC"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "4",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKC"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "5",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "6",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "7",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "8",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "9",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKD"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "10",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKD"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "11",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKD"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "12",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKD"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "13",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKG"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "14",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKG"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "15",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKG"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "16",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKG"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "17",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKF"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "18",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKF"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "19",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "construction through to practical completion and handover",
+   "region_nuts1": [
+    "UKF"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "20",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "21",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "22",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "23",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "24",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "25",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "26",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "27",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "28",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "29",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "30",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "31",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "32",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "33",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "34",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "35",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "36",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "37",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "38",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "39",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "40",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "41",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "42",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "43",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "44",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "45",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "46",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "47",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "48",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "49",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "50",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "51",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "52",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "53",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "54",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "55",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "56",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "57",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "58",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "59",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "60",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "61",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "62",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "63",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "design, construction, delivery and, where applicable, aftercare of completed assets",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

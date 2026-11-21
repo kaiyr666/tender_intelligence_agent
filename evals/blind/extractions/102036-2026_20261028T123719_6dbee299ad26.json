@@ -1,0 +1,23 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [
+  {
+   "kind": "closed_framework_call_off",
+   "quote": "Further Competition under CCS RM6089 Workplace Services (FM Phase 2) Lot 1a"
+  }
+ ],
+ "lots": [
+  {
+   "lot_id": "whole",
+   "services": [],
+   "primary_service": null,
+   "primary_service_quote": null,
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

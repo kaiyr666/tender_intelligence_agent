@@ -1,0 +1,20 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [],
+   "primary_service": "other: foul water drainage",
+   "primary_service_quote": "The provision of Foul Water Drainage at Samlesbury Enterprise Zone.",
+   "region_nuts1": [
+    "UKD"
+   ],
+   "contract_length_months": 9,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

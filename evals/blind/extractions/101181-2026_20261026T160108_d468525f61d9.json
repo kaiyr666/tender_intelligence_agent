@@ -1,0 +1,22 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "installation of SuDS features and new parking facilities throughout St Ives Crescent, including terraced basins, permeable tarmac parking areas, swales and rain gardens",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

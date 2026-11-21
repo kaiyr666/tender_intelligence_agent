@@ -1,0 +1,22 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "The works comprise refurbishment, reconfiguration and enhancement of the existing Harlington civic and entertainment venue.",
+   "region_nuts1": [
+    "UKJ"
+   ],
+   "contract_length_months": 20,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

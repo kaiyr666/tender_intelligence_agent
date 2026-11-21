@@ -1,0 +1,20 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "specialist mechanical and electrical (M&E) maintenance",
+   "primary_service_quote": "Lift Contractors to complete Lift Equipment renewal works as specified",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

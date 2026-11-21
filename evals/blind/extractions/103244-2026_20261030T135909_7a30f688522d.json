@@ -1,0 +1,81 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1A",
+   "services": [],
+   "primary_service": "other: water and wastewater mechanical plant",
+   "primary_service_quote": "maintenance, renewal, refurbishment and like-for-like replacement of mechanical plant and equipment associated with NWL's above and below ground assets",
+   "region_nuts1": [],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "1B",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "other: water and wastewater electrical plant",
+   "primary_service_quote": "maintenance, renewal, refurbishment and like-for-like replacement of electrical plant and equipment associated with NWL's above and below ground assets",
+   "region_nuts1": [],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "1C",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "other: water and wastewater MEICA systems",
+   "primary_service_quote": "design, supply, installation, testing, commissioning and handover of MEICA systems associated with NWL's above and below ground assets",
+   "region_nuts1": [],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2A",
+   "services": [],
+   "primary_service": "other: water and wastewater mechanical plant",
+   "primary_service_quote": "maintenance, renewal, refurbishment and like-for-like replacement of mechanical plant and equipment associated with NWL's above and below ground assets",
+   "region_nuts1": [],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2B",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "other: water and wastewater electrical plant",
+   "primary_service_quote": "maintenance, renewal, refurbishment and like-for-like replacement of electrical plant and equipment associated with NWL's above and below ground assets",
+   "region_nuts1": [],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2C",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "other: water and wastewater MEICA systems",
+   "primary_service_quote": "design, supply, installation, testing, commissioning and handover of MEICA systems associated with NWL's above and below ground assets",
+   "region_nuts1": [],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

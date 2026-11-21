@@ -1,0 +1,18 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [],
+   "primary_service": "other: rights of way and watercourse maintenance",
+   "primary_service_quote": "Maintenance and Improvement Works for Public Rights of Way Network and Watercourses",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "LOT-0000",
+   "services": [
+    "office and commercial cleaning"
+   ],
+   "primary_service": "office and commercial cleaning",
+   "primary_service_quote": "routine, periodic and specialist cleaning of sports facilities, including sports halls, gyms, fitness areas, changing rooms, showers, toilets, communal areas and associated facilities",
+   "region_nuts1": [
+    "UKK"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

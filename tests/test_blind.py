@@ -2,9 +2,22 @@
 
 from datetime import UTC, datetime
 
+from app.llm import Usage
 from app.notices import Lot, Notice
 from app.profile import load_profile
-from evals.blind import parse_marks, screening_list, to_markdown
+from app.score import NEEDS_REVIEW, REJECTED, SHORTLISTED
+from evals.blind import (
+    Decision,
+    decisions,
+    disagreements,
+    parse_marks,
+    parse_reasons,
+    results_markdown,
+    screening_list,
+    tally,
+    to_markdown,
+)
+from evals.run import DROPPED, CachedOnly
 
 NOW = datetime(2026, 11, 2, 9, 0, tzinfo=UTC)
 
@@ -122,3 +135,61 @@ def test_every_notice_in_a_list_gets_a_mark():
     notices = [make_notice(notice_id=f"90000{n}-2026") for n in range(1, 4)]
     text = to_markdown(notices, NOW).replace("`900002-2026`", "`900002-2026` ")
     assert len(parse_marks(text)) == 3
+
+
+# Comparing the tool's decisions with the marks
+
+
+def test_reason_is_the_text_after_the_notice_id():
+    text = to_markdown([make_notice()], NOW).replace("`900001-2026`", "`900001-2026` -gut: voids")
+    assert parse_reasons(text) == {"900001-2026": "gut: voids"}
+
+
+def decision(outcome, reason="", score=None):
+    return Decision(outcome, reason, score)
+
+
+MARKS_SAMPLE = {"a": "bid", "b": "bid", "c": "maybe", "d": "no", "e": "no"}
+DECISIONS_SAMPLE = {
+    "a": decision(SHORTLISTED, score=0.9),
+    "b": decision(DROPPED, "no matching CPV code"),
+    "c": decision(SHORTLISTED, score=0.8),
+    "d": decision(SHORTLISTED, score=0.75),
+    "e": decision(REJECTED, "out of region"),
+}
+
+
+def test_tally_counts_bids_only():
+    counts = tally(MARKS_SAMPLE, DECISIONS_SAMPLE, maybe_is_bid=False)
+    assert counts == {"found": 1, "missed": 1, "noise": 2, "agreed_no": 1}
+
+
+def test_tally_can_count_maybe_as_a_bid():
+    counts = tally(MARKS_SAMPLE, DECISIONS_SAMPLE, maybe_is_bid=True)
+    assert counts == {"found": 2, "missed": 1, "noise": 1, "agreed_no": 1}
+
+
+def test_needs_review_is_not_a_find():
+    counts = tally({"a": "bid"}, {"a": decision(NEEDS_REVIEW)}, maybe_is_bid=False)
+    assert counts["missed"] == 1
+
+
+def test_disagreements_are_every_maybe_and_every_mismatch():
+    assert disagreements(MARKS_SAMPLE, DECISIONS_SAMPLE) == ["b", "c", "d"]
+
+
+def test_notice_the_pre_filter_drops_is_decided_without_an_llm_call():
+    usage = Usage()
+    dropped = make_notice(cpv_codes=["72000000"])
+    found = decisions([dropped], load_profile(), NOW, CachedOnly("test-model"), usage, None)
+    assert found["900001-2026"].outcome == DROPPED and usage.calls == 0
+
+
+def test_results_show_both_counts_and_each_disagreement_with_both_reasons():
+    notices = {i: make_notice(notice_id=i, title=f"Notice {i}") for i in MARKS_SAMPLE}
+    text = results_markdown(
+        MARKS_SAMPLE, {"b": "joinery lot"}, DECISIONS_SAMPLE, notices, NOW, Usage()
+    )
+    assert "| no | 1 | 1 | 2 | 1 |" in text and "| bid | 2 | 1 | 1 | 1 |" in text
+    assert "Your mark: bid (joinery lot)" in text and "no matching CPV code" in text
+    assert "Notice a" not in text

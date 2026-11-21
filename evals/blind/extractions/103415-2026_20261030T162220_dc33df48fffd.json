@@ -1,0 +1,42 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "LOT-0000",
+   "services": [
+    "construction and capital works"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "Construction and repairs and maintenance related - to bridges and structures, drainage and highway construction",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [],
+   "primary_service": "other: road surface treatment",
+   "primary_service_quote": "Maintenance related to - road recycling, surface dressing, micro asphalt works, slurry sealing, high friction surfacing",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3",
+   "services": [],
+   "primary_service": "other: highway surfacing",
+   "primary_service_quote": "reconstruction, plane and inlay schemes, permanent patching, overlay schemes, minor civils works",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

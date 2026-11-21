@@ -1,0 +1,20 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [],
+   "primary_service": "other: exhibition fit-out and graphics",
+   "primary_service_quote": "Video Games Exhibition Fit-out services and Graphics",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 16,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

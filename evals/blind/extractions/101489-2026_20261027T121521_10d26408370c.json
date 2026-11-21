@@ -1,0 +1,67 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "specialist mechanical and electrical (M&E) maintenance",
+   "primary_service_quote": "supply, install, test, and commission a fully operational Domestic Lifting Equipment",
+   "region_nuts1": [
+    "UKD"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "specialist mechanical and electrical (M&E) maintenance",
+   "primary_service_quote": "supply, install, test, and commission a fully operational Domestic Lifting Equipment",
+   "region_nuts1": [
+    "UKI"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3",
+   "services": [
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "specialist mechanical and electrical (M&E) maintenance",
+   "primary_service_quote": "Domestic Service, Maintenance and Repairs (North and LCR)",
+   "region_nuts1": [
+    "UKD"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "4",
+   "services": [
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "specialist mechanical and electrical (M&E) maintenance",
+   "primary_service_quote": "Domestic Service, Maintenance and Repairs (South, Central and London)",
+   "region_nuts1": [
+    "UKI"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

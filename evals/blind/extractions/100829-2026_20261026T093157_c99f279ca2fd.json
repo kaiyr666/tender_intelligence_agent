@@ -1,0 +1,225 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "construction and capital works",
+    "planned and reactive building maintenance",
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "External Wall, Façade and Cladding Remediation Works",
+   "region_nuts1": [
+    "UKF",
+    "UKG"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "1b",
+   "services": [
+    "construction and capital works",
+    "planned and reactive building maintenance",
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "construction and capital works",
+   "primary_service_quote": "External Wall, Façade and Cladding Remediation Works",
+   "region_nuts1": [
+    "UKC",
+    "UKD",
+    "UKE",
+    "UKF",
+    "UKG",
+    "UKH",
+    "UKI",
+    "UKJ",
+    "UKK",
+    "UKL"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2a",
+   "services": [],
+   "primary_service": "other: fire safety consultancy",
+   "primary_service_quote": "providing Fire Safety Consultancy, for properties located within the Midlands",
+   "region_nuts1": [
+    "UKF",
+    "UKG"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2b",
+   "services": [],
+   "primary_service": "other: fire safety consultancy",
+   "primary_service_quote": "providing Fire Safety Consultancy, for properties located across England and Wales",
+   "region_nuts1": [
+    "UKC",
+    "UKD",
+    "UKE",
+    "UKF",
+    "UKG",
+    "UKH",
+    "UKI",
+    "UKJ",
+    "UKK",
+    "UKL"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3a.1",
+   "services": [],
+   "primary_service": "other: supply of composite fire doors",
+   "primary_service_quote": "supplying Composite Fire Doors for properties located across England and Wales",
+   "region_nuts1": [
+    "UKC",
+    "UKD",
+    "UKE",
+    "UKF",
+    "UKG",
+    "UKH",
+    "UKI",
+    "UKJ",
+    "UKK",
+    "UKL"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3a.2",
+   "services": [],
+   "primary_service": "other: supply of timber fire doors",
+   "primary_service_quote": "supplying Timber Fire Doors for properties located across England and Wales",
+   "region_nuts1": [
+    "UKC",
+    "UKD",
+    "UKE",
+    "UKF",
+    "UKG",
+    "UKH",
+    "UKI",
+    "UKJ",
+    "UKK",
+    "UKL"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3a.3",
+   "services": [],
+   "primary_service": "other: supply of timber internal fire doors",
+   "primary_service_quote": "supplying Timber Internal Fire Doors for properties located across England and Wales",
+   "region_nuts1": [
+    "UKC",
+    "UKD",
+    "UKE",
+    "UKF",
+    "UKG",
+    "UKH",
+    "UKI",
+    "UKJ",
+    "UKK",
+    "UKL"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3b.1",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Supply and Installation of Composite Fire Doors",
+   "region_nuts1": [
+    "UKC",
+    "UKD",
+    "UKE",
+    "UKF",
+    "UKG",
+    "UKH",
+    "UKI",
+    "UKJ",
+    "UKK",
+    "UKL"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3b.2",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Supply and Installation of Timber Fire Doors",
+   "region_nuts1": [
+    "UKC",
+    "UKD",
+    "UKE",
+    "UKF",
+    "UKG",
+    "UKH",
+    "UKI",
+    "UKJ",
+    "UKK",
+    "UKL"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3b.3",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Supply and Installation of Timber Internal Fire Doors",
+   "region_nuts1": [
+    "UKC",
+    "UKD",
+    "UKE",
+    "UKF",
+    "UKG",
+    "UKH",
+    "UKI",
+    "UKJ",
+    "UKK",
+    "UKL"
+   ],
+   "contract_length_months": 48,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

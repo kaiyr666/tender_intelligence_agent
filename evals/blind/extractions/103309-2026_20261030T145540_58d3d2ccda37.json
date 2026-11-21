@@ -1,0 +1,46 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [],
+   "primary_service": "other: furnished accommodation",
+   "primary_service_quote": "provide 2 or 3 bedded furnished accommodation for young adults, and/or families with varying ages of children based in Worcester City",
+   "region_nuts1": [
+    "UKG"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [],
+   "primary_service": "other: furnished accommodation",
+   "primary_service_quote": "provide 2 or 3 bedded furnished accommodation for young adults, and/or families with varying ages of children based in Redditch",
+   "region_nuts1": [
+    "UKG"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3",
+   "services": [],
+   "primary_service": "other: furnished accommodation",
+   "primary_service_quote": "provide 2 or 3 bedded furnished accommodation for young adults, and/or families with varying ages of children based in Kidderminster",
+   "region_nuts1": [
+    "UKG"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

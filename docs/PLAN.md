@@ -27,10 +27,10 @@ About 210 minutes of slices. The rest of the 5 hours covers the spec (done), the
   - Build: `evals/cases.jsonl` with the human-checked labels and expected fields ("not stated" allowed; set match for services and accreditations, exact region, dates to the day, durations in months); the harness runs the whole pipeline, pre-filter included, against a frozen date and reports TP/FP/FN, precision, recall, pre-filter recall, per-field accuracy with coverage, and cost; threshold tuned; results in `docs/EVAL.md`, described as preliminary.
   - Test: the eval runs from a clean clone on cached notices.
 - [x] **Slice 4b: Pre-filter fixes** (~25 min, added on 21 Nov at the human's request). Done, decision D32. Construction (45) codes reach the LLM, and £0 is read as "not stated". Check-set recall went from 4/8 to 8/8, but the check set has now been used for tuning. The 9–15 Nov shortlist was unchanged (8) at twice the reads ($0.29).
-- [ ] **Slice 4c: Fresh held-out set** (added on 21 Nov at the human's request; beyond the 5-hour box)
+- [x] **Slice 4c: Blind screen of an unseen week** (added on 21 Nov at the human's request; beyond the 5-hour box). Done, decision D33. Replaced the planned two-week labelled set to save the human's time: one week (26 Oct–1 Nov), 137 notices marked blind in about 1 hour, then a 15-minute review of the disagreements. After review the tool found 4 of 5 bids, with 1 false positive (Blackpool Tower structural repairs). Results in `docs/EVAL.md`.
   - Goal: measure recall on notices no fix was made on.
-  - Build: label every notice delivered in the North, UK-wide or with no stated region, whatever its CPV code, from about two weeks not yet used (19 Oct to 1 Nov); out-of-region notices are no-bid by rule (D25). Claude drafts labels from the client's rules before the tool reads them; the human checks them. Report it as a third, held-out set.
-  - Test: the eval still runs offline from a clean clone.
+  - Build: `evals/blind.py` (`make` writes the list, `compare` runs the pipeline and lists disagreements); marks committed before the tool ran; extractions committed in `evals/blind/extractions/` so `compare` reruns offline.
+  - Test: list selection, mark parsing, counts both ways, the results page, and a pre-filter drop decided with no LLM call.
 - [ ] **Slice 5: Wrap-up** (~20 min)
   - Goal: a repo a reviewer understands in five minutes.
   - Build: README (how it works, results, where it breaks, next steps) and the final AI_WORKFLOW log.

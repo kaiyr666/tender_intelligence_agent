@@ -1,0 +1,49 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "manned guarding and security"
+   ],
+   "primary_service": "manned guarding and security",
+   "primary_service_quote": "Scope for all Lots cover manned guarding, key holding, alarm response for offices and mobile patrol",
+   "region_nuts1": [
+    "UKD",
+    "UKF"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "SIA Approved Contractor",
+     "quote": "Potential Provider is accredited with SIA Approved Contractor Scheme and granted for the following licensable activities:"
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [
+    "manned guarding and security"
+   ],
+   "primary_service": "manned guarding and security",
+   "primary_service_quote": "Scope for all Lots cover manned guarding, key holding, alarm response for offices and mobile patrol",
+   "region_nuts1": [
+    "UKE",
+    "UKF"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "SIA Approved Contractor",
+     "quote": "Potential Provider is accredited with SIA Approved Contractor Scheme and granted for the following licensable activities:"
+    }
+   ],
+   "preferred_accreditations": []
+  }
+ ]
+}
