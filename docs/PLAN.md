@@ -15,9 +15,15 @@ About 210 minutes of slices. The rest of the 5 hours covers the spec (done), the
   - Goal: the bid team gets the full weekly output.
   - Build: `prompts/rationale.md` (from extracted fields only); `report.py` writing `output/report.md` and `output/shortlist.csv` with the four groups, planning count, cost, incomplete banner and OGL attribution. Plain layout, no polish. Run on the last full week.
   - Test: a golden-file test of the report and CSV from a fixed scored input; the rationale prompt gets no raw notice text.
-- [ ] **Slice 4: Evaluation** (~40 min)
+- [ ] **Slice 4: Evaluation** (~70 min; was 40, before the label check found the steps below)
   - Goal: measure the shortlist and the extraction against the targets.
-  - First: apply the client's service answers (D27) to `config/profile.toml`: grounds maintenance as an offered service with its CPV codes. Specialist trade lots stay in, as building maintenance.
+  - First, from the label check and the 21 Nov analysis of seven notices (all D27):
+    1. **Service definitions.** Give each service in `config/profile.toml` an includes / excludes list and pass it to the extract prompt, so borderline lots stop flipping between reads (107673; 106942 lots 3a and 3b gated as construction; 108109 lot 1 cleaning but lots 2 and 3 "other"). Cleaning includes window and high-level and residential communal cleaning; building maintenance includes minor works, joinery, redecoration, flooring, glazing, drainage and other trade lots; add grounds maintenance as offered; add specialist M&E (HVAC, gas, lifts, fire systems) and specialist equipment decontamination as excluded. Re-read the week and the eval notices (about $0.30 each).
+    2. **CPV list.** Add grounds-maintenance codes (7731xxxx). Remove the M&E codes (50710000, 50720000, 50730000, 50750000), and check 50700000, which matches every 507xxxxx code by hierarchy and would still let lifts and heating in. No "never" list: mixed frameworks would be dropped for one bad lot.
+    3. **Close the 0.60 loophole.** An in-region, in-band lot whose main service the company does not offer scores exactly the 0.60 threshold when mobilisation is unknown (107285 scaffolding, water mains, pest control, surveys; 106652). Fix with the threshold or by rejecting an "other" main service, chosen on the eval.
+    4. **Lots in the labels.** Add `bid_lots` (every lot the team would bid) to the multi-lot bid notices 106942, 107285, 108109 and 106253. The eval checks that the tool's chosen lot is in `bid_lots` and lists lots wrongly gated; today 106253 picks Mechanical over Building Fabric & Grounds, and 106942 gates 3a and 3b.
+    5. **Label reasons.** 107886: "Scotland (buyer in Edinburgh)", not "no region stated" (the buyer's address is stripped, D14). 108016: drop "over GBP 5m" as a reason, since it is only a penalty.
+    6. **Ask the human:** add about 10 more northern notices to the eval set (only 8 of 32 are bids), and commit the eval extractions so the eval runs without an API key.
   - Build: `evals/cases.jsonl` with the human-checked labels and expected fields ("not stated" allowed; set match for services and accreditations, exact region, dates to the day, durations in months); the harness runs the whole pipeline, pre-filter included, against a frozen date and reports TP/FP/FN, precision, recall, pre-filter recall, per-field accuracy with coverage, and cost; threshold tuned; results in `docs/EVAL.md`, described as preliminary.
   - Test: the eval runs from a clean clone on cached notices.
 - [ ] **Slice 5: Wrap-up** (~20 min)
