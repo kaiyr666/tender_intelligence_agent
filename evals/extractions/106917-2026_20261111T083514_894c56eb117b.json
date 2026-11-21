@@ -1,0 +1,22 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "grounds maintenance"
+   ],
+   "primary_service": "grounds maintenance",
+   "primary_service_quote": "hardcore surface weed treatment on pathways, car parks and footpaths in the City of Sunderland",
+   "region_nuts1": [
+    "UKC"
+   ],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

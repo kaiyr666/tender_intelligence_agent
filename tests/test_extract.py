@@ -183,8 +183,17 @@ def test_long_notice_text_is_cut(fake_llm, profile):
 
 def test_profile_service_labels_are_in_the_prompt(fake_llm, profile):
     _, user = sent_messages(fake_llm, make_notice(), profile)
-    for label in profile.services.offered + profile.services.excluded:
+    for label in profile.services.offered_names + profile.services.excluded_names:
         assert label in user
+
+
+def test_service_definitions_are_in_the_prompt(fake_llm, profile):
+    _, user = sent_messages(fake_llm, make_notice(), profile)
+    services = profile.services.offered + profile.services.excluded
+    phrases = [phrase for service in services for phrase in service.includes + service.excludes]
+    assert phrases, "the real profile should define its services"
+    for phrase in phrases:
+        assert phrase in user
 
 
 def test_lot_ids_are_in_the_prompt(fake_llm, profile):

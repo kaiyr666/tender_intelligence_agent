@@ -1,0 +1,224 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake scaffolding works",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake Drainage works.",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To Provide glazing",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "4",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake window and door replacement",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "5",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake fencing renewals",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "6",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake Water Mains Replacements",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "7",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake Handrail works",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "8",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake Metal works (Including metal roofing, Soffits, fascias, Garage doors)",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "9",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake general building works",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "10",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake Major repairs",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "11",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake Specialist defect and remedial works",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "12",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake Aerial resiting works",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "13",
+   "services": [],
+   "primary_service": "other: pest control and proofing",
+   "primary_service_quote": "To undertake Pest Control & Proofing works",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "14",
+   "services": [],
+   "primary_service": "other: specialist structural surveys",
+   "primary_service_quote": "To undertake Specialist Structural Surveys",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "15",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake Flooring Works",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "16",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake Kitchen Unit Wrapping works",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "17",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "To undertake Ramp works (Repair, Renew and removal)",
+   "region_nuts1": [],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

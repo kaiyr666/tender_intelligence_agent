@@ -1,0 +1,246 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [],
+   "primary_service": "other: asbestos surveying and analysis",
+   "primary_service_quote": "Lot 1: Asbestos Surveying and Analytical Works",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "ISO/IEC 17020",
+     "quote": "Tenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17020\nISO / IEC 17025"
+    },
+    {
+     "name": "ISO/IEC 17025",
+     "quote": "Tenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17020\nISO / IEC 17025"
+    },
+    {
+     "name": "one of: Constructionline, CHAS, SafeContractor or SSIP accreditation",
+     "quote": "One or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\n•\tSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "1b",
+   "services": [],
+   "primary_service": "other: asbestos emergency reactive work",
+   "primary_service_quote": "Lot 1b: Asbestos Emergency Reactive Work",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "ISO/IEC 17020",
+     "quote": "Tenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17020\nISO / IEC 17025"
+    },
+    {
+     "name": "ISO/IEC 17025",
+     "quote": "Tenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17020\nISO / IEC 17025"
+    },
+    {
+     "name": "one of: Constructionline, CHAS, SafeContractor or SSIP accreditation",
+     "quote": "One or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\n•\tSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "1c",
+   "services": [],
+   "primary_service": "other: asbestos removal",
+   "primary_service_quote": "Lot 1c: Asbestos Removal Work",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "ISO/IEC 17020",
+     "quote": "Tenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17020\nISO / IEC 17025"
+    },
+    {
+     "name": "ISO/IEC 17025",
+     "quote": "Tenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17020\nISO / IEC 17025"
+    },
+    {
+     "name": "membership of a relevant industry body, for example ARCA or ACAD",
+     "quote": "Membership of a relevant industry body for example ARCA / ACAD"
+    },
+    {
+     "name": "one of: Constructionline, CHAS, SafeContractor or SSIP accreditation",
+     "quote": "One or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\nSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "1d",
+   "services": [],
+   "primary_service": "other: asbestos laboratory analysis",
+   "primary_service_quote": "Suppliers shall be able to carry out various works with asbestos containing materials including:\nSampling Analysis",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "ISO/IEC 17025",
+     "quote": "Tenderers are required to confirm that they have or will have at the start of the framework the following:\nISO / IEC 17025"
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2a",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Reactive and Planned works across the Authority's property portfolio in relation to all types of electrical works.",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: Constructionline, CHAS, SafeContractor or SSIP accreditation",
+     "quote": "One or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\n•\tSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation."
+    },
+    {
+     "name": "NICEIC",
+     "quote": "Tenderers are required to confirm that they have or will have at the start of the framework the following:\nOne or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\n•\tSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation.\nNational Inspection Council for Electrical Installation Contracting (NICEIC) Certification"
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2b",
+   "services": [
+    "planned and reactive building maintenance",
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Lot 2b: Electrical Statutory Planned Preventative Maintenance (PPM)",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: Constructionline, CHAS, SafeContractor or SSIP accreditation",
+     "quote": "One or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\n•\tSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation."
+    },
+    {
+     "name": "NICEIC",
+     "quote": "Tenderers are required to confirm that they have or will have at the start of the framework the following:\nOne or more of the following:\n•\tConstructionline Registration\n•\tContractors Health and Safety Assessment Scheme (CHAS)\n•\tSafeContractor\n•\tSafety Schemes in Procurement (SSIP) accreditation.\nNational Inspection Council for Electrical Installation Contracting (NICEIC) Certification"
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3a",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Concreting \nPlastering \nRendering \nBrick work repairs",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: Constructionline, CHAS, SafeContractor or SSIP accreditation",
+     "quote": "One or more of the following accreditation / certification schemes: \n- Constructionline Registration \n- Contractors Health and Safety Assessment Scheme (CHAS) \n- SafeContractor \n- Safety Schemes in Procurement (SSIP) accreditation."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3b",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Supply, installation and removal of flooring.",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: Constructionline, CHAS, SafeContractor or SSIP accreditation",
+     "quote": "One or more of the following accreditation / certification schemes: \n- Constructionline Registration \n- Contractors Health and Safety Assessment Scheme (CHAS) \n- SafeContractor \n- Safety Schemes in Procurement (SSIP) accreditation."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "4",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "General carpentry and joinery including but not limited to the supply, installation, repair, removal and disposal of the following:",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: Constructionline, CHAS, SafeContractor or SSIP accreditation",
+     "quote": "One or more of the following accreditation / certification schemes: \n- Constructionline Registration \n- Contractors Health and Safety Assessment Scheme (CHAS) \n- SafeContractor \n- Safety Schemes in Procurement (SSIP) accreditation."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "5a",
+   "services": [
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "specialist mechanical and electrical (M&E) maintenance",
+   "primary_service_quote": "Lot 5a - Mechanical Reactive and Planned Works",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "5b",
+   "services": [
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "specialist mechanical and electrical (M&E) maintenance",
+   "primary_service_quote": "Lot 5b - Mechanical Statutory Planned Preventative Maintenance (PPM)",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

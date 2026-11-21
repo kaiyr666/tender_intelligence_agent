@@ -1,0 +1,442 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "S1",
+   "services": [],
+   "primary_service": "other: building surveying and asset surveys",
+   "primary_service_quote": "building surveying, inspection, condition assessment and asset survey services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S2",
+   "services": [],
+   "primary_service": "other: architectural design and planning",
+   "primary_service_quote": "architectural, design and planning services across residential, commercial, civic and public sector development",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S3",
+   "services": [],
+   "primary_service": "other: engineering design and technical consultancy",
+   "primary_service_quote": "multidisciplinary engineering and technical consultancy",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S4",
+   "services": [],
+   "primary_service": "other: project and construction management",
+   "primary_service_quote": "project, programme and construction management services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S5",
+   "services": [],
+   "primary_service": "other: quantity surveying and cost consultancy",
+   "primary_service_quote": "quantity surveying, cost consultancy and commercial management",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S6",
+   "services": [],
+   "primary_service": "other: building safety and compliance consultancy",
+   "primary_service_quote": "building safety, fire safety, risk and compliance consultancy",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S7",
+   "services": [],
+   "primary_service": "other: energy and sustainability consultancy",
+   "primary_service_quote": "energy, sustainability, retrofit and decarbonisation consultancy",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S8",
+   "services": [],
+   "primary_service": "other: property development and acquisition advice",
+   "primary_service_quote": "strategic property and development services associated with identifying and acquiring land, sites and property",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S9",
+   "services": [],
+   "primary_service": "other: planning and development advice",
+   "primary_service_quote": "planning, development management, viability and associated development advisory services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S10",
+   "services": [],
+   "primary_service": "other: procurement and commercial consultancy",
+   "primary_service_quote": "procurement, commercial and category management consultancy",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S11",
+   "services": [],
+   "primary_service": "other: legal services",
+   "primary_service_quote": "legal advisory and representation services relevant to contracting authorities and other public bodies",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S12",
+   "services": [],
+   "primary_service": "other: marketing and communications",
+   "primary_service_quote": "marketing, communications, public relations and digital engagement",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S13",
+   "services": [],
+   "primary_service": "other: recruitment and workforce resourcing",
+   "primary_service_quote": "recruitment and workforce resourcing",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S14",
+   "services": [
+    "integrated facilities management",
+    "office and commercial cleaning"
+   ],
+   "primary_service": "integrated facilities management",
+   "primary_service_quote": "FM management, concierge, portering, reception, janitorial, caretaking and other building support activities",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S15",
+   "services": [
+    "office and commercial cleaning"
+   ],
+   "primary_service": "office and commercial cleaning",
+   "primary_service_quote": "communal cleaning, building cleaning, window cleaning, deep cleaning, specialist cleaning, washroom services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S16",
+   "services": [
+    "manned guarding and security"
+   ],
+   "primary_service": "manned guarding and security",
+   "primary_service_quote": "guarding, patrols, waking watch, surveillance, concierge security, alarm monitoring",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S17",
+   "services": [
+    "grounds maintenance"
+   ],
+   "primary_service": "grounds maintenance",
+   "primary_service_quote": "grounds, landscape and arboricultural maintenance",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S18",
+   "services": [],
+   "primary_service": "other: waste and recycling services",
+   "primary_service_quote": "waste collection, treatment, disposal, recycling and resource management",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S19",
+   "services": [],
+   "primary_service": "other: pest control and environmental treatment",
+   "primary_service_quote": "pest management and environmental treatment services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S20",
+   "services": [],
+   "primary_service": "other: car park management and enforcement",
+   "primary_service_quote": "car park operation, management and enforcement",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S21",
+   "services": [],
+   "primary_service": "other: housing and property management",
+   "primary_service_quote": "housing and residential property management",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S22",
+   "services": [],
+   "primary_service": "other: temporary accommodation and homelessness support",
+   "primary_service_quote": "temporary accommodation, lettings and homelessness-related services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S23",
+   "services": [],
+   "primary_service": "other: removals, storage and relocation",
+   "primary_service_quote": "resident and organisational relocation, removal and storage services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S24",
+   "services": [
+    "IT services"
+   ],
+   "primary_service": "IT services",
+   "primary_service_quote": "ICT, managed technology and digital transformation services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S25",
+   "services": [
+    "IT services"
+   ],
+   "primary_service": "IT services",
+   "primary_service_quote": "cyber security, information assurance, information governance and data protection",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S26",
+   "services": [
+    "IT services"
+   ],
+   "primary_service": "IT services",
+   "primary_service_quote": "data management, analytics, systems and reporting",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S27",
+   "services": [],
+   "primary_service": "other: finance, audit and tax services",
+   "primary_service_quote": "financial, accounting, audit, tax and treasury services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S28",
+   "services": [],
+   "primary_service": "other: insurance and risk services",
+   "primary_service_quote": "insurance, brokerage, claims and risk services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S29",
+   "services": [],
+   "primary_service": "other: energy and utility management",
+   "primary_service_quote": "energy and utility management services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S30",
+   "services": [],
+   "primary_service": "other: transport, fleet and logistics",
+   "primary_service_quote": "transport, fleet and logistics requirements",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S31",
+   "services": [],
+   "primary_service": "other: training and organisational development",
+   "primary_service_quote": "training, learning and organisational development",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S32",
+   "services": [],
+   "primary_service": "other: consultation and research",
+   "primary_service_quote": "consultation, research, engagement and customer insight",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S33",
+   "services": [],
+   "primary_service": "other: print, mail and document management",
+   "primary_service_quote": "print, mail and document management services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S34",
+   "services": [],
+   "primary_service": "other: customer contact and call handling",
+   "primary_service_quote": "customer contact and call-handling services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S35",
+   "services": [],
+   "primary_service": "other: translation and accessible communication",
+   "primary_service_quote": "translation, interpretation and accessible communication",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S36",
+   "services": [
+    "catering"
+   ],
+   "primary_service": "catering",
+   "primary_service_quote": "catering, hospitality, event and venue services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S37",
+   "services": [],
+   "primary_service": "other: occupational health and employee wellbeing",
+   "primary_service_quote": "occupational health and workforce wellbeing services",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "S38",
+   "services": [],
+   "primary_service": "other: grant funding and bid support",
+   "primary_service_quote": "grant funding, bid development and social value advisory support",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

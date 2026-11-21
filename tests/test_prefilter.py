@@ -70,11 +70,14 @@ def reason_for(notice, profile):
         "90910000",  # a profile code itself
         "90911200",  # under 90910000
         "90919200",  # under 90910000
-        "50711000",  # under 50700000
+        "50711000",  # general electrical maintenance, a profile code itself
+        "50711100",  # under 50711000
         "45453100",  # under 45453000
+        "77314000",  # grounds maintenance, under 77310000
         "98341130",  # an exact, fully specific profile code
         "50000000",  # broad code, exact
         "90900000",  # broad code, exact
+        "50700000",  # broad code, exact
     ],
 )
 def test_cpv_code_matches_profile(code, profile):
@@ -88,6 +91,9 @@ def test_cpv_code_matches_profile(code, profile):
         "50100000",  # under broad 50000000, which matches only exactly
         "90920000",  # under broad 90900000 but not under 90910000
         "72000000",  # unrelated (IT services)
+        "50750000",  # lift maintenance: specialist M&E, under broad 50700000 (D27)
+        "50720000",  # central heating maintenance: specialist M&E
+        "50712000",  # mechanical installations: specialist M&E
     ],
 )
 def test_cpv_code_does_not_match_profile(code, profile):

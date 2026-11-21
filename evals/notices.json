@@ -3192,5 +3192,758 @@
     "selection_criteria": "Tenderers must demonstrate satisfactory economic and financial standing and provide the information requested within the Procurement Specific Questionnaire and Financial Standing Template (Appendix 6). Suppliers must register on the Central Digital Platform and provide Core Supplier Information, including financial information and exclusion grounds information in accordance with the Procurement Act 2023. The Council reserves the right to assess financial standing and exclude suppliers that do not demonstrate sufficient financial capacity to deliver the Contract.\nTenderers must demonstrate relevant experience, technical competence and capability in the provision of fire systems and equipment servicing, maintenance and responsive repair services. Suppliers must evidence experience of delivering similar contracts, appropriately qualified and competent personnel, suitable health and safety arrangements, and the ability to provide services across Central Bedfordshire Council's housing stock and associated premises. Tenderers must also demonstrate compliance with all relevant legislation, regulatory requirements, British Standards and manufacturer recommendations applicable to fire systems and associated fire safety equipment."
    }
   ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b6bb",
+  "notice_id": "105810-2026",
+  "published": "2026-11-06T14:51:23Z",
+  "title": "Provision of Damp Services",
+  "description": "Blackpool Coastal Housing (BCH) wishes to establish a contract with a single supplier for the identification & rectification of dampness, timber decay and infestation and mould/condensation problems within their Housing Stock.\nThe Contracting Authority wishes to appoint a Supplier who can clearly demonstrate the ability to meet our requirements and who offers the most advantageous tender.\nIt is anticipated that the contract term will be from February 2027 to January 2029, with the option to extend incrementally for a period of 1 + 1 years (subject to contract review and budget availability).",
+  "buyer": "BLACKPOOL COASTAL HOUSING LIMITED",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 1500000.0,
+  "deadline": "2026-12-07T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/105810-2026",
+  "cpv_codes": [
+   "45453100",
+   "71315300"
+  ],
+  "regions": [
+   "UKD42"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 1500000.0,
+    "contract_start": "2027-02-01",
+    "contract_end": "2029-01-31",
+    "cpv_codes": [
+     "45453100",
+     "71315300"
+    ],
+    "regions": [
+     "UKD42"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b650",
+  "notice_id": "105640-2026",
+  "published": "2026-11-06T11:55:54Z",
+  "title": "Fire Door Inspections and Maintenance",
+  "description": "Wellspring Academy Trust is looking to contract for the provision of Fire Door Inspections and Maintenance services across the Trust's multiple sites in three lots: Lot 1 - North region, Lot 2 - East region, Lot 3 - West region. The contract is expected to start on 1 May 2027 and remain in place for a maximum period of five years (3+2).",
+  "buyer": "WELLSPRING ACADEMY TRUST",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 1110000.0,
+  "deadline": "2026-12-07T14:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/105640-2026",
+  "cpv_codes": [
+   "44221220",
+   "45343000",
+   "50000000",
+   "71630000"
+  ],
+  "regions": [
+   "UKE",
+   "UKE31",
+   "UKE4",
+   "UKF3"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "North region",
+    "description": "Fire Door Inspections and Maintenance services across the Trust's multiple sites in the North region. Names and addresses of all academies can be found in Annex A - Asset Register.",
+    "value_gbp": 462000.0,
+    "contract_start": "2027-05-01",
+    "contract_end": "2030-04-30",
+    "cpv_codes": [
+     "44221220",
+     "45343000",
+     "50000000",
+     "71630000"
+    ],
+    "regions": [
+     "UKE"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "2",
+    "title": "East region",
+    "description": "Fire Door Inspections and Maintenance services across the Trust's multiple sites in the East region. Names and addresses of all academies can be found in Annex A - Asset Register.",
+    "value_gbp": 369000.0,
+    "contract_start": "2027-05-01",
+    "contract_end": "2030-04-30",
+    "cpv_codes": [
+     "44221220",
+     "45343000",
+     "50000000",
+     "71630000"
+    ],
+    "regions": [
+     "UKF3"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "3",
+    "title": "West region",
+    "description": "Fire Door Inspections and Maintenance services across the Trust's multiple sites in the West region. Names and addresses of all academies can be found in Annex A - Asset Register.",
+    "value_gbp": 279000.0,
+    "contract_start": "2027-05-01",
+    "contract_end": "2030-04-30",
+    "cpv_codes": [
+     "44221220",
+     "45343000",
+     "50000000",
+     "71630000"
+    ],
+    "regions": [
+     "UKE31",
+     "UKE4"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-0783ae",
+  "notice_id": "105582-2026",
+  "published": "2026-11-06T10:53:47Z",
+  "title": "Refurbishment and Associated Building Works Framework",
+  "description": "West Yorkshire Fire and Rescue Service (WYFRS) would like to establish a multi-supplier Open framework for the delivery of refurbishment and associated building works across its estate. The proposed framework will include other Fire and Rescue Services within the Yorkshire and Humberside region, promoting regional collaboration. Bidders can apply for one or all FRS’s. WYFRS are acting as lead contracting authority, and FRS’s named on the framework will be:-\n•\tWest Yorkshire Fire and Rescue Service.\n•\tHumberside Fire and Rescue Service.\n•\tSouth Yorkshire Fire and Rescue Service.\nWe are aiming to award local contractors on the framework and are encouraging SME’s to tender for the value lots available. As such all bidders must have a registered office within the Yorkshire and Humberside region.",
+  "buyer": "West Yorkshire Fire and Rescue Service",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 40000000.0,
+  "deadline": "2026-12-12T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/105582-2026",
+  "cpv_codes": [
+   "45453100"
+  ],
+  "regions": [
+   "UKE"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Lot 1",
+    "description": "Value Band £30k to £399k",
+    "value_gbp": 0.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "45453100"
+    ],
+    "regions": [
+     "UKE"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "2",
+    "title": "Lot 2",
+    "description": "Value band £400k to £999k",
+    "value_gbp": 0.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "45453100"
+    ],
+    "regions": [
+     "UKE"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "3",
+    "title": "Lot 3",
+    "description": "Value band £1m to £2.5m",
+    "value_gbp": 0.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "45453100"
+    ],
+    "regions": [
+     "UKE"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07b5fb",
+  "notice_id": "105503-2026",
+  "published": "2026-11-06T09:10:28Z",
+  "title": "JHG - Window Cleaning Contract (Lot 1- North, Lot 2 - Tameside, Lot 3 - Midlands)",
+  "description": "Jigsaw Homes Group has three operational areas which are as follows;\n•\tJigsaw Homes North (Lancashire/Merseyside/Cheshire/Greater M/cr)\n•\tJigsaw Homes Midlands (East Midlands)\n•\tJigsaw Homes Tameside (Greater Manchester)\n\tThe service provider shall be required to have the skills, knowledge, experience and qualifications necessary to deliver an effective programme of Window Cleaning, report on the findings and recommend all appropriate actions and produce a completion certificate to properties owned and managed by Jigsaw Homes Group (JHG) including;  \n•\tcommunal (& public) areas to residential properties;\n•\tJHG owned commercial properties;\n•\tnew build properties (from developer handover onwards);\n•\tAny other buildings for which JHG have a responsibility for.\nThis service is currently managed by a couple of contractors throughout the North, Tameside & Midlands regions. It is our intention to outsource the whole of the Asset Management Communal Window Cleaning Service and split it into three Lots. The first, Lot 1 – North which covers parts of Greater Manchester, Lancashire, Cheshire & Merseyside, the second, Lot 2 – Tameside area and the third, Lot 3 – Midlands. Bidders can apply for one Lot, two or all three Lots.\nThe initial contract for 2 years with an option of an additional two year to a total of four years and consists of the following number per Lot;\n•\tLot 1 – North \n•\tLot 2 – Tameside\n•\tLot 3 - Midlands\nJHG intends to enter into a Contract, please refer to Section 8 – Terms of Agreement for further details.\nThe successful Contractor(s) will be expected to mobilise to our timescale and be operational by 1st April 2027, please refer to Section 1.10 the Tender Process Summary below for more details.\nThe initial contract period runs until 31st March 2029 and if successful an extension of a year based on performance and by mutual agreement. ",
+  "buyer": "Jigsaw Homes Group",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 200000.0,
+  "deadline": "2026-12-04T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/105503-2026",
+  "cpv_codes": [
+   "90911000"
+  ],
+  "regions": [
+   "UKD",
+   "UKF"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Lot 1 - North",
+    "description": "Properties in the North West of England, please read tender docs for more information.",
+    "value_gbp": 80000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "90911000"
+    ],
+    "regions": [
+     "UKD",
+     "UKF"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "2",
+    "title": "Lot 2 - Tameside",
+    "description": "Tameside, please see tender docs for further information",
+    "value_gbp": 80000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "90911000"
+    ],
+    "regions": [
+     "UKD",
+     "UKF"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "3",
+    "title": "Lot 3 - Midlands",
+    "description": "East Midlands - Nottingham area",
+    "value_gbp": 40000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2029-03-31",
+    "cpv_codes": [
+     "90911000"
+    ],
+    "regions": [
+     "UKD",
+     "UKF"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-0795c5",
+  "notice_id": "103819-2026",
+  "published": "2026-11-02T15:03:42Z",
+  "title": "WUTH-ITT-C484988 Minor, Small & Medium Works",
+  "description": "The Contracting Authority is seeking to establish a Framework for provision of minor, small & medium works across its own sites and for any other participating authority as named in the ITT.\nThe Framework will be for a period of 12 months with the option to extend for a further 12 months (maximum duration 2 years).\nThe Framework will be broken down into five Lots:\nLot 1 - Electrical (value band £1 - £50,000)\nLot 2 - Flooring (value band £1 - £50,000)\nLot 3 - Minor/Reactive Works (value band £1 - £50,000)\nLot 4 - Minor/Small Planned works (value band £50,001 - £350,000)\nLot 5 - Medium/Planned Works (value band £350,001 - £1.5m)\nTenderers will be required to demonstrate the ability to provide and coordinate a wide array of skilled building and service trades.",
+  "buyer": "WIRRAL UNIVERSITY TEACHING HOSPITAL NHS FOUNDATION TRUST",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 40000000.0,
+  "deadline": "2026-12-08T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/103819-2026",
+  "cpv_codes": [
+   "31100000",
+   "31200000",
+   "31300000",
+   "31400000",
+   "31600000",
+   "31700000",
+   "35100000",
+   "42400000",
+   "42500000",
+   "42600000",
+   "44100000",
+   "44200000",
+   "44300000",
+   "44400000",
+   "44500000",
+   "44600000",
+   "44800000",
+   "44900000",
+   "45100000",
+   "45200000",
+   "45400000",
+   "45500000",
+   "50700000",
+   "51100000",
+   "51300000",
+   "51500000",
+   "51700000",
+   "71300000",
+   "71500000",
+   "71700000",
+   "76600000",
+   "90000000"
+  ],
+  "regions": [
+   "UKD6",
+   "UKD7"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Electrical  Value Band £1 - £50,000 excluding VAT",
+    "description": "Electrical works such as:\nInstallation of new sockets; data points; electrical upgrades",
+    "value_gbp": 5000000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2028-03-31",
+    "cpv_codes": [
+     "31100000",
+     "31200000",
+     "31300000",
+     "31400000",
+     "31600000",
+     "31700000",
+     "35100000",
+     "42400000",
+     "42500000",
+     "42600000",
+     "44100000",
+     "44200000",
+     "44300000",
+     "44400000",
+     "44500000",
+     "44600000",
+     "44800000",
+     "44900000",
+     "45100000",
+     "45200000",
+     "45400000",
+     "45500000",
+     "50700000",
+     "51100000",
+     "51300000",
+     "51500000",
+     "51700000",
+     "71300000",
+     "71500000",
+     "71700000",
+     "76600000",
+     "90000000"
+    ],
+    "regions": [
+     "UKD6",
+     "UKD7"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "2",
+    "title": "Flooring Value Band £1 - £50,000 excluding VAT",
+    "description": "Flooring works such as:\nReplacement flooring, flooring repairs, new flooring within value band",
+    "value_gbp": 5000000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2028-03-31",
+    "cpv_codes": [
+     "31100000",
+     "31200000",
+     "31300000",
+     "31400000",
+     "31600000",
+     "31700000",
+     "35100000",
+     "42400000",
+     "42500000",
+     "42600000",
+     "44100000",
+     "44200000",
+     "44300000",
+     "44400000",
+     "44500000",
+     "44600000",
+     "44800000",
+     "44900000",
+     "45100000",
+     "45200000",
+     "45400000",
+     "45500000",
+     "50700000",
+     "51100000",
+     "51300000",
+     "51500000",
+     "51700000",
+     "71300000",
+     "71500000",
+     "71700000",
+     "76600000",
+     "90000000"
+    ],
+    "regions": [
+     "UKD6",
+     "UKD7"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "3",
+    "title": "Minor/Reactive Works Value Band £1 - £50,000 excluding VAT",
+    "description": "Examples of Minor / Reactive works:\nFitting of curtains and blinds; supply and fit of Digi locks; locks and keys; signage; space reconfiguration and small refurbishment work; painting and decorating; removal or installation of cupboards/shelving; fire stopping/compartmentation works",
+    "value_gbp": 8000000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2028-03-31",
+    "cpv_codes": [
+     "31100000",
+     "31200000",
+     "31300000",
+     "31400000",
+     "31600000",
+     "31700000",
+     "35100000",
+     "42400000",
+     "42500000",
+     "42600000",
+     "44100000",
+     "44200000",
+     "44300000",
+     "44400000",
+     "44500000",
+     "44600000",
+     "44800000",
+     "44900000",
+     "45100000",
+     "45200000",
+     "45400000",
+     "45500000",
+     "50700000",
+     "51100000",
+     "51300000",
+     "51500000",
+     "51700000",
+     "71300000",
+     "71500000",
+     "71700000",
+     "76600000",
+     "90000000"
+    ],
+    "regions": [
+     "UKD6",
+     "UKD7"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "4",
+    "title": "Minor/Small Planned Works - Value band £50,001 - £350,000 excluding VAT",
+    "description": "Example:  installation of and replacement of site wide mechanical and electrical systems, larger refurbishment works; larger fire stopping/compartmentation works",
+    "value_gbp": 10000000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2028-03-31",
+    "cpv_codes": [
+     "31100000",
+     "31200000",
+     "31300000",
+     "31400000",
+     "31600000",
+     "31700000",
+     "35100000",
+     "42400000",
+     "42500000",
+     "42600000",
+     "44100000",
+     "44200000",
+     "44300000",
+     "44400000",
+     "44500000",
+     "44600000",
+     "44800000",
+     "44900000",
+     "45100000",
+     "45200000",
+     "45400000",
+     "45500000",
+     "50700000",
+     "51100000",
+     "51300000",
+     "51500000",
+     "51700000",
+     "71300000",
+     "71500000",
+     "71700000",
+     "76600000",
+     "90000000"
+    ],
+    "regions": [
+     "UKD6",
+     "UKD7"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "5",
+    "title": "Medium/Planned Works -  Value band £350,001 to £1,500,000 excluding VAT",
+    "description": "Example: Roof replacements, pipework replacement works, car park resurfacing, window replacements.",
+    "value_gbp": 15000000.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2028-03-31",
+    "cpv_codes": [
+     "31100000",
+     "31200000",
+     "31300000",
+     "31400000",
+     "31600000",
+     "31700000",
+     "35100000",
+     "42400000",
+     "42500000",
+     "42600000",
+     "44100000",
+     "44200000",
+     "44300000",
+     "44400000",
+     "44500000",
+     "44600000",
+     "44800000",
+     "44900000",
+     "45100000",
+     "45200000",
+     "45400000",
+     "45500000",
+     "50700000",
+     "51100000",
+     "51300000",
+     "51500000",
+     "51700000",
+     "71300000",
+     "71500000",
+     "71700000",
+     "76600000",
+     "90000000"
+    ],
+    "regions": [
+     "UKD6",
+     "UKD7"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07809c",
+  "notice_id": "106917-2026",
+  "published": "2026-11-11T08:35:14Z",
+  "title": "Hardcore Surface Weed Treatment",
+  "description": "The Council requires a contractor to carry out hardcore surface weed treatment on pathways, car parks and footpaths in the City of Sunderland.",
+  "buyer": "Sunderland City Council",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 448110.0,
+  "deadline": "2026-12-11T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/106917-2026",
+  "cpv_codes": [
+   "77312100"
+  ],
+  "regions": [
+   "UKC23"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 448110.0,
+    "contract_start": "2027-03-01",
+    "contract_end": "2029-02-28",
+    "cpv_codes": [
+     "77312100"
+    ],
+    "regions": [
+     "UKC23"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-0780f1",
+  "notice_id": "103529-2026",
+  "published": "2026-11-02T09:13:48Z",
+  "title": "Responsive Repairs & Maintenance and Void Property Works for Karbon Living",
+  "description": "The purpose of this invitation to tender is for Karbon Homes the Authority to appoint experienced and competent Contractors to deliver Responsive Repairs & Maintenance and Void Property Works for Karbon Living a limited company and for-profit RP and subsidiary of Karbon Homes Limited.\nAll documents relating to this tender are available to download from the Panacea e-Sourcing portal.\nSubmission Instructions:\nElectronically via the e-Sourcing portal. Suppliers must submit one copy of their tender electronically, with any additional documents required or requested. Documents must be compatible with Microsoft Office or Adobe/PDF.\nShould you require technical support with the e-Sourcing portal please email Panacea directly at:\n•\tEmail: [email removed]\n•\tPhone: [phone removed]\nTenders must be submitted using the above e-Sourcing portal. Tenders submitted via postal, or email methods will not be accepted.",
+  "buyer": "Karbon Homes",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 5000000.0,
+  "deadline": "2026-11-20T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/103529-2026",
+  "cpv_codes": [
+   "45420000",
+   "45430000",
+   "45440000",
+   "45450000"
+  ],
+  "regions": [
+   "UKC",
+   "UKE"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": "Void works",
+    "description": "Void Property Works for Karbon Living.",
+    "value_gbp": 2500000.0,
+    "contract_start": "2027-01-11",
+    "contract_end": "2031-01-10",
+    "cpv_codes": [
+     "45420000",
+     "45430000",
+     "45440000",
+     "45450000"
+    ],
+    "regions": [
+     "UKC",
+     "UKE"
+    ],
+    "selection_criteria": null
+   },
+   {
+    "lot_id": "2",
+    "title": "Responsive repairs & maintenance works",
+    "description": "Responsive repairs & maintenance works for Karbon Living.",
+    "value_gbp": 2500000.0,
+    "contract_start": "2027-01-11",
+    "contract_end": "2031-01-10",
+    "cpv_codes": [
+     "45420000",
+     "45430000",
+     "45440000",
+     "45450000"
+    ],
+    "regions": [
+     "UKC",
+     "UKE"
+    ],
+    "selection_criteria": null
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-06a2a1",
+  "notice_id": "104445-2026",
+  "published": "2026-11-03T18:54:48Z",
+  "title": "Building Repair and Maintenance Works",
+  "description": "Building Repair and Maintenance works covering Council buildings, Schools, park lands, assets and sites within the Metropolitan Borough and Parishes of Oldham where the Council has an interest.\nVarious minor works disciplines for use in schools, offices and other council buildings and infrastructure.\nOnly reactive repair and maintenance works. Requires quick response. SLAs to be set for response times.\nA minimum of 1 hour response is allowed, ranging up to 28 days for repair.",
+  "buyer": "Oldham Metropolitan Borough Council",
+  "status": "active",
+  "main_category": "works",
+  "value_gbp": 6000000.0,
+  "deadline": "2026-12-01T12:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/104445-2026",
+  "cpv_codes": [
+   "45000000"
+  ],
+  "regions": [
+   "UKD37"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 6000000.0,
+    "contract_start": "2027-03-01",
+    "contract_end": "2033-03-01",
+    "cpv_codes": [
+     "45000000"
+    ],
+    "regions": [
+     "UKD37"
+    ],
+    "selection_criteria": "This opportunity is open to UK suppliers only."
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-07955f",
+  "notice_id": "103643-2026",
+  "published": "2026-11-02T11:29:32Z",
+  "title": "NH2250 The Provision of Term Electrical Services",
+  "description": "Term contract for the provision of ad-hoc Electrical Services and Minor Electrical Works across the Trust estate on an as-required basis",
+  "buyer": "Northumbria Healthcare Facilities Management",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 1200000.0,
+  "deadline": "2026-11-27T17:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/103643-2026",
+  "cpv_codes": [
+   "45317300",
+   "71314100"
+  ],
+  "regions": [
+   "UKC2"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 1200000.0,
+    "contract_start": "2027-02-01",
+    "contract_end": "2029-01-31",
+    "cpv_codes": [
+     "45317300",
+     "71314100"
+    ],
+    "regions": [
+     "UKC2"
+    ],
+    "selection_criteria": "As per ITT documentation\nAs per ITT documentation"
+   }
+  ]
+ },
+ {
+  "ocid": "ocds-h6vhtk-06dd87",
+  "notice_id": "105298-2026",
+  "published": "2026-11-05T14:50:58Z",
+  "title": "Invitation to Tender for the Management of the Cleaning Services at Greenhead College",
+  "description": "Aims of the Service and Tender\nThe key aims of the tender are to:\n\tProvide a high standard of cleaning \n\tDeliver the cleaning services with consistency - good quality assurance systems in place\n\tGood communication at local and operations manager level with the College - two-way communication\n\tDaily interaction with the College representative at each site\n\tDevelop an effective method of handing over any special needs and comments on a daily basis\n\tA Contractor that adopts a flexible and proactive approach to all College activities. \n\tCleaners to work the hours that best suit the needs of the College and maximise the work completed\n\tA Contractor that operates using the optimum level of staffing. \n\tTraining and development of the teams at the College\nThis does not imply that this is not happening now - these are the aims of the contract.\nThe College work to provide the students with the very best experiences they can. The quality of the environment in which they all work together is very important to us. The cleanliness and good order of the classrooms, corridors, social and dining spaces and other areas of the College impacts upon the teaching and learning that goes within the College. The College expectations are high, and they are looking for a cleaning contractor who has the same aims and aspirations as we do. They do seek value for money but that does not mean they will choose the cheapest quote possible. They are seeking a partner who will be willing to undertake extra work and be flexible in approach when dealing with certain key events in our year.\nSuppliers of cleaning services to all College buildings should ensure the following criteria are met: \n•\tAll site based and visiting staff are Enhanced DBS checked \n•\tAll staff wear College ID badges and company branded workwear \n•\tQuality assurance schedule to be carried out by the supplier daily \n•\tAny signs of vandalism or graffiti to be reported to College designated personnel daily \n•\tCleaning fluids should be compliant with relevant public services specifications \n•\tAll cleaning equipment and chemicals should be stored in the designated cupboards and locked at all times \n•\tSupplier to provide own equipment & cleaning products \n•\tReport any maintenance issues identified during cleaning to the premises team so they can be rectified as soon as possible. \n•\tSupervisors should be non-working to ensure the team are monitored and lone working is reduced to an absolute minimum. \n•\tDeep cleans will be by agreement in all College holidays, excepting for Christmas closure (2 weeks)",
+  "buyer": "Greenhead College",
+  "status": "active",
+  "main_category": "services",
+  "value_gbp": 0.0,
+  "deadline": "2027-01-11T10:00:00Z",
+  "url": "https://www.find-tender.service.gov.uk/Notice/105298-2026",
+  "cpv_codes": [
+   "90919300"
+  ],
+  "regions": [
+   "UKE4"
+  ],
+  "lots": [
+   {
+    "lot_id": "1",
+    "title": null,
+    "description": null,
+    "value_gbp": 0.0,
+    "contract_start": "2027-04-01",
+    "contract_end": "2030-03-31",
+    "cpv_codes": [
+     "90919300"
+    ],
+    "regions": [
+     "UKE4"
+    ],
+    "selection_criteria": null
+   }
+  ]
  }
 ]

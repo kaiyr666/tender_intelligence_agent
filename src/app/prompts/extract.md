@@ -9,7 +9,7 @@ Rules:
 - Notice-wide requirements (stated for the whole notice, not for one lot) go in the notice_* fields, not repeated in each lot.
 
 # User
-The company's service categories. Use these labels exactly, in services and primary_service.
+The company's service categories. Use these labels exactly, in services and primary_service. Each label lists what it includes; "Not" names work that belongs under another label, given in brackets. Classify by the work done, not by the words of the notice's title, so that a lot of minor works in a maintenance framework is building maintenance and a new-build project is construction.
 
 Services the company offers:
 $offered_services
@@ -19,7 +19,7 @@ $excluded_services
 
 For each lot, record:
 - services: every label above that the lot covers.
-- primary_service: the label for the lot's main scope of work. If the main scope matches none of the labels, write "other: " and a few words (for example "other: grounds maintenance"). Use null only when the notice does not say what the work is. When the main scope is one of the services the company does not do, primary_service_quote must quote the words that show it.
+- primary_service: the label for the lot's main scope of work. If the main scope matches none of the labels, write "other: " and a few words (for example "other: pest control"). Use null only when the notice does not say what the work is. When the main scope is one of the services the company does not do, primary_service_quote must quote the words that show it.
 - region_nuts1: where the work is delivered, as NUTS 1 codes (UKC North East, UKD North West, UKE Yorkshire and the Humber, UKF East Midlands, UKG West Midlands, UKH East of England, UKI London, UKJ South East, UKK South West, UKL Wales, UKM Scotland, UKN Northern Ireland). When the notice names the town, city, county or site where the work is done (for example "across the Sheffield College estate" or "council buildings in Maidstone"), give the code for that place, even if no code is written. Use where the work is done, not where the buyer's head office is. Use "UK" only when the work covers the whole of the UK. Empty only if the notice names no place for the work.
 - contract_length_months: the initial term in months, without optional extensions.
 - mobilisation_weeks: the time between contract award and service start, only if the notice states a mobilisation or lead-in period, or both an award date and a start date.

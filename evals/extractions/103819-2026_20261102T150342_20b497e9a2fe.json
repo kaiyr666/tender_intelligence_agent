@@ -1,0 +1,73 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Installation of new sockets; data points; electrical upgrades",
+   "region_nuts1": [],
+   "contract_length_months": 12,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Replacement flooring, flooring repairs, new flooring within value band",
+   "region_nuts1": [],
+   "contract_length_months": 12,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "space reconfiguration and small refurbishment work; painting and decorating",
+   "region_nuts1": [],
+   "contract_length_months": 12,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "4",
+   "services": [
+    "planned and reactive building maintenance",
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "specialist mechanical and electrical (M&E) maintenance",
+   "primary_service_quote": "installation of and replacement of site wide mechanical and electrical systems",
+   "region_nuts1": [],
+   "contract_length_months": 12,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "5",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Roof replacements, pipework replacement works, car park resurfacing, window replacements",
+   "region_nuts1": [],
+   "contract_length_months": 12,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

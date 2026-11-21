@@ -168,6 +168,30 @@
 - **Cost:** (2) widens the brief's service list (cleaning, security, building maintenance). The profile does not yet match (2) and (6): grounds maintenance is not an offered service or CPV code, and specialist M&E is classed as building maintenance (Sheffield College HVAC, 106476, is shortlisted at 0.95). Slice 4 updates `config/profile.toml` before tuning. (5) already matches: specialist trades are classed as building maintenance, so 107285 is shortlisted on its drainage lot.
 - **Revisit if:** the bid team disagrees with any of these on a real weekly report.
 
+## D28: Service definitions live in the profile, next to each label
+- **Chose:** each service in `config/profile.toml` is a table with `name`, `includes` and `excludes`; the extract prompt lists them as "label. Includes: ...; Not: ... (other label)". Grounds maintenance is an offered service; specialist M&E (HVAC, gas, heating, lifts, fire systems) and specialist equipment decontamination are excluded services, so they gate with a quote like construction does.
+- **Alternatives:** (a) a separate `[services.definitions]` table keyed by label; (b) definitions written into `prompts/extract.md`.
+- **Why:** the label analysis found the same lot classed differently on two reads (107673, 106942 lots 3a and 3b, 108109). Writing down where the boundaries are is the cheapest fix that stays in config, where a consultant can change it for another client (D3). (a) puts a label and its definition in two places that can drift apart; (b) puts client facts into a prompt.
+- **Revisit if:** classifications still flip between reads on the eval set; then add one short worked example per borderline case to the prompt.
+
+## D29: CPV list follows the client's scope; 50700000 matches only exactly
+- **Chose:** add 77310000 (grounds maintenance and its sub-codes); remove 50710000, 50720000, 50730000 and 50750000 (M&E); move 50700000 to the exact-match list and add 50711000 (electrical installations), because the company does general electrical work.
+- **Alternatives:** keep 50700000 as a prefix and let the LLM's excluded-service gate drop M&E; a list of "never" codes.
+- **Why:** measured on 9–15 Nov. As a prefix, 50700000 kept 11 notices whose only matching codes were M&E (lifts, heating, HVAC, laundry equipment), each an LLM call that the gate then has to get right; Sheffield College HVAC (106476) was shortlisted at 0.95 that way. As an exact code it still keeps joinery, roofing and minor works coded 50700000 (107545, 106971). A "never" list would drop a mixed framework for one bad lot. Adding 7731 keeps 8 grounds-maintenance notices that week, one a bid in the eval (106185).
+- **Revisit if:** a relevant building-maintenance notice coded only with a 507xxxxx M&E code is missed.
+
+## D30: Threshold 0.70 closes the "other service" loophole
+- **Chose:** raise `shortlist_threshold` from 0.60 to 0.70.
+- **Alternatives:** gate a lot whose main service is "other" (not offered, not excluded).
+- **Why:** since region became a gate (D25), a lot with service fit 0 can score at most 0.65 (0.60 with mobilisation unknown, which is nearly always), so any threshold above 0.65 shuts it out with no new rule. On the tuning set the sweep keeps 100% precision and recall from 0.50 to 0.75, so 0.70 sits between the 0.65 ceiling and the lowest-scoring bid. A gate on "other" would reject on an LLM reading with no quote behind it, against D8, and specialist M&E and decontamination now have their own excluded labels (D28), which gate with a quote.
+- **Revisit if:** a bid scores between 0.65 and 0.70 (for example an offered service with unknown value, unknown mobilisation and a short deadline), or the weights change.
+
+## D31: The eval runs the real pipeline offline, from committed extractions
+- **Chose:** `evals/run.py` pre-filters, extracts (through `assess`, so with the same cache and budget) and scores the labelled notices against a frozen date (Mon 16 Nov 2026, 09:00 UTC). Extractions are committed in `evals/extractions/` with the model name in `model.txt`; by default the eval makes no LLM call and stops if one is missing, and `--live` reads missing notices and removes files no case uses. "Shortlisted" is the positive prediction, so a bid sent to "needs review" or dropped by the pre-filter counts as a miss. Region is compared as the scorer uses it (delivery codes first, at NUTS 1); requirement names ignore filler words ("accreditation") and ISO edition years. The 10 cases added after tuning are kept as a separate "check" set and reported apart.
+- **Alternatives:** a harness with its own copy of the pipeline steps; comparing the LLM's region field, which is ignored whenever delivery codes exist; requiring an API key for every eval run.
+- **Why:** reusing `assess` means the eval measures the code that ships. Committed extractions make the numbers reproducible from a clean clone and in CI at no cost, and reruns no longer change with each LLM read. The two comparison rules came from the first run: 5 of 6 region "misses" were notices where the scorer correctly used delivery codes, and "SSIP accreditation" against "SSIP" is not an extraction error. Both are definitions of the field, not fixes to pass a case; the remaining misses stay misses.
+- **Revisit if:** the eval grows past about 100 cases, when a held-out split from weeks the threshold never saw becomes possible (D9).
+
 <!--
 Template:
 ## Dn: <decision>

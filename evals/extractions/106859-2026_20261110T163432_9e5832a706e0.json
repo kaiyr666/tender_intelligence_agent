@@ -1,0 +1,20 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [],
+   "primary_service": "other: food hall operation",
+   "primary_service_quote": "occupy and operate an indoor street food market within the Retford Town Hall's Buttermarket",
+   "region_nuts1": [
+    "UKF"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

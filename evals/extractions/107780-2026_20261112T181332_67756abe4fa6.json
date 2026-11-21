@@ -1,0 +1,72 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "grounds maintenance"
+   ],
+   "primary_service": "grounds maintenance",
+   "primary_service_quote": "Habinteg requires a Supplier to provide grounds maintenance to schemes in Milton Keynes and Dunstable.",
+   "region_nuts1": [
+    "UKJ",
+    "UKH"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [
+    "office and commercial cleaning"
+   ],
+   "primary_service": "office and commercial cleaning",
+   "primary_service_quote": "Lot 2: Communal Cleaning in Letchworth",
+   "region_nuts1": [
+    "UKH"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3",
+   "services": [
+    "grounds maintenance",
+    "office and commercial cleaning",
+    "integrated facilities management"
+   ],
+   "primary_service": "integrated facilities management",
+   "primary_service_quote": "Lot 3: Thetford & Hoveton Grounds Maintenance and Communal Cleaning Services",
+   "region_nuts1": [
+    "UKH"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "4",
+   "services": [
+    "grounds maintenance",
+    "office and commercial cleaning",
+    "integrated facilities management"
+   ],
+   "primary_service": "integrated facilities management",
+   "primary_service_quote": "Lot 4: Essex & Ipswich Grounds Maintenance, Communal Cleaning and Window Cleaning Services",
+   "region_nuts1": [
+    "UKH"
+   ],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

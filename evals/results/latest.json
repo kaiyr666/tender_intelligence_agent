@@ -1,35 +1,1023 @@
 {
-  "time": "2026-11-16 11:46",
-  "cases": 3,
-  "case_accuracy": 1.0,
-  "field_accuracy": {
-    "max_amount_gbp": 1.0
-  },
-  "failures": [],
-  "rows": [
-    {
-      "id": "sample-1",
-      "correct": true,
-      "output": {
-        "word_count": 10,
-        "max_amount_gbp": 250000.0
-      }
+ "time": "2026-11-21 18:44",
+ "model": "gpt-6.1-terra",
+ "frozen_now": "2026-11-16T09:00:00+00:00",
+ "threshold": 0.7,
+ "llm_calls": 0,
+ "cost_usd": 0.0,
+ "by_set": {
+  "check": {
+   "cases": 10,
+   "bids": 8,
+   "tp": 4,
+   "fp": 0,
+   "fn": 4,
+   "tn": 2,
+   "precision": 1.0,
+   "recall": 0.5,
+   "prefilter_recall": 0.5,
+   "chosen_lot_ok": 1.0,
+   "fields": {
+    "contract_length_months": {
+     "accuracy": 1.0,
+     "coverage": 0.6
     },
-    {
-      "id": "sample-2",
-      "correct": true,
-      "output": {
-        "word_count": 8,
-        "max_amount_gbp": 40000.0
-      }
+    "mandatory_accreditations": {
+     "accuracy": 1.0,
+     "coverage": 0.6
     },
-    {
-      "id": "sample-3",
-      "correct": true,
-      "output": {
-        "word_count": 8,
-        "max_amount_gbp": null
-      }
+    "mobilisation_weeks": {
+     "accuracy": 1.0,
+     "coverage": 0.6
+    },
+    "primary_service": {
+     "accuracy": 1.0,
+     "coverage": 0.6
+    },
+    "region_nuts1": {
+     "accuracy": 0.833,
+     "coverage": 0.6
+    },
+    "services": {
+     "accuracy": 1.0,
+     "coverage": 0.6
+    },
+    "tupe": {
+     "accuracy": 1.0,
+     "coverage": 0.6
     }
+   },
+   "sweep": [
+    [
+     0.5,
+     1.0,
+     0.5
+    ],
+    [
+     0.55,
+     1.0,
+     0.5
+    ],
+    [
+     0.6,
+     1.0,
+     0.5
+    ],
+    [
+     0.65,
+     1.0,
+     0.5
+    ],
+    [
+     0.7,
+     1.0,
+     0.5
+    ],
+    [
+     0.75,
+     1.0,
+     0.5
+    ],
+    [
+     0.8,
+     1.0,
+     0.5
+    ],
+    [
+     0.85,
+     1.0,
+     0.5
+    ],
+    [
+     0.9,
+     1.0,
+     0.5
+    ]
+   ]
+  },
+  "tuning": {
+   "cases": 32,
+   "bids": 8,
+   "tp": 8,
+   "fp": 0,
+   "fn": 0,
+   "tn": 24,
+   "precision": 1.0,
+   "recall": 1.0,
+   "prefilter_recall": 1.0,
+   "chosen_lot_ok": 1.0,
+   "fields": {
+    "contract_length_months": {
+     "accuracy": 1.0,
+     "coverage": 0.75
+    },
+    "mandatory_accreditations": {
+     "accuracy": 0.958,
+     "coverage": 0.75
+    },
+    "mobilisation_weeks": {
+     "accuracy": 0.958,
+     "coverage": 0.75
+    },
+    "primary_service": {
+     "accuracy": 0.833,
+     "coverage": 0.75
+    },
+    "region_nuts1": {
+     "accuracy": 0.958,
+     "coverage": 0.75
+    },
+    "services": {
+     "accuracy": 0.792,
+     "coverage": 0.75
+    },
+    "tupe": {
+     "accuracy": 1.0,
+     "coverage": 0.75
+    }
+   },
+   "sweep": [
+    [
+     0.5,
+     1.0,
+     1.0
+    ],
+    [
+     0.55,
+     1.0,
+     1.0
+    ],
+    [
+     0.6,
+     1.0,
+     1.0
+    ],
+    [
+     0.65,
+     1.0,
+     1.0
+    ],
+    [
+     0.7,
+     1.0,
+     1.0
+    ],
+    [
+     0.75,
+     1.0,
+     1.0
+    ],
+    [
+     0.8,
+     1.0,
+     0.875
+    ],
+    [
+     0.85,
+     1.0,
+     0.875
+    ],
+    [
+     0.9,
+     1.0,
+     0.75
+    ]
+   ]
+  }
+ },
+ "all": {
+  "cases": 42,
+  "bids": 16,
+  "tp": 12,
+  "fp": 0,
+  "fn": 4,
+  "tn": 26,
+  "precision": 1.0,
+  "recall": 0.75,
+  "prefilter_recall": 0.75,
+  "chosen_lot_ok": 1.0,
+  "fields": {
+   "contract_length_months": {
+    "accuracy": 1.0,
+    "coverage": 0.714
+   },
+   "mandatory_accreditations": {
+    "accuracy": 0.967,
+    "coverage": 0.714
+   },
+   "mobilisation_weeks": {
+    "accuracy": 0.967,
+    "coverage": 0.714
+   },
+   "primary_service": {
+    "accuracy": 0.867,
+    "coverage": 0.714
+   },
+   "region_nuts1": {
+    "accuracy": 0.933,
+    "coverage": 0.714
+   },
+   "services": {
+    "accuracy": 0.833,
+    "coverage": 0.714
+   },
+   "tupe": {
+    "accuracy": 1.0,
+    "coverage": 0.714
+   }
+  },
+  "sweep": [
+   [
+    0.5,
+    1.0,
+    0.75
+   ],
+   [
+    0.55,
+    1.0,
+    0.75
+   ],
+   [
+    0.6,
+    1.0,
+    0.75
+   ],
+   [
+    0.65,
+    1.0,
+    0.75
+   ],
+   [
+    0.7,
+    1.0,
+    0.75
+   ],
+   [
+    0.75,
+    1.0,
+    0.75
+   ],
+   [
+    0.8,
+    1.0,
+    0.688
+   ],
+   [
+    0.85,
+    1.0,
+    0.688
+   ],
+   [
+    0.9,
+    1.0,
+    0.625
+   ]
   ]
+ },
+ "rows": [
+  {
+   "case_id": "106024-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: out of region (UKN0C, from delivery address)",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": false,
+    "services": false,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106149-2026",
+   "case_set": "tuning",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 1 scores 0.95 (threshold 0.70)",
+   "best_score": 0.95,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106185-2026",
+   "case_set": "tuning",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 1 scores 0.86 (threshold 0.70)",
+   "best_score": 0.865,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106253-2026",
+   "case_set": "tuning",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 2: Electrical scores 0.80 (threshold 0.70)",
+   "best_score": 0.795,
+   "best_lot": "2",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106367-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: out of region (UKF2, from delivery address)",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106615-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "main service is construction and capital works, which the company does not do",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106652-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "main service is specialist equipment decontamination, which the company does not do",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106679-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: out of region (UKN, from notice text)",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106848-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: out of region (UKI44, from delivery address)",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106859-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: out of region (UKF15, from delivery address)",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": false,
+    "services": false,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106942-2026",
+   "case_set": "tuning",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 3a: General Building Works scores 0.95 (threshold 0.70)",
+   "best_score": 0.95,
+   "best_lot": "3a",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "107117-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "dropped by pre-filter",
+   "reason": "value under minimum",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "107141-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "dropped by pre-filter",
+   "reason": "value under minimum",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "107220-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: out of region (UKF, from delivery address); not in the company's region: out of region (UKJ, from delivery address)",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": false,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "107285-2026",
+   "case_set": "tuning",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 1: Lot 1- Scaffolding scores 0.95 (threshold 0.70)",
+   "best_score": 0.95,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "107354-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: delivery region not stated",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": false,
+    "services": false,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "107545-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "value £25,000 is under £100,000; not in the company's region: out of region (UKM92, from delivery address)",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "107673-2026",
+   "case_set": "tuning",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 1 scores 0.95 (threshold 0.70)",
+   "best_score": 0.95,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "107780-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: out of region (UKH, from delivery address); value £31,324 is under £100,000; value £45,249 is under £100,000",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": false,
+    "services": false,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "107886-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: delivery region not stated",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "107905-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "dropped by pre-filter",
+   "reason": "no matching CPV code",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "107934-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "dropped by pre-filter",
+   "reason": "value under minimum",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "108016-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "dropped by pre-filter",
+   "reason": "no matching CPV code",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "108059-2026",
+   "case_set": "tuning",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 1 scores 0.90 (threshold 0.70)",
+   "best_score": 0.9,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "108075-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: UK-wide contract, no regional lot (from delivery address)",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": false,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "108100-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: out of region (UKJ45, from delivery address)",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": false,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "108109-2026",
+   "case_set": "tuning",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 1: Public Buildings scores 0.93 (threshold 0.70)",
+   "best_score": 0.929,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": false,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "108170-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: UK-wide contract, no regional lot (from delivery address); main service is IT services, which the company does not do; main service is catering, which the company does not do",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "108175-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "dropped by pre-filter",
+   "reason": "no matching CPV code",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "108202-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "not in the company's region: delivery region not stated",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "108226-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "dropped by pre-filter",
+   "reason": "no matching CPV code",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "108230-2026",
+   "case_set": "tuning",
+   "bid": false,
+   "outcome": "dropped by pre-filter",
+   "reason": "no matching CPV code",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "105810-2026",
+   "case_set": "check",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 1 scores 0.95 (threshold 0.70)",
+   "best_score": 0.95,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "105640-2026",
+   "case_set": "check",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 1: North region scores 0.95 (threshold 0.70)",
+   "best_score": 0.95,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "105582-2026",
+   "case_set": "check",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "value £0 is under £100,000; main service is construction and capital works, which the company does not do",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "105503-2026",
+   "case_set": "check",
+   "bid": false,
+   "outcome": "rejected",
+   "reason": "value £80,000 is under £100,000; value £40,000 is under £100,000",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": false,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "103819-2026",
+   "case_set": "check",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 1: Electrical  Value Band £1 - £50,000 excluding VAT scores 0.95 (threshold 0.70)",
+   "best_score": 0.95,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "106917-2026",
+   "case_set": "check",
+   "bid": true,
+   "outcome": "shortlisted",
+   "reason": "Lot 1 scores 0.95 (threshold 0.70)",
+   "best_score": 0.95,
+   "best_lot": "1",
+   "chosen_lot_ok": true,
+   "wrongly_gated_lots": [],
+   "field_hits": {
+    "primary_service": true,
+    "services": true,
+    "region_nuts1": true,
+    "contract_length_months": true,
+    "mobilisation_weeks": true,
+    "mandatory_accreditations": true,
+    "tupe": true
+   }
+  },
+  {
+   "case_id": "103529-2026",
+   "case_set": "check",
+   "bid": true,
+   "outcome": "dropped by pre-filter",
+   "reason": "no matching CPV code",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "104445-2026",
+   "case_set": "check",
+   "bid": true,
+   "outcome": "dropped by pre-filter",
+   "reason": "no matching CPV code",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "103643-2026",
+   "case_set": "check",
+   "bid": true,
+   "outcome": "dropped by pre-filter",
+   "reason": "no matching CPV code",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  },
+  {
+   "case_id": "105298-2026",
+   "case_set": "check",
+   "bid": true,
+   "outcome": "dropped by pre-filter",
+   "reason": "value under minimum",
+   "best_score": null,
+   "best_lot": null,
+   "chosen_lot_ok": null,
+   "wrongly_gated_lots": [],
+   "field_hits": {}
+  }
+ ]
 }

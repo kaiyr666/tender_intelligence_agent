@@ -6,9 +6,13 @@ from pydantic import ValidationError
 from app.profile import load_profile
 
 VALID_TOML = """
-[services]
-offered = ["office and commercial cleaning"]
-excluded = ["catering"]
+[[services.offered]]
+name = "office and commercial cleaning"
+includes = ["window cleaning"]
+excludes = ["clinical cleaning"]
+
+[[services.excluded]]
+name = "catering"
 
 [cpv]
 codes = ["90910000"]
@@ -84,3 +88,38 @@ def test_cpv_code_that_is_not_eight_digits_is_rejected(tmp_path, bad_code):
     text = VALID_TOML.replace('codes = ["90910000"]', f'codes = ["{bad_code}"]')
     with pytest.raises(ValidationError):
         load_profile(write_toml(tmp_path, text))
+
+
+def test_service_definitions_load(tmp_path):
+    [cleaning] = load_profile(write_toml(tmp_path, VALID_TOML)).services.offered
+    assert (cleaning.name, cleaning.includes, cleaning.excludes) == (
+        "office and commercial cleaning",
+        ["window cleaning"],
+        ["clinical cleaning"],
+    )
+
+
+def test_service_without_definition_lists_loads_with_empty_lists(tmp_path):
+    [catering] = load_profile(write_toml(tmp_path, VALID_TOML)).services.excluded
+    assert (catering.includes, catering.excludes) == ([], [])
+
+
+def test_service_names_are_listed_in_order(tmp_path):
+    services = load_profile(write_toml(tmp_path, VALID_TOML)).services
+    assert services.offered_names == ["office and commercial cleaning"]
+    assert services.excluded_names == ["catering"]
+
+
+def test_service_without_a_name_is_rejected(tmp_path):
+    text = VALID_TOML.replace('name = "catering"', 'includes = ["canteens"]')
+    with pytest.raises(ValidationError):
+        load_profile(write_toml(tmp_path, text))
+
+
+def test_real_profile_offers_grounds_maintenance():
+    assert "grounds maintenance" in load_profile().services.offered_names
+
+
+def test_real_profile_excludes_specialist_m_and_e():
+    excluded = load_profile().services.excluded_names
+    assert any("specialist mechanical and electrical" in name for name in excluded)

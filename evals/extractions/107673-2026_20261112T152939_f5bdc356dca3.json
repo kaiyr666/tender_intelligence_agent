@@ -1,0 +1,22 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "planned and reactive minor building works across its estate",
+   "region_nuts1": [
+    "UKD"
+   ],
+   "contract_length_months": 24,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

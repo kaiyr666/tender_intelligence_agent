@@ -1,0 +1,46 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Fire Door Inspections and Maintenance services across the Trust's multiple sites in the North region",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Fire Door Inspections and Maintenance services across the Trust's multiple sites in the East region",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Fire Door Inspections and Maintenance services across the Trust's multiple sites in the West region",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

@@ -14,7 +14,7 @@ from pydantic import BaseModel, Field, ValidationError
 
 from app.llm import Provider, Usage, complete_json, load_prompt
 from app.notices import Notice
-from app.profile import Profile
+from app.profile import Profile, Service
 
 PROMPT_NAME = "extract"
 # Lot id the model uses for a notice that has no lots.
@@ -91,12 +91,22 @@ def prompt_variables(notice: Notice, profile: Profile) -> dict[str, str]:
         text = text[:MAX_INPUT_CHARS] + "\n[notice text cut here]"
     lot_ids = [lot.lot_id for lot in notice.lots] or [WHOLE_NOTICE]
     return {
-        "offered_services": "\n".join(f"- {s}" for s in profile.services.offered),
-        "excluded_services": "\n".join(f"- {s}" for s in profile.services.excluded),
+        "offered_services": "\n".join(map(_service_line, profile.services.offered)),
+        "excluded_services": "\n".join(map(_service_line, profile.services.excluded)),
         "held_accreditations": ", ".join(profile.accreditations.held),
         "lot_ids": ", ".join(lot_ids),
         "notice": text,
     }
+
+
+def _service_line(service: Service) -> str:
+    """'- label. Includes: ...; Not: ...' for the prompt's service list."""
+    line = f"- {service.name}"
+    if service.includes:
+        line += f". Includes: {'; '.join(service.includes)}"
+    if service.excludes:
+        line += f". Not: {'; '.join(service.excludes)}"
+    return line
 
 
 def extract_notice(

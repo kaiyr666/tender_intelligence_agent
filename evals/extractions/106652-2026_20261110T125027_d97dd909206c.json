@@ -1,0 +1,20 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "specialist equipment decontamination"
+   ],
+   "primary_service": "specialist equipment decontamination",
+   "primary_service_quote": "cleaning, decontamination & inspection of community equipment issued to individuals living in the community",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

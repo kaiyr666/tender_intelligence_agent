@@ -11,9 +11,26 @@ DEFAULT_PROFILE_PATH = Path(__file__).resolve().parents[2] / "config" / "profile
 CpvCode = Annotated[str, StringConstraints(pattern=r"^\d{8}$")]
 
 
+class Service(BaseModel):
+    """A service label, with what it covers and what it does not, so the LLM classifies
+    borderline lots the same way on every read."""
+
+    name: str
+    includes: list[str] = []
+    excludes: list[str] = []
+
+
 class Services(BaseModel):
-    offered: list[str]
-    excluded: list[str]
+    offered: list[Service]
+    excluded: list[Service]
+
+    @property
+    def offered_names(self) -> list[str]:
+        return [service.name for service in self.offered]
+
+    @property
+    def excluded_names(self) -> list[str]:
+        return [service.name for service in self.excluded]
 
 
 class CpvRules(BaseModel):

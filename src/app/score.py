@@ -168,7 +168,7 @@ def _decide(
 def _check_excluded_service(
     lot_x: LotExtraction, profile: Profile, text: str, gates: list[str], reviews: list[str]
 ) -> None:
-    if _label(lot_x.primary_service) not in _labels(profile.services.excluded):
+    if _label(lot_x.primary_service) not in _labels(profile.services.excluded_names):
         return
     if quote_found(lot_x.primary_service_quote, text):
         gates.append(f"main service is {lot_x.primary_service}, which the company does not do")
@@ -196,7 +196,8 @@ def _check_accreditations(
 
 def _service_fit(lot_x: LotExtraction, profile: Profile) -> Criterion:
     primary = _label(lot_x.primary_service)
-    offered, excluded = _labels(profile.services.offered), _labels(profile.services.excluded)
+    offered = _labels(profile.services.offered_names)
+    excluded = _labels(profile.services.excluded_names)
     if primary is None:
         score, reason = UNKNOWN_SCORE, "main service not stated"
     elif primary in offered:
@@ -215,13 +216,7 @@ def _service_fit(lot_x: LotExtraction, profile: Profile) -> Criterion:
 def _region_fit(
     notice: Notice, lot: Lot | None, lot_x: LotExtraction, profile: Profile
 ) -> Criterion:
-    """Delivery-address NUTS codes when the notice has them, the LLM's reading otherwise."""
-    if lot and lot.regions:
-        regions, source = lot.regions, "delivery address"
-    elif len(notice.lots) <= 1 and notice.regions:
-        regions, source = notice.regions, "delivery address"
-    else:
-        regions, source = [r.strip().upper() for r in lot_x.region_nuts1], "notice text"
+    regions, source = lot_regions(notice, lot, lot_x)
     if not regions:
         return Criterion("region", UNKNOWN_SCORE, "delivery region not stated")
     listed = ", ".join(regions)
@@ -230,6 +225,16 @@ def _region_fit(
     if regions == ["UK"]:
         return Criterion("region", 0.0, f"UK-wide contract, no regional lot (from {source})")
     return Criterion("region", 0.0, f"out of region ({listed}, from {source})")
+
+
+def lot_regions(notice: Notice, lot: Lot | None, lot_x: LotExtraction) -> tuple[list[str], str]:
+    """Where the lot is delivered and where that came from: delivery-address NUTS codes
+    when the notice has them, the LLM's reading of the text otherwise."""
+    if lot and lot.regions:
+        return lot.regions, "delivery address"
+    if len(notice.lots) <= 1 and notice.regions:
+        return notice.regions, "delivery address"
+    return [r.strip().upper() for r in lot_x.region_nuts1], "notice text"
 
 
 def _value_fit(value: float | None, profile: Profile) -> Criterion:

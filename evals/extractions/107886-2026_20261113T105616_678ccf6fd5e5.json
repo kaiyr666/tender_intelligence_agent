@@ -1,0 +1,20 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "whole",
+   "services": [
+    "office and commercial cleaning"
+   ],
+   "primary_service": "office and commercial cleaning",
+   "primary_service_quote": "The Supplier shall provide a comprehensive cleaning service throughout the premises",
+   "region_nuts1": [],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

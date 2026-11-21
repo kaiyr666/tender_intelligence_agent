@@ -1,0 +1,67 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Term Joinery Contractor are planned works, routine maintenance works, and unplanned reactive works",
+   "region_nuts1": [
+    "UKM"
+   ],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Term Joinery Contractor are planned works, routine maintenance works, and unplanned reactive works",
+   "region_nuts1": [
+    "UKM"
+   ],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Term Joinery Contractor are planned works, routine maintenance works, and unplanned reactive works",
+   "region_nuts1": [
+    "UKM"
+   ],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "4",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Term Joinery Contractor are planned works, routine maintenance works, and unplanned reactive works",
+   "region_nuts1": [
+    "UKM"
+   ],
+   "contract_length_months": null,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

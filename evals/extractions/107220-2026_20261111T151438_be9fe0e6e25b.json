@@ -1,0 +1,40 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "planned and reactive building maintenance",
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Routine and Responsive Maintenance, Out of Hours Emergency Callouts, Major Works, Planned Works",
+   "region_nuts1": [
+    "UKF"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [
+    "planned and reactive building maintenance",
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Routine and Responsive Maintenance, Out of Hours Emergency Callouts, Major Works, Planned Works",
+   "region_nuts1": [
+    "UKJ",
+    "UKF"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

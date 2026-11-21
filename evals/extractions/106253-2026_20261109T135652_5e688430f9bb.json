@@ -1,0 +1,53 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [
+    "specialist mechanical and electrical (M&E) maintenance"
+   ],
+   "primary_service": "specialist mechanical and electrical (M&E) maintenance",
+   "primary_service_quote": "Provision of planned preventative and reactive mechanical maintenance services across the University’s estate.",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "2",
+   "services": [
+    "planned and reactive building maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "Provision of planned preventative and reactive electrical maintenance services across the University’s estate.",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "3",
+   "services": [
+    "planned and reactive building maintenance",
+    "grounds maintenance"
+   ],
+   "primary_service": "planned and reactive building maintenance",
+   "primary_service_quote": "The scope includes internal and external building fabric repairs, general maintenance and associated grounds services",
+   "region_nuts1": [
+    "UKE"
+   ],
+   "contract_length_months": 60,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

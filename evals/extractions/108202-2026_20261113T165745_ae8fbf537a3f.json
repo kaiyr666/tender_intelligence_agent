@@ -1,0 +1,40 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "Lot 1",
+   "services": [],
+   "primary_service": "other: catering equipment maintenance",
+   "primary_service_quote": "Catering Equipment PPM & Reactive Maintenance - Activity Based.",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "Lot 2",
+   "services": [],
+   "primary_service": "other: laundry and dishwasher equipment maintenance",
+   "primary_service_quote": "Laundry & Dishwashers PPM and Reactive Maintenance.",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "Lot 3",
+   "services": [],
+   "primary_service": "other: refrigeration maintenance",
+   "primary_service_quote": "Refrigeration PPM and Reactive Maintenance.",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [],
+   "preferred_accreditations": []
+  }
+ ]
+}

@@ -26,6 +26,7 @@ packages = ["src/app"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]  # so tests can import the eval harness (evals/run.py)
 addopts = "-q"
 
 [tool.ruff]

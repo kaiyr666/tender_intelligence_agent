@@ -1,0 +1,119 @@
+{
+ "notice_mandatory_accreditations": [],
+ "notice_preferred_accreditations": [],
+ "red_flags": [],
+ "lots": [
+  {
+   "lot_id": "1",
+   "services": [],
+   "primary_service": "other: diagnostic imaging and radiology equipment",
+   "primary_service_quote": "Lot 1 – Diagnostic Imaging and Radiology",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: ISO 9001, ISO 13485 or Medical Device Single Audit Program (MDSAP)",
+     "quote": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "Lot 2",
+   "services": [],
+   "primary_service": "other: specialist imaging equipment",
+   "primary_service_quote": "Lot 2 – Specialist Imaging Equipment",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: ISO 9001, ISO 13485 or Medical Device Single Audit Program (MDSAP)",
+     "quote": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "Lot 3",
+   "services": [],
+   "primary_service": "other: decontamination capital equipment",
+   "primary_service_quote": "Lot 3 – Decontamination Capital Equipment",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: ISO 9001, ISO 13485 or Medical Device Single Audit Program (MDSAP)",
+     "quote": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "Lot 4",
+   "services": [],
+   "primary_service": "other: radiotherapy systems and devices",
+   "primary_service_quote": "4a – Radiotherapy Treatment Systems and IT Solutions and Related Accessories and Services",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: ISO 9001, ISO 13485 or Medical Device Single Audit Program (MDSAP)",
+     "quote": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "Lot 5",
+   "services": [],
+   "primary_service": "other: endoscopic imaging equipment, endoscopes and robotics",
+   "primary_service_quote": "Lot 5 – Endoscopic Imaging Equipment, Reusable Endoscopes and Robotics",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: ISO 9001, ISO 13485 or Medical Device Single Audit Program (MDSAP)",
+     "quote": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "6",
+   "services": [],
+   "primary_service": "other: internal radiation therapy products",
+   "primary_service_quote": "6a – Brachytherapy Seeds and Related Accessories",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: ISO 9001, ISO 13485 or Medical Device Single Audit Program (MDSAP)",
+     "quote": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain."
+    }
+   ],
+   "preferred_accreditations": []
+  },
+  {
+   "lot_id": "7",
+   "services": [],
+   "primary_service": "other: capital medical devices",
+   "primary_service_quote": "Lot 7 – Capital Medical Devices",
+   "region_nuts1": [],
+   "contract_length_months": 36,
+   "mobilisation_weeks": null,
+   "mandatory_accreditations": [
+    {
+     "name": "one of: ISO 9001, ISO 13485 or Medical Device Single Audit Program (MDSAP)",
+     "quote": "Tenderers must have ISO 9001: 2015 or ISO 13485:2016 or Medical Device Single Audit Program (MDSAP) certification accredited by the United Kingdom Accreditation Service (UKAS) (or international equivalent) to cover all segments of the Tenderer’s and the product’s supply chain."
+    }
+   ],
+   "preferred_accreditations": []
+  }
+ ]
+}

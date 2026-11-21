@@ -1,19 +1,86 @@
 # Company profile: what a good-fit tender looks like for this client.
 # Change this file, not the code, to screen tenders for another company.
 
-[services]
-offered = [
-    "office and commercial cleaning",
-    "manned guarding and security",
-    "planned and reactive building maintenance",
-    "integrated facilities management",
+# Each service has a label the LLM must use, what it covers and what it does not. The lists
+# keep borderline lots (minor works, trade lots, specialist M&E) classified the same way on
+# every read (D27). "Not" points the LLM to the label a lot belongs to instead.
+
+[[services.offered]]
+name = "office and commercial cleaning"
+includes = [
+    "cleaning of offices, schools, public and commercial buildings",
+    "washrooms and communal areas",
+    "window and high-level cleaning",
+    "communal areas of residential blocks",
 ]
-excluded = [
-    "clinical or hospital cleaning",
-    "construction and capital works",
-    "catering",
-    "IT services",
+excludes = [
+    "clinical areas of hospitals (clinical or hospital cleaning)",
+    "decontamination of medical or care equipment (specialist equipment decontamination)",
 ]
+
+[[services.offered]]
+name = "manned guarding and security"
+includes = [
+    "manned guarding and mobile patrols",
+    "key holding, alarm response and monitoring",
+    "reception, concierge and CCTV monitoring by security staff",
+]
+excludes = ["cyber security (IT services)"]
+
+[[services.offered]]
+name = "planned and reactive building maintenance"
+includes = [
+    "planned and reactive repairs to building fabric",
+    "minor works, joinery and carpentry, redecoration and painting",
+    "flooring, glazing, windows and doors, roofing repairs",
+    "drainage, fencing, handrails, scaffolding and other trade lots of a repairs or maintenance contract",
+    "general electrical maintenance and testing",
+]
+excludes = [
+    "HVAC, gas, heating, lifts and fire systems (specialist mechanical and electrical (M&E) maintenance)",
+    "new build, extensions, demolition and capital projects (construction and capital works)",
+]
+
+[[services.offered]]
+name = "grounds maintenance"
+includes = [
+    "grass cutting, shrub and hedge maintenance, weed control",
+    "maintenance of grounds, parks and green spaces",
+]
+
+[[services.offered]]
+name = "integrated facilities management"
+includes = ["one contract combining several FM services, such as cleaning, security and maintenance"]
+
+[[services.excluded]]
+name = "clinical or hospital cleaning"
+includes = ["cleaning of hospital wards, theatres and other clinical areas"]
+
+[[services.excluded]]
+name = "specialist equipment decontamination"
+includes = ["cleaning and decontamination of medical, community care or laboratory equipment"]
+
+[[services.excluded]]
+name = "specialist mechanical and electrical (M&E) maintenance"
+includes = [
+    "HVAC, air conditioning and ventilation systems",
+    "gas, boilers and heating systems",
+    "lifts and escalators",
+    "fire alarms, sprinklers and fire suppression systems",
+]
+excludes = ["general electrical maintenance and testing (planned and reactive building maintenance)"]
+
+[[services.excluded]]
+name = "construction and capital works"
+includes = ["new build, extensions, demolition, major refurbishment and other capital projects"]
+excludes = ["minor works within a repairs or maintenance contract (planned and reactive building maintenance)"]
+
+[[services.excluded]]
+name = "catering"
+
+[[services.excluded]]
+name = "IT services"
+includes = ["cyber security, software and IT support"]
 
 [cpv]
 # A notice is kept when one of its CPV codes is one of these codes or sits under one
@@ -25,19 +92,18 @@ codes = [
     "70330000", # property management services
     "98341130", # janitorial services
     "98341140", # caretaker services
-    "50700000", # repair and maintenance of building installations
-    "50710000", # repair and maintenance of electrical and mechanical installations
-    "50720000", # repair and maintenance of central heating
-    "50730000", # repair and maintenance of cooler groups
-    "50750000", # lift maintenance
+    "50711000", # repair and maintenance of electrical building installations
     "50800000", # miscellaneous repair and maintenance
     "45259000", # repair and maintenance of plant
     "45453000", # overhaul and refurbishment work (often used for planned maintenance)
+    "77310000", # planting and maintenance of green areas (grounds maintenance, 77314000)
 ]
 # Broad parent codes that buyers sometimes use alone for relevant work. These match only
-# exactly: 50000000 keeps "repair and maintenance services" but not vehicle repairs (50100000).
+# exactly: 50000000 keeps "repair and maintenance services" but not vehicle repairs (50100000),
+# and 50700000 keeps building repairs but not lifts or heating (50750000, 50720000; D28).
 broad_codes = [
     "50000000", # repair and maintenance services
+    "50700000", # repair and maintenance services of building installations
     "90900000", # cleaning and sanitation services
 ]
 
@@ -71,8 +137,9 @@ min_days = 14
 
 [scoring]
 # A notice is shortlisted when its best eligible lot scores at least this (0 to 1).
-# Tuned on the eval set in slice 4.
-shortlist_threshold = 0.6
+# 0.70 is above the 0.65 that a lot of a service the company does not offer can reach,
+# and below every bid on the eval set (D30).
+shortlist_threshold = 0.7
 
 [scoring.weights]
 # Relative weights of the criteria; they do not need to add up to 1.
