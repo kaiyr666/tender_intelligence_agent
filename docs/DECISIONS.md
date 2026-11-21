@@ -153,7 +153,7 @@
 - **Why:** the human's decision for the client after the first real week, where 21 of 28 shortlisted notices were outside the North or had no region. The brief says the client considers national contracts only when they are split into regional lots. A hard rule is clearer to the bid team than a weight, and re-scoring needs no new LLM calls.
 - **Cost:** a northern tender whose notice does not say where the work is, or whose region the LLM misreads, is rejected without review, which departs from D8 for this gate. Every eligible lot now scores 1 on region, so the 0.20 region weight no longer separates eligible lots and lowers the bar for the other five criteria: a lot whose main service the company does not offer reaches 0.65 when everything else is perfect.
 - **Revisit if:** the eval finds bid-labelled northern notices rejected on region, especially "not stated". Slice 4 should retune the region weight and the threshold.
-- **Clarified (22 Nov):** a national-coverage lot, whose delivery codes list the North among every other region, counts as UK-wide and is rejected; the human confirmed this for the client after the blind screen (100829). The code does not do this yet: a lot passes when any of its codes is northern (see "Where it breaks").
+- **Clarified (22 Nov):** a national-coverage lot, whose delivery codes list the North among every other region, counts as UK-wide and is rejected; the human confirmed this for the client after the blind screen (100829). The region gate now rejects such lots (D34).
 
 ## D26: The LLM maps named places to a region
 - **Chose:** the extract prompt tells the model to give the NUTS 1 code for a named town, city, county or site where the work is done ("across the Sheffield College estate" → UKE), and to leave the region empty only when no place is named. Delivery-address codes still win when present (code).
@@ -206,6 +206,13 @@
 - **Why:** every eval case had been used for fixes, and the client's question is whether the tool picks what its bid team would. A blind human screen answers that directly, covers the pre-filter, and fits the deadline. AI labels test rule-following, not the client's intent, and GPT shares a model family with the extractor. Full labelling spends most of its time on obvious no-bids. Locking the marks before the run keeps them from being anchored on the tool; the review is anchored, so both readings are kept.
 - **Cost:** one week gives few bids (5 after review), so the result is counts, not rates. The review changed two blanks to bids after seeing the tool's answer.
 - **Revisit if:** the client can run a shadow pilot (the tool beside the manual screen for 3 to 4 weeks), which replaces this with real decisions.
+
+## D34: A lot is in region only when all its regions are in the North
+- **Chose:** the region gate passes a lot only when every delivery code, or every region read from the text when there are no codes, is in UKC, UKD or UKE. A lot that also covers any other region is rejected with the reason "also covers regions outside the North". The human chose this for the client on 22 Nov.
+- **Alternatives:** (a) when a lot's codes cover 6 or more of the 12 UK regions, treat them as "England" and use the region read from the text, rejecting only if that too covers 6 or more (Claude's recommendation); (b) reject a lot whose codes cover 6 or more regions.
+- **Why:** after the blind screen the client confirmed that national-coverage lots are rejected (D25 clarified), and the old rule passed any lot with one northern code, which shortlisted EEM's national fire doors lot (100829). The chosen rule is the simplest to state and check.
+- **Cost:** buyers often list all 9 English regions for a local contract. 108109 (Newcastle window cleaning, a labelled bid whose text says Newcastle) is now rejected, so recall on all 42 cases falls from 16/16 to 15/16 and the 9–15 Nov shortlist from 8 to 7. Lots across a regional border, such as Yorkshire and the East Midlands (103415), are rejected too. Option (a) would have kept 108109 and still rejected 100829. The fix was made on the blind week, which is therefore no longer unseen.
+- **Revisit if:** the bid team misses local northern contracts coded "all of England"; then use option (a).
 
 <!--
 Template:

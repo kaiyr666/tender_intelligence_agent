@@ -206,8 +206,24 @@ def test_lot_in_the_north_is_not_gated_on_region():
     assert score(ext=extraction(lot_x(region_nuts1=["UKD"]))).lots[0].status == ELIGIBLE
 
 
-def test_lot_with_any_northern_code_among_several_is_not_gated():
+# A lot that also covers regions outside the North is national or cross-regional work, which
+# the client rejects (D25, clarified 22 Nov). This replaced "any northern code passes".
+
+
+def test_lot_that_also_covers_a_region_outside_the_north_is_gated():
     result = score(ext=extraction(lot_x(region_nuts1=["UKI", "UKE"])))
+    assert result.lots[0].status == GATED
+
+
+def test_delivery_codes_listing_every_english_region_are_a_gate():
+    england = ["UKC", "UKD", "UKE", "UKF", "UKG", "UKH", "UKI", "UKJ", "UKK"]
+    result = score(make_notice(regions=england), extraction(lot_x(region_nuts1=["UKC"])))
+    assert result.outcome == REJECTED
+    assert "outside the North" in result.reason
+
+
+def test_several_northern_delivery_codes_are_in_region():
+    result = score(make_notice(regions=["UKD12", "UKE3"]), extraction())
     assert result.lots[0].status == ELIGIBLE
 
 
@@ -248,8 +264,8 @@ def test_unstated_region_is_neutral():
     assert criterion_for("region", region_nuts1=[]) == 0.5
 
 
-def test_any_northern_region_among_several_scores_one():
-    assert criterion_for("region", region_nuts1=["UKI", "UKE"]) == 1.0
+def test_a_northern_region_among_others_scores_zero():
+    assert criterion_for("region", region_nuts1=["UKI", "UKE"]) == 0.0
 
 
 def test_delivery_address_code_beats_the_extraction():

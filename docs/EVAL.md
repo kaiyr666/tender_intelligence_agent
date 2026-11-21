@@ -21,8 +21,12 @@
 | 2026-11-21 | Check | 10 (8) | 100% (8/8) | 100% (8/8) | 100% | 100% (8/8) | Fixed on this set, so no longer independent |
 | 2026-11-21 | All | 42 (16) | 100% (16/16) | 100% (16/16) | 100% | 100% (16/16) | |
 | 2026-11-22 | Blind week | 137 (4) | 60% (3/5) | 75% (3/4) | 75% (3/4) | not checked | Unseen week 26 Oct–1 Nov, screened by the human, after review (D33) |
+| 2026-11-22 | Tuning | 32 (8) | 100% (7/7) | 88% (7/8) | 100% | 100% (7/7) | Region gate rejects lots that also cover regions outside the North (D34) |
+| 2026-11-22 | Check | 10 (8) | 100% (8/8) | 100% (8/8) | 100% | 100% (8/8) | |
+| 2026-11-22 | All | 42 (16) | 100% (15/15) | 94% (15/16) | 100% | 100% (15/15) | |
+| 2026-11-22 | Blind week | 137 (4) | 75% (3/4) | 75% (3/4) | 75% (3/4) | not checked | After D34, which was fixed on this week |
 
-Targets: recall ≥ 80%, precision ≥ 60%. Before D32 they were met on the tuning set and **recall was missed on the check set** (50%), entirely through the pre-filter. After D32 both sets reach 100%, but both have now been used for fixes, so these figures show the fixes work, not how the tool does on unseen weeks. On the one unseen week (below), after review, precision meets its target at 3 of 5 and recall misses it at 3 of 4; four bids are too few to call either way.
+Targets: recall ≥ 80%, precision ≥ 60%. Before D32 they were met on the tuning set and **recall was missed on the check set** (50%), entirely through the pre-filter. After D32 both sets reach 100%, but both have now been used for fixes, so these figures show the fixes work, not how the tool does on unseen weeks. On the one unseen week (below), after review, precision meets its target at 3 of 5 and recall misses it at 3 of 4; four bids are too few to call either way. D34 then rejected the national lot (3 of 4 on both, but fixed on that week) and lost 108109 on the tuning set.
 
 Field accuracy on all 42, after D32 (coverage 86%: the 6 notices still dropped by the pre-filter are not extracted):
 
@@ -36,7 +40,7 @@ Field accuracy on all 42, after D32 (coverage 86%: the 6 notices still dropped b
 | Primary service | 86% |
 | Services | 81% |
 
-Threshold sweep, tuning set: precision 100% throughout; recall 100% from 0.50 to 0.75, 88% at 0.80, 75% at 0.90. The threshold is 0.70 (D30): above the 0.65 that a lot of a service the company does not offer can reach, below every bid.
+Threshold sweep, tuning set: precision 100% throughout; recall 100% from 0.50 to 0.75, 88% at 0.80, 75% at 0.90. After D34 recall is 88% from 0.50 to 0.75 (108109 is gated, so no threshold brings it back), 75% at 0.80 and 62% at 0.90. The threshold is 0.70 (D30): above the 0.65 that a lot of a service the company does not offer can reach, below every bid.
 
 ## Blind screen of an unseen week (26 Oct–1 Nov)
 - **Method (D33):** `uv run python -m evals.blind make` listed the 137 notices open on Mon 2 Nov that were delivered in the North, UK-wide by lot or with no stated region, whatever their CPV code, leaving out the eval notices. The list showed notice facts only (title, buyer, value, delivery codes, deadline, the first 300 characters), in a fixed random order. The human marked each one bid, maybe or blank in about 1 hour, and the marks were committed (39d8de7) before the tool read the week. `evals.blind compare` then ran the real pipeline as at 2 Nov 09:00 (35 LLM calls, $0.19). The human reviewed every maybe and every disagreement against the full notice in 15 minutes (`evals/blind/2026-10-26_review.md`).
@@ -56,6 +60,7 @@ Threshold sweep, tuning set: precision 100% throughout; recall 100% from 0.50 to
   - Four bids: each one moves recall by 25 points, so these are counts, not rates.
   - The reviewed figures may lean towards the tool: the blank-to-bid change (100987) was made after seeing the tool shortlist it. It rests on lot facts the 300-character summary did not show, but anchoring cannot be ruled out. The blind rows bound the result from the other side.
   - D32 on this week: no bid found, and both false positives (102242, 100829) came in through it. On the check set it found three bids; whether it pays overall needs more weeks.
+- **After D34 (22 Nov):** the region gate now rejects the national lot, so the week reads 3 of 4 bids found and 1 false positive (Blackpool Tower). The fix was made on this week, so it no longer counts as unseen.
 - **Time:** the manual screen of 137 already narrowed notices took about 1 hour. The tool's shortlist was 5 notices; reviewing its 10 disagreements took 15 minutes.
 
 ## Instructive failures
@@ -63,9 +68,9 @@ Threshold sweep, tuning set: precision 100% throughout; recall 100% from 0.50 to
 2. **A value of £0 counted as a value** (105298, Greenhead College cleaning; fixed by D32). The notice gives £0 as a placeholder, and the pre-filter drops it as "under £100k". £0 should be read as "not stated".
 3. **The primary service of out-of-scope notices is still unstable.** Northern Ireland's construction and minor works framework (106024) reads as building maintenance, a food hall operator (106859) as "other" instead of catering, and British Council FM in Bangladesh (107354) as "other" instead of integrated FM. None changes an outcome (region or another gate decides), but it shows where the service definitions still leave room.
 
-Smaller misses: 108100's 6-week mobilisation was not extracted; MDSAP was written out in full (108075); a delivery list that covers most of England is taken as the region (108109, 105503; see "Where it breaks").
+Smaller misses: 108100's 6-week mobilisation was not extracted; MDSAP was written out in full (108075); since D34 a lot whose delivery codes list all of England is rejected, which loses 108109, a Newcastle bid (see "Where it breaks").
 
 ## What would improve it most
 - **A shadow pilot:** the bid team runs the tool beside its manual screen for 3 to 4 weeks and records its own decisions next to the CSV, about 20 to 30 real bid decisions. One blind week gave 5 bids; about 60 would pin recall to within ±10 points.
-- Separate structural and heritage repair (engineering, structural steel) from building maintenance in the service definitions, and reject national-coverage lots in the region gate (D25 clarified).
+- Separate structural and heritage repair (engineering, structural steel) from building maintenance in the service definitions, and, if the bid team misses local contracts coded "all of England", let the text decide for lots coded with 6 or more regions (D34 option a).
 - Apply the region gate in the pre-filter when a notice has delivery addresses: after D32 most of the extra LLM calls are notices the region gate rejects anyway.

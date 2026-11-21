@@ -220,10 +220,18 @@ def _region_fit(
     if not regions:
         return Criterion("region", UNKNOWN_SCORE, "delivery region not stated")
     listed = ", ".join(regions)
-    if any(r.startswith(code) for r in regions for code in profile.region.nuts_codes):
+    north = tuple(profile.region.nuts_codes)
+    outside = [r for r in regions if not r.startswith(north)]
+    if not outside:
         return Criterion("region", 1.0, f"in region ({listed}, from {source})")
     if regions == ["UK"]:
         return Criterion("region", 0.0, f"UK-wide contract, no regional lot (from {source})")
+    if len(outside) < len(regions):
+        # Buyers list every English region for national lots; the client rejects any lot
+        # that also covers work outside the North (D25, clarified 22 Nov).
+        return Criterion(
+            "region", 0.0, f"also covers regions outside the North ({listed}, from {source})"
+        )
     return Criterion("region", 0.0, f"out of region ({listed}, from {source})")
 
 
