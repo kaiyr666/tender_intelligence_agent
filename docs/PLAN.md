@@ -32,7 +32,7 @@ About 210 minutes of slices. The rest of the 5 hours covers the spec (done), the
   - Build: `evals/blind.py` (`make` writes the list, `compare` runs the pipeline and lists disagreements); marks committed before the tool ran; extractions committed in `evals/blind/extractions/` so `compare` reruns offline.
   - Test: list selection, mark parsing, counts both ways, the results page, and a pre-filter drop decided with no LLM call.
 - [x] **Region gate for national lots** (22 Nov, at the human's request). Done, decision D34: a lot is in region only when all its regions are northern. The blind week's national lot is now rejected; 108109 (a labelled bid coded "all of England") is lost, and the 9–15 Nov shortlist is 7.
-- [ ] **Slice 5: Wrap-up** (~20 min)
+- [x] **Slice 5: Wrap-up** (~20 min). Done on 22 Nov: README sections filled, next steps reordered around a shadow pilot. A fresh clone ran `uv sync --locked`, 376 tests and the offline eval with no API key. "Where it breaks" and "Next steps" are drafts for the human to edit. The release tag is left to `/wrapup`.
   - Goal: a repo a reviewer understands in five minutes.
   - Build: README (how it works, results, where it breaks, next steps) and the final AI_WORKFLOW log.
   - Test: the fresh-clone instructions work.

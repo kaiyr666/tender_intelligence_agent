@@ -6,26 +6,51 @@
 A UK facilities-management company's bid team of three reads 150–250 new Find a Tender notices a week by hand. It costs them about a day and a half a week, and they still miss relevant tenders that are described in unexpected words. That time should go into writing bids.
 
 ## What is built
-<!-- The working pieces, in plain words. What is deliberately not built: see docs/SPEC.md. -->
+A command-line tool the bid team runs once a week. For a date range (by default the last full Monday–Sunday week) it:
+- fetches the tender and planning notices updated in that range from the Find a Tender OCDS API, keeps the latest release of each notice and drops withdrawn ones. A fetch that stops partway keeps what it has and marks the report incomplete;
+- stores a reduced copy of each notice in `data/raw/`, with contacts cut from `parties[]` and emails and phone numbers masked in the text;
+- drops notices that are closed, under £100k or coded outside the company's work (CPV codes);
+- has the LLM read each remaining notice once, lot by lot: services and the main service, region, contract length, mobilisation, mandatory accreditations and red flags, with a quote from the notice for the fields that can reject a lot;
+- gates and scores every lot in code against `config/profile.toml` and keeps the best eligible lot per notice;
+- has the LLM write a two-to-three-sentence rationale for each shortlisted notice from the scored fields only;
+- writes `output/report.md` (shortlisted, rejected, needs review, not processed, with cost, planning count and OGL attribution) and `output/shortlist.csv` (every assessed notice and its outcome).
+
+Screening for another company means editing `config/profile.toml` (services with what they include and exclude, CPV codes, regions, accreditations held, weights, threshold), not the code. The eval harness (`evals/run.py`) and the blind-screen tool (`evals/blind.py`) are in `evals/`. Out of scope, and why: `docs/SPEC.md`.
 
 ## Run it
+Needs [uv](https://docs.astral.sh/uv/); it installs Python 3.11 or later if missing.
 ```bash
 uv sync
 cp .env.example .env   # then add your API key to .env
-uv run python -m app
+uv run python -m app                                   # last full Monday–Sunday week
+uv run python -m app --from 2026-11-09 --to 2026-11-15 # any range, both dates inclusive
 ```
-With an OpenAI key, `.env` needs `OPENAI_API_KEY`, `LLM_PROVIDER=openai`, `LLM_MODEL=<model>`, and the model's price in USD per million tokens as `LLM_INPUT_USD_PER_MTOK` and `LLM_OUTPUT_USD_PER_MTOK`. The run refuses to start without a price, because the budget (`LLM_BUDGET_USD`, default 2.50) needs it.
-The run writes `output/report.md` and `output/shortlist.csv` (git-ignored).
-Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
+With an OpenAI key, `.env` needs `OPENAI_API_KEY`, `LLM_PROVIDER=openai`, `LLM_MODEL=<model>`, and the model's price in USD per million tokens as `LLM_INPUT_USD_PER_MTOK` and `LLM_OUTPUT_USD_PER_MTOK`. The run refuses to start without a price, because the budget (`LLM_BUDGET_USD`, default 2.50) needs it. Claude works too: `LLM_PROVIDER=anthropic` and `ANTHROPIC_API_KEY`.
+A week takes about 3 minutes to fetch and costs about $0.30 to read. The run writes `output/report.md` and `output/shortlist.csv` (git-ignored). Extractions are cached in `data/cache/`, so a second run of the same week makes no extraction calls.
+
+Tests: `uv run pytest` · Eval: `uv run python -m evals.run`. Neither needs an API key or the network: the eval reads committed extractions.
 
 ## How it works
 ```
-<input> → <step> → <step> → <output>
+Find a Tender API → fetch, de-duplicate, sanitise → pre-filter → extract per lot → gate and score → rationale → report.md + shortlist.csv
+     (code)                (code)                     (code)        (LLM)            (code)        (LLM)          (code)
 ```
-<!-- Which steps are plain code and which use the LLM, and why. Details in docs/DECISIONS.md. -->
+The LLM does the two jobs that need reading: turning free text into fields, and writing the rationale. Everything that decides an outcome (the pre-filter, the hard gates, the scores, the threshold) is plain Python, so every score traces back to a rubric line and the same extraction always gives the same result (D1). The LLM's output is checked against a Pydantic model before use, and a gate that rests on the LLM's reading (an excluded main service, a missing accreditation) rejects only when its supporting quote is found in the notice; otherwise the notice goes to "needs review" (D8). The region gate is the exception: the client asked for out-of-region, UK-wide and unstated regions to be rejected outright (D25, D34). Cost is checked before every call against a budget (D10, D17). Every choice, with the alternatives it beat, is in [docs/DECISIONS.md](docs/DECISIONS.md).
 
 ## Results
-<!-- Headline numbers from docs/EVAL.md. -->
+Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%, precision ≥ 60%.
+
+| Set | Cases (bids) | Precision | Recall | Note |
+|---|---|---|---|---|
+| Labelled, all | 42 (16) | 100% (15/15) | 94% (15/16) | every case has been used for fixes |
+| Blind week 26 Oct–1 Nov, before D34 | 137 (4) | 60% (3/5) | 75% (3/4) | unseen, screened by the human, after review |
+| Blind week, after D34 | 137 (4) | 75% (3/4) | 75% (3/4) | D34 was fixed on this week |
+
+- The labelled figures show the fixes work, not how the tool does on a new week. The one unseen week has only four bids, so each one moves recall by 25 points.
+- The one labelled miss (108109, Newcastle window cleaning) is the cost of the client's rule on national lots (D34): its lots are coded as all of England.
+- Field accuracy on the 42: contract length and TUPE 100%, accreditations and mobilisation 97%, region 94%, main service 86%, services 81%.
+- Cost: the 9–15 Nov week read 122 notices for $0.29 and shortlisted 7. Re-reading all 42 eval notices costs about $0.20.
+- The human's manual screen of the blind week (137 notices, already narrowed) took about 1 hour; the tool shortlisted 5 and reviewing its 10 disagreements took 15 minutes.
 
 ## Where it breaks
 <!-- Honest limits: data it cannot handle, failure modes seen in the eval, what the reviews flagged and was not fixed. Write this yourself. -->
@@ -37,6 +62,7 @@ Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 - **Personal names in free text are not removed.** Contact details in `parties[]` are dropped and emails and phone numbers in descriptions are masked, but a name written into a description stays.
 - **Only the excluded-service and accreditation gates are checked against the notice text.** The region gate trusts the LLM's reading when a notice has no delivery address (D25), and other extracted fields (contract length, mobilisation) are validated for shape, not for truth.
 - **The 15-minute review target is not measured.** No bid manager has timed a review of the report. As a baseline, the human's blind manual screen of 137 already narrowed notices took about 1 hour, and reviewing the tool's 10 disagreements took 15 minutes.
+- **The blind screen cannot be rerun from a fresh clone.** Its marks and extractions are committed, but `evals.blind compare` also needs that week's notices, which live in the git-ignored `data/raw/`; fetching 26 Oct–1 Nov again rebuilds them, though notices amended since then will differ.
 - **Phone masking over-masks.** Any 10–11 digit reference starting with 0 is masked as if it were a phone number.
 - **Values in other currencies are treated as unknown.** One UK lot that week was labelled AED in the source data.
 - **A week's fetch takes about 3 minutes,** because the API's stage filter is unreliable and every stage has to be fetched (D11).
@@ -60,11 +86,12 @@ Tests: `uv run pytest` · Eval: `uv run python -m evals.run`
 
 ## Next steps (if this were a paid engagement)
 <!-- What you would do next, in order, and why. Write this yourself. -->
-1. Label 100+ notices from weeks the threshold never saw, and report results on that held-out set.
-2. Time a bid manager reviewing one weekly report, and record shortlist size and confusing entries.
-3. Require supporting quotes for every extracted field, not only the gate fields.
-4. Apply the region gate in the pre-filter for notices with delivery addresses, so out-of-region notices cost no LLM call.
-5. Incumbent lookup from award notices, and an MCP server (`search_tenders`, `get_tender`, `shortlist`).
+1. A shadow pilot: the bid team runs the tool beside its manual screen for 3 to 4 weeks and records its own decision next to each CSV row. That gives about 20 to 30 real bid decisions on unseen weeks (about 60 would pin recall to within ±10 points) and times a real review of the report.
+2. Separate structural and heritage repair from building maintenance in the service definitions, so a job like the Blackpool Tower repairs is gated as construction.
+3. Apply the region gate in the pre-filter for notices with delivery addresses, so out-of-region notices cost no LLM call. Most of the reads D32 added are notices the region gate rejects anyway.
+4. If the pilot shows the team missing local northern contracts coded "all of England", switch the region rule to D34's option (a), which keeps 108109.
+5. Require supporting quotes for every extracted field, not only the gate fields.
+6. Incumbent lookup from award notices, and an MCP server (`search_tenders`, `get_tender`, `shortlist`).
 
 ## How AI was used
 Built with Claude Code and reviewed by Codex; see [docs/AI_WORKFLOW.md](docs/AI_WORKFLOW.md).
