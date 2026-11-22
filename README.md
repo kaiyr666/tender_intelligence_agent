@@ -29,14 +29,14 @@ uv run python -m app                                   # last full Monday–Sund
 uv run python -m app --from 2026-11-09 --to 2026-11-15 # any range, both dates inclusive
 ```
 With an OpenAI key, `.env` needs `OPENAI_API_KEY`, `LLM_PROVIDER=openai`, `LLM_MODEL=<model>`, and the model's price in USD per million tokens as `LLM_INPUT_USD_PER_MTOK` and `LLM_OUTPUT_USD_PER_MTOK`. The run refuses to start without a price, because the budget (`LLM_BUDGET_USD`, default 2.50) needs it. Claude works too: `LLM_PROVIDER=anthropic` and `ANTHROPIC_API_KEY`.
-A week takes about 3 minutes to fetch and, read from scratch, an estimated $0.60 in LLM calls (122 notices at about $0.005 each; the measured 9–15 Nov run paid $0.29 for the 62 notices not yet cached). Deadlines in the report and CSV are in UTC. The run writes `output/report.md`, `output/shortlist.csv`, `output/report.html` and `output/runs/<from>_<to>.json` (all git-ignored); a second run of the same week replaces its run file. `examples/runs/` holds one committed run (9–15 Nov) so the views can be tried without an API key. Extractions are cached in `data/cache/`, so a second run of the same week makes no extraction calls.
+A week read from scratch takes about 15 minutes and $0.60 in LLM calls: the 16–21 Nov run took 5 minutes to fetch and 11 to read 125 notices one at a time, for $0.61 (the 9–15 Nov run paid $0.29 for the 62 notices not yet cached). Deadlines in the report and CSV are in UTC. The run writes `output/report.md`, `output/shortlist.csv`, `output/report.html` and `output/runs/<from>_<to>.json` (all git-ignored); a second run of the same week replaces its run file. `examples/runs/` holds two committed runs (9–15 Nov and 16–21 Nov) so the views can be tried without an API key. Extractions are cached in `data/cache/`, so a second run of the same week makes no extraction calls.
 
 Tests: `uv run pytest` · Eval: `uv run python -m evals.run`. Neither needs an API key or the network: the eval reads committed extractions.
 
 ### Read it in a browser (web view)
 Each run writes `output/report.html`. Any saved run can be rendered again, including the committed example from a fresh clone with no API key:
 ```bash
-uv run python -m app.html_report examples/runs/2026-11-09_2026-11-15.json   # writes output/report_2026-11-09_2026-11-15.html
+uv run python -m app.html_report examples/runs/2026-11-16_2026-11-21.json   # writes output/report_2026-11-16_2026-11-21.html
 uv run python -m app.html_report <run.json> --out somewhere.html
 ```
 The page is one file with no outside requests (inline CSS and script, system fonts), so it opens offline or as an email attachment. It shows the funnel (fetched, kept, shortlisted), a card per shortlisted notice with its score against the threshold, deadline and days left, red flags, rationale and a folded score breakdown, the other three groups as filterable tables, and what the profile screens for. It works without JavaScript (every group is shown); the script only switches groups and filters tables. It follows the system's dark mode and prints without its controls, with every score breakdown opened for the printout (with JavaScript off they print folded).
@@ -60,9 +60,12 @@ The page is one file with no outside requests (inline CSS and script, system fon
 claude mcp add tender-intelligence -- uv --directory /path/to/tender_intelligence_agent run python -m app.mcp_server --runs-dir examples/runs
 ```
 Then ask, for example:
-- "What is on this week's shortlist, and why is the top one ranked first?"
-- "Why was notice 108109-2026, the Newcastle window cleaning, rejected?"
-- "Which shortlisted tenders carry TUPE, and what does the profile screen for?"
+- "What is on this week's shortlist, and why is the top one ranked first?" (the newest run, 16–21 Nov)
+- "Why was notice 109921-2026, the THEP schools cleaning, rejected?"
+- "In the 9–15 Nov run, why was 108109-2026, the Newcastle window cleaning, rejected?"
+- "Which tenders in this run carry TUPE, and what does the profile screen for?"
+
+The demo script, with the answers from the 22 Nov rehearsal and the fallbacks, is in [docs/DEMO.md](docs/DEMO.md).
 
 Data: contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), from Find a Tender (https://www.find-tender.service.gov.uk).
 
@@ -85,7 +88,7 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 - The labelled figures show the fixes work, not how the tool does on a new week. The one unseen week has only four bids, so each one moves recall by 25 points.
 - The one labelled miss (108109, Newcastle window cleaning) is the cost of the client's rule on national lots (D34): its lots are coded as all of England.
 - Field accuracy on the 42: contract length and TUPE 100%, accreditations and mobilisation 97%, region 94%, main service 86%, services 81%.
-- Cost: the 9–15 Nov week read 122 notices and shortlisted 7. 62 of them were new reads, for $0.29; the other 60 came from the cache. A fresh week is estimated at about $0.60. Re-reading all 42 eval notices costs about $0.20.
+- Cost: the 9–15 Nov week read 122 notices and shortlisted 7. 62 of them were new reads, for $0.29; the other 60 came from the cache. The 16–21 Nov week, read from scratch, fetched 489 tender notices, read 125 and shortlisted 8 for $0.61; it is unlabelled, so it shows cost and output, not accuracy. Re-reading all 42 eval notices costs about $0.20.
 - The human's manual screen of the blind week (137 notices, already narrowed) took about 1 hour; the tool shortlisted 5 and reviewing its 10 disagreements took 15 minutes.
 
 ## Where it breaks
@@ -101,7 +104,8 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 - **The blind screen cannot be rerun from a fresh clone.** Its marks and extractions are committed, but `evals.blind compare` also needs that week's notices, which live in the git-ignored `data/raw/`; fetching 26 Oct–1 Nov again rebuilds them, though notices amended since then will differ.
 - **Phone masking over-masks.** Any 10–11 digit reference starting with 0 is masked as if it were a phone number.
 - **Values in other currencies are treated as unknown.** One UK lot that week was labelled AED in the source data.
-- **A week's fetch takes about 3 minutes,** because the API's stage filter is unreliable and every stage has to be fetched (D11).
+- **A fresh week takes about 15 minutes.** The fetch takes 3 to 5 minutes, because the API's stage filter is unreliable and every stage has to be fetched (D11), and the LLM reads notices one at a time (11 minutes for 125 in 16–21 Nov). Too slow to run live on a call.
+- **The short-deadline red flag and the deadline score can disagree.** The flag is the LLM's reading of the notice's wording; the score is code counting days. In 16–21 Nov, 109415 (Habinteg) scores 0.73 for 10 days to respond against the 14 needed but carries no short-deadline flag, and an assistant asked about it points out the mismatch.
 - **Accreditation names are matched loosely.** A requirement for "Cyber Essentials Plus" counts as held because the company holds "Cyber Essentials". "X or equivalent" with only X named is treated as X, so "CHAS or equivalent" is rejected even though SafeContractor would qualify. Groups that name the alternatives ("CHAS, SafeContractor or Constructionline") are handled.
 - **A lot that also covers any region outside the North is rejected** (D34, the client's rule for national lots). Buyers often list all 9 English regions for a local contract, so a northern tender coded that way is lost: 108109 (Newcastle window cleaning, a labelled bid) is rejected, and the 9–15 Nov shortlist went from 8 to 7. Lots across a regional border (Yorkshire and the East Midlands) are rejected too. The rule replaced "any northern code passes", which shortlisted EEM's national fire doors lot (100829) in the blind week.
 - **Tenders outside the North are rejected, and so are UK-wide contracts and notices that do not say where the work is** (D25, the client's rule). A northern tender that does not state its region, or whose region the LLM misreads, is rejected without review. The LLM now also reads named places (D26), which brought back 106476 (Sheffield College, rejected at first because its notice has no delivery code). In the 9–15 Nov run the shortlist went from 28 before D25 to 9, to 8 after slice 4's profile changes (D28–D30), all of them labelled bids in the eval, and to 7 after D34; 6 notices are still rejected as "region not stated", mostly Scottish, Northern Irish or overseas buyers.
@@ -123,7 +127,7 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 - **Rationales are not checked in code.** The prompt gets only scored fields (D23) and the real week's 28 rationales matched them, but nothing verifies a number or place in the text. They also mostly restate the score breakdown.
 - **Rationales are not cached.** Every run pays for them again (about $0.03 for a week).
 - **A run file is only as fresh as its run.** Deadlines and the "closed" pre-filter are judged at the run date, so the committed 9–15 Nov example (run on 22 Nov) leaves out notices that closed between 15 and 22 Nov and differs from the report of a run on 16 Nov. An amended notice is re-read on the next run, so an old run file and a new one can disagree.
-- **Run files hold notice text.** Titles, descriptions and quotes are stored as fetched, with emails and phone numbers masked (D14); a name written into a description stays, as in `data/raw/`. `output/` is git-ignored; the committed example was checked by the human first.
+- **Run files hold notice text.** Titles, descriptions and quotes are stored as fetched, with emails and phone numbers masked (D14); a name written into a description stays, as in `data/raw/`. `output/` is git-ignored; the committed examples were checked first. In the 16–21 Nov example one person's name, in three rejected notices, was masked by hand (D40), so that file differs from what the pipeline wrote; the pipeline itself still keeps such names. The 16–21 Nov run is unlabelled, so no precision or recall is claimed for it.
 - **A schema change makes old run files unreadable.** A file with another `schema_version` is refused with an error naming the file, and has to be recreated by running that week again; there is no migration.
 - **A run file copied under another week's name still loads.** `load_run` checks that the record's own `run_id` matches its dates, not the file name, so the web view can open a renamed file. The MCP server, which picks runs by name, skips such a file with a message on stderr (review 05).
 - **The MCP server is read-only.** It cannot start a run, change the profile or record a bid decision (D36); the bid team still runs the CLI each week.

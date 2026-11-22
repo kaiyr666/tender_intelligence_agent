@@ -248,6 +248,13 @@
 - **Cost:** system fonts look slightly different on Windows, macOS and phones. The score bar's track is a low-contrast shape in dark mode; the number and threshold beside it carry the meaning. No sorting or column choice: the table order is the report's.
 - **Revisit if:** the team wants to act on the page (bid/no-bid, notes): that needs a server (D36's "Revisit if").
 
+## D40: The demo week is 16–21 Nov, and its committed copy has one name masked by hand
+- **Chose:** slice 9 ran 16–21 Nov (Monday to Saturday) on Sunday 22 Nov, and the copy committed to `examples/runs/` has one person's name replaced with `[name removed]` in three rejected notices' descriptions ("contact … on [phone removed]"). The run in `output/runs/` is untouched. The human chose both on 22 Nov.
+- **Alternatives:** for the week, run 16–22 Nov on the 22nd, which would miss the rest of that day's notices without saying so, or wait for the 23rd as the plan said; for the name, commit the file as fetched (public text under OGL, and "names stay" is already a known limit), or commit nothing and demo from `output/` only.
+- **Why:** a week that ends on the run day is silently incomplete, and running on the morning of the call leaves no time to read the result or recover from a failed run; few notices are published on a Sunday. The spec keeps personal data out unless it needs it, and a public repo is a wider audience than the source page. A hand edit of one file was cheaper and more certain than adding name detection to the pipeline the day before the call.
+- **Cost:** the example does not show Sunday's notices, and it is no longer byte-for-byte what the pipeline wrote. Other names written in other forms may remain: the scan looked for titles (Mr, Dr) and names after contact words.
+- **Revisit if:** run files are shared beyond this repo: then mask names in the pipeline, not by hand.
+
 <!--
 Template:
 ## Dn: <decision>
