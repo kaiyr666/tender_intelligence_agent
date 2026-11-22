@@ -18,8 +18,9 @@ First commit any uncommitted work so the review sees it. Then run one of these a
   ```
 - **empty (default):** review the code changed since the last review:
   ```
-  codex exec -m gpt-6.2-astra -c model_reasoning_effort="high" review --base reviewed "Follow the review checklist and output format in AGENTS.md."
+  codex exec -m gpt-6.2-astra -c model_reasoning_effort="high" --sandbox read-only "Review the code changed since the last review: the diff from the git branch 'reviewed' to HEAD (git diff reviewed..HEAD). Check it against docs/SPEC.md and the slices it builds in docs/PLAN.md. Follow the review checklist and output format in AGENTS.md."
   ```
+  (Not `codex exec review --base reviewed`: Codex 0.169 refuses `--base` together with a prompt, and the prompt is what asks for AGENTS.md's format.)
 - **`all`:** review the whole repository:
   ```
   codex exec -m gpt-6.2-astra -c model_reasoning_effort="high" --sandbox read-only "Review this entire repository against docs/SPEC.md, following the review checklist and output format in AGENTS.md."

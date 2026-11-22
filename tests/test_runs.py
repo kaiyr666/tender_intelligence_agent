@@ -4,15 +4,20 @@ import csv
 import io
 import json
 import os
+import subprocess
+import sys
+import traceback
+from dataclasses import replace
 from pathlib import Path
 
 import pytest
 from test_report import RATIONALES, RUN, scored_results
 
 from app.profile import load_profile
-from app.report import render_csv
+from app.report import OUTPUT_DIR, render_csv, render_report
 from app.runs import (
     RUN_SCHEMA_VERSION,
+    RUNS_DIR,
     RunFileError,
     is_run_id,
     list_runs,
@@ -20,7 +25,7 @@ from app.runs import (
     save_run,
     to_record,
 )
-from app.score import SHORTLISTED
+from app.score import NOT_PROCESSED, SHORTLISTED
 
 FIXTURE = Path(__file__).parent / "fixtures" / "runs" / "2026-11-09_2026-11-15.json"
 EXAMPLE = Path(__file__).parents[1] / "examples" / "runs" / "2026-11-09_2026-11-15.json"
@@ -173,8 +178,14 @@ def test_criteria_take_their_weight_from_the_profile():
 def test_profile_snapshot_is_taken_from_the_profile():
     snapshot = record().profile
 
-    assert snapshot.offered_services == PROFILE.services.offered_names
-    assert snapshot.excluded_services == PROFILE.services.excluded_names
+    # Review 05: the definitions are kept, so a reader explains an old run by its own profile.
+    assert [s.model_dump() for s in snapshot.offered_services] == [
+        s.model_dump() for s in PROFILE.services.offered
+    ]
+    assert [s.model_dump() for s in snapshot.excluded_services] == [
+        s.model_dump() for s in PROFILE.services.excluded
+    ]
+    assert any(service.includes for service in snapshot.offered_services)
     assert snapshot.region_nuts_codes == PROFILE.region.nuts_codes
     assert (snapshot.value_min_gbp, snapshot.value_max_gbp) == (
         PROFILE.value.min_gbp,
@@ -210,6 +221,16 @@ def not_an_object(data):
     return json.dumps([data])
 
 
+def with_dates_reversed(data):
+    data.update(date_from="2026-11-15", date_to="2026-11-09", run_id="2026-11-15_2026-11-09")
+    return json.dumps(data)
+
+
+def with_text_as_version(data):
+    data["schema_version"] = "MARKER from the file"
+    return json.dumps(data)
+
+
 @pytest.mark.parametrize(
     ("corrupt", "reason"),
     [
@@ -218,6 +239,8 @@ def not_an_object(data):
         (with_version_2, "schema version 2"),
         (with_unsafe_run_id, "run_id"),
         (not_an_object, "not a JSON object"),
+        (with_dates_reversed, "date_from"),
+        (with_text_as_version, "no valid schema version"),
     ],
 )
 def test_a_bad_run_file_raises_an_error_naming_the_file(tmp_path, corrupt, reason):
@@ -229,6 +252,91 @@ def test_a_bad_run_file_raises_an_error_naming_the_file(tmp_path, corrupt, reaso
 
     assert str(path) in str(error.value)
     assert reason in str(error.value)
+
+
+@pytest.mark.parametrize("field", ["schema_version", "published"], ids=["version", "invalid field"])
+def test_errors_do_not_echo_values_from_the_file(tmp_path, field):
+    # Run files hold notice text; an error shown to an MCP client must not carry it.
+    data = json.loads(FIXTURE.read_text(encoding="utf-8"))
+    target = data if field == "schema_version" else data["notices"][0]
+    target[field] = "MARKER from the file"
+    path = tmp_path / "2026-11-09_2026-11-15.json"
+    path.write_text(json.dumps(data), encoding="utf-8")
+
+    with pytest.raises(RunFileError) as error:
+        load_run(path)
+
+    assert "MARKER" not in "".join(traceback.format_exception(error.value))
+
+
+def test_a_failed_save_leaves_the_previous_run_readable(tmp_path, monkeypatch):
+    save_run(record(), tmp_path)
+    write_text = Path.write_text
+
+    def write_half_then_fail(self, text, *args, **kwargs):
+        write_text(self, text[:10], *args, **kwargs)
+        raise OSError("disk full")
+
+    monkeypatch.setattr(Path, "write_text", write_half_then_fail)
+    with pytest.raises(OSError, match="disk full"):
+        save_run(record().model_copy(update={"cost_usd": 0.01}), tmp_path)
+    monkeypatch.undo()
+
+    assert [path.name for path in tmp_path.iterdir()] == ["2026-11-09_2026-11-15.json"]
+    assert load_run(tmp_path / "2026-11-09_2026-11-15.json").cost_usd == RUN.cost_usd
+
+
+def test_a_complete_run_has_no_incomplete_reasons():
+    processed = [r for r in scored_results() if r.outcome != NOT_PROCESSED]
+
+    assert record(processed).incomplete_reasons == []
+
+
+def test_a_budget_stop_makes_the_run_incomplete():
+    reasons = record().incomplete_reasons
+
+    assert reasons == ["1 notice was not processed (the LLM budget was reached before this notice)"]
+
+
+def test_a_stopped_fetch_makes_the_run_incomplete():
+    processed = [r for r in scored_results() if r.outcome != NOT_PROCESSED]
+    stopped = replace(RUN, complete=False, problem="HTTP 503 after 3 attempts")
+
+    saved = to_record(processed, RATIONALES, stopped, PROFILE, MODEL)
+
+    assert saved.incomplete_reasons == ["the fetch stopped early (HTTP 503 after 3 attempts)"]
+
+
+@pytest.mark.parametrize("fetch_complete", [True, False])
+@pytest.mark.parametrize("with_unprocessed", [True, False])
+def test_run_health_agrees_with_the_report_banner(fetch_complete, with_unprocessed):
+    results = [r for r in scored_results() if with_unprocessed or r.outcome != NOT_PROCESSED]
+    run = replace(RUN, complete=fetch_complete, problem=None if fetch_complete else "HTTP 503")
+
+    saved = to_record(results, RATIONALES, run, PROFILE, MODEL)
+
+    report = render_report(results, RATIONALES, run)
+    assert report.count("**INCOMPLETE:**") == len(saved.incomplete_reasons)
+
+
+def test_runs_dir_is_inside_the_report_output_folder():
+    assert RUNS_DIR == OUTPUT_DIR / "runs"
+
+
+def test_reading_a_run_does_not_load_the_pipeline():
+    # The web view and the MCP server import runs.py; it must not pull in the extractor,
+    # llm.py or its settings, which load .env (PLAN, rules for slices 6-9).
+    code = (
+        "import sys; from pathlib import Path; from app.runs import list_runs, load_run; "
+        f"load_run(Path({str(FIXTURE)!r})); list_runs(Path({str(FIXTURE.parent)!r})); "
+        "print(','.join(sorted(m for m in sys.modules if m.startswith('app.') or m == 'dotenv')))"
+    )
+
+    loaded = subprocess.run(
+        [sys.executable, "-c", code], capture_output=True, text=True, check=True
+    ).stdout.strip()
+
+    assert loaded.split(",") == ["app.runs"]
 
 
 def test_a_missing_run_file_raises_an_error_naming_the_file(tmp_path):

@@ -3,22 +3,31 @@
 The web view and the MCP server read only these files, never the pipeline. Text
 from notices and the LLM is stored as it is; each reader escapes it for its own
 output.
+
+Reading a run must not load the pipeline: the readers never import the extractor or
+llm.py, whose settings load .env. So the pipeline modules are imported only inside
+to_record, which only the CLI calls.
 """
 
+from __future__ import annotations
+
 import json
+import os
 import re
 from datetime import date, datetime
 from pathlib import Path
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 from pydantic import BaseModel, ValidationError, model_validator
 
-from app.profile import Profile
-from app.report import GROUPS, OUTPUT_DIR, RunSummary, grouped
-from app.score import SHORTLISTED, LotResult, NoticeResult
+if TYPE_CHECKING:
+    from app.profile import Profile
+    from app.report import RunSummary
+    from app.score import LotResult, NoticeResult
 
 RUN_SCHEMA_VERSION = 1
-RUNS_DIR = OUTPUT_DIR / "runs"
+# The same folder as report.OUTPUT_DIR / "runs", defined here so readers need not import report.
+RUNS_DIR = Path(__file__).resolve().parents[2] / "output" / "runs"
 RUN_ID_PATTERN = re.compile(r"\d{4}-\d{2}-\d{2}_\d{4}-\d{2}-\d{2}")
 
 Outcome = Literal["shortlisted", "rejected", "needs review", "not processed"]
@@ -71,11 +80,17 @@ class NoticeRecord(BaseModel):
     rationale: str | None  # shortlisted notices only
 
 
+class ServiceRecord(BaseModel):
+    name: str
+    includes: list[str]
+    excludes: list[str]
+
+
 class ProfileSnapshot(BaseModel):
     """The parts of the profile a reader needs to understand the scores, as they were."""
 
-    offered_services: list[str]
-    excluded_services: list[str]
+    offered_services: list[ServiceRecord]
+    excluded_services: list[ServiceRecord]
     region_nuts_codes: list[str]
     value_min_gbp: float
     value_max_gbp: float
@@ -104,11 +119,28 @@ class RunRecord(BaseModel):
     notices: list[NoticeRecord]
 
     @model_validator(mode="after")
-    def _run_id_names_the_dates(self) -> "RunRecord":
+    def _run_id_names_the_dates(self) -> RunRecord:
+        if self.date_from > self.date_to:
+            raise ValueError("date_from must not be after date_to")
         # The run ID becomes a file name, so it must be exactly the two dates.
         if self.run_id != run_id_for(self.date_from, self.date_to):
             raise ValueError("run_id must be <date_from>_<date_to>")
         return self
+
+    @property
+    def incomplete_reasons(self) -> list[str]:
+        """Why the run is incomplete, on the same rules as the INCOMPLETE banners in report.md:
+        the fetch stopped early, or notices were not processed. Empty for a complete run."""
+        reasons = []
+        if not self.complete:
+            reasons.append(f"the fetch stopped early ({self.problem or 'unknown'})")
+        unprocessed = [n for n in self.notices if n.outcome == "not processed"]
+        if unprocessed:
+            count = len(unprocessed)
+            noun = "notice was" if count == 1 else "notices were"
+            causes = "; ".join(dict.fromkeys(n.reason for n in unprocessed))
+            reasons.append(f"{count} {noun} not processed ({causes})")
+        return reasons
 
 
 def run_id_for(date_from: date, date_to: date) -> str:
@@ -134,10 +166,13 @@ def to_record(
     model: str,
 ) -> RunRecord:
     """The run as one record, notices in the report's order. Pre-filter drops are only counted."""
+    from app.report import GROUPS, grouped
+    from app.score import SHORTLISTED
+
     weights = profile.scoring.weights.model_dump()
     groups = grouped(results)
     notices = [
-        _notice_record(result, rank, rationales, weights)
+        _notice_record(result, rank if outcome == SHORTLISTED else None, rationales, weights)
         for outcome, _ in GROUPS
         for rank, result in enumerate(groups[outcome], start=1)
     ]
@@ -161,10 +196,21 @@ def to_record(
 
 
 def save_run(record: RunRecord, runs_dir: Path = RUNS_DIR) -> Path:
-    """Write <run_id>.json into runs_dir, replacing an earlier run of the same dates."""
+    """Write <run_id>.json into runs_dir, replacing an earlier run of the same dates.
+
+    The file is written beside the target and then swapped in, so a write that fails
+    partway leaves the earlier run intact and a reader never sees half a file.
+    """
     runs_dir.mkdir(parents=True, exist_ok=True)
     path = runs_dir / f"{record.run_id}.json"
-    path.write_text(record.model_dump_json(indent=2) + "\n", encoding="utf-8", newline="\n")
+    temporary = path.with_name(path.name + ".tmp")
+    try:
+        temporary.write_text(
+            record.model_dump_json(indent=2) + "\n", encoding="utf-8", newline="\n"
+        )
+        os.replace(temporary, path)
+    finally:
+        temporary.unlink(missing_ok=True)
     return path
 
 
@@ -178,14 +224,18 @@ def load_run(path: Path) -> RunRecord:
         raise RunFileError(f"{path}: not a JSON object")
     version = data.get("schema_version")
     if version != RUN_SCHEMA_VERSION:
+        # Only a number is quoted back: the file's other values are untrusted text.
+        found = f"schema version {version}" if _is_int(version) else "no valid schema version"
         raise RunFileError(
-            f"{path}: schema version {version}, but this tool reads version "
-            f"{RUN_SCHEMA_VERSION}; run the CLI again for this week to rewrite it"
+            f"{path}: {found}, but this tool reads version {RUN_SCHEMA_VERSION}; "
+            "run the CLI again for this week to rewrite it"
         )
     try:
         return RunRecord.model_validate(data)
     except ValidationError as error:
-        raise RunFileError(f"{path}: not a valid run record ({_problems(error)})") from error
+        problems = _problems(error)
+    # Raised outside the except block, so the traceback does not carry the rejected values.
+    raise RunFileError(f"{path}: not a valid run record ({problems})")
 
 
 def list_runs(runs_dir: Path = RUNS_DIR) -> list[Path]:
@@ -198,10 +248,10 @@ def list_runs(runs_dir: Path = RUNS_DIR) -> list[Path]:
 
 
 def _notice_record(
-    result: NoticeResult, rank: int, rationales: dict[str, str], weights: dict[str, float]
+    result: NoticeResult, rank: int | None, rationales: dict[str, str], weights: dict[str, float]
 ) -> NoticeRecord:
+    """`rank` is the shortlist position, None for other outcomes."""
     notice, best = result.notice, result.best_lot
-    shortlisted = result.outcome == SHORTLISTED
     red_flags = result.extraction.red_flags if result.extraction else []
     return NoticeRecord(
         notice_id=notice.notice_id,
@@ -217,12 +267,12 @@ def _notice_record(
         description=notice.description,
         outcome=result.outcome,
         reason=result.reason,
-        rank=rank if shortlisted else None,
+        rank=rank,
         score=best.score if best else None,
         best_lot_id=best.lot_id if best else None,
         lots=[_lot_record(lot, weights) for lot in result.lots],
         red_flags=[RedFlagRecord(kind=flag.kind, quote=flag.quote) for flag in red_flags],
-        rationale=rationales.get(notice.notice_id) if shortlisted else None,
+        rationale=rationales.get(notice.notice_id) if rank is not None else None,
     )
 
 
@@ -242,8 +292,8 @@ def _lot_record(lot: LotResult, weights: dict[str, float]) -> LotRecord:
 
 def _profile_snapshot(profile: Profile) -> ProfileSnapshot:
     return ProfileSnapshot(
-        offered_services=profile.services.offered_names,
-        excluded_services=profile.services.excluded_names,
+        offered_services=[ServiceRecord(**s.model_dump()) for s in profile.services.offered],
+        excluded_services=[ServiceRecord(**s.model_dump()) for s in profile.services.excluded],
         region_nuts_codes=profile.region.nuts_codes,
         value_min_gbp=profile.value.min_gbp,
         value_max_gbp=profile.value.max_gbp,
@@ -263,3 +313,7 @@ def _problems(error: ValidationError, limit: int = 3) -> str:
     ]
     more = f"; and {len(problems) - limit} more" if len(problems) > limit else ""
     return "; ".join(problems[:limit]) + more
+
+
+def _is_int(value: object) -> bool:
+    return isinstance(value, int) and not isinstance(value, bool)

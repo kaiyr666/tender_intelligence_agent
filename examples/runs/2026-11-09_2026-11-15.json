@@ -14,19 +14,108 @@
   "cost_usd": 0.006082,
   "profile": {
     "offered_services": [
-      "office and commercial cleaning",
-      "manned guarding and security",
-      "planned and reactive building maintenance",
-      "grounds maintenance",
-      "integrated facilities management"
+      {
+        "name": "office and commercial cleaning",
+        "includes": [
+          "cleaning of offices, schools, public and commercial buildings",
+          "washrooms and communal areas",
+          "window and high-level cleaning",
+          "communal areas of residential blocks"
+        ],
+        "excludes": [
+          "clinical areas of hospitals (clinical or hospital cleaning)",
+          "decontamination of medical or care equipment (specialist equipment decontamination)"
+        ]
+      },
+      {
+        "name": "manned guarding and security",
+        "includes": [
+          "manned guarding and mobile patrols",
+          "key holding, alarm response and monitoring",
+          "reception, concierge and CCTV monitoring by security staff"
+        ],
+        "excludes": [
+          "cyber security (IT services)"
+        ]
+      },
+      {
+        "name": "planned and reactive building maintenance",
+        "includes": [
+          "planned and reactive repairs to building fabric",
+          "minor works, joinery and carpentry, redecoration and painting",
+          "flooring, glazing, windows and doors, roofing repairs",
+          "drainage, fencing, handrails, scaffolding and other trade lots of a repairs or maintenance contract",
+          "general electrical maintenance and testing"
+        ],
+        "excludes": [
+          "HVAC, gas, heating, lifts and fire systems (specialist mechanical and electrical (M&E) maintenance)",
+          "new build, extensions, demolition and capital projects (construction and capital works)"
+        ]
+      },
+      {
+        "name": "grounds maintenance",
+        "includes": [
+          "grass cutting, shrub and hedge maintenance, weed control",
+          "maintenance of grounds, parks and green spaces"
+        ],
+        "excludes": []
+      },
+      {
+        "name": "integrated facilities management",
+        "includes": [
+          "one contract combining several FM services, such as cleaning, security and maintenance"
+        ],
+        "excludes": []
+      }
     ],
     "excluded_services": [
-      "clinical or hospital cleaning",
-      "specialist equipment decontamination",
-      "specialist mechanical and electrical (M&E) maintenance",
-      "construction and capital works",
-      "catering",
-      "IT services"
+      {
+        "name": "clinical or hospital cleaning",
+        "includes": [
+          "cleaning of hospital wards, theatres and other clinical areas"
+        ],
+        "excludes": []
+      },
+      {
+        "name": "specialist equipment decontamination",
+        "includes": [
+          "cleaning and decontamination of medical, community care or laboratory equipment"
+        ],
+        "excludes": []
+      },
+      {
+        "name": "specialist mechanical and electrical (M&E) maintenance",
+        "includes": [
+          "HVAC, air conditioning and ventilation systems",
+          "gas, boilers and heating systems",
+          "lifts and escalators",
+          "fire alarms, sprinklers and fire suppression systems"
+        ],
+        "excludes": [
+          "general electrical maintenance and testing (planned and reactive building maintenance)"
+        ]
+      },
+      {
+        "name": "construction and capital works",
+        "includes": [
+          "new build, extensions, demolition, major refurbishment and other capital projects"
+        ],
+        "excludes": [
+          "minor works within a repairs or maintenance contract (planned and reactive building maintenance)"
+        ]
+      },
+      {
+        "name": "catering",
+        "includes": [],
+        "excludes": []
+      },
+      {
+        "name": "IT services",
+        "includes": [
+          "cyber security, software and IT support"
+        ],
+        "excludes": []
+      }
     ],
     "region_nuts_codes": [
       "UKC",
