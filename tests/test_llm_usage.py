@@ -3,10 +3,19 @@
 import json
 
 import pytest
+from pydantic import BaseModel
 
 from app import llm
 from app.llm import BudgetExceeded, LLMError, Usage, call_cost, complete_json, estimate_cost
-from app.pipeline import ExampleFields
+
+pytestmark = pytest.mark.usefixtures("test_prompts")
+
+
+class ExampleFields(BaseModel):
+    organisation: str | None
+    amount_gbp: float | None
+    deadline: str | None
+
 
 VALID = json.dumps({"organisation": "X", "amount_gbp": 1, "deadline": None})
 INVALID = "no json here"
@@ -14,9 +23,7 @@ ONE_CALL_USD = 0.003  # FakeLLM: 1000 tokens at $1/M in + 200 tokens at $10/M ou
 
 
 def run(fake_llm, usage, text="Some text"):
-    return complete_json(
-        "example_extract", ExampleFields, provider=fake_llm, usage=usage, text=text
-    )
+    return complete_json("fields", ExampleFields, provider=fake_llm, usage=usage, text=text)
 
 
 def first_attempt_estimate(fake_llm):

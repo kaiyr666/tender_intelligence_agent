@@ -1,9 +1,22 @@
 import json
 
 import pytest
+from pydantic import BaseModel
 
 from app import llm
-from app.pipeline import ExampleFields, extract_fields
+
+pytestmark = pytest.mark.usefixtures("test_prompts")
+
+
+class ExampleFields(BaseModel):
+    organisation: str | None
+    amount_gbp: float | None
+    deadline: str | None
+
+
+def extract_fields(text: str, provider) -> ExampleFields:
+    return llm.complete_json("fields", ExampleFields, provider=provider, text=text)
+
 
 VALID = json.dumps({"organisation": "Leeds City Council", "amount_gbp": 250000, "deadline": None})
 

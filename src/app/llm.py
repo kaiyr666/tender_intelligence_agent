@@ -6,7 +6,7 @@ one-line change in .env.
 
 Usage:
     usage = Usage(budget_usd=2.0)
-    fields = complete_json("example_extract", ExampleFields, usage=usage, text=notice_text)
+    extraction = complete_json("extract", Extraction, usage=usage, **prompt_variables)
 
 Cost is controlled before a call, not after: each attempt first checks that a
 worst-case estimate of its cost still fits the budget.

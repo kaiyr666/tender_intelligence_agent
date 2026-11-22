@@ -1,5 +1,7 @@
 """Shared test fixtures. Tests never call a real LLM; they use FakeLLM."""
 
+from pathlib import Path
+
 import pytest
 
 from app.llm import Reply
@@ -36,6 +38,14 @@ class FakeLLM:
 @pytest.fixture
 def fake_llm() -> FakeLLM:
     return FakeLLM()
+
+
+@pytest.fixture
+def test_prompts(monkeypatch):
+    """Point llm.py at tests/fixtures/prompts, so its tests do not depend on the real prompts."""
+    import app.llm
+
+    monkeypatch.setattr(app.llm, "PROMPTS_DIR", Path(__file__).parent / "fixtures" / "prompts")
 
 
 @pytest.fixture(autouse=True)
