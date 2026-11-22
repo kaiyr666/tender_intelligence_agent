@@ -17,6 +17,7 @@ import pytest
 
 import app.__main__ as cli
 from app.fetch import API_URL, first_page_url
+from app.runs import load_run
 
 NOW = datetime(2026, 11, 16, 8, 0, tzinfo=UTC)
 DATE_FROM, DATE_TO = date(2026, 11, 9), date(2026, 11, 15)
@@ -141,6 +142,7 @@ def cli_run(tmp_path, monkeypatch, fake_llm):
     monkeypatch.setattr(cli, "DATA_DIR", tmp_path / "raw")
     monkeypatch.setattr(cli, "CACHE_DIR", tmp_path / "cache")
     monkeypatch.setattr(cli, "OUTPUT_DIR", tmp_path / "output")
+    monkeypatch.setattr(cli, "RUNS_DIR", tmp_path / "output" / "runs")
     argv = ["app", "--from", DATE_FROM.isoformat(), "--to", DATE_TO.isoformat()]
     monkeypatch.setattr(sys, "argv", argv)
 
@@ -205,3 +207,18 @@ def test_a_rerun_uses_cached_extractions(cli_run, fake_llm):
 
     assert len(fake_llm.calls) == 5  # the second run only writes the rationale again
     assert "## Shortlisted (1)" in report
+
+
+def test_a_run_also_saves_a_run_record_matching_the_csv(cli_run, fake_llm, tmp_path):
+    rationale = json.dumps({"rationale": RATIONALE})
+    fake_llm.reply_with(OFFICE_EXTRACTION, CATERING_EXTRACTION, OFFICE_EXTRACTION, rationale)
+
+    _, rows = cli_run(FakeApi())
+
+    saved = load_run(tmp_path / "output" / "runs" / "2026-11-09_2026-11-15.json")
+    assert [(n.notice_id, n.outcome) for n in saved.notices] == [
+        (r["notice_id"], r["outcome"]) for r in rows
+    ]
+    assert saved.notices[0].rationale == RATIONALE
+    assert (saved.model, saved.generated_at) == (fake_llm.model, NOW)
+    assert (saved.tender_count, saved.prefilter_kept, saved.planning_count) == (4, 3, 1)

@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-11-09_2026-11-15",
+  "date_from": "2026-11-09",
+  "date_to": "2026-11-15",
+  "generated_at": "2026-11-16T09:30:00Z",
+  "model": "test-model",
+  "tender_count": 463,
+  "prefilter_kept": 5,
+  "planning_count": 12,
+  "complete": true,
+  "problem": null,
+  "llm_calls": 7,
+  "cost_usd": 0.0412,
+  "profile": {
+    "offered_services": [
+      "office and commercial cleaning",
+      "manned guarding and security",
+      "planned and reactive building maintenance",
+      "grounds maintenance",
+      "integrated facilities management"
+    ],
+    "excluded_services": [
+      "clinical or hospital cleaning",
+      "specialist equipment decontamination",
+      "specialist mechanical and electrical (M&E) maintenance",
+      "construction and capital works",
+      "catering",
+      "IT services"
+    ],
+    "region_nuts_codes": [
+      "UKC",
+      "UKD",
+      "UKE"
+    ],
+    "value_min_gbp": 100000.0,
+    "value_max_gbp": 5000000.0,
+    "accreditations_held": [
+      "ISO 9001",
+      "ISO 14001",
+      "Cyber Essentials",
+      "SafeContractor",
+      "SIA Approved Contractor"
+    ],
+    "mobilisation_min_weeks": 8,
+    "deadline_min_days": 14,
+    "weights": {
+      "service": 0.35,
+      "region": 0.2,
+      "value": 0.15,
+      "accreditations": 0.1,
+      "mobilisation": 0.1,
+      "deadline": 0.1
+    },
+    "shortlist_threshold": 0.6
+  },
+  "notices": [
+    {
+      "notice_id": "100002-2026",
+      "ocid": "ocds-test-2",
+      "title": "=HYPERLINK(\"x\") Cleaning | Leeds offices",
+      "buyer": "Buyer 2",
+      "url": "https://www.find-tender.service.gov.uk/Notice/100002-2026",
+      "published": "2026-11-12T00:00:00Z",
+      "deadline": "2026-12-04T12:00:00Z",
+      "value_gbp": 250000.0,
+      "regions": [],
+      "cpv_codes": [
+        "90910000"
+      ],
+      "description": "Not shown in the report.",
+      "outcome": "shortlisted",
+      "reason": "Lot 1: Offices | north scores 0.95 (threshold 0.60)",
+      "rank": 1,
+      "score": 0.95,
+      "best_lot_id": "1",
+      "lots": [
+        {
+          "lot_id": "1",
+          "lot_name": "Lot 1: Offices | north",
+          "status": "eligible",
+          "reasons": [],
+          "score": 0.95,
+          "criteria": [
+            {
+              "name": "service",
+              "weight": 0.35,
+              "score": 1.0,
+              "reason": "main service is office and commercial cleaning"
+            },
+            {
+              "name": "region",
+              "weight": 0.2,
+              "score": 1.0,
+              "reason": "in region (UKE, from delivery address)"
+            },
+            {
+              "name": "value",
+              "weight": 0.15,
+              "score": 1.0,
+              "reason": "£250,000 is in the value band"
+            },
+            {
+              "name": "accreditations",
+              "weight": 0.1,
+              "score": 1.0,
+              "reason": "no preferred accreditations listed"
+            },
+            {
+              "name": "mobilisation",
+              "weight": 0.1,
+              "score": 0.5,
+              "reason": "mobilisation time not stated"
+            },
+            {
+              "name": "deadline",
+              "weight": 0.1,
+              "score": 1.0,
+              "reason": "18 days to respond (needs 14)"
+            }
+          ]
+        },
+        {
+          "lot_id": "2",
+          "lot_name": "Lot 2: Wards",
+          "status": "gated",
+          "reasons": [
+            "main service is clinical cleaning"
+          ],
+          "score": 0.4,
+          "criteria": [
+            {
+              "name": "service",
+              "weight": 0.35,
+              "score": 1.0,
+              "reason": "main service is office and commercial cleaning"
+            },
+            {
+              "name": "region",
+              "weight": 0.2,
+              "score": 1.0,
+              "reason": "in region (UKE, from delivery address)"
+            },
+            {
+              "name": "value",
+              "weight": 0.15,
+              "score": 1.0,
+              "reason": "£250,000 is in the value band"
+            },
+            {
+              "name": "accreditations",
+              "weight": 0.1,
+              "score": 1.0,
+              "reason": "no preferred accreditations listed"
+            },
+            {
+              "name": "mobilisation",
+              "weight": 0.1,
+              "score": 0.5,
+              "reason": "mobilisation time not stated"
+            },
+            {
+              "name": "deadline",
+              "weight": 0.1,
+              "score": 1.0,
+              "reason": "18 days to respond (needs 14)"
+            }
+          ]
+        }
+      ],
+      "red_flags": [
+        {
+          "kind": "tupe",
+          "quote": "TUPE applies"
+        }
+      ],
+      "rationale": "Office cleaning in Leeds | in the value band. TUPE applies."
+    },
+    {
+      "notice_id": "100001-2026",
+      "ocid": "ocds-test-1",
+      "title": "Security guarding, Hull",
+      "buyer": "Buyer 1",
+      "url": "https://www.find-tender.service.gov.uk/Notice/100001-2026",
+      "published": "2026-11-12T00:00:00Z",
+      "deadline": "2026-12-04T12:00:00Z",
+      "value_gbp": 6000000.0,
+      "regions": [],
+      "cpv_codes": [
+        "90910000"
+      ],
+      "description": "Not shown in the report.",
+      "outcome": "shortlisted",
+      "reason": "whole notice scores 0.85 (threshold 0.60)",
+      "rank": 2,
+      "score": 0.85,
+      "best_lot_id": "whole",
+      "lots": [
+        {
+          "lot_id": "whole",
+          "lot_name": "whole notice",
+          "status": "eligible",
+          "reasons": [],
+          "score": 0.85,
+          "criteria": [
+            {
+              "name": "service",
+              "weight": 0.35,
+              "score": 1.0,
+              "reason": "main service is office and commercial cleaning"
+            },
+            {
+              "name": "region",
+              "weight": 0.2,
+              "score": 1.0,
+              "reason": "in region (UKE, from delivery address)"
+            },
+            {
+              "name": "value",
+              "weight": 0.15,
+              "score": 0.3,
+              "reason": "£6,000,000 is over £5,000,000"
+            },
+            {
+              "name": "accreditations",
+              "weight": 0.1,
+              "score": 1.0,
+              "reason": "no preferred accreditations listed"
+            },
+            {
+              "name": "mobilisation",
+              "weight": 0.1,
+              "score": 0.5,
+              "reason": "mobilisation time not stated"
+            },
+            {
+              "name": "deadline",
+              "weight": 0.1,
+              "score": 1.0,
+              "reason": "18 days to respond (needs 14)"
+            }
+          ]
+        }
+      ],
+      "red_flags": [],
+      "rationale": "Guarding in Hull, in region. <b>Value</b> is over the band."
+    },
+    {
+      "notice_id": "100003-2026",
+      "ocid": "ocds-test-3",
+      "title": "Maintenance framework",
+      "buyer": "Buyer 3",
+      "url": "https://www.find-tender.service.gov.uk/Notice/100003-2026",
+      "published": "2026-11-12T00:00:00Z",
+      "deadline": null,
+      "value_gbp": null,
+      "regions": [],
+      "cpv_codes": [
+        "90910000"
+      ],
+      "description": "Not shown in the report.",
+      "outcome": "rejected",
+      "reason": "requires CHAS, which the company does not hold",
+      "rank": null,
+      "score": null,
+      "best_lot_id": null,
+      "lots": [
+        {
+          "lot_id": "whole",
+          "lot_name": "whole notice",
+          "status": "gated",
+          "reasons": [
+            "requires CHAS"
+          ],
+          "score": 0.6,
+          "criteria": [
+            {
+              "name": "service",
+              "weight": 0.35,
+              "score": 1.0,
+              "reason": "main service is office and commercial cleaning"
+            },
+            {
+              "name": "region",
+              "weight": 0.2,
+              "score": 1.0,
+              "reason": "in region (UKE, from delivery address)"
+            },
+            {
+              "name": "value",
+              "weight": 0.15,
+              "score": 1.0,
+              "reason": "£250,000 is in the value band"
+            },
+            {
+              "name": "accreditations",
+              "weight": 0.1,
+              "score": 1.0,
+              "reason": "no preferred accreditations listed"
+            },
+            {
+              "name": "mobilisation",
+              "weight": 0.1,
+              "score": 0.5,
+              "reason": "mobilisation time not stated"
+            },
+            {
+              "name": "deadline",
+              "weight": 0.1,
+              "score": 1.0,
+              "reason": "18 days to respond (needs 14)"
+            }
+          ]
+        }
+      ],
+      "red_flags": [],
+      "rationale": null
+    },
+    {
+      "notice_id": "100004-2026",
+      "ocid": "ocds-test-4",
+      "title": "Hospital cleaning",
+      "buyer": "Buyer 4",
+      "url": "https://www.find-tender.service.gov.uk/Notice/100004-2026",
+      "published": "2026-11-12T00:00:00Z",
+      "deadline": "2026-12-04T12:00:00Z",
+      "value_gbp": 250000.0,
+      "regions": [],
+      "cpv_codes": [
+        "90910000"
+      ],
+      "description": "Not shown in the report.",
+      "outcome": "needs review",
+      "reason": "the extraction failed: the model did not return valid output",
+      "rank": null,
+      "score": null,
+      "best_lot_id": null,
+      "lots": [],
+      "red_flags": [],
+      "rationale": null
+    },
+    {
+      "notice_id": "100005-2026",
+      "ocid": "ocds-test-5",
+      "title": "Caretaking",
+      "buyer": "Buyer 5",
+      "url": "https://www.find-tender.service.gov.uk/Notice/100005-2026",
+      "published": "2026-11-12T00:00:00Z",
+      "deadline": "2026-12-04T12:00:00Z",
+      "value_gbp": 250000.0,
+      "regions": [],
+      "cpv_codes": [
+        "90910000"
+      ],
+      "description": "Not shown in the report.",
+      "outcome": "not processed",
+      "reason": "the LLM budget was reached before this notice",
+      "rank": null,
+      "score": null,
+      "best_lot_id": null,
+      "lots": [],
+      "red_flags": [],
+      "rationale": null
+    }
+  ]
+}

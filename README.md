@@ -13,7 +13,8 @@ A command-line tool the bid team runs once a week. For a date range (by default 
 - has the LLM read each remaining notice once, lot by lot: services and the main service, region, contract length, mobilisation, mandatory accreditations and red flags, with a quote from the notice for the fields that can reject a lot;
 - gates and scores every lot in code against `config/profile.toml` and keeps the best eligible lot per notice;
 - has the LLM write a two-to-three-sentence rationale for each shortlisted notice from the scored fields only;
-- writes `output/report.md` (shortlisted, rejected, needs review, not processed, with cost, planning count and OGL attribution) and `output/shortlist.csv` (every assessed notice and its outcome).
+- writes `output/report.md` (shortlisted, rejected, needs review, not processed, with cost, planning count and OGL attribution) and `output/shortlist.csv` (every assessed notice and its outcome);
+- saves the whole run as one validated JSON file, `output/runs/<from>_<to>.json`: the run summary, a snapshot of the profile, and every assessed notice with its lots, criteria, reasons, red flags and rationale (D37). The planned web view and MCP server read only this file.
 
 Screening for another company means editing `config/profile.toml` (services with what they include and exclude, CPV codes, regions, accreditations held, weights, threshold), not the code. The eval harness (`evals/run.py`) and the blind-screen tool (`evals/blind.py`) are in `evals/`. Out of scope, and why: `docs/SPEC.md`.
 
@@ -26,7 +27,7 @@ uv run python -m app                                   # last full Monday–Sund
 uv run python -m app --from 2026-11-09 --to 2026-11-15 # any range, both dates inclusive
 ```
 With an OpenAI key, `.env` needs `OPENAI_API_KEY`, `LLM_PROVIDER=openai`, `LLM_MODEL=<model>`, and the model's price in USD per million tokens as `LLM_INPUT_USD_PER_MTOK` and `LLM_OUTPUT_USD_PER_MTOK`. The run refuses to start without a price, because the budget (`LLM_BUDGET_USD`, default 2.50) needs it. Claude works too: `LLM_PROVIDER=anthropic` and `ANTHROPIC_API_KEY`.
-A week takes about 3 minutes to fetch and, read from scratch, an estimated $0.60 in LLM calls (122 notices at about $0.005 each; the measured 9–15 Nov run paid $0.29 for the 62 notices not yet cached). Deadlines in the report and CSV are in UTC. The run writes `output/report.md` and `output/shortlist.csv` (git-ignored). Extractions are cached in `data/cache/`, so a second run of the same week makes no extraction calls.
+A week takes about 3 minutes to fetch and, read from scratch, an estimated $0.60 in LLM calls (122 notices at about $0.005 each; the measured 9–15 Nov run paid $0.29 for the 62 notices not yet cached). Deadlines in the report and CSV are in UTC. The run writes `output/report.md`, `output/shortlist.csv` and `output/runs/<from>_<to>.json` (all git-ignored); a second run of the same week replaces its run file. `examples/runs/` holds one committed run (9–15 Nov) so the views can be tried without an API key. Extractions are cached in `data/cache/`, so a second run of the same week makes no extraction calls.
 
 Tests: `uv run pytest` · Eval: `uv run python -m evals.run`. Neither needs an API key or the network: the eval reads committed extractions.
 
@@ -88,6 +89,9 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 - **The budget stops early rather than late.** Each call is checked against its worst case (full output allowance), so a run can stop with up to one call's maximum unspent.
 - **Rationales are not checked in code.** The prompt gets only scored fields (D23) and the real week's 28 rationales matched them, but nothing verifies a number or place in the text. They also mostly restate the score breakdown.
 - **Rationales are not cached.** Every run pays for them again (about $0.03 for a week).
+- **A run file is only as fresh as its run.** Deadlines and the "closed" pre-filter are judged at the run date, so the committed 9–15 Nov example (run on 22 Nov) leaves out notices that closed between 15 and 22 Nov and differs from the report of a run on 16 Nov. An amended notice is re-read on the next run, so an old run file and a new one can disagree.
+- **Run files hold notice text.** Titles, descriptions and quotes are stored as fetched, with emails and phone numbers masked (D14); a name written into a description stays, as in `data/raw/`. `output/` is git-ignored; the committed example was checked by the human first.
+- **A schema change makes old run files unreadable.** A file with another `schema_version` is refused with an error naming the file, and has to be recreated by running that week again; there is no migration.
 - **Scottish notices link to the Public Contracts Scotland API,** not a page a person can read, because that is the URL the source data gives.
 - **The report shows the notice's total value,** not the best lot's; the lot's value is in the score breakdown.
 - **Most scoring numbers are still first guesses** (unknown = 0.5, over £5m = 0.3, minor excluded service −0.25, the weights). Only the threshold (0.70) was set on the eval, and the eval is too small to tune the rest.

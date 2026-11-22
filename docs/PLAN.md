@@ -46,7 +46,7 @@ Rules for every slice below:
 - All text from notices or from the LLM (titles, buyers, descriptions, lot names, quotes, reasons, rationales) is untrusted: escaped in HTML, labelled as data for the MCP client.
 - Each slice ends as `CLAUDE.md` says: tests and `ruff check --no-cache .` pass, this plan ticked, decisions and "Where it breaks" updated, one commit `slice N: <what>`, pushed, CI checked.
 
-- [ ] **Slice 6: Run record** (~1 h). Depends on: nothing.
+- [x] **Slice 6: Run record** (~1 h). Depends on: nothing. Done on 22 Nov, within D37. Every CLI run writes `output/runs/<from>_<to>.json`. The fixture and the human-checked example `examples/runs/2026-11-09_2026-11-15.json` both load. The example's run on 22 Nov read all 122 notices from the cache and cost $0.01 for rationales, with the same 7 shortlisted. `report.md` and `shortlist.csv` are unchanged. `load_run` also refuses a `run_id` that is not the file's two dates, so a run ID can never become a path like `../`.
   - Goal: each run saves its results as one validated JSON file that the web view and the MCP server can read without the pipeline.
   - Build `src/app/runs.py`:
     - `RUN_SCHEMA_VERSION = 1`; `RUNS_DIR = OUTPUT_DIR / "runs"`; run IDs are `YYYY-MM-DD_YYYY-MM-DD` (from, to), checked with a regex wherever an ID comes from outside.
