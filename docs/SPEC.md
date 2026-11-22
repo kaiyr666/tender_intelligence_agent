@@ -56,4 +56,4 @@ The bid team, once a week. They run the tool for the last full week and open a M
 - Region comes from NUTS codes in delivery addresses when present (code), and from the text via the LLM otherwise. "North" means NUTS UKC, UKD and UKE.
 - A national contract counts only through a lot in the North; a UK-wide lot with no regional split is rejected, as the brief says.
 - "New" means updated in the date range, so a notice amended this week appears again.
-- The demo uses the most recent full Monday–Sunday week.
+- The demo uses the most recent full Monday–Sunday week. Exception: the 23 Nov demo uses 16–21 Nov, Monday to Saturday, because it was run on the Sunday (D40).

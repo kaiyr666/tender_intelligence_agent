@@ -1,6 +1,6 @@
 # Demo script, 23 Nov
 
-Both views read the committed runs in `examples/runs/`, so nothing on the call needs the API key, the LLM or Find a Tender. A live run takes about 15 minutes; do not start one on the call.
+Both views read the committed runs in `examples/runs/`, so nothing on the call needs the screening API key, the screening LLM or Find a Tender. Claude Desktop itself is an LLM service: if it is down, show the pre-rendered page and the written answers below. A live run takes about 16 minutes; do not start one on the call.
 
 ## Before the call
 1. Render the page: `uv run python -m app.html_report examples/runs/2026-11-16_2026-11-21.json`, then open `output/report_2026-11-16_2026-11-21.html`.
@@ -11,7 +11,7 @@ Both views read the committed runs in `examples/runs/`, so nothing on the call n
 16–21 Nov (Monday to Saturday; D40), run on 22 Nov, unlabelled. 489 tender notices, 125 kept by the pre-filter and read by the LLM, 8 shortlisted, 117 rejected, none needing review, $0.61. Rejections: 101 on region (85 out of region, 7 UK-wide, 5 partly outside the North, 4 not stated), 9 construction, 2 specialist M&E, 1 missing accreditation, 4 below the threshold.
 
 ## Questions and the rehearsal's answers
-Rehearsed on 22 Nov with headless Claude Code (`claude -p`) over the MCP server; every answer matched `output/report.md`.
+Rehearsed on 22 Nov with headless Claude Code (`claude -p`) over the MCP server. Every answer matched the run file (`examples/runs/2026-11-16_2026-11-21.json`). The shortlist and 109921's region rejection also appear in that run's `report.md`. The 0.75 score without the region gate and the TUPE flags on rejected notices appear only in the run file, so only the MCP server shows them; the web view lists rejected notices with their reason alone. The hard-gate rules in answer 4 come from the `get_profile` tool's description.
 
 1. **What is on this week's shortlist, and why is the top one ranked first?** Eight notices: Port of Workington security, Kirklees electrical works (lot 2), Durham window cleaning, ACIS communal cleaning (lot 2) and WYFRA grounds maintenance at 0.95; Habinteg communal cleaning 0.92; L&Q reactive repairs NW North 0.88; NEPO retrofit 0.84. The assistant said Workington is first only because it was read first: five notices tie at 0.95 and ties are not broken. *Weak:* the honest answer to "why first" is "no reason". Say so before the client asks.
 2. **Why was 109921-2026 rejected?** THEP schools cleaning: the delivery address is in Inner London East, so the region gate rejects it; without the gate it would have scored 0.75. It also carries a TUPE flag.
@@ -26,4 +26,5 @@ Rehearsed on 22 Nov with headless Claude Code (`claude -p`) over the MCP server;
 
 ## Fallbacks
 - Claude Desktop cannot connect: show the web view, and run `uv run pytest tests/test_mcp_server.py` (it includes the protocol over real stdio).
+- Claude itself is unavailable: show the pre-rendered page and read the answers above.
 - The 16–21 Nov file fails to load: use the 9–15 Nov example (`examples/runs/2026-11-09_2026-11-15.json`), which the README's questions also cover.
