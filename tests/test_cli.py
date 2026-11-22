@@ -222,3 +222,14 @@ def test_a_run_also_saves_a_run_record_matching_the_csv(cli_run, fake_llm, tmp_p
     assert saved.notices[0].rationale == RATIONALE
     assert (saved.model, saved.generated_at) == (fake_llm.model, NOW)
     assert (saved.tender_count, saved.prefilter_kept, saved.planning_count) == (4, 3, 1)
+
+
+def test_a_run_also_writes_the_web_page(cli_run, fake_llm, tmp_path):
+    rationale = json.dumps({"rationale": RATIONALE})
+    fake_llm.reply_with(OFFICE_EXTRACTION, CATERING_EXTRACTION, OFFICE_EXTRACTION, rationale)
+
+    cli_run(FakeApi())
+
+    page = (tmp_path / "output" / "report.html").read_text(encoding="utf-8")
+    assert "Shortlisted (1)" in page
+    assert "Office cleaning, Leeds" in page

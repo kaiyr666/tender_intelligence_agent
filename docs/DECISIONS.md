@@ -241,6 +241,13 @@
 - **Cost:** 17 more packages in the lock file (among them starlette, uvicorn, cryptography and jsonschema), mostly for HTTP transports the server does not use.
 - **Revisit if:** Claude Desktop or Claude Code cannot connect to a 2.x server; then pin `mcp<2` and switch to `FastMCP`.
 
+## D39: The web view is a quiet Swiss-style report page with system fonts
+- **Chose:** a minimal, light-first page in the "Minimalism & Swiss" style the `ui-ux-pro-max` design pass returned for a data-dense B2B report: one navy accent (#1e40af), slate text, amber only for red-flag chips and red only for the INCOMPLETE banner, a dark scheme from `prefers-color-scheme`. System font stack, 16 px base, a 1.75 / 1.25 / 1.06 / 0.94 rem heading scale and tabular numbers. Shortlisted notices are cards with a bullet bar (fill = score, tick = threshold, both also written as numbers); the other groups are tables that stack into labelled rows under 640 px. The score breakdown sits in `<details>`, so the page works without JavaScript; the script only switches groups and filters tables, through `hidden` and `textContent`. Lot status is shown as the record names it ("gated").
+- **Alternatives:** the design pass's own font pairing (Fira Code and Fira Sans from Google Fonts) and GSAP list motion, both ruled out because the page must make no outside requests and needs no motion; a dashboard style with KPI tiles and charts, which spends the page on decoration for a list of 5 to 30 notices; one big table like the CSV, which has no room for the rationale; a red-to-green gauge per score, which leans on colour (the design pass's own chart guidance prefers a bullet bar with the number beside it).
+- **Why:** the bid team reads a ranked list and decides what to open, so hierarchy and scanning matter more than visuals. A single file with no network opens offline, on a call, or as an attachment, and cannot leak that someone opened it. Escaping every string and never writing HTML from the script keeps planted notice text inert.
+- **Cost:** system fonts look slightly different on Windows, macOS and phones. The score bar's track is a low-contrast shape in dark mode; the number and threshold beside it carry the meaning. No sorting or column choice: the table order is the report's.
+- **Revisit if:** the team wants to act on the page (bid/no-bid, notes): that needs a server (D36's "Revisit if").
+
 <!--
 Template:
 ## Dn: <decision>

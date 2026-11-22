@@ -14,7 +14,8 @@ A command-line tool the bid team runs once a week. For a date range (by default 
 - gates and scores every lot in code against `config/profile.toml` and keeps the best eligible lot per notice;
 - has the LLM write a two-to-three-sentence rationale for each shortlisted notice from the scored fields only;
 - writes `output/report.md` (shortlisted, rejected, needs review, not processed, with cost, planning count and OGL attribution) and `output/shortlist.csv` (every assessed notice and its outcome);
-- saves the whole run as one validated JSON file, `output/runs/<from>_<to>.json`: the run summary, a snapshot of the profile, and every assessed notice with its lots, criteria, reasons, red flags and rationale (D37). The web view (planned) and the MCP server read only this file;
+- saves the whole run as one validated JSON file, `output/runs/<from>_<to>.json`: the run summary, a snapshot of the profile, and every assessed notice with its lots, criteria, reasons, red flags and rationale (D37). The web view and the MCP server read only this file;
+- writes `output/report.html`, a self-contained page of the same run for the bid team (`src/app/html_report.py`, D39): see "Read it in a browser" below;
 - answers an AI assistant's questions about any saved run through a read-only MCP server (`src/app/mcp_server.py`, D36, D38): see "Ask an AI assistant" below.
 
 Screening for another company means editing `config/profile.toml` (services with what they include and exclude, CPV codes, regions, accreditations held, weights, threshold), not the code. The eval harness (`evals/run.py`) and the blind-screen tool (`evals/blind.py`) are in `evals/`. Out of scope, and why: `docs/SPEC.md`.
@@ -28,9 +29,17 @@ uv run python -m app                                   # last full Monday–Sund
 uv run python -m app --from 2026-11-09 --to 2026-11-15 # any range, both dates inclusive
 ```
 With an OpenAI key, `.env` needs `OPENAI_API_KEY`, `LLM_PROVIDER=openai`, `LLM_MODEL=<model>`, and the model's price in USD per million tokens as `LLM_INPUT_USD_PER_MTOK` and `LLM_OUTPUT_USD_PER_MTOK`. The run refuses to start without a price, because the budget (`LLM_BUDGET_USD`, default 2.50) needs it. Claude works too: `LLM_PROVIDER=anthropic` and `ANTHROPIC_API_KEY`.
-A week takes about 3 minutes to fetch and, read from scratch, an estimated $0.60 in LLM calls (122 notices at about $0.005 each; the measured 9–15 Nov run paid $0.29 for the 62 notices not yet cached). Deadlines in the report and CSV are in UTC. The run writes `output/report.md`, `output/shortlist.csv` and `output/runs/<from>_<to>.json` (all git-ignored); a second run of the same week replaces its run file. `examples/runs/` holds one committed run (9–15 Nov) so the views can be tried without an API key. Extractions are cached in `data/cache/`, so a second run of the same week makes no extraction calls.
+A week takes about 3 minutes to fetch and, read from scratch, an estimated $0.60 in LLM calls (122 notices at about $0.005 each; the measured 9–15 Nov run paid $0.29 for the 62 notices not yet cached). Deadlines in the report and CSV are in UTC. The run writes `output/report.md`, `output/shortlist.csv`, `output/report.html` and `output/runs/<from>_<to>.json` (all git-ignored); a second run of the same week replaces its run file. `examples/runs/` holds one committed run (9–15 Nov) so the views can be tried without an API key. Extractions are cached in `data/cache/`, so a second run of the same week makes no extraction calls.
 
 Tests: `uv run pytest` · Eval: `uv run python -m evals.run`. Neither needs an API key or the network: the eval reads committed extractions.
+
+### Read it in a browser (web view)
+Each run writes `output/report.html`. Any saved run can be rendered again, including the committed example from a fresh clone with no API key:
+```bash
+uv run python -m app.html_report examples/runs/2026-11-09_2026-11-15.json   # writes output/report_2026-11-09_2026-11-15.html
+uv run python -m app.html_report <run.json> --out somewhere.html
+```
+The page is one file with no outside requests (inline CSS and script, system fonts), so it opens offline or as an email attachment. It shows the funnel (fetched, kept, shortlisted), a card per shortlisted notice with its score against the threshold, deadline and days left, red flags, rationale and a folded score breakdown, the other three groups as filterable tables, and what the profile screens for. It works without JavaScript (every group is shown); the script only switches groups and filters tables. It follows the system's dark mode and prints without its controls.
 
 ### Ask an AI assistant (MCP server)
 `uv run python -m app.mcp_server` starts a local, read-only MCP server over stdio. It reads the run files in `output/runs/`, or another folder with `--runs-dir` (`examples/runs` works from a fresh clone, with no API key). It has five tools: `list_runs` lists the saved runs, and `shortlist`, `get_tender`, `search_tenders` and `get_profile` each take a `run_id` from it, defaulting to the newest readable run. It makes no LLM or network calls and writes nothing.
@@ -125,6 +134,9 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 - **The assistant reads notice text.** Titles, descriptions, quotes and rationales reach it as tool output. The server labels them as data, not instructions, but cannot stop a client from following text planted in a notice. The server itself cannot write or send anything, but the assistant reading its output may have other tools that can, so what planted text could do depends on the client's other tools and permissions (review 06). Connect it to an assistant with only read tools, or one that asks before it writes or sends.
 - **Scottish notices link to the Public Contracts Scotland API,** not a page a person can read, because that is the URL the source data gives.
 - **The report shows the notice's total value,** not the best lot's; the lot's value is in the score breakdown.
+- **The web view is a snapshot.** It is written from one run file, so it is as fresh as that run; days left are counted from the run's time, not today, so an old page can show a deadline as open that has since closed. It is read-only: no bid decisions, no re-run, no profile edits (D36).
+- **The web view's days left count calendar days in UTC.** A notice closing at 00:30 on Tuesday shows "1 day left" on a run made at 23:00 on Monday, and a run made on the deadline day after the deadline still shows "closes today".
+- **The web view does not show the description or the CPV codes.** The page is for deciding which notices to open; the full notice is one click away on Find a Tender, and the MCP server's `get_tender` returns the description.
 - **Most scoring numbers are still first guesses** (unknown = 0.5, over £5m = 0.3, minor excluded service −0.25, the weights). Only the threshold (0.70) was set on the eval, and the eval is too small to tune the rest.
 
 ## Next steps (if this were a paid engagement)
@@ -134,7 +146,7 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 3. Apply the region gate in the pre-filter for notices with delivery addresses, so out-of-region notices cost no LLM call. Most of the reads D32 added are notices the region gate rejects anyway.
 4. If the pilot shows the team missing local northern contracts coded "all of England", switch the region rule to D34's option (a), which keeps 108109.
 5. Require supporting quotes for every extracted field, not only the gate fields.
-6. Incumbent lookup from award notices. (The MCP server is built; a read-only web view is planned as slice 8 in `docs/PLAN.md`, D36.)
+6. Incumbent lookup from award notices.
 
 ## How AI was used
 Built with Claude Code under a written spec, plan and decisions log. Codex reviewed the spec and plan twice before any code was written (`docs/reviews/`); the code itself had no Codex review. The log of what was delegated, what the tests and reviews caught, and what the human overruled is in [docs/AI_WORKFLOW.md](docs/AI_WORKFLOW.md).

@@ -76,7 +76,7 @@ Rules for every slice below:
   - Manual check: connect from Claude Desktop or Claude Code to `examples/runs` and ask why the top notice ranks first and why a named notice was rejected; the answers must match the report.
   - Done when: the tests pass, the manual check works, and the tool list matches this plan.
 
-- [ ] **Slice 8: Web view** (~3–4 h). Depends on: slice 6 (not 7).
+- [x] **Slice 8: Web view** (~3–4 h). Depends on: slice 6 (not 7). Done on 22 Nov, D39. `uv run python -m app.html_report examples/runs/2026-11-09_2026-11-15.json` renders the example; every CLI run also writes `output/report.html`. 70 tests in `tests/test_html_report.py` (written first, by the `test-writer` agent) and one CLI test; 557 in all. Checked by hand at 1280 px and 375 px, light and dark (dark through a copy with the dark colours forced on, since the browser pane renders local files light): no sideways scroll, group switching and the filter work, all text pairs at least 6.4:1. The human approved the screenshots.
   - Goal: a minimalist, polished page the bid team reads in minutes, opened from a file during the call.
   - Design pass first (~30 min) with the `ui-ux-pro-max` skill: pick a style, palette, type scale and UX checklist for a data-dense B2B list (a ranked shortlist with score bars). Record the choice and the rejected alternatives as D39. System fonts only, no web fonts, so the page needs no network.
   - Build `src/app/html_report.py`: `render_html(record: RunRecord) -> str` (pure) and `write_html(record, path)`. `__main__.py` also writes `output/report.html`; `uv run python -m app.html_report <run.json> [--out PATH]` renders any saved run (default `output/report_<run_id>.html`), so `examples/runs/` works from a fresh clone.

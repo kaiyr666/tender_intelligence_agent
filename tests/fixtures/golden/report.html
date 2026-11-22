@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Tender shortlist, 2026-11-09 to 2026-11-15</title>
+<style>
+:root{--bg:#f8fafc;--card:#fff;--text:#0f172a;--head:#1e3a8a;--muted:#475569;--line:#e2e8f0;
+--accent:#1e40af;--track:#e2e8f0;--fill:#1e40af;--tick:#0f172a;--chip-bg:#fef3c7;
+--chip-text:#92400e;--alert-bg:#fef2f2;--alert-line:#dc2626;--alert-text:#991b1b;
+--focus:#1e40af;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#111a2e;--text:#e2e8f0;
+--head:#bfdbfe;--muted:#a3b1c6;--line:#243049;--accent:#93c5fd;--track:#243049;--fill:#60a5fa;
+--tick:#f8fafc;--chip-bg:#422006;--chip-text:#fcd34d;--alert-bg:#2a0f12;--alert-line:#f87171;
+--alert-text:#fecaca;--focus:#93c5fd}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,
+"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-variant-numeric:tabular-nums}
+main,.page-head,.page-foot{max-width:60rem;margin:0 auto;padding:0 16px}
+h1,h2,h3,h4{color:var(--head);line-height:1.25;margin:0}
+h1{font-size:1.75rem}h2{font-size:1.25rem;margin:2rem 0 .5rem}h3{font-size:1.0625rem}
+h4{font-size:.9375rem;margin:1rem 0 .25rem}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--focus);
+outline-offset:2px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--card);padding:8px 12px}
+.skip:focus{left:16px;top:8px}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);
+white-space:nowrap}
+.page-head{padding-top:2rem;padding-bottom:1rem}
+.eyebrow{margin:0 0 .25rem;color:var(--muted);font-size:.875rem;text-transform:uppercase;
+letter-spacing:.04em}
+.meta,.muted{color:var(--muted)}.small{font-size:.875rem}
+.banner{border:1px solid var(--alert-line);border-left-width:6px;background:var(--alert-bg);
+color:var(--alert-text);padding:12px 16px;border-radius:6px;margin:0 0 1rem}
+.banner p,.banner ul{margin:0}.banner ul{padding-left:1.25rem}
+.funnel{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;list-style:none;padding:0;
+margin:0 0 .5rem}
+.funnel li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px}
+.funnel .num{display:block;font-size:1.75rem;font-weight:650;color:var(--head)}
+.groups ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:1.5rem 0 0}
+.groups a{display:inline-block;padding:10px 14px;border:1px solid var(--line);border-radius:999px;
+background:var(--card);text-decoration:none;min-height:44px}
+.groups a[aria-current=true]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;
+margin:12px 0}
+.card-head{display:flex;gap:12px;align-items:flex-start}
+.rank{flex:none;width:2rem;height:2rem;border-radius:50%;background:var(--accent);
+color:var(--bg);display:grid;place-items:center;font-weight:700}
+.buyer{margin:.125rem 0 0;color:var(--muted)}
+.score{display:flex;align-items:center;gap:12px;margin:12px 0}
+.score-num{font-size:1.5rem;font-weight:700;color:var(--head);min-width:3.2rem}
+.bar{position:relative;flex:1;height:10px;background:var(--track);border-radius:5px}
+.fill{position:absolute;inset:0 auto 0 0;background:var(--fill);border-radius:5px}
+.tick{position:absolute;top:-5px;bottom:-5px;width:2px;background:var(--tick)}
+.facts{margin:0;display:grid;gap:4px 16px;
+grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+.facts div{min-width:0}.facts dt{font-size:.8125rem;color:var(--muted)}.facts dd{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:12px 0 0}
+.chip{background:var(--chip-bg);color:var(--chip-text);font-size:.8125rem;font-weight:600;
+padding:2px 10px;border-radius:999px}
+.rationale{margin:12px 0}
+details{border-top:1px solid var(--line);padding-top:8px;margin-top:8px}
+summary{cursor:pointer;color:var(--accent);font-weight:600;padding:10px 0}
+.open{font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:.9375rem;background:var(--card)}
+th,td{text-align:left;vertical-align:top;padding:8px;border-bottom:1px solid var(--line)}
+th{font-size:.8125rem;color:var(--muted);font-weight:600}
+td{overflow-wrap:anywhere}.n{text-align:right;white-space:nowrap}
+table.criteria td{overflow-wrap:break-word}
+.filter{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 8px}
+.filter input{font:inherit;padding:8px 10px;min-height:44px;border:1px solid var(--muted);
+border-radius:6px;background:var(--card);color:var(--text);flex:1;min-width:12rem}
+.empty{color:var(--muted);font-style:italic}
+.profile-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.profile-grid h3{margin:.5rem 0}
+.plain{list-style:none;padding:0;margin:0}.plain li{margin:0 0 8px}
+.page-foot{margin-top:3rem;padding-top:1rem;padding-bottom:2rem;border-top:1px solid var(--line);
+color:var(--muted);font-size:.875rem}
+@media (max-width:640px){h1{font-size:1.375rem}
+.funnel{grid-template-columns:1fr}.funnel li{display:flex;align-items:baseline;gap:8px}
+.funnel .num{display:inline;font-size:1.25rem}
+table.criteria th,table.criteria td{padding:6px 4px;font-size:.875rem}
+table.stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+table.stack,table.stack tbody,table.stack tr,table.stack td{display:block;width:100%}
+table.stack tr{border-bottom:1px solid var(--line);padding:6px 0}
+table.stack td{border:0;padding:2px 8px;text-align:left}
+table.stack td::before{content:attr(data-label);display:block;font-size:.75rem;
+color:var(--muted)}}
+@media (prefers-reduced-motion:no-preference){.groups a,summary{transition:background .15s}}
+@media print{.skip,.groups,.filter{display:none!important}
+[data-group][hidden]{display:block!important}
+body{background:#fff;color:#000}.card{break-inside:avoid}
+details>*{display:block}}
+</style>
+</head>
+<body>
+<a class="skip" href="#shortlist">Skip to the shortlist</a>
+<header class="page-head"><p class="eyebrow">Tender Intelligence · weekly screen of Find a Tender</p><h1>Tender shortlist, 2026-11-09 to 2026-11-15</h1><p class="meta">Generated 2026-11-16 09:30 UTC · model test-model · results as of this time</p></header>
+<main>
+<div class="banner" role="alert"><p><strong>INCOMPLETE:</strong> this run is missing notices. Run the CLI again for this week.</p><ul><li>1 notice was not processed (the LLM budget was reached before this notice)</li></ul></div>
+<section class="summary" aria-labelledby="summary-h"><h2 id="summary-h" class="visually-hidden">Run summary</h2><ol class="funnel"><li><span class="num">463</span> <span>tender notices fetched</span></li><li><span class="num">5</span> <span>kept by the pre-filter (CPV code, value, deadline)</span></li><li><span class="num">2</span> <span>shortlisted</span></li></ol><p class="muted">Of those kept: rejected 1 · needs review 1 · not processed 1. 12 planning-stage notices (counted, not screened). LLM cost $0.04 (7 calls).</p></section>
+<nav class="groups" aria-label="Result groups"><ul><li><a href="#shortlist" data-group-tab>Shortlisted (2)</a></li><li><a href="#rejected" data-group-tab>Rejected (1)</a></li><li><a href="#needs-review" data-group-tab>Needs review (1)</a></li><li><a href="#not-processed" data-group-tab>Not processed (1)</a></li></ul></nav>
+<section id="shortlist" class="group" data-group aria-labelledby="shortlist-h"><h2 id="shortlist-h">Shortlisted (2)</h2><p class="muted">Each lot is scored 0 to 1 on six weighted criteria. A notice is shortlisted when its best eligible lot scores at least 0.60. Equal scores keep the order the notices were read in.</p><article class="card" id="n-100002-2026"><div class="card-head"><span class="rank" aria-label="Rank 1">1</span><div><h3>=HYPERLINK(&quot;x&quot;) Cleaning | Leeds offices</h3><p class="buyer">Buyer 2</p></div></div><div class="score"><span class="score-num">0.95</span><span class="bar" role="img" aria-label="Score 0.95 out of 1; shortlist threshold 0.60"><span class="fill" style="width:95%"></span><span class="tick" style="left:60%"></span></span><span class="muted small">threshold 0.60</span></div><dl class="facts"><div><dt>Best lot</dt><dd>Lot 1: Offices | north (of 2 lots)</dd></div><div><dt>Deadline</dt><dd>2026-12-04 12:00 UTC · 18 days left</dd></div><div><dt>Notice value</dt><dd>£250,000</dd></div></dl><ul class="chips" aria-label="Red flags"><li class="chip">TUPE</li></ul><p class="rationale">Office cleaning in Leeds | in the value band. TUPE applies.</p><details><summary>Score breakdown</summary><h4>Best lot: Lot 1: Offices | north</h4><table class="criteria"><thead><tr><th scope="col">Criterion</th><th scope="col" class="n">Weight</th><th scope="col" class="n">Score</th><th scope="col">Reason</th></tr></thead><tbody><tr><td data-label="Criterion">service</td><td data-label="Weight" class="n">0.35</td><td data-label="Score" class="n">1.00</td><td data-label="Reason">main service is office and commercial cleaning</td></tr><tr><td data-label="Criterion">region</td><td data-label="Weight" class="n">0.20</td><td data-label="Score" class="n">1.00</td><td data-label="Reason">in region (UKE, from delivery address)</td></tr><tr><td data-label="Criterion">value</td><td data-label="Weight" class="n">0.15</td><td data-label="Score" class="n">1.00</td><td data-label="Reason">£250,000 is in the value band</td></tr><tr><td data-label="Criterion">accreditations</td><td data-label="Weight" class="n">0.10</td><td data-label="Score" class="n">1.00</td><td data-label="Reason">no preferred accreditations listed</td></tr><tr><td data-label="Criterion">mobilisation</td><td data-label="Weight" class="n">0.10</td><td data-label="Score" class="n">0.50</td><td data-label="Reason">mobilisation time not stated</td></tr><tr><td data-label="Criterion">deadline</td><td data-label="Weight" class="n">0.10</td><td data-label="Score" class="n">1.00</td><td data-label="Reason">18 days to respond (needs 14)</td></tr></tbody></table><h4>Other lots</h4><ul><li><strong>Lot 2: Wards</strong>: gated, score 0.40 (main service is clinical cleaning)</li></ul><h4>Red flags in the notice</h4><ul><li>TUPE: <q>TUPE applies</q></li></ul></details><p><a class="open" href="https://www.find-tender.service.gov.uk/Notice/100002-2026">Open on Find a Tender<span class="visually-hidden"> (notice 100002-2026)</span></a></p></article><article class="card" id="n-100001-2026"><div class="card-head"><span class="rank" aria-label="Rank 2">2</span><div><h3>Security guarding, Hull</h3><p class="buyer">Buyer 1</p></div></div><div class="score"><span class="score-num">0.85</span><span class="bar" role="img" aria-label="Score 0.85 out of 1; shortlist threshold 0.60"><span class="fill" style="width:85%"></span><span class="tick" style="left:60%"></span></span><span class="muted small">threshold 0.60</span></div><dl class="facts"><div><dt>Deadline</dt><dd>2026-12-04 12:00 UTC · 18 days left</dd></div><div><dt>Notice value</dt><dd>£6,000,000</dd></div></dl><p class="rationale">Guarding in Hull, in region. &lt;b&gt;Value&lt;/b&gt; is over the band.</p><details><summary>Score breakdown</summary><h4>Best lot: whole notice</h4><table class="criteria"><thead><tr><th scope="col">Criterion</th><th scope="col" class="n">Weight</th><th scope="col" class="n">Score</th><th scope="col">Reason</th></tr></thead><tbody><tr><td data-label="Criterion">service</td><td data-label="Weight" class="n">0.35</td><td data-label="Score" class="n">1.00</td><td data-label="Reason">main service is office and commercial cleaning</td></tr><tr><td data-label="Criterion">region</td><td data-label="Weight" class="n">0.20</td><td data-label="Score" class="n">1.00</td><td data-label="Reason">in region (UKE, from delivery address)</td></tr><tr><td data-label="Criterion">value</td><td data-label="Weight" class="n">0.15</td><td data-label="Score" class="n">0.30</td><td data-label="Reason">£6,000,000 is over £5,000,000</td></tr><tr><td data-label="Criterion">accreditations</td><td data-label="Weight" class="n">0.10</td><td data-label="Score" class="n">1.00</td><td data-label="Reason">no preferred accreditations listed</td></tr><tr><td data-label="Criterion">mobilisation</td><td data-label="Weight" class="n">0.10</td><td data-label="Score" class="n">0.50</td><td data-label="Reason">mobilisation time not stated</td></tr><tr><td data-label="Criterion">deadline</td><td data-label="Weight" class="n">0.10</td><td data-label="Score" class="n">1.00</td><td data-label="Reason">18 days to respond (needs 14)</td></tr></tbody></table></details><p><a class="open" href="https://www.find-tender.service.gov.uk/Notice/100001-2026">Open on Find a Tender<span class="visually-hidden"> (notice 100001-2026)</span></a></p></article></section>
+<section id="rejected" class="group" data-group aria-labelledby="rejected-h"><h2 id="rejected-h">Rejected (1)</h2><div class="filter" hidden><label for="rejected-filter">Filter rejected</label><input type="search" id="rejected-filter" data-filter="rejected" autocomplete="off"><span class="muted small" aria-live="polite"></span></div><table class="stack"><thead><tr><th scope="col">Notice</th><th scope="col">Title</th><th scope="col">Reason</th></tr></thead><tbody><tr><td data-label="Notice"><a href="https://www.find-tender.service.gov.uk/Notice/100003-2026">100003-2026</a></td><td data-label="Title">Maintenance framework</td><td data-label="Reason">requires CHAS, which the company does not hold</td></tr></tbody></table></section>
+<section id="needs-review" class="group" data-group aria-labelledby="needs-review-h"><h2 id="needs-review-h">Needs review (1)</h2><div class="filter" hidden><label for="needs-review-filter">Filter needs review</label><input type="search" id="needs-review-filter" data-filter="needs-review" autocomplete="off"><span class="muted small" aria-live="polite"></span></div><table class="stack"><thead><tr><th scope="col">Notice</th><th scope="col">Title</th><th scope="col">Reason</th></tr></thead><tbody><tr><td data-label="Notice"><a href="https://www.find-tender.service.gov.uk/Notice/100004-2026">100004-2026</a></td><td data-label="Title">Hospital cleaning</td><td data-label="Reason">the extraction failed: the model did not return valid output</td></tr></tbody></table></section>
+<section id="not-processed" class="group" data-group aria-labelledby="not-processed-h"><h2 id="not-processed-h">Not processed (1)</h2><div class="filter" hidden><label for="not-processed-filter">Filter not processed</label><input type="search" id="not-processed-filter" data-filter="not-processed" autocomplete="off"><span class="muted small" aria-live="polite"></span></div><table class="stack"><thead><tr><th scope="col">Notice</th><th scope="col">Title</th><th scope="col">Reason</th></tr></thead><tbody><tr><td data-label="Notice"><a href="https://www.find-tender.service.gov.uk/Notice/100005-2026">100005-2026</a></td><td data-label="Title">Caretaking</td><td data-label="Reason">the LLM budget was reached before this notice</td></tr></tbody></table></section>
+<section class="profile" aria-labelledby="profile-h"><h2 id="profile-h">What we screen for</h2><p class="muted">The company profile as it was when this run was scored.</p><div class="profile-grid"><div><h3>Services offered</h3><ul class="plain"><li><strong>office and commercial cleaning</strong><br><span class='muted'>includes cleaning of offices, schools, public and commercial buildings; washrooms and communal areas; window and high-level cleaning; communal areas of residential blocks</span><br><span class='muted'>excludes clinical areas of hospitals (clinical or hospital cleaning); decontamination of medical or care equipment (specialist equipment decontamination)</span></li><li><strong>manned guarding and security</strong><br><span class='muted'>includes manned guarding and mobile patrols; key holding, alarm response and monitoring; reception, concierge and CCTV monitoring by security staff</span><br><span class='muted'>excludes cyber security (IT services)</span></li><li><strong>planned and reactive building maintenance</strong><br><span class='muted'>includes planned and reactive repairs to building fabric; minor works, joinery and carpentry, redecoration and painting; flooring, glazing, windows and doors, roofing repairs; drainage, fencing, handrails, scaffolding and other trade lots of a repairs or maintenance contract; general electrical maintenance and testing</span><br><span class='muted'>excludes HVAC, gas, heating, lifts and fire systems (specialist mechanical and electrical (M&amp;E) maintenance); new build, extensions, demolition and capital projects (construction and capital works)</span></li><li><strong>grounds maintenance</strong><br><span class='muted'>includes grass cutting, shrub and hedge maintenance, weed control; maintenance of grounds, parks and green spaces</span></li><li><strong>integrated facilities management</strong><br><span class='muted'>includes one contract combining several FM services, such as cleaning, security and maintenance</span></li></ul></div><div><h3>Services excluded</h3><ul class="plain"><li><strong>clinical or hospital cleaning</strong><br><span class='muted'>includes cleaning of hospital wards, theatres and other clinical areas</span></li><li><strong>specialist equipment decontamination</strong><br><span class='muted'>includes cleaning and decontamination of medical, community care or laboratory equipment</span></li><li><strong>specialist mechanical and electrical (M&amp;E) maintenance</strong><br><span class='muted'>includes HVAC, air conditioning and ventilation systems; gas, boilers and heating systems; lifts and escalators; fire alarms, sprinklers and fire suppression systems</span><br><span class='muted'>excludes general electrical maintenance and testing (planned and reactive building maintenance)</span></li><li><strong>construction and capital works</strong><br><span class='muted'>includes new build, extensions, demolition, major refurbishment and other capital projects</span><br><span class='muted'>excludes minor works within a repairs or maintenance contract (planned and reactive building maintenance)</span></li><li><strong>catering</strong></li><li><strong>IT services</strong><br><span class='muted'>includes cyber security, software and IT support</span></li></ul></div><div><h3>Rules</h3><dl class="facts"><div><dt>Regions</dt><dd>North East (UKC), North West (UKD), Yorkshire and the Humber (UKE) only; a lot that also covers another region is rejected</dd></div><div><dt>Value band</dt><dd>£100,000 to £5,000,000</dd></div><div><dt>Accreditations held</dt><dd>ISO 9001, ISO 14001, Cyber Essentials, SafeContractor, SIA Approved Contractor</dd></div><div><dt>Mobilisation</dt><dd>at least 8 weeks</dd></div><div><dt>Deadline</dt><dd>at least 14 days to respond</dd></div><div><dt>Weights</dt><dd>service 0.35, region 0.20, value 0.15, accreditations 0.10, mobilisation 0.10, deadline 0.10</dd></div><div><dt>Shortlist threshold</dt><dd>0.60</dd></div></dl></div></div></section>
+</main>
+<footer class="page-foot"><p>Scores come from code; the LLM only reads notices and writes the rationale.</p><p>Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, from <a href="https://www.find-tender.service.gov.uk">Find a Tender</a>.</p></footer>
+<script>
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll("[data-group-tab]"));
+  var groups = Array.prototype.slice.call(document.querySelectorAll("[data-group]"));
+  function show(id) {
+    groups.forEach(function (group) { group.hidden = group.id !== id; });
+    tabs.forEach(function (tab) {
+      tab.setAttribute("aria-current", tab.getAttribute("href") === "#" + id ? "true" : "false");
+    });
+  }
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function (event) {
+      event.preventDefault();
+      var id = tab.getAttribute("href").slice(1);
+      show(id);
+      history.replaceState(null, "", "#" + id);
+    });
+  });
+  var target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
+  var start = target && target.closest("[data-group]");
+  show(start ? start.id : "shortlist");
+  if (target) { target.scrollIntoView(); }
+  document.querySelectorAll("[data-filter]").forEach(function (input) {
+    var box = input.parentNode;
+    var status = box.querySelector("[aria-live]");
+    var rows = document.querySelectorAll("#" + input.dataset.filter + " tbody tr");
+    box.hidden = false;
+    input.addEventListener("input", function () {
+      var words = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+      var shown = 0;
+      rows.forEach(function (row) {
+        var text = row.textContent.toLowerCase();
+        var match = words.every(function (word) { return text.indexOf(word) !== -1; });
+        row.hidden = !match;
+        if (match) { shown += 1; }
+      });
+      status.textContent = words.length ? shown + " of " + rows.length + " shown" : "";
+    });
+  });
+})();
+</script>
+</body>
+</html>

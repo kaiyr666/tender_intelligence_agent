@@ -14,6 +14,7 @@ from app.config import get_settings
 from app.explain import write_rationales
 from app.extract import ExtractionCache
 from app.fetch import FetchError
+from app.html_report import write_html
 from app.llm import ProviderError, Usage, get_provider
 from app.profile import load_profile
 from app.report import OUTPUT_DIR, RunSummary, write_report
@@ -79,9 +80,11 @@ def main() -> None:
         weights=profile.scoring.weights.model_dump(),
     )
     report_path, csv_path = write_report(results, rationales, run, OUTPUT_DIR)
-    run_path = save_run(to_record(results, rationales, run, profile, settings.llm_model), RUNS_DIR)
+    record = to_record(results, rationales, run, profile, settings.llm_model)
+    run_path = save_run(record, RUNS_DIR)
+    page_path = write_html(record, OUTPUT_DIR / "report.html")
     print(f"Report: {report_path}\nCSV:    {csv_path}  (LLM cost in total ${usage.cost_usd:.2f})")
-    print(f"Run:    {run_path}")
+    print(f"Run:    {run_path}\nPage:   {page_path}")
 
 
 if __name__ == "__main__":
