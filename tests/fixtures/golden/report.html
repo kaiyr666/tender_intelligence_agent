@@ -27,6 +27,7 @@ a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(
 outline-offset:2px;border-radius:2px}
 .skip{position:absolute;left:-999px;top:0;background:var(--card);padding:8px 12px}
 .skip:focus{left:16px;top:8px}
+main:focus{outline:none}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);
 white-space:nowrap}
 .page-head{padding-top:2rem;padding-bottom:1rem}
@@ -92,14 +93,13 @@ color:var(--muted)}}
 @media (prefers-reduced-motion:no-preference){.groups a,summary{transition:background .15s}}
 @media print{.skip,.groups,.filter{display:none!important}
 [data-group][hidden]{display:block!important}
-body{background:#fff;color:#000}.card{break-inside:avoid}
-details>*{display:block}}
+body{background:#fff;color:#000}.card{break-inside:avoid}}
 </style>
 </head>
 <body>
-<a class="skip" href="#shortlist">Skip to the shortlist</a>
+<a class="skip" href="#main">Skip to the results</a>
 <header class="page-head"><p class="eyebrow">Tender Intelligence · weekly screen of Find a Tender</p><h1>Tender shortlist, 2026-11-09 to 2026-11-15</h1><p class="meta">Generated 2026-11-16 09:30 UTC · model test-model · results as of this time</p></header>
-<main>
+<main id="main" tabindex="-1">
 <div class="banner" role="alert"><p><strong>INCOMPLETE:</strong> this run is missing notices. Run the CLI again for this week.</p><ul><li>1 notice was not processed (the LLM budget was reached before this notice)</li></ul></div>
 <section class="summary" aria-labelledby="summary-h"><h2 id="summary-h" class="visually-hidden">Run summary</h2><ol class="funnel"><li><span class="num">463</span> <span>tender notices fetched</span></li><li><span class="num">5</span> <span>kept by the pre-filter (CPV code, value, deadline)</span></li><li><span class="num">2</span> <span>shortlisted</span></li></ol><p class="muted">Of those kept: rejected 1 · needs review 1 · not processed 1. 12 planning-stage notices (counted, not screened). LLM cost $0.04 (7 calls).</p></section>
 <nav class="groups" aria-label="Result groups"><ul><li><a href="#shortlist" data-group-tab>Shortlisted (2)</a></li><li><a href="#rejected" data-group-tab>Rejected (1)</a></li><li><a href="#needs-review" data-group-tab>Needs review (1)</a></li><li><a href="#not-processed" data-group-tab>Not processed (1)</a></li></ul></nav>
@@ -125,13 +125,28 @@ details>*{display:block}}
       event.preventDefault();
       var id = tab.getAttribute("href").slice(1);
       show(id);
-      history.replaceState(null, "", "#" + id);
+      try {
+        history.replaceState(null, "", "#" + id);
+      } catch (error) {
+        // Some browsers refuse history changes on a page opened from disk; the switch still works.
+      }
     });
   });
   var target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
   var start = target && target.closest("[data-group]");
   show(start ? start.id : "shortlist");
   if (target) { target.scrollIntoView(); }
+  // Print every breakdown open, then fold back the ones that were closed.
+  var folded = [];
+  window.addEventListener("beforeprint", function () {
+    folded = Array.prototype.filter.call(document.querySelectorAll("details"), function (d) {
+      return !d.open;
+    });
+    folded.forEach(function (d) { d.open = true; });
+  });
+  window.addEventListener("afterprint", function () {
+    folded.forEach(function (d) { d.open = false; });
+  });
   document.querySelectorAll("[data-filter]").forEach(function (input) {
     var box = input.parentNode;
     var status = box.querySelector("[aria-live]");

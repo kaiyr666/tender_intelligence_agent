@@ -227,7 +227,13 @@ def test_a_javascript_url_is_not_rendered_as_a_link():
 
 @pytest.mark.parametrize(
     "url",
-    ["JavaScript:alert(1)", "http://example.com/x", "//example.com/x", "data:text/html,x"],
+    [
+        "JavaScript:alert(1)",
+        "http://example.com/x",
+        "//example.com/x",
+        "data:text/html,x",
+        "https://[2001:db8::1/tender",  # malformed: urlsplit raises ValueError
+    ],
 )
 def test_a_notice_url_that_is_not_https_falls_back_to_its_find_a_tender_page(url):
     record = with_notice(fixture_record(), TOP, url=url)

@@ -61,9 +61,9 @@ def render_html(record: runs.RunRecord) -> str:
         f"<style>{STYLE}</style>",
         "</head>",
         "<body>",
-        '<a class="skip" href="#shortlist">Skip to the shortlist</a>',
+        '<a class="skip" href="#main">Skip to the results</a>',
         _header(record, title),
-        "<main>",
+        '<main id="main" tabindex="-1">',
         _banner(record),
         _funnel(record, by_outcome),
         _group_nav(by_outcome),
@@ -387,8 +387,11 @@ def _percent(fraction: float) -> str:
 
 def _safe_url(notice: runs.NoticeRecord) -> str:
     """The notice's own link if it is https, else its Find a Tender page (never javascript:)."""
-    parsed = urlsplit(notice.url.strip())
-    if parsed.scheme == "https" and parsed.netloc:
+    try:
+        parsed = urlsplit(notice.url.strip())
+    except ValueError:  # malformed, e.g. an unclosed IPv6 bracket
+        parsed = None
+    if parsed and parsed.scheme == "https" and parsed.netloc:
         return notice.url.strip()
     return FIND_A_TENDER_NOTICE + quote(notice.notice_id, safe="")
 
@@ -420,6 +423,7 @@ a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(
 outline-offset:2px;border-radius:2px}
 .skip{position:absolute;left:-999px;top:0;background:var(--card);padding:8px 12px}
 .skip:focus{left:16px;top:8px}
+main:focus{outline:none}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);
 white-space:nowrap}
 .page-head{padding-top:2rem;padding-bottom:1rem}
@@ -485,8 +489,7 @@ color:var(--muted)}}
 @media (prefers-reduced-motion:no-preference){.groups a,summary{transition:background .15s}}
 @media print{.skip,.groups,.filter{display:none!important}
 [data-group][hidden]{display:block!important}
-body{background:#fff;color:#000}.card{break-inside:avoid}
-details>*{display:block}}
+body{background:#fff;color:#000}.card{break-inside:avoid}}
 """
 
 # Only textContent, attributes and the hidden property: never innerHTML.
@@ -505,13 +508,28 @@ SCRIPT = """
       event.preventDefault();
       var id = tab.getAttribute("href").slice(1);
       show(id);
-      history.replaceState(null, "", "#" + id);
+      try {
+        history.replaceState(null, "", "#" + id);
+      } catch (error) {
+        // Some browsers refuse history changes on a page opened from disk; the switch still works.
+      }
     });
   });
   var target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
   var start = target && target.closest("[data-group]");
   show(start ? start.id : "shortlist");
   if (target) { target.scrollIntoView(); }
+  // Print every breakdown open, then fold back the ones that were closed.
+  var folded = [];
+  window.addEventListener("beforeprint", function () {
+    folded = Array.prototype.filter.call(document.querySelectorAll("details"), function (d) {
+      return !d.open;
+    });
+    folded.forEach(function (d) { d.open = true; });
+  });
+  window.addEventListener("afterprint", function () {
+    folded.forEach(function (d) { d.open = false; });
+  });
   document.querySelectorAll("[data-filter]").forEach(function (input) {
     var box = input.parentNode;
     var status = box.querySelector("[aria-live]");

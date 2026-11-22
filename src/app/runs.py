@@ -79,6 +79,15 @@ class NoticeRecord(BaseModel):
     red_flags: list[RedFlagRecord]
     rationale: str | None  # shortlisted notices only
 
+    @model_validator(mode="after")
+    def _ranked_only_when_shortlisted(self) -> NoticeRecord:
+        # Both views show the rank as the shortlist position, so it must agree with the outcome.
+        if (self.outcome == "shortlisted") != (self.rank is not None):
+            raise ValueError("rank must be set for a shortlisted notice and only for one")
+        if self.rank is not None and self.rank < 1:
+            raise ValueError("rank must be 1 or more")
+        return self
+
 
 class ServiceRecord(BaseModel):
     name: str

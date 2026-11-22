@@ -226,6 +226,16 @@ def with_dates_reversed(data):
     return json.dumps(data)
 
 
+def with_rank_on_a_rejected_notice(data):
+    data["notices"][2]["rank"] = 3
+    return json.dumps(data)
+
+
+def without_rank_on_a_shortlisted_notice(data):
+    data["notices"][0]["rank"] = None
+    return json.dumps(data)
+
+
 def with_text_as_version(data):
     data["schema_version"] = "MARKER from the file"
     return json.dumps(data)
@@ -241,6 +251,8 @@ def with_text_as_version(data):
         (not_an_object, "not a JSON object"),
         (with_dates_reversed, "date_from"),
         (with_text_as_version, "no valid schema version"),
+        (with_rank_on_a_rejected_notice, "notices.2"),
+        (without_rank_on_a_shortlisted_notice, "notices.0"),
     ],
 )
 def test_a_bad_run_file_raises_an_error_naming_the_file(tmp_path, corrupt, reason):
