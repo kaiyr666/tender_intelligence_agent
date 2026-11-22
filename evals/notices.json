@@ -9,7 +9,7 @@
   "status": "active",
   "main_category": "services",
   "value_gbp": 1800000.0,
-  "deadline": null,
+  "deadline": "2026-12-11T12:00:00Z",
   "url": "https://www.find-tender.service.gov.uk/Notice/106024-2026",
   "cpv_codes": [
    "44100000",
@@ -137,7 +137,7 @@
   "status": "active",
   "main_category": "works",
   "value_gbp": 23107953.14,
-  "deadline": null,
+  "deadline": "2026-12-14T12:00:00Z",
   "url": "https://www.find-tender.service.gov.uk/Notice/106253-2026",
   "cpv_codes": [
    "45300000",
@@ -250,7 +250,7 @@
   "status": "active",
   "main_category": "works",
   "value_gbp": 300000000.0,
-  "deadline": null,
+  "deadline": "2026-11-27T18:00:00Z",
   "url": "https://www.find-tender.service.gov.uk/Notice/106615-2026",
   "cpv_codes": [
    "45100000",
@@ -1669,7 +1669,7 @@
   "status": "active",
   "main_category": "services",
   "value_gbp": 1850000.0,
-  "deadline": null,
+  "deadline": "2026-12-15T12:00:00Z",
   "url": "https://www.find-tender.service.gov.uk/Notice/108059-2026",
   "cpv_codes": [
    "90910000",

@@ -305,3 +305,22 @@ def test_tender_period_end_wins_over_expression_of_interest_deadline():
 
 def test_fixture_notice_without_tender_period_uses_its_expression_of_interest_deadline(by_id):
     assert by_id["108059-2026"].deadline == datetime(2026, 12, 15, 12, 0, tzinfo=UTC)
+
+
+# Lot status and the notice link
+
+
+def test_cancelled_and_withdrawn_lots_are_left_out():
+    lots = [
+        {"id": "1", "title": "Offices", "status": "active"},
+        {"id": "2", "title": "Depots", "status": "cancelled"},
+        {"id": "3", "title": "Schools", "status": "withdrawn"},
+        {"id": "4", "title": "Libraries"},
+    ]
+    assert [lot.lot_id for lot in to_notice(synthetic(lots=lots)).lots] == ["1", "4"]
+
+
+@pytest.mark.parametrize("url", ["javascript:alert(1)", "http://example.org/notice", "ftp://x/y"])
+def test_notice_link_that_is_not_https_falls_back_to_the_notice_page(url):
+    release = synthetic(documents=[{"documentType": "tenderNotice", "url": url}])
+    assert to_notice(release).url == NOTICE_URL.format(notice_id="900001-2026")

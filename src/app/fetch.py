@@ -72,7 +72,8 @@ def fetch_releases(
 
     429/503 wait for Retry-After and retry; network errors retry with backoff.
     After MAX_ATTEMPTS on one page the releases so far are returned with
-    complete=False. Other HTTP errors raise FetchError.
+    complete=False. Other HTTP errors and invalid JSON raise FetchError on the
+    first page, and on a later page also stop the fetch with what it has.
     """
     releases: list[dict] = []
     url: str | None = first_page_url(date_from, date_to)
@@ -81,7 +82,12 @@ def fetch_releases(
         if url in seen_urls:
             return FetchResult(releases, False, f"the API repeated a page link: {url}")
         seen_urls.add(url)
-        page, problem = _get_page(url, get, sleep)
+        try:
+            page, problem = _get_page(url, get, sleep)
+        except FetchError as error:
+            if len(seen_urls) == 1:
+                raise
+            return FetchResult(releases, False, str(error))
         if page is None:
             return FetchResult(releases, False, problem)
         releases.extend(page.get("releases") or [])

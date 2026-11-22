@@ -97,7 +97,11 @@ def to_notice(release: dict) -> Notice:
     """Reduce one tender-stage release to a Notice."""
     tender = release.get("tender") or {}
     items = tender.get("items") or []
-    lots = [_to_lot(lot, items) for lot in tender.get("lots") or []]
+    lots = [
+        _to_lot(lot, items)
+        for lot in tender.get("lots") or []
+        if lot.get("status") not in WITHDRAWN_STATUSES
+    ]
     notice_cpv = _cpv_codes(items)
     classification = tender.get("classification") or {}
     if classification.get("scheme") == "CPV" and classification.get("id"):
@@ -190,12 +194,15 @@ def _notice_value(tender: dict, lots: list[Lot]) -> float | None:
 
 
 def _notice_url(release: dict) -> str:
-    for document in (release.get("tender") or {}).get("documents") or []:
-        if document.get("documentType") == "tenderNotice" and document.get("url"):
-            return document["url"]
-    for link in release.get("links") or []:
-        if link.get("rel") == "canonical" and link.get("href"):
-            return link["href"]
+    """The notice page from the release, or the standard page when no https link is given."""
+    candidates = [
+        document.get("url")
+        for document in (release.get("tender") or {}).get("documents") or []
+        if document.get("documentType") == "tenderNotice"
+    ] + [link.get("href") for link in release.get("links") or [] if link.get("rel") == "canonical"]
+    for url in candidates:
+        if isinstance(url, str) and url.startswith("https://"):
+            return url
     return NOTICE_URL.format(notice_id=release["id"])
 
 

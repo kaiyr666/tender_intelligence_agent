@@ -205,12 +205,42 @@ def test_report_shows_planning_count_cost_and_attribution():
     assert "Open Government Licence v3.0" in report
 
 
-def test_incomplete_banner_only_when_the_fetch_stopped():
-    stopped = replace(RUN, complete=False, problem="HTTP 503 after 3 attempts")
+def processed_results():
+    return [r for r in scored_results() if r.outcome != NOT_PROCESSED]
 
-    assert "INCOMPLETE" not in render_report(scored_results(), RATIONALES, RUN)
-    assert "INCOMPLETE" in render_report(scored_results(), RATIONALES, stopped)
-    assert "HTTP 503 after 3 attempts" in render_report(scored_results(), RATIONALES, stopped)
+
+def test_no_incomplete_banner_when_every_notice_was_processed():
+    assert "INCOMPLETE" not in render_report(processed_results(), RATIONALES, RUN)
+
+
+def test_incomplete_banner_when_the_fetch_stopped():
+    stopped = replace(RUN, complete=False, problem="HTTP 503 after 3 attempts")
+    report = render_report(processed_results(), RATIONALES, stopped)
+
+    assert "INCOMPLETE" in report
+    assert "HTTP 503 after 3 attempts" in report
+
+
+def test_incomplete_banner_when_the_budget_stopped_a_complete_fetch():
+    report = render_report(scored_results(), RATIONALES, RUN)
+
+    assert "INCOMPLETE" in report
+    assert "the LLM budget was reached before this notice" in report.split("## ")[0]
+
+
+def test_link_destination_cannot_break_out_of_the_markdown_link():
+    result = scored_results()[2]
+    odd = replace(result, notice=result.notice.model_copy(update={"url": "https://x/N/1) [y](z"}))
+    report = render_report([odd], {}, RUN)
+
+    assert "(https://x/N/1%29%20%5By%5D%28z)" in report
+
+
+def test_deadline_time_is_shown_in_report_and_csv():
+    results = scored_results()
+
+    assert "deadline 2026-12-04 12:00 UTC" in render_report(results, RATIONALES, RUN)
+    assert "2026-12-04 12:00 UTC" in render_csv(results, RATIONALES)
 
 
 def test_empty_groups_still_render():

@@ -153,6 +153,20 @@ def test_page_that_keeps_failing_returns_earlier_releases_marked_incomplete():
     assert api.calls.count(NEXT_URL) == MAX_ATTEMPTS
 
 
+@pytest.mark.parametrize(
+    "bad_page",
+    [error(500), HttpResponse(200, {}, b"<html>not json</html>")],
+    ids=["500", "bad-json"],
+)
+def test_unusable_later_page_keeps_earlier_releases_marked_incomplete(bad_page):
+    result, _, _ = run(
+        {first_url(): [page([{"id": "a"}], next_url=NEXT_URL)], NEXT_URL: [bad_page]}
+    )
+    assert result.releases == [{"id": "a"}]
+    assert result.complete is False
+    assert NEXT_URL in result.problem
+
+
 def test_network_down_from_the_start_gives_an_empty_incomplete_result():
     result, _, _ = run({first_url(): [OSError("no route to host")]})
     assert (result.releases, result.complete) == ([], False)

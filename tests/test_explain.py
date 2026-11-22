@@ -112,6 +112,15 @@ def test_invalid_output_gives_a_placeholder_and_the_rest_continue(fake_llm):
     assert rationales["900002-2026"] == "Office cleaning in Yorkshire, in the value band."
 
 
+def test_blank_rationale_gives_the_placeholder(fake_llm):
+    blank = json.dumps({"rationale": "   "})
+    fake_llm.reply_with(blank, blank)
+
+    rationales = write_rationales([shortlisted(1)], fake_llm, Usage())
+
+    assert "not written" in rationales["900001-2026"]
+
+
 def test_budget_reached_stops_further_calls(fake_llm):
     usage = Usage(budget_usd=0.0)
 

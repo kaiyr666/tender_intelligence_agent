@@ -1,0 +1,41 @@
+# Review 04
+
+- **Date:** 2026-11-22
+- **Mode:** all, whole repository against docs/SPEC.md, at 16ef9ae
+- **Model:** gpt-6.2-astra, reasoning effort high (117k tokens), read-only and static: it could not run the tests
+
+## P1 — must fix
+
+| File and line | Problem | Concrete fix |
+|---|---|---|
+| [extract.py:90](src/app/extract.py:90) | The 24,000-character cut removes entire lots while still asking the model to assess them. In `106942-2026`, lots `5a` and `5b` begin after the cut, and both cached contract lengths are `null` despite explicit three-year periods. | Reserve input space for each lot, split oversized notices into budget-checked calls, and send lots with insufficient evidence to review. Derive contract length from structured dates when they specify the initial term. |
+| [score.py:75](src/app/score.py:75) | One recognized lot ID is enough for a definitive outcome, so omitting the only eligible lot can reject the notice, and duplicate IDs can produce conflicting scores for the same lot. | Require exactly one extraction per expected lot ID before caching or scoring. Retry invalid coverage and route persistent failures to needs review. |
+| [score.py:72](src/app/score.py:72) | Both quote-backed gates search the entire notice, so a mandatory accreditation quoted from one lot can disqualify a different lot. | Check lot-specific claims against that lot’s text and notice-wide claims against the shared text. Add a two-lot regression where only one lot requires the certificate. |
+| [score.py:144](src/app/score.py:144) | Substring matching treats **Cyber Essentials Plus** as held when the company holds only **Cyber Essentials**, allowing an ineligible lot onto the shortlist. | Match normalized scheme names and qualification levels exactly, with explicit handling for edition years, aliases, and named alternatives. |
+| [notices.py:100](src/app/notices.py:100) | Every source lot enters scoring and its status is discarded, so a cancelled lot in an otherwise active tender can become the recommended lot. | Preserve lot status and exclude explicitly cancelled or withdrawn lots from selection. Test an active tender whose highest-scoring lot was cancelled. |
+| [notices.py:154](src/app/notices.py:154) | The reducer reads only item `additionalClassifications`, so a relevant primary `item.classification` can disappear and an unrelated remaining code can cause a pre-filter rejection. | Collect primary and additional CPVs at notice, item, and lot scope. Test the raw-release-to-pre-filter path with the only matching code in the item’s primary classification. |
+| [notices.py:110](src/app/notices.py:110) | Tender-level `selectionCriteria` never reaches extraction, so a mandatory accreditation stated only there cannot gate any lot. | Preserve sanitized notice-wide selection criteria, include them in the extraction and quote check, and test a requirement that applies to two lots. |
+| [fetch.py:84](src/app/fetch.py:84) | A later page returning HTTP 500 or malformed JSON raises out of the fetch loop, losing earlier pages and preventing the promised partial report. | Preserve accumulated releases on terminal page failures and return `complete=False` with the reason. Add a CLI test with a successful first page and a malformed second page. |
+| [llm.py:95](src/app/llm.py:95) | Three characters per input token is an estimate, so a token-dense notice can cost more than the budget check reserves. SDK-managed attempts also sit outside that check. | Use a provider token count or a genuine upper bound including message overhead. Reserve cost per attempt and account conservatively for attempts whose billing is unknown. |
+| [__main__.py:73](src/app/__main__.py:73) | Report completion reflects only the fetch, so budget exhaustion can leave tenders unprocessed without an **INCOMPLETE** banner. | Carry the assessment stop reason into the run summary and test a complete fetch followed by budget exhaustion. |
+| [extract.py:137](src/app/extract.py:137) | An external release ID is used directly as a cache path component, so a malformed ID can move reads and writes outside the extraction directory. | Use an encoded or hashed filename component and verify that the resolved path stays under the cache directory. |
+| [report.py:144](src/app/report.py:144) | API-supplied IDs and URLs are interpolated directly into Markdown links in both report layouts, allowing an unsafe or misleading link into the bid team’s report. | Escape link labels, validate and encode HTTP(S) destinations, and fall back to the canonical Find a Tender notice URL. |
+
+## P2 — should fix
+
+| File and line | Problem | Concrete fix |
+|---|---|---|
+| [evals/notices.json:1672](evals/notices.json:1672) | Four labelled notices have `null` deadlines where the saved weekly notices for the same releases have dates. For `108059-2026`, the release fixture confirms **15 December at noon**, and the stored eval scores it **0.90** against the weekly report’s **0.95**. | Refresh the four reduced fixtures and affected extractions, rerun the metrics, and compare fields for releases shared by the ingestion and eval fixtures. |
+| [evals/run.py:389](evals/run.py:389) | A `--live` refresh that runs out of budget or fails validation can still replace the model marker and prune old extractions, leaving the next offline eval unable to run. | Verify that every required new extraction can be loaded before updating the marker, pruning the previous cache, or publishing results. |
+| [test_eval.py:350](tests/test_eval.py:350) | The offline integration test checks case order and zero calls, so it still passes if a scoring regression rejects every labelled bid. | Assert the spec’s precision and recall floors and at least one expected multi-lot selection using the committed cases. |
+| [fetch.py:117](src/app/fetch.py:117) | A date-form `Retry-After` falls back to ten seconds, and a numeric delay above 120 seconds is shortened, so both can cause an early retry. | Parse both forms. When the requested wait exceeds the run’s limit, return an incomplete fetch instead of retrying early. |
+| [report.py:179](src/app/report.py:179) | Both exports discard the deadline time, so a noon closing time appears identical to an end-of-day deadline. | Render the time and timezone in Markdown and preserve the timestamp in CSV. Add a noon-deadline assertion to both output tests. |
+| [report.py:147](src/app/report.py:147) | Markdown suppresses the selected lot’s name whenever only one lot was scored, including a single named lot. | Display the selected name whenever the source notice contains a named lot. |
+| [explain.py:21](src/app/explain.py:21) | The rationale schema accepts whitespace-only output as valid, resulting in an empty report entry instead of the documented fallback. | Strip before validation, require nonempty content, and test that repeated blank responses produce the fallback. |
+| [README.md:52](README.md:52) | The README presents **$0.29** as the cost of reading 122 notices, although D32 records 62 extraction calls in that run and the remaining extractions came from cache. | Label the figure as a partially cached run and report a separately measured or explicitly estimated fresh-week cost. |
+| [README.md:57](README.md:57) | The limitations section claims both labelled sets currently have 100% recall, although the committed results show **7/8** tuning bids and **8/8** check bids after D34. | Date the 100% figure as pre-D34 and state the current combined result of **15/16**. |
+| [README.md:16](README.md:16) | The README mentions attribution in the generated report but omits the README’s own OGL v3.0 attribution required by the spec. | Add the Find a Tender source and the attribution text already used in the report. |
+
+**Verification.** I checked the source, tests, release fixture, saved weekly notices, and committed evaluation artifacts at `16ef9ae`. The committed results record **15 true positives, zero false positives, and one false negative**. I could not rerun pytest or the offline eval because the workspace’s Windows Python interpreter was unavailable. Ruff execution was also denied. No repository files changed.
+
+**Overall verdict — Fix the lot-selection and hard-gate errors before the bid team relies on the shortlist, and make interrupted runs visibly incomplete.**

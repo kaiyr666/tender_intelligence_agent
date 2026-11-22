@@ -1,5 +1,5 @@
 {
- "time": "2026-11-22 01:08",
+ "time": "2026-11-22 10:23",
  "model": "gpt-6.1-terra",
  "frozen_now": "2026-11-16T09:00:00+00:00",
  "threshold": 0.7,
@@ -170,7 +170,7 @@
     [
      0.8,
      1.0,
-     0.75
+     0.875
     ],
     [
      0.85,
@@ -260,7 +260,7 @@
    [
     0.8,
     1.0,
-    0.875
+    0.938
    ],
    [
     0.85,
@@ -340,8 +340,8 @@
    "case_set": "tuning",
    "bid": true,
    "outcome": "shortlisted",
-   "reason": "Lot 2: Electrical scores 0.80 (threshold 0.70)",
-   "best_score": 0.795,
+   "reason": "Lot 2: Electrical scores 0.84 (threshold 0.70)",
+   "best_score": 0.845,
    "best_lot": "2",
    "chosen_lot_ok": true,
    "wrongly_gated_lots": [],
@@ -708,8 +708,8 @@
    "case_set": "tuning",
    "bid": true,
    "outcome": "shortlisted",
-   "reason": "Lot 1 scores 0.90 (threshold 0.70)",
-   "best_score": 0.9,
+   "reason": "Lot 1 scores 0.95 (threshold 0.70)",
+   "best_score": 0.95,
    "best_lot": "1",
    "chosen_lot_ok": true,
    "wrongly_gated_lots": [],

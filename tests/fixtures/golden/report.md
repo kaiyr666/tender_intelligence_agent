@@ -1,5 +1,7 @@
 # Tender shortlist, 2026-11-09 to 2026-11-15
 
+> **INCOMPLETE:** 1 notice was not processed (the LLM budget was reached before this notice). Run again to continue; finished extractions are cached.
+
 Generated 2026-11-16 09:30 UTC.
 
 - 463 tender notices; 5 kept by the pre-filter (CPV code, value and deadline).
@@ -13,7 +15,7 @@ Each lot is scored 0 to 1 on six criteria, weighted service 0.35, region 0.20, v
 
 ### 1. =HYPERLINK("x") Cleaning \| Leeds offices (0.95)
 
-- [100002-2026](https://www.find-tender.service.gov.uk/Notice/100002-2026) · Buyer 2 · deadline 2026-12-04 · notice value £250,000
+- [100002-2026](https://www.find-tender.service.gov.uk/Notice/100002-2026) · Buyer 2 · deadline 2026-12-04 12:00 UTC · notice value £250,000
 - Best lot: Lot 1: Offices \| north (of 2 lots scored)
 - Red flags: TUPE
 
@@ -30,7 +32,7 @@ Office cleaning in Leeds \| in the value band. TUPE applies.
 
 ### 2. Security guarding, Hull (0.85)
 
-- [100001-2026](https://www.find-tender.service.gov.uk/Notice/100001-2026) · Buyer 1 · deadline 2026-12-04 · notice value £6,000,000
+- [100001-2026](https://www.find-tender.service.gov.uk/Notice/100001-2026) · Buyer 1 · deadline 2026-12-04 12:00 UTC · notice value £6,000,000
 
 Guarding in Hull, in region. &lt;b&gt;Value&lt;/b&gt; is over the band.
 

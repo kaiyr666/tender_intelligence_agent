@@ -7,8 +7,9 @@ cannot be written never blocks the report: the score breakdown is there anyway.
 """
 
 import json
+from typing import Annotated
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, StringConstraints
 
 from app.llm import BudgetExceeded, LLMError, Provider, ProviderError, Usage, complete_json
 from app.score import SHORTLISTED, NoticeResult
@@ -18,7 +19,9 @@ NOT_WRITTEN = "Rationale not written ({reason}); see the score breakdown."
 
 
 class Rationale(BaseModel):
-    rationale: str = Field(max_length=800, description="2-3 sentences for the bid team.")
+    rationale: Annotated[
+        str, StringConstraints(strip_whitespace=True, min_length=1, max_length=800)
+    ] = Field(description="2-3 sentences for the bid team.")
 
 
 def rationale_facts(result: NoticeResult) -> dict:

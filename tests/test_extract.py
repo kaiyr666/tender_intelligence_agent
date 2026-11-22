@@ -255,6 +255,18 @@ def extraction():
     return Extraction.model_validate(extraction_dict())
 
 
+@pytest.mark.parametrize("notice_id", ["../../outside", "a/b\\c", "C:evil"])
+def test_cache_file_stays_inside_the_cache_folder(cache, profile, notice_id):
+    path = cache.path_for(make_notice(notice_id=notice_id), profile, "fake-model")
+    assert path.parent == cache.directory
+    assert ".." not in path.name
+
+
+def test_cache_file_name_keeps_a_normal_notice_id(cache, profile):
+    path = cache.path_for(make_notice(notice_id="108109-2026"), profile, "fake-model")
+    assert path.name.startswith("108109-2026_")
+
+
 def test_cache_miss_returns_none(cache, profile):
     assert cache.get(make_notice(), profile, "fake-model") is None
 

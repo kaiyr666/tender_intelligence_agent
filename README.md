@@ -26,9 +26,11 @@ uv run python -m app                                   # last full Monday–Sund
 uv run python -m app --from 2026-11-09 --to 2026-11-15 # any range, both dates inclusive
 ```
 With an OpenAI key, `.env` needs `OPENAI_API_KEY`, `LLM_PROVIDER=openai`, `LLM_MODEL=<model>`, and the model's price in USD per million tokens as `LLM_INPUT_USD_PER_MTOK` and `LLM_OUTPUT_USD_PER_MTOK`. The run refuses to start without a price, because the budget (`LLM_BUDGET_USD`, default 2.50) needs it. Claude works too: `LLM_PROVIDER=anthropic` and `ANTHROPIC_API_KEY`.
-A week takes about 3 minutes to fetch and costs about $0.30 to read. The run writes `output/report.md` and `output/shortlist.csv` (git-ignored). Extractions are cached in `data/cache/`, so a second run of the same week makes no extraction calls.
+A week takes about 3 minutes to fetch and, read from scratch, an estimated $0.60 in LLM calls (122 notices at about $0.005 each; the measured 9–15 Nov run paid $0.29 for the 62 notices not yet cached). Deadlines in the report and CSV are in UTC. The run writes `output/report.md` and `output/shortlist.csv` (git-ignored). Extractions are cached in `data/cache/`, so a second run of the same week makes no extraction calls.
 
 Tests: `uv run pytest` · Eval: `uv run python -m evals.run`. Neither needs an API key or the network: the eval reads committed extractions.
+
+Data: contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), from Find a Tender (https://www.find-tender.service.gov.uk).
 
 ## How it works
 ```
@@ -49,13 +51,13 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 - The labelled figures show the fixes work, not how the tool does on a new week. The one unseen week has only four bids, so each one moves recall by 25 points.
 - The one labelled miss (108109, Newcastle window cleaning) is the cost of the client's rule on national lots (D34): its lots are coded as all of England.
 - Field accuracy on the 42: contract length and TUPE 100%, accreditations and mobilisation 97%, region 94%, main service 86%, services 81%.
-- Cost: the 9–15 Nov week read 122 notices for $0.29 and shortlisted 7. Re-reading all 42 eval notices costs about $0.20.
+- Cost: the 9–15 Nov week read 122 notices and shortlisted 7. 62 of them were new reads, for $0.29; the other 60 came from the cache. A fresh week is estimated at about $0.60. Re-reading all 42 eval notices costs about $0.20.
 - The human's manual screen of the blind week (137 notices, already narrowed) took about 1 hour; the tool shortlisted 5 and reviewing its 10 disagreements took 15 minutes.
 
 ## Where it breaks
 <!-- Honest limits: data it cannot handle, failure modes seen in the eval, what the reviews flagged and was not fixed. Write this yourself. -->
-- **The eval numbers are preliminary.** 42 hand-picked cases, all now used for fixes: the 32 the profile and threshold were tuned on, and the 10 added afterwards, which scored 50% recall until the pre-filter was fixed on them (D32). Both now score 100% precision and recall, which says little about unseen weeks. One unseen week (26 Oct–1 Nov) was screened blind by the human (D33): after review the tool found 3 of 4 bids and 3 of its 5 shortlisted notices were bids (3 of 4 after D34, fixed on that week), but 4 bids is too few for a rate. D34 also costs one labelled bid on the tuning set (108109). Results in `docs/EVAL.md`.
-- **Every construction-coded notice is read by the LLM** (D32), because buyers code repairs and maintenance as construction. That doubles a week's LLM reads (61 to 122 notices in 9–15 Nov, $0.29), and keeping capital projects off the shortlist now rests on the LLM naming construction as the main service with a quote. In that week all the new notices were rejected. In the blind week it happened once: structural repairs to Blackpool Tower (engineering and structural steel codes) were read as building maintenance and shortlisted at 0.95.
+- **The eval numbers are preliminary.** 42 hand-picked cases, all now used for fixes: the 32 the profile and threshold were tuned on, and the 10 added afterwards, which scored 50% recall until the pre-filter was fixed on them (D32). Both reached 100% precision and recall after D32; since D34 the tuning set finds 7 of 8 bids and the check set 8 of 8 (15 of 16 in all). That says little about unseen weeks. One unseen week (26 Oct–1 Nov) was screened blind by the human (D33): after review the tool found 3 of 4 bids and 3 of its 5 shortlisted notices were bids (3 of 4 after D34, fixed on that week), but 4 bids is too few for a rate. D34 also costs one labelled bid on the tuning set (108109). Results in `docs/EVAL.md`.
+- **Every construction-coded notice is read by the LLM** (D32), because buyers code repairs and maintenance as construction. That doubles a week's LLM reads (61 to 122 notices in 9–15 Nov; the 62 new reads cost $0.29), and keeping capital projects off the shortlist now rests on the LLM naming construction as the main service with a quote. In that week all the new notices were rejected. In the blind week it happened once: structural repairs to Blackpool Tower (engineering and structural steel codes) were read as building maintenance and shortlisted at 0.95.
 - **Other CPV codes outside the profile are still dropped unread.** Fire-system and automatic-door servicing (50413100, 50330000) is dropped, which suits the client now that specialist M&E is out of scope (D27); a relevant notice coded only with an unrelated code is missed. In the blind week that was supply and installation of bin and scooter stores at Newcastle housing blocks (44000000), which the human judged a borderline bid.
 - **A value of £0 is read as "not stated"** (D32), so it scores the neutral 0.5 rather than being dropped. A real contract of £0 (a concession paid by users) is treated the same way.
 - **The committed eval extractions go stale on any prompt or profile change.** The offline eval and its test then fail until `uv run python -m evals.run --live` re-reads the 42 notices (about $0.20). This is deliberate: an eval silently scored on old extractions would mislead.
@@ -75,6 +77,12 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 - **Mobilisation is almost never stated,** so it scores 0.5 nearly everywhere and caps a lot's score at 0.95.
 - **Staff checks and licences never gate** (DBS, CSCS, SIA licences, waste-carrier registration, Gas Safe, insurance; D22). A notice that truly depends on one the company cannot get is still shortlisted.
 - **Red flags (TUPE, short deadline, closed framework call-off) are extracted but not scored.** A call-off only open to existing framework suppliers can still be shortlisted; the flag is there for the bid team to see.
+- **Long notices are cut at 24,000 characters,** so the end of about one notice a week is never read. In 106942 lots 5a and 5b start after the cut and are scored from their titles alone; they are specialist M&E lots, rejected anyway. Raising the cap costs more per long notice (review 04).
+- **A requirement quoted from one lot can gate another.** The quote check confirms the quote is in the notice, not that it belongs to the lot the LLM attached it to (review 04).
+- **Lots listed twice by the LLM are both scored,** and the best of them counts. This has not been seen in the 122 notices of 9–15 Nov.
+- **Notice-wide selection criteria are not passed to the LLM.** Lot-level criteria are; none of the 10 sample releases had criteria at notice level, so the gap is unconfirmed (review 04).
+- **A `Retry-After` header given as a date is read as 10 seconds,** so a rate-limited fetch can retry early; after the last attempt it stops and keeps what it has.
+- **A `--live` eval run that stops partway can still remove old extractions,** so the next offline eval fails until `--live` completes.
 - **Lots the model leaves out are not scored.** If the extraction covers none of a notice's lots, the notice goes to "needs review"; if it covers some, the missing ones are ignored.
 - **A provider error stops the run** (bad key, network). Extractions done so far are cached, so running again continues where it stopped.
 - **The budget stops early rather than late.** Each call is checked against its worst case (full output allowance), so a run can stop with up to one call's maximum unspent.

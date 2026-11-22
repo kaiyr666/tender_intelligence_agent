@@ -1,7 +1,8 @@
 # Review 03
 
 - **Date:** 2026-11-22
-- **Mode:** all, whole repository against docs/SPEC.md (Codex gpt-6.2-sol, no reasoning effort, read-only, static: it could not run the tests)
+- **Mode:** all, whole repository against docs/SPEC.md
+- **Model:** gpt-6.2-sol, no reasoning effort (Codex defaults; the skill named neither), read-only and static: it could not run the tests
 
 ## P1 — must fix
 

@@ -214,6 +214,12 @@
 - **Cost:** buyers often list all 9 English regions for a local contract. 108109 (Newcastle window cleaning, a labelled bid whose text says Newcastle) is now rejected, so recall on all 42 cases falls from 16/16 to 15/16 and the 9–15 Nov shortlist from 8 to 7. Lots across a regional border, such as Yorkshire and the East Midlands (103415), are rejected too. Option (a) would have kept 108109 and still rejected 100829. The fix was made on the blind week, which is therefore no longer unseen.
 - **Revisit if:** the bid team misses local northern contracts coded "all of England"; then use option (a).
 
+## D35: Deadlines show their time, in UTC
+- **Chose:** the report and the CSV show a deadline as `2026-12-15 12:00 UTC`, not the date alone (review 04). A deadline given as a date only shows 23:59.
+- **Alternatives:** UK local time (Europe/London); the date alone, as before.
+- **Why:** a noon deadline and an end-of-day deadline looked the same, and the bid team plans to the hour. UK time would read better, but on Windows Python's time zones need the `tzdata` package, a new dependency for a label; the API gives times in UTC, which is GMT for half the year.
+- **Revisit if:** the bid team misreads summer deadlines by an hour; then add `tzdata` and show UK time.
+
 <!--
 Template:
 ## Dn: <decision>

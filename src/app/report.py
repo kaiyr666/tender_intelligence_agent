@@ -9,9 +9,11 @@ neutralised in the CSV.
 import csv
 import io
 from dataclasses import dataclass
-from datetime import date, datetime
+from datetime import UTC, date, datetime
 from pathlib import Path
+from urllib.parse import quote
 
+from app.notices import Notice
 from app.score import NEEDS_REVIEW, NOT_PROCESSED, REJECTED, SHORTLISTED, NoticeResult
 
 OUTPUT_DIR = Path(__file__).resolve().parents[2] / "output"
@@ -76,6 +78,7 @@ def render_report(results: list[NoticeResult], rationales: dict[str, str], run: 
             "Notices after that point are missing; run again for the full range.",
             "",
         ]
+    lines += _unprocessed_banner(groups[NOT_PROCESSED])
     lines += _summary(groups, run)
     for outcome, heading in GROUPS:
         lines += ["", f"## {heading} ({len(groups[outcome])})", ""]
@@ -141,7 +144,7 @@ def _shortlist_entry(rank: int, result: NoticeResult, rationales: dict[str, str]
     lines = [
         f"### {rank}. {_md(notice.title)} ({lot.score:.2f})",
         "",
-        f"- [{notice.notice_id}]({notice.url}) · {_md(notice.buyer or 'buyer not stated')} · "
+        f"- {_link(notice)} · {_md(notice.buyer or 'buyer not stated')} · "
         f"deadline {_deadline(result)} · notice value {_value(result)}",
     ]
     if len(result.lots) > 1:
@@ -159,9 +162,7 @@ def _outcome_table(results: list[NoticeResult]) -> list[str]:
     lines = ["| Notice | Title | Reason |", "|---|---|---|"]
     for result in results:
         notice = result.notice
-        lines.append(
-            f"| [{notice.notice_id}]({notice.url}) | {_md(notice.title)} | {_md(result.reason)} |"
-        )
+        lines.append(f"| {_link(notice)} | {_md(notice.title)} | {_md(result.reason)} |")
     return lines
 
 
@@ -176,7 +177,7 @@ def _csv_row(rank: int, result: NoticeResult, rationale: str | None) -> list:
         notice.title,
         notice.buyer or "",
         lot.lot_name if lot else "",
-        notice.deadline.date().isoformat() if notice.deadline else "",
+        _deadline_text(notice.deadline) if notice.deadline else "",
         f"{notice.value_gbp:.0f}" if notice.value_gbp is not None else "",
         *[scores.get(name, "") for name in CRITERIA],
         _red_flags(result),
@@ -188,7 +189,32 @@ def _csv_row(rank: int, result: NoticeResult, rationale: str | None) -> list:
 
 def _deadline(result: NoticeResult) -> str:
     deadline = result.notice.deadline
-    return deadline.date().isoformat() if deadline else "not stated"
+    return _deadline_text(deadline) if deadline else "not stated"
+
+
+def _deadline_text(deadline: datetime) -> str:
+    """Date and time, because a noon closing time matters as much as the day."""
+    return f"{deadline.astimezone(UTC):%Y-%m-%d %H:%M} UTC"
+
+
+def _unprocessed_banner(unprocessed: list[NoticeResult]) -> list[str]:
+    """A run the budget or the provider stopped is as incomplete as a fetch that stopped."""
+    if not unprocessed:
+        return []
+    count = len(unprocessed)
+    noun = "notice was" if count == 1 else "notices were"
+    reasons = "; ".join(dict.fromkeys(result.reason for result in unprocessed))
+    return [
+        f"> **INCOMPLETE:** {count} {noun} not processed ({_md(reasons)}). "
+        "Run again to continue; finished extractions are cached.",
+        "",
+    ]
+
+
+def _link(notice: Notice) -> str:
+    """A Markdown link whose destination cannot close the link or open another one."""
+    destination = quote(notice.url, safe=":/?#@!$&'*+,;=%~")
+    return f"[{_md(notice.notice_id)}]({destination})"
 
 
 def _value(result: NoticeResult) -> str:

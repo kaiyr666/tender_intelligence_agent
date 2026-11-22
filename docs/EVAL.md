@@ -25,6 +25,7 @@
 | 2026-11-22 | Check | 10 (8) | 100% (8/8) | 100% (8/8) | 100% | 100% (8/8) | |
 | 2026-11-22 | All | 42 (16) | 100% (15/15) | 94% (15/16) | 100% | 100% (15/15) | |
 | 2026-11-22 | Blind week | 137 (4) | 75% (3/4) | 75% (3/4) | 75% (3/4) | not checked | After D34, which was fixed on this week |
+| 2026-11-22 | All | 42 (16) | 100% (15/15) | 94% (15/16) | 100% | 100% (15/15) | Four eval notices given the deadlines they were missing (review 04); 4 re-reads, $0.02 |
 
 Targets: recall ≥ 80%, precision ≥ 60%. Before D32 they were met on the tuning set and **recall was missed on the check set** (50%), entirely through the pre-filter. After D32 both sets reach 100%, but both have now been used for fixes, so these figures show the fixes work, not how the tool does on unseen weeks. On the one unseen week (below), after review, precision meets its target at 3 of 5 and recall misses it at 3 of 4; four bids are too few to call either way. D34 then rejected the national lot (3 of 4 on both, but fixed on that week) and lost 108109 on the tuning set.
 
@@ -40,7 +41,7 @@ Field accuracy on all 42, after D32 (coverage 86%: the 6 notices still dropped b
 | Primary service | 86% |
 | Services | 81% |
 
-Threshold sweep, tuning set: precision 100% throughout; recall 100% from 0.50 to 0.75, 88% at 0.80, 75% at 0.90. After D34 recall is 88% from 0.50 to 0.75 (108109 is gated, so no threshold brings it back), 75% at 0.80 and 62% at 0.90. The threshold is 0.70 (D30): above the 0.65 that a lot of a service the company does not offer can reach, below every bid.
+Threshold sweep, tuning set: precision 100% throughout; recall 100% from 0.50 to 0.75, 88% at 0.80, 75% at 0.90. After D34 recall is 88% from 0.50 to 0.75 (108109 is gated, so no threshold brings it back), 75% at 0.80 and 62% at 0.90. After review 04 gave four eval notices their missing deadlines (106024, 106253, 106615, 108059, present in the saved weekly data for the same releases), 106253 scores 0.84 instead of 0.80 and 108059 0.95 instead of 0.90, so tuning recall stays 88% up to 0.80 and falls to 75% at 0.85. The threshold is 0.70 (D30): above the 0.65 that a lot of a service the company does not offer can reach, below every bid.
 
 ## Blind screen of an unseen week (26 Oct–1 Nov)
 - **Method (D33):** `uv run python -m evals.blind make` listed the 137 notices open on Mon 2 Nov that were delivered in the North, UK-wide by lot or with no stated region, whatever their CPV code, leaving out the eval notices. The list showed notice facts only (title, buyer, value, delivery codes, deadline, the first 300 characters), in a fixed random order. The human marked each one bid, maybe or blank in about 1 hour, and the marks were committed (39d8de7) before the tool read the week. `evals.blind compare` then ran the real pipeline as at 2 Nov 09:00 (35 LLM calls, $0.19). The human reviewed every maybe and every disagreement against the full notice in 15 minutes (`evals/blind/2026-10-26_review.md`).

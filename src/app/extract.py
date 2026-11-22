@@ -134,7 +134,9 @@ class ExtractionCache:
         payload = json.dumps([system, user, model, prompt_variables(notice, profile)])
         digest = hashlib.sha256(payload.encode("utf-8")).hexdigest()[:12]
         released = notice.published.strftime("%Y%m%dT%H%M%S")
-        return self.directory / f"{notice.notice_id}_{released}_{digest}.json"
+        # The ID comes from the API, so only letters, digits and dashes reach the file name.
+        safe_id = re.sub(r"[^A-Za-z0-9-]", "_", notice.notice_id)
+        return self.directory / f"{safe_id}_{released}_{digest}.json"
 
     def get(self, notice: Notice, profile: Profile, model: str) -> Extraction | None:
         """The cached extraction, or None if there is none or the file is unreadable."""
