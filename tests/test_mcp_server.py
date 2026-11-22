@@ -332,6 +332,60 @@ def test_an_unknown_run_lists_the_available_ones(runs_dir):
         shortlist(runs_dir, run_id="2026-01-05_2026-01-11")
 
 
+def count_loads(monkeypatch):
+    """Count the run files the server parses."""
+    loaded = []
+    real_load = mcp_server.runs.load_run
+
+    def counting_load(path):
+        loaded.append(path.name)
+        return real_load(path)
+
+    monkeypatch.setattr(mcp_server.runs, "load_run", counting_load)
+    return loaded
+
+
+@pytest.mark.parametrize(("run_id", "expected"), [(None, NEWEST), (OLDER, OLDER)])
+def test_one_run_lookup_reads_only_that_run_file(runs_dir, monkeypatch, run_id, expected):
+    # Review 06: a year of weekly runs must not all be parsed to answer one question.
+    save_older_run(runs_dir)
+    save_older_run(
+        runs_dir,
+        date_from=date(2026, 10, 26),
+        date_to=date(2026, 11, 1),
+        run_id="2026-10-26_2026-11-01",
+    )
+    loaded = count_loads(monkeypatch)
+
+    get_profile(runs_dir, run_id=run_id)
+
+    assert loaded == [f"{expected}.json"]
+
+
+def test_the_newest_lookup_skips_an_unreadable_newest_file(runs_dir, monkeypatch, capsys):
+    (runs_dir / "2026-11-16_2026-11-22.json").write_text("{not json", encoding="utf-8")
+    save_older_run(runs_dir)
+    loaded = count_loads(monkeypatch)
+
+    assert shortlist(runs_dir)["run_id"] == NEWEST
+    assert loaded == ["2026-11-16_2026-11-22.json", f"{NEWEST}.json"]
+    assert "2026-11-16_2026-11-22.json" in capsys.readouterr().err
+
+
+def test_a_named_run_that_cannot_be_read_says_so(runs_dir):
+    (runs_dir / "2026-11-16_2026-11-22.json").write_text("{not json", encoding="utf-8")
+
+    with pytest.raises(ToolError, match="could not be read"):
+        shortlist(runs_dir, run_id="2026-11-16_2026-11-22")
+
+
+def test_a_named_run_whose_file_holds_another_week_is_not_served(runs_dir):
+    shutil.copy(FIXTURE, runs_dir / "2026-11-16_2026-11-22.json")
+
+    with pytest.raises(ToolError, match="could not be read"):
+        shortlist(runs_dir, run_id="2026-11-16_2026-11-22")
+
+
 @pytest.mark.parametrize(
     "run_id",
     ["../2026-11-09_2026-11-15", "..\\2026-11-09_2026-11-15", f"{NEWEST}.json", "latest", ""],
@@ -445,6 +499,19 @@ def test_the_protocol_lists_the_five_tools_and_calls_shortlist(runs_dir):
     assert result.is_error is False
     ranked = [row["notice_id"] for row in result.structured_content["notices"]]
     assert ranked == ["100002-2026", "100001-2026"]
+
+
+def test_get_profile_says_the_quoted_gates_send_unsupported_cases_to_review(runs_dir):
+    # Review 06: the excluded-service and accreditation gates reject only on a found quote.
+    async def session():
+        async with Client(build_server(runs_dir)) as client:
+            return (await client.list_tools()).tools
+
+    tools = anyio.run(session)
+
+    description = next(tool.description for tool in tools if tool.name == "get_profile")
+    assert "quote" in description
+    assert "needs review" in description
 
 
 def test_the_protocol_reports_a_tool_error_to_the_assistant(runs_dir):

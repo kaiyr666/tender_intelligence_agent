@@ -207,7 +207,10 @@ def build_server(runs_dir: Path) -> MCPServer:
         "accreditations held, mobilisation, criterion weights and the shortlist threshold. "
         "Hard gates: a value under the band, a lot not wholly in these regions, an excluded "
         "main service, a missing mandatory accreditation; a value over the band only lowers "
-        "the score. " + DATA_NOTE,
+        "the score. The excluded-service and accreditation gates reject only when the LLM's "
+        "supporting quote is found in the notice. Otherwise the lot goes to review (unless "
+        "another gate rejects it), and the notice to needs review unless another lot is "
+        "shortlisted. " + DATA_NOTE,
         annotations=READ_ONLY,
     )
     def get_profile_tool(run_id: RunIdArg = None) -> dict[str, Any]:
@@ -223,46 +226,57 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--runs-dir", type=Path, default=runs.RUNS_DIR)
     args = parser.parse_args(argv)
     runs_dir = args.runs_dir.resolve()
-    if not _readable_runs(runs_dir):
+    if not any(_read_run(path) for path in runs.list_runs(runs_dir)):
         sys.exit(_no_runs_message(runs_dir))
     build_server(runs_dir).run("stdio")
 
 
 def _readable_runs(runs_dir: Path) -> list[runs.RunRecord]:
-    """The runs in runs_dir, newest first. A file that cannot be read, or that holds another
-    week than its name says (a copied file posing as another week), is skipped with a note
-    on stderr."""
-    records = []
-    for path in runs.list_runs(runs_dir):
-        try:
-            record = runs.load_run(path)
-        except runs.RunFileError as error:
-            _warn(f"skipped {error}")
-            continue
-        if record.run_id != path.stem:
-            _warn(f"skipped {path}: it holds run {record.run_id}, not the week in its name")
-            continue
-        records.append(record)
-    return records
+    """Every readable run in runs_dir, newest first."""
+    return [record for path in runs.list_runs(runs_dir) if (record := _read_run(path))]
+
+
+def _read_run(path: Path) -> runs.RunRecord | None:
+    """The run in path, or None with a note on stderr when the file cannot be read or holds
+    another week than its name says (a copied file posing as another week)."""
+    try:
+        record = runs.load_run(path)
+    except runs.RunFileError as error:
+        _warn(f"skipped {error}")
+        return None
+    if record.run_id != path.stem:
+        _warn(f"skipped {path}: it holds run {record.run_id}, not the week in its name")
+        return None
+    return record
 
 
 def _select_run(runs_dir: Path, run_id: str | None) -> runs.RunRecord:
-    """The named run, or the newest. The ID is checked before any file is touched."""
+    """The named run, or the newest readable one, parsing only the files needed (review 06).
+    The ID is checked before any file is touched."""
     if run_id is not None and not runs.is_run_id(run_id):
         raise ToolError(
             "run_id must be YYYY-MM-DD_YYYY-MM-DD (the run's from and to dates); "
             "list_runs gives the saved runs"
         )
-    available = _readable_runs(runs_dir)
-    if not available:
-        raise ToolError(_no_runs_message(runs_dir))
+    paths = runs.list_runs(runs_dir)
     if run_id is None:
-        return available[0]
-    for record in available:
-        if record.run_id == run_id:
-            return record
-    names = ", ".join(record.run_id for record in available)
-    raise ToolError(f"No saved run {run_id}. Available runs, newest first: {names}.")
+        record = next((record for path in paths if (record := _read_run(path))), None)
+        if record is None:
+            raise ToolError(_no_runs_message(runs_dir))
+        return record
+    path = next((path for path in paths if path.stem == run_id), None)
+    if path is None:
+        if not paths:
+            raise ToolError(_no_runs_message(runs_dir))
+        names = ", ".join(path.stem for path in paths)
+        raise ToolError(f"No saved run {run_id}. Run files, newest first: {names}.")
+    record = _read_run(path)
+    if record is None:
+        raise ToolError(
+            f"Run {run_id} could not be read (the server's log says why); "
+            "running the CLI for that week again rewrites it."
+        )
+    return record
 
 
 def _no_runs_message(runs_dir: Path) -> str:

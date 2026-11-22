@@ -33,7 +33,7 @@ A week takes about 3 minutes to fetch and, read from scratch, an estimated $0.60
 Tests: `uv run pytest` · Eval: `uv run python -m evals.run`. Neither needs an API key or the network: the eval reads committed extractions.
 
 ### Ask an AI assistant (MCP server)
-`uv run python -m app.mcp_server` starts a local, read-only MCP server over stdio. It reads the run files in `output/runs/`, or another folder with `--runs-dir` (`examples/runs` works from a fresh clone, with no API key). It has five tools: `list_runs`, `shortlist`, `get_tender`, `search_tenders` and `get_profile`; each takes a `run_id` and defaults to the newest week. It makes no LLM or network calls and writes nothing.
+`uv run python -m app.mcp_server` starts a local, read-only MCP server over stdio. It reads the run files in `output/runs/`, or another folder with `--runs-dir` (`examples/runs` works from a fresh clone, with no API key). It has five tools: `list_runs` lists the saved runs, and `shortlist`, `get_tender`, `search_tenders` and `get_profile` each take a `run_id` from it, defaulting to the newest readable run. It makes no LLM or network calls and writes nothing.
 
 **Claude Desktop:** add the server to `claude_desktop_config.json` (Settings → Developer → Edit Config; on Windows it is in `%APPDATA%\Claude\`, on macOS in `~/Library/Application Support/Claude/`), then restart Claude Desktop. Use the full path to the repo, and to `uv` if Claude Desktop cannot find it (`where uv` on Windows, `which uv` elsewhere).
 ```json
@@ -122,7 +122,7 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 - **The MCP server is local only.** It speaks stdio to an assistant on the same machine; sharing it with the team would need a hosted server with authentication.
 - **Equal scores are not tie-broken.** Six of the seven notices on the 9–15 Nov shortlist score 0.95, and their ranks are only the order they were read in. The MCP server tells the assistant so, rather than let it invent a reason for the order.
 - **No "what if" scoring.** The assistant can explain a score from its criteria, but cannot rescore a notice under another profile or threshold; that needs a CLI run with the changed profile.
-- **The assistant reads notice text.** Titles, descriptions, quotes and rationales reach it as tool output. The server labels them as data, not instructions, but cannot stop a client from following text planted in a notice; it has no tools that write or send anything, so the harm is limited to a wrong answer.
+- **The assistant reads notice text.** Titles, descriptions, quotes and rationales reach it as tool output. The server labels them as data, not instructions, but cannot stop a client from following text planted in a notice. The server itself cannot write or send anything, but the assistant reading its output may have other tools that can, so what planted text could do depends on the client's other tools and permissions (review 06). Connect it to an assistant with only read tools, or one that asks before it writes or sends.
 - **Scottish notices link to the Public Contracts Scotland API,** not a page a person can read, because that is the URL the source data gives.
 - **The report shows the notice's total value,** not the best lot's; the lot's value is in the score breakdown.
 - **Most scoring numbers are still first guesses** (unknown = 0.5, over £5m = 0.3, minor excluded service −0.25, the weights). Only the threshold (0.70) was set on the eval, and the eval is too small to tune the rest.
