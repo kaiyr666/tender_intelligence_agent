@@ -99,7 +99,7 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 3. Apply the region gate in the pre-filter for notices with delivery addresses, so out-of-region notices cost no LLM call. Most of the reads D32 added are notices the region gate rejects anyway.
 4. If the pilot shows the team missing local northern contracts coded "all of England", switch the region rule to D34's option (a), which keeps 108109.
 5. Require supporting quotes for every extracted field, not only the gate fields.
-6. Incumbent lookup from award notices, and an MCP server (`search_tenders`, `get_tender`, `shortlist`).
+6. Incumbent lookup from award notices. (The MCP server and a read-only web view are planned as slices 6–9 in `docs/PLAN.md`, D36.)
 
 ## How AI was used
 Built with Claude Code under a written spec, plan and decisions log. Codex reviewed the spec and plan twice before any code was written (`docs/reviews/`); the code itself had no Codex review. The log of what was delegated, what the tests and reviews caught, and what the human overruled is in [docs/AI_WORKFLOW.md](docs/AI_WORKFLOW.md).

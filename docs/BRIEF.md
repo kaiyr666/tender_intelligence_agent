@@ -34,10 +34,10 @@ Keep this profile in a config file, not in code, so it can be changed for anothe
 6. **Output:** a ranked shortlist as a Markdown report and a CSV with score, key fields, deadline, link to the notice and rationale. Also list notices rejected only by the LLM step, so the team can sanity-check them.
 7. **Evaluate:** a labelled set of about 30 real notices (bid / no-bid for this company), reporting precision and recall of the shortlist plus accuracy of the extracted fields.
 
-**If time allows:** an MCP server exposing `search_tenders`, `get_tender` and `shortlist` so an AI assistant can answer ad-hoc questions; and incumbent lookup (who won previous contracts from the same buyer for similar services, using award notices).
+**If time allows:** an MCP server exposing `search_tenders`, `get_tender` and `shortlist` so an AI assistant can answer ad-hoc questions (now planned, see the update below); and incumbent lookup (who won previous contracts from the same buyer for similar services, using award notices).
 
 ## Out of scope
-Web UI, user accounts, downloading tender documents from buyer portals, writing bids, email alerts and scheduling, any source other than Find a Tender.
+User accounts, downloading tender documents from buyer portals, writing bids, email alerts and scheduling, any source other than Find a Tender.
 
 ## Success measures
 - The shortlist on the labelled set reaches **recall of at least 80%** (we rarely miss a good tender) with **precision of at least 60%** (most shortlisted tenders are worth a look).
@@ -56,3 +56,17 @@ Web UI, user accounts, downloading tender documents from buyer portals, writing 
 - **What if a notice has no value stated?** Keep it, flag "value unknown", and score that criterion as neutral.
 - **What if the deadline field is missing?** Treat it as unknown and flag it; don't drop the notice.
 - **Planning-stage notices?** Exclude from the shortlist, but count them in the report as an early pipeline signal.
+
+## Update, 22 Nov 2026: a read-only web view and an MCP server
+"Web UI" was out of scope by our own choice when we scoped this proof of concept, to protect the 5-hour time box; no client asked for that limit. For a demo on 23 Nov the proof of concept gains two read-only ways to see a week's results:
+
+- **A web view** for the bid team: one self-contained HTML page per run with the ranked shortlist, each score's breakdown, the rationale, and why every other notice was rejected or sent to review. It opens from a file, needs no server and works offline.
+- **An MCP server** for an AI assistant (Claude Desktop or Claude Code): it answers questions such as "why was this tender rejected?" from the same saved results.
+
+Both read one saved results file per run, so neither re-runs the pipeline or has its own copy of the scoring. Both stay read-only: they do not edit the company profile, start a run, call the LLM or record bid decisions. Those wait for a pilot.
+
+What the bid team does with them:
+- **Input:** a date range, given to the CLI (by default the last full Monday–Sunday week).
+- **Configure:** nothing in the view. The profile stays in `config/profile.toml`, changed under review, because a change shifts every result and the eval. API keys stay in environment variables.
+- **View:** the shortlist with score breakdowns, rationales, deadlines and red flags; the rejected, needs-review and not-processed notices with their reasons; the run's health (complete or not, LLM cost); what the profile screens for.
+

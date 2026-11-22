@@ -220,6 +220,20 @@
 - **Why:** a noon deadline and an end-of-day deadline looked the same, and the bid team plans to the hour. UK time would read better, but on Windows Python's time zones need the `tzdata` package, a new dependency for a label; the API gives times in UTC, which is GMT for half the year.
 - **Revisit if:** the bid team misreads summer deadlines by an hour; then add `tzdata` and show UK time.
 
+## D36: A read-only web view and a read-only MCP server join the scope
+- **Chose:** two read-only views of a run for the 23 Nov demo: a self-contained HTML page for the bid team, and a local stdio MCP server for an AI assistant (slices 6–9). Neither edits the profile, starts a run, calls the LLM or records bid decisions. The human chose this on 22 Nov: "Web UI" had been out of scope by our own assumption, to protect the 5-hour box, not at anyone else's request.
+- **Alternatives:** (a) the HTML page only (4–5 h); (b) the MCP server only (2–3 h), Claude's first recommendation, while it still read the out-of-scope line as a client requirement; (c) a local web app (FastAPI) with a Run button, profile editing and bid/no-bid capture (9–12 h, or 16–22 h with full config editing); (d) Streamlit (4–5 h, a new dependency that is hard to make look polished).
+- **Why:** the role being interviewed for asks to "sketch the system from data to UI" and to "wire an API or an MCP server"; the two views show both, over one result. The bid team only enters a date range, so the gap is reading, not input. Profile editing would shift every result and make the committed eval extractions stale, so it stays a reviewed file change. A live run takes 3 minutes and depends on the Find a Tender API, which is dead air on a call. Bid/no-bid capture is the shadow pilot's job.
+- **Cost:** about 7 hours beyond the box. The MCP server adds one dependency (D38). Results are only as fresh as the last CLI run.
+- **Revisit if:** a pilot starts: then add bid/no-bid capture and a small authenticated server, and consider a guarded run tool with the budget enforced.
+
+## D37: One saved run record feeds both views
+- **Chose:** every CLI run also writes `output/runs/<from>_<to>.json`, a Pydantic-validated record with a schema version, the run summary, a profile snapshot and every assessed notice with its lots, criteria, reasons, red flags and rationale. The web view and the MCP server read only this file.
+- **Alternatives:** each view re-runs the pipeline from the saved notices and the extraction cache; the views parse `shortlist.csv`; a SQLite database.
+- **Why:** re-running would give each view its own copy of the scoring path and need the LLM for rationales, which are not cached. The CSV flattens lots and criteria, which both views need. A database adds a schema and migrations for a weekly file. One JSON file per run is easy to commit as an example, validate on load and explain to a client.
+- **Cost:** the record repeats data that is already in `report.md` and the CSV; a schema change needs a version bump and old runs either migrate or fail with a clear error.
+- **Revisit if:** runs need querying across many weeks, or more than one person writes results.
+
 <!--
 Template:
 ## Dn: <decision>
