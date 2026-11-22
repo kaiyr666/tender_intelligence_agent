@@ -234,6 +234,13 @@
 - **Cost:** the record repeats data that is already in `report.md` and the CSV; a schema change needs a version bump and old runs either migrate or fail with a clear error.
 - **Revisit if:** runs need querying across many weeks, or more than one person writes results.
 
+## D38: The MCP server uses the official `mcp` SDK, version 2
+- **Chose:** `mcp>=2.3`, the official Python SDK, for slice 7's stdio server. Version 2 renamed `FastMCP` (`mcp.server.fastmcp`, which the plan named) to `MCPServer` (`mcp.server.mcpserver`); the check the plan asked for before coding found the old import gone, so the server uses `MCPServer`.
+- **Alternatives:** pin `mcp<2` and keep `FastMCP` as the plan wrote it; write the JSON-RPC stdio loop by hand; the separate `fastmcp` package.
+- **Why:** the SDK negotiates protocol versions with each client, which a hand-written loop would have to track as the protocol changes. Pinning 1.x would start on a superseded major version for no gain, since the two APIs are close. Version 2 also connects a client to a server object in memory, so the tests run the real protocol without a subprocess. One-line reason: the official SDK for the MCP server the spec now includes (D36).
+- **Cost:** 17 more packages in the lock file (among them starlette, uvicorn, cryptography and jsonschema), mostly for HTTP transports the server does not use.
+- **Revisit if:** Claude Desktop or Claude Code cannot connect to a 2.x server; then pin `mcp<2` and switch to `FastMCP`.
+
 <!--
 Template:
 ## Dn: <decision>

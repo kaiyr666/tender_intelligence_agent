@@ -14,7 +14,8 @@ A command-line tool the bid team runs once a week. For a date range (by default 
 - gates and scores every lot in code against `config/profile.toml` and keeps the best eligible lot per notice;
 - has the LLM write a two-to-three-sentence rationale for each shortlisted notice from the scored fields only;
 - writes `output/report.md` (shortlisted, rejected, needs review, not processed, with cost, planning count and OGL attribution) and `output/shortlist.csv` (every assessed notice and its outcome);
-- saves the whole run as one validated JSON file, `output/runs/<from>_<to>.json`: the run summary, a snapshot of the profile, and every assessed notice with its lots, criteria, reasons, red flags and rationale (D37). The planned web view and MCP server read only this file.
+- saves the whole run as one validated JSON file, `output/runs/<from>_<to>.json`: the run summary, a snapshot of the profile, and every assessed notice with its lots, criteria, reasons, red flags and rationale (D37). The web view (planned) and the MCP server read only this file;
+- answers an AI assistant's questions about any saved run through a read-only MCP server (`src/app/mcp_server.py`, D36, D38): see "Ask an AI assistant" below.
 
 Screening for another company means editing `config/profile.toml` (services with what they include and exclude, CPV codes, regions, accreditations held, weights, threshold), not the code. The eval harness (`evals/run.py`) and the blind-screen tool (`evals/blind.py`) are in `evals/`. Out of scope, and why: `docs/SPEC.md`.
 
@@ -30,6 +31,29 @@ With an OpenAI key, `.env` needs `OPENAI_API_KEY`, `LLM_PROVIDER=openai`, `LLM_M
 A week takes about 3 minutes to fetch and, read from scratch, an estimated $0.60 in LLM calls (122 notices at about $0.005 each; the measured 9–15 Nov run paid $0.29 for the 62 notices not yet cached). Deadlines in the report and CSV are in UTC. The run writes `output/report.md`, `output/shortlist.csv` and `output/runs/<from>_<to>.json` (all git-ignored); a second run of the same week replaces its run file. `examples/runs/` holds one committed run (9–15 Nov) so the views can be tried without an API key. Extractions are cached in `data/cache/`, so a second run of the same week makes no extraction calls.
 
 Tests: `uv run pytest` · Eval: `uv run python -m evals.run`. Neither needs an API key or the network: the eval reads committed extractions.
+
+### Ask an AI assistant (MCP server)
+`uv run python -m app.mcp_server` starts a local, read-only MCP server over stdio. It reads the run files in `output/runs/`, or another folder with `--runs-dir` (`examples/runs` works from a fresh clone, with no API key). It has five tools: `list_runs`, `shortlist`, `get_tender`, `search_tenders` and `get_profile`; each takes a `run_id` and defaults to the newest week. It makes no LLM or network calls and writes nothing.
+
+**Claude Desktop:** add the server to `claude_desktop_config.json` (Settings → Developer → Edit Config; on Windows it is in `%APPDATA%\Claude\`, on macOS in `~/Library/Application Support/Claude/`), then restart Claude Desktop. Use the full path to the repo, and to `uv` if Claude Desktop cannot find it (`where uv` on Windows, `which uv` elsewhere).
+```json
+{
+  "mcpServers": {
+    "tender-intelligence": {
+      "command": "uv",
+      "args": ["--directory", "C:/path/to/tender_intelligence_agent", "run", "python", "-m", "app.mcp_server", "--runs-dir", "examples/runs"]
+    }
+  }
+}
+```
+**Claude Code:**
+```bash
+claude mcp add tender-intelligence -- uv --directory /path/to/tender_intelligence_agent run python -m app.mcp_server --runs-dir examples/runs
+```
+Then ask, for example:
+- "What is on this week's shortlist, and why is the top one ranked first?"
+- "Why was notice 108109-2026, the Newcastle window cleaning, rejected?"
+- "Which shortlisted tenders carry TUPE, and what does the profile screen for?"
 
 Data: contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), from Find a Tender (https://www.find-tender.service.gov.uk).
 
@@ -92,7 +116,13 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 - **A run file is only as fresh as its run.** Deadlines and the "closed" pre-filter are judged at the run date, so the committed 9–15 Nov example (run on 22 Nov) leaves out notices that closed between 15 and 22 Nov and differs from the report of a run on 16 Nov. An amended notice is re-read on the next run, so an old run file and a new one can disagree.
 - **Run files hold notice text.** Titles, descriptions and quotes are stored as fetched, with emails and phone numbers masked (D14); a name written into a description stays, as in `data/raw/`. `output/` is git-ignored; the committed example was checked by the human first.
 - **A schema change makes old run files unreadable.** A file with another `schema_version` is refused with an error naming the file, and has to be recreated by running that week again; there is no migration.
-- **A run file copied under another week's name still loads.** `load_run` checks that the record's own `run_id` matches its dates, not the file name, so the web view can open a renamed file. Picking runs by name is the MCP server's job, and slice 7 is planned to skip such files (review 05).
+- **A run file copied under another week's name still loads.** `load_run` checks that the record's own `run_id` matches its dates, not the file name, so the web view can open a renamed file. The MCP server, which picks runs by name, skips such a file with a message on stderr (review 05).
+- **The MCP server is read-only.** It cannot start a run, change the profile or record a bid decision (D36); the bid team still runs the CLI each week.
+- **The MCP server's answers are as of the last run.** It reads saved run files only, so a notice amended or closed since is shown as it was, and a week nobody has run is not there. Notices the pre-filter dropped are counted, not listed, so the server cannot say why one of them was dropped.
+- **The MCP server is local only.** It speaks stdio to an assistant on the same machine; sharing it with the team would need a hosted server with authentication.
+- **Equal scores are not tie-broken.** Six of the seven notices on the 9–15 Nov shortlist score 0.95, and their ranks are only the order they were read in. The MCP server tells the assistant so, rather than let it invent a reason for the order.
+- **No "what if" scoring.** The assistant can explain a score from its criteria, but cannot rescore a notice under another profile or threshold; that needs a CLI run with the changed profile.
+- **The assistant reads notice text.** Titles, descriptions, quotes and rationales reach it as tool output. The server labels them as data, not instructions, but cannot stop a client from following text planted in a notice; it has no tools that write or send anything, so the harm is limited to a wrong answer.
 - **Scottish notices link to the Public Contracts Scotland API,** not a page a person can read, because that is the URL the source data gives.
 - **The report shows the notice's total value,** not the best lot's; the lot's value is in the score breakdown.
 - **Most scoring numbers are still first guesses** (unknown = 0.5, over £5m = 0.3, minor excluded service −0.25, the weights). Only the threshold (0.70) was set on the eval, and the eval is too small to tune the rest.
@@ -104,7 +134,7 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 3. Apply the region gate in the pre-filter for notices with delivery addresses, so out-of-region notices cost no LLM call. Most of the reads D32 added are notices the region gate rejects anyway.
 4. If the pilot shows the team missing local northern contracts coded "all of England", switch the region rule to D34's option (a), which keeps 108109.
 5. Require supporting quotes for every extracted field, not only the gate fields.
-6. Incumbent lookup from award notices. (The MCP server and a read-only web view are planned as slices 6–9 in `docs/PLAN.md`, D36.)
+6. Incumbent lookup from award notices. (The MCP server is built; a read-only web view is planned as slice 8 in `docs/PLAN.md`, D36.)
 
 ## How AI was used
 Built with Claude Code under a written spec, plan and decisions log. Codex reviewed the spec and plan twice before any code was written (`docs/reviews/`); the code itself had no Codex review. The log of what was delegated, what the tests and reviews caught, and what the human overruled is in [docs/AI_WORKFLOW.md](docs/AI_WORKFLOW.md).

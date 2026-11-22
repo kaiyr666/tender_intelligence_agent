@@ -59,7 +59,7 @@ Rules for every slice below:
   - Test (`tests/test_runs.py`, written first): a save/load round trip is equal; the shortlist ranks match the report; every assessed notice is present with its reason; rationale only on shortlisted notices; weights copied into criteria; broken JSON, a missing field and schema version 2 each raise `RunFileError` naming the file; `list_runs` skips other files and sorts newest first. Extend `tests/test_cli.py` so the end-to-end run writes a loadable run file.
   - Done when: the fixture and the example run load, and `report.md` and `shortlist.csv` are unchanged.
 
-- [ ] **Slice 7: MCP server** (~2–3 h). Depends on: slice 6.
+- [x] **Slice 7: MCP server** (~2–3 h). Depends on: slice 6. Done on 22 Nov. `mcp` 2.3 renamed `FastMCP` to `MCPServer`, so the server uses that (D38). 46 tests, including the protocol in memory and over real stdio; 480 in all. Manual check: headless Claude Code (`claude -p` with `--mcp-config`) against `examples/runs` named the 7 shortlisted notices, explained the 0.95 tie at the top (six notices share it; the tool says ranks among ties mean nothing) and 108109's region gate, all matching `report.md`.
   - Goal: an AI assistant can ask about any saved run, read-only, from Claude Desktop or Claude Code.
   - Dependency: `uv add mcp` (the official Python SDK), with its one-line reason as D38. Use `FastMCP` from `mcp.server.fastmcp`; check the import against the installed version before writing code.
   - Build `src/app/mcp_server.py`, run with `uv run python -m app.mcp_server [--runs-dir PATH]` (default `output/runs`; with no runs there, exit with a message that suggests `--runs-dir examples/runs`). Stdio only. Nothing may print to stdout except the protocol; errors go to stderr.
