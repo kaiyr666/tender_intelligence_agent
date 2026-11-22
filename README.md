@@ -94,4 +94,4 @@ Full figures and method in [docs/EVAL.md](docs/EVAL.md). Targets: recall ≥ 80%
 6. Incumbent lookup from award notices, and an MCP server (`search_tenders`, `get_tender`, `shortlist`).
 
 ## How AI was used
-Built with Claude Code and reviewed by Codex; see [docs/AI_WORKFLOW.md](docs/AI_WORKFLOW.md).
+Built with Claude Code under a written spec, plan and decisions log. Codex reviewed the spec and plan twice before any code was written (`docs/reviews/`); the code itself had no Codex review. The log of what was delegated, what the tests and reviews caught, and what the human overruled is in [docs/AI_WORKFLOW.md](docs/AI_WORKFLOW.md).

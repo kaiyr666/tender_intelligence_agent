@@ -10,16 +10,16 @@ The bid team, once a week. They run the tool for the last full week and open a M
 - **CLI** `uv run python -m app --from YYYY-MM-DD --to YYYY-MM-DD`. Both dates are inclusive (from 00:00:00 to 23:59:59).
 - **Fetch:** tender-stage and planning-stage notices updated in the range, from the Find a Tender OCDS API, with paging, a timeout and bounded retries that honour `Retry-After` on 429/503. Releases are grouped by notice ID (`ocid`) and only the latest is kept; withdrawn or cancelled notices are dropped. A fetch that stops partway keeps what it has and marks the run incomplete.
 - **Stored data:** `data/raw/` (git-ignored) holds a reduced notice: `parties[]` cut to organisation name and role, and emails and phone numbers masked in free text. Nothing else is stored or logged.
-- **Pre-filter (code):** drops a notice when its deadline has passed, its stated value is under £100k, or none of its CPV codes (notice, items and lots) match the profile. A notice with no CPV code at all is kept. Planning-stage notices are counted, not shortlisted.
+- **Pre-filter (code):** drops a notice when its deadline has passed, its stated value is under £100k, or none of its CPV codes (notice, items and lots) match the profile. A notice with no CPV code at all is kept, and so is any construction (45) code, because buyers code maintenance as construction (D32). A value of £0 counts as not stated (D32). Planning-stage notices are counted, not shortlisted.
 - **Extract (LLM):** per lot (or once for a notice without lots): services and the primary service, delivery region, contract length, mobilisation time, mandatory accreditations and red flags (TUPE, short deadline, closed framework call-off). Unknown is an allowed value. Fields that drive a gate carry a supporting quote from the notice. Output is validated by Pydantic.
 - **Score (code):** each lot is gated and scored on all criteria from `config/profile.toml`: service fit, region, value band, accreditations, mobilisation and deadline. Each criterion gives 0–1 and a reason. Notice-wide requirements apply to every lot.
-- **Hard gates:** value under £100k, a lot outside the North (out of region, UK-wide with no regional lot, or no region stated), an excluded service as the lot's primary service, or a mandatory accreditation the company lacks. The excluded-service and accreditation gates only reject when the supporting quote is found in the notice text; otherwise the notice goes to "needs review". The region gate rejects without a quote, also when the region was read from the text (D25). Over £5m lowers the score but is not a gate.
+- **Hard gates:** value under £100k, a lot outside the North (out of region, UK-wide with no regional lot, no region stated, or a lot that also covers any region outside the North; D34), an excluded service as the lot's primary service, or a mandatory accreditation the company lacks. The excluded-service and accreditation gates only reject when the supporting quote is found in the notice text; otherwise the notice goes to "needs review". The region gate rejects without a quote, also when the region was read from the text (D25). Over £5m lowers the score but is not a gate.
 - **Lots:** one row per notice, showing its best eligible lot by name.
 - **Shortlist:** a score threshold set in config and tuned on the eval set.
 - **Explain (LLM):** a 2–3 sentence rationale per shortlisted tender, written from the extracted fields only.
 - **Output:** `report.md` and `shortlist.csv`. The report has four groups: shortlisted, rejected after extraction, needs review (failed extraction or unsupported gate), and not processed (budget or fetch stopped). It also shows the planning-stage count, the run's LLM cost, an "incomplete" banner when that applies, and the OGL v3.0 attribution.
 - **Cost control:** `llm.py` records token usage per call. Extractions are cached by notice ID and release date, the input text is capped, and the run stops calling the LLM before a configured budget is exceeded.
-- **Eval:** about 30 real notices with bid / no-bid labels and expected field values, including some the pre-filter dropped. It reports TP/FP/FN, precision, recall, pre-filter recall and per-field accuracy, with deadlines judged against a frozen date.
+- **Eval:** about 30 real notices with bid / no-bid labels and expected field values, including some the pre-filter dropped. Built as 42 labelled cases, plus a blind screen of one unseen week by the human (D33); see `docs/EVAL.md`. It reports TP/FP/FN, precision, recall, pre-filter recall and per-field accuracy, with deadlines judged against a frozen date.
 
 ## What we do not build (out of scope), and why
 - Web UI, user accounts, email alerts and scheduling: the brief excludes them, and a CLI plus a file covers a weekly run.
@@ -31,7 +31,7 @@ The bid team, once a week. They run the tool for the last full week and open a M
 
 ## Data
 - Find a Tender OCDS API (`/api/1.0/ocdsReleasePackages`): public, no key, OGL v3.0 (attribution in the report and README).
-- Volume, measured for 9–15 Nov 2026: 2,258 releases of all stages, 463 active tender notices, and 59 that survive the pre-filter. Fetching a week takes about 3 minutes (23 pages).
+- Volume, measured for 9–15 Nov 2026: 2,258 releases of all stages, 463 active tender notices, and 59 that survive the pre-filter (122 since D32 lets construction codes through). Fetching a week takes about 3 minutes (23 pages).
 - Field coverage varies. Slice 1 checks real responses before the code relies on `value`, `tenderPeriod.endDate`, lots, CPV and delivery addresses.
 - Test fixtures are sanitised real notices.
 
